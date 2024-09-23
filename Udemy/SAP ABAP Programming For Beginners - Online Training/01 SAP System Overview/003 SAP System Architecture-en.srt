@@ -1,0 +1,382 @@
+1
+00:00:01,300 --> 00:00:05,620
+So we're going to discuss the technical
+architecture of a typical SAP system.
+
+2
+00:00:07,020 --> 00:00:10,700
+Then we're going to move on do landscape
+architecture and
+
+3
+00:00:10,700 --> 00:00:15,690
+just discuss why we break our landscape
+into multiple systems.
+
+4
+00:00:19,210 --> 00:00:23,080
+Here we have a slide showing a 3-Tier
+Client Server Architecture
+
+5
+00:00:23,080 --> 00:00:24,700
+of a typical SAP system.
+
+6
+00:00:26,500 --> 00:00:31,350
+At the top we have the Presentation
+Server, the presentation server is
+
+7
+00:00:31,350 --> 00:00:35,270
+any input device that we can use to
+control an SAP system.
+
+8
+00:00:35,270 --> 00:00:37,480
+So here we're showing the SAP GUI.
+
+9
+00:00:38,790 --> 00:00:41,880
+But we're not limited just to using a SAP
+GUI.
+
+10
+00:00:41,880 --> 00:00:47,840
+We can a web browser, mobile device or any
+other form of input you can think of.
+
+11
+00:00:47,840 --> 00:00:53,640
+The presentation layer communicates with
+the application server.
+
+12
+00:00:53,640 --> 00:00:57,410
+And the application server is the brains
+of an SAP system.
+
+13
+00:00:57,410 --> 00:00:59,830
+This is where all the central processing
+gets done.
+
+14
+00:01:01,670 --> 00:01:02,880
+You can see here,
+
+15
+00:01:02,880 --> 00:01:08,180
+we're showing the application sever isn't
+just one system in itself.
+
+16
+00:01:08,180 --> 00:01:12,590
+Your application server can be made up of
+multiple instances
+
+17
+00:01:12,590 --> 00:01:14,730
+of the processing system.
+
+18
+00:01:14,730 --> 00:01:19,242
+Now the application server in turn
+communicates with the database layer of
+
+19
+00:01:19,242 --> 00:01:21,790
+the 3-tier architecture.
+
+20
+00:01:21,790 --> 00:01:28,050
+The database is kept on a separate server,
+a separate system in itself,
+
+21
+00:01:28,050 --> 00:01:32,610
+mainly for performance reasons, but also
+for security as well.
+
+22
+00:01:32,610 --> 00:01:35,640
+It provides a separation and
+
+23
+00:01:35,640 --> 00:01:41,220
+that's why we got these three different
+layers in this whole SAP system.
+
+24
+00:01:41,220 --> 00:01:44,590
+The presentation server communicates with
+the application server.
+
+25
+00:01:44,590 --> 00:01:47,670
+The application server does all the
+processing,
+
+26
+00:01:47,670 --> 00:01:49,510
+it makes calls to the database.
+
+27
+00:01:50,720 --> 00:01:53,840
+Data is passed back to the application
+server,
+
+28
+00:01:53,840 --> 00:01:59,461
+more processing is done before the results
+are then sent to the presentation server.
+
+29
+00:01:59,461 --> 00:02:03,128
+[BLANK_AUDIO]
+
+30
+00:02:03,128 --> 00:02:08,040
+Now let's quickly discuss a typical
+landscape architecture.
+
+31
+00:02:08,040 --> 00:02:15,350
+Now, I say typical, but you'll find that
+when you work with SAP, there is no
+
+32
+00:02:15,350 --> 00:02:20,700
+typical in inverted commas landscape
+architecture that most companies use.
+
+33
+00:02:21,720 --> 00:02:26,940
+What you do find that's very common, is
+you'll find the development system,
+
+34
+00:02:26,940 --> 00:02:30,500
+you'll find the testing system and then
+you'll find a production system.
+
+35
+00:02:32,400 --> 00:02:34,500
+Now why do we have these three systems?
+
+36
+00:02:34,500 --> 00:02:36,900
+Well, it's fairly straightforward.
+
+37
+00:02:36,900 --> 00:02:42,370
+All the development work and initial unit
+testing that we do
+
+38
+00:02:42,370 --> 00:02:46,910
+in our SAP work gets done on a development
+system.
+
+39
+00:02:46,910 --> 00:02:53,780
+This ensures we do not affect any other
+system that is being used by the company.
+
+40
+00:02:53,780 --> 00:02:59,860
+Once our developments, we think, are good
+enough to be tested by maybe an external
+
+41
+00:02:59,860 --> 00:03:04,450
+source or someone else within your company
+whose role it is to carry out testing.
+
+42
+00:03:05,550 --> 00:03:10,500
+We move our developments using what's
+called a transport system
+
+43
+00:03:10,500 --> 00:03:12,600
+to the next system.
+
+44
+00:03:12,600 --> 00:03:14,420
+Which, in this case, is the testing
+system.
+
+45
+00:03:15,740 --> 00:03:19,630
+On the testing system normally, no
+developments is done at all.
+
+46
+00:03:19,630 --> 00:03:20,840
+It's just used for
+
+47
+00:03:20,840 --> 00:03:24,810
+testing what developments were carried out
+in the developments system.
+
+48
+00:03:26,190 --> 00:03:31,490
+If everything works out and everything
+passes in the test system.
+
+49
+00:03:31,490 --> 00:03:34,840
+Within user transport system again to move
+our developments or
+
+50
+00:03:34,840 --> 00:03:38,380
+our program changes into the production
+environment.
+
+51
+00:03:39,620 --> 00:03:41,810
+When code goes into a production
+environment,
+
+52
+00:03:41,810 --> 00:03:46,010
+that's when it's turned on and that's when
+it's used within the business itself.
+
+53
+00:03:47,950 --> 00:03:53,960
+Now our landscape architecture is not
+separated just for development purposes.
+
+54
+00:03:55,050 --> 00:03:57,670
+Your company can have other reasons.
+
+55
+00:03:57,670 --> 00:04:02,810
+They can be the quantity of data that a
+normal production system holds.
+
+56
+00:04:02,810 --> 00:04:07,670
+It can be too great to actually be used in
+the development environment
+
+57
+00:04:07,670 --> 00:04:09,360
+because normally your development system
+and
+
+58
+00:04:09,360 --> 00:04:14,300
+your testing system are not as large as a
+production system.
+
+59
+00:04:14,300 --> 00:04:16,660
+You only want a subset of data to test on.
+
+60
+00:04:16,660 --> 00:04:21,380
+There is also the security element that
+you need to look at.
+
+61
+00:04:21,380 --> 00:04:25,430
+More often than not, companies do not want
+developers
+
+62
+00:04:25,430 --> 00:04:29,870
+to see live production data for data
+security issues.
+
+63
+00:04:29,870 --> 00:04:33,630
+You know, you got employee data on the
+system.
+
+64
+00:04:33,630 --> 00:04:35,810
+You've got sales data.
+
+65
+00:04:35,810 --> 00:04:40,100
+And you don't want people who're not
+involved in those specific areas
+
+66
+00:04:40,100 --> 00:04:41,470
+to actually see the live data.
+
+67
+00:04:42,870 --> 00:04:48,230
+So normally,your development and testing
+systems have a different set of data that
+
+68
+00:04:48,230 --> 00:04:51,030
+they can develop and test on.
+
+69
+00:04:51,030 --> 00:04:54,770
+I would say the three systems we have here
+are normally a minimum.
+
+70
+00:04:54,770 --> 00:04:58,490
+You know, you normally got your
+development system,
+
+71
+00:04:58,490 --> 00:05:04,565
+testing system then our production system,
+but it can increase to four systems.
+
+72
+00:05:04,565 --> 00:05:09,155
+Maybe you want a training system, maybe
+you've got multiple projects
+
+73
+00:05:09,155 --> 00:05:13,615
+running at the same time, so maybe you've
+got two different development systems.
+
+74
+00:05:13,615 --> 00:05:17,075
+You can then have two different test
+systems you know, and then maybe
+
+75
+00:05:17,075 --> 00:05:21,555
+a consolidation system before this is
+passed to the production environment.
+
+76
+00:05:23,130 --> 00:05:26,720
+This is all dependent on the company that
+you're going to be working at.
+
+77
+00:05:26,720 --> 00:05:31,090
+But one thing that is common is that each
+system that you do have in your landscape
+
+78
+00:05:31,090 --> 00:05:35,200
+architecture will have it's own
+application server and
+
+79
+00:05:35,200 --> 00:05:37,160
+it's own database server.
+
+80
+00:05:37,160 --> 00:05:39,690
+This then ensures we have platform
+independence.
+

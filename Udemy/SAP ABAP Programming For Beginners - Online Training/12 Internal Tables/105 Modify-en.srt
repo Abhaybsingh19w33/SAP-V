@@ -1,0 +1,163 @@
+1
+00:00:00,000 --> 00:00:03,045
+[BLANK_AUDIO]
+
+2
+00:00:03,045 --> 00:00:06,940
+So we've looked at how we can loop through
+an internal table.
+
+3
+00:00:06,940 --> 00:00:11,800
+Now let's have a look at how we can update
+the records in the internal table
+
+4
+00:00:11,800 --> 00:00:13,110
+using the modify statements.
+
+5
+00:00:13,110 --> 00:00:16,700
+I will add in some code, and
+
+6
+00:00:16,700 --> 00:00:20,050
+whilst I'm writing it see if you can work
+out how it all fits together.
+
+7
+00:00:20,050 --> 00:00:21,150
+It's fairly simple.
+
+8
+00:00:21,150 --> 00:00:23,045
+And then we'll go over it line by line.
+
+9
+00:00:23,045 --> 00:00:33,045
+[BLANK_AUDIO]
+
+10
+00:01:15,586 --> 00:01:17,265
+Okay, very simple change.
+
+11
+00:01:18,675 --> 00:01:23,295
+You can see I've included an if statement
+and also a modify statement.
+
+12
+00:01:24,345 --> 00:01:29,765
+The if statement allows us to determine if
+the employee surname is equal to Jones.
+
+13
+00:01:31,550 --> 00:01:34,275
+If it is, we are going to [UNKNOWN] date,
+
+14
+00:01:34,275 --> 00:01:38,880
+with the surname of Smith.Then we have an
+endif statement.
+
+15
+00:01:38,880 --> 00:01:40,570
+In fact, let me change this code.
+
+16
+00:01:42,470 --> 00:01:43,790
+That shouldn't be there.
+
+17
+00:01:43,790 --> 00:01:44,610
+It should be there.
+
+18
+00:01:46,490 --> 00:01:46,990
+There we go.
+
+19
+00:01:48,090 --> 00:01:52,490
+So if the if statement is true, we then
+have the modify statement.
+
+20
+00:01:52,490 --> 00:01:57,230
+Which will take the contents of the
+headline that we have just updated and
+
+21
+00:01:57,230 --> 00:02:00,200
+update the record in the internal table
+that
+
+22
+00:02:00,200 --> 00:02:02,430
+was originally read into the head record.
+
+23
+00:02:04,060 --> 00:02:07,090
+Now, the modify statement has some
+specific features
+
+24
+00:02:07,090 --> 00:02:09,940
+when used inside the loop for an internal
+table.
+
+25
+00:02:09,940 --> 00:02:13,330
+So in our case, modify statement only
+
+26
+00:02:13,330 --> 00:02:17,949
+changes the contents of the existing line
+in the internal table that we have read.
+
+27
+00:02:19,100 --> 00:02:22,360
+It does not create a brand new record.
+
+28
+00:02:23,500 --> 00:02:26,260
+If the modify statement is in a loop,
+
+29
+00:02:26,260 --> 00:02:28,978
+it is always the current line that is
+changed.
+
+30
+00:02:28,978 --> 00:02:33,190
+But please note, you should not do this
+
+31
+00:02:33,190 --> 00:02:38,010
+if you are trying to modify key fields of
+an internal table that use a unique key.
+
+32
+00:02:39,260 --> 00:02:44,040
+If the modified statement is used outside
+of a loop, we must specify the record
+
+33
+00:02:44,040 --> 00:02:49,350
+index number that we want to modify,
+because we have got no index number being
+
+34
+00:02:49,350 --> 00:02:54,120
+monitored by the system automatically like
+when we have our code inside a loop.
+
+35
+00:02:55,700 --> 00:03:01,530
+Now a little note is the way we use the
+modify statements in our example here,
+
+36
+00:03:01,530 --> 00:03:06,600
+we can only it this way with index tables
+and tables with header lines.
+

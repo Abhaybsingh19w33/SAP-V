@@ -1,0 +1,340 @@
+1
+00:00:01,720 --> 00:00:04,910
+Okay, first of all I'm going to
+tidy this program up a little bit.
+
+2
+00:00:07,310 --> 00:00:10,300
+What we will do is now take
+a look at the update statements.
+
+3
+00:00:10,300 --> 00:00:16,830
+Now the update statement
+allows us to modify one or
+
+4
+00:00:16,830 --> 00:00:20,840
+more existing records in
+our table at the same time.
+
+5
+00:00:22,010 --> 00:00:26,681
+Now in this example, we're just
+gonna focus on updating one record.
+
+6
+00:00:26,681 --> 00:00:30,088
+But to update multiple records,
+the same sort of thing applies.
+
+7
+00:00:33,931 --> 00:00:36,390
+So just as with the insert statement.
+
+8
+00:00:36,390 --> 00:00:39,418
+We first of all would declare a work area.
+
+9
+00:00:39,418 --> 00:00:43,844
+We would then fill our work area
+with the data that we want to update
+
+10
+00:00:43,844 --> 00:00:48,752
+the record with, and then proceed to
+execute the update statement which
+
+11
+00:00:48,752 --> 00:00:53,360
+would take our data,
+update the record in the database.
+
+12
+00:00:53,360 --> 00:00:55,850
+And then give us back
+a return code to tell us
+
+13
+00:00:55,850 --> 00:00:58,980
+if the update was successful or not.
+
+14
+00:00:58,980 --> 00:01:01,070
+So as we have already
+got a table structure.
+
+15
+00:01:01,070 --> 00:01:08,015
+Or work area structure should
+I say to the y employees.
+
+16
+00:01:08,015 --> 00:01:12,289
+Let's use them, so
+we don't have to declare it again.
+
+17
+00:01:12,289 --> 00:01:17,979
+But what we will do is
+change these contents.
+
+18
+00:01:20,902 --> 00:01:23,938
+So we will let this insert
+statement run through.
+
+19
+00:01:23,938 --> 00:01:27,897
+Insert the record, and then we will
+update it with some new values.
+
+20
+00:01:33,244 --> 00:01:38,202
+And instead of Westmore,
+let's use Eastmore, and
+
+21
+00:01:38,202 --> 00:01:41,926
+we will change the guy's name to ANDY.
+
+22
+00:01:41,926 --> 00:01:45,963
+Now very similar to the insert statement,
+
+23
+00:01:45,963 --> 00:01:49,561
+and I'll copy this checking as well.
+
+24
+00:01:54,205 --> 00:01:56,839
+What we will do?
+
+25
+00:01:56,839 --> 00:01:59,320
+Is instead of insert, we will use update.
+
+26
+00:02:00,460 --> 00:02:02,560
+And just like the insert statement,
+
+27
+00:02:02,560 --> 00:02:07,510
+the simple form would be
+just update z employees.
+
+28
+00:02:09,440 --> 00:02:12,430
+And that would update
+using the head of record.
+
+29
+00:02:15,160 --> 00:02:19,440
+But as we don't want to do that,
+because it's the old way of doing things,
+
+30
+00:02:19,440 --> 00:02:23,196
+we want to use our separate work area.
+
+31
+00:02:23,196 --> 00:02:27,059
+So back in our program,
+
+32
+00:02:27,059 --> 00:02:31,308
+[SOUND] we would say update z
+
+33
+00:02:31,308 --> 00:02:36,340
+employees from our work area.
+
+34
+00:02:36,340 --> 00:02:38,710
+So that's it,
+we don't need to do any more coding.
+
+35
+00:02:38,710 --> 00:02:40,930
+Let's just test this out.
+
+36
+00:02:40,930 --> 00:02:43,200
+So I'll Save the program.
+
+37
+00:02:43,200 --> 00:02:44,080
+Let's make sure it compiles okay.
+
+38
+00:02:45,800 --> 00:02:47,255
+Oop, we do have a problem.
+
+39
+00:02:47,255 --> 00:02:47,945
+Let's have a look.
+
+40
+00:02:49,145 --> 00:02:50,235
+Missing period.
+
+41
+00:02:50,235 --> 00:02:52,495
+Oh!
+Just off the endif.
+
+42
+00:02:52,495 --> 00:02:53,274
+There we go.
+
+43
+00:02:56,897 --> 00:02:59,381
+Everything looks good.
+
+44
+00:02:59,381 --> 00:03:00,832
+We'll put a break point in.
+
+45
+00:03:05,081 --> 00:03:07,612
+And run through.
+
+46
+00:03:07,612 --> 00:03:12,582
+So we're going to insert our record,
+check for
+
+47
+00:03:12,582 --> 00:03:15,449
+the SY sub RC on the insert.
+
+48
+00:03:15,449 --> 00:03:19,292
+Yes, it's zero so everything is good.
+
+49
+00:03:19,292 --> 00:03:20,740
+And now we're gonna get to the update.
+
+50
+00:03:23,010 --> 00:03:27,690
+So the first thing, which I forgot to do,
+but it doesn't really matter in this case,
+
+51
+00:03:27,690 --> 00:03:30,820
+is I should have used the clear statement,
+
+52
+00:03:30,820 --> 00:03:34,880
+and cleared out employee surname and
+fullname, but
+
+53
+00:03:34,880 --> 00:03:40,490
+because we're updating every single
+field again, it won't really matter.
+
+54
+00:03:40,490 --> 00:03:42,240
+So I'll step through.
+
+55
+00:03:43,400 --> 00:03:45,000
+The employee is exactly the same.
+
+56
+00:03:45,000 --> 00:03:49,475
+Our surname will change to EASRMORE.
+
+57
+00:03:52,480 --> 00:03:52,980
+Fullname to ANDY.
+
+58
+00:03:56,650 --> 00:04:01,036
+Mr. date of birth,
+now the next one is the update statement.
+
+59
+00:04:01,036 --> 00:04:07,052
+So first of all while we're here,
+let's bring through the other section.
+
+60
+00:04:07,052 --> 00:04:13,041
+We'll do a Refresh,
+there's our new record.
+
+61
+00:04:13,041 --> 00:04:18,268
+Let's go back and execute this update.
+
+62
+00:04:18,268 --> 00:04:23,550
+SY-SUBRC is 0, so
+that indicates everything is good.
+
+63
+00:04:23,550 --> 00:04:29,065
+Oh, and look, I didn't update the actual
+comment to say, record updated correctly.
+
+64
+00:04:29,065 --> 00:04:30,725
+Never mind.
+
+65
+00:04:30,725 --> 00:04:35,639
+But, because the update has been executed,
+if I do a refresh,
+
+66
+00:04:35,639 --> 00:04:39,442
+we should see each Eastmore changed to,
+sorry,
+
+67
+00:04:39,442 --> 00:04:44,938
+we should see Westmore changed to
+Eastmore and Bruce changed to Andy.
+
+68
+00:04:44,938 --> 00:04:47,912
+There we go.
+
+69
+00:04:47,912 --> 00:04:50,896
+And now just press F8 to zoom
+to the end of the program.
+
+70
+00:04:55,097 --> 00:04:56,189
+And there's that output.
+
+71
+00:05:02,214 --> 00:05:08,083
+Represent that breakpoint and just for
+completing this I am going to change this.
+
+72
+00:05:17,371 --> 00:05:23,258
+And it would be nice to put these
+
+73
+00:05:23,258 --> 00:05:27,588
+these are menu line on it.
+
+74
+00:05:27,588 --> 00:05:28,308
+There we go.
+
+75
+00:05:31,210 --> 00:05:33,032
+You know, what data is it?
+
+76
+00:05:33,032 --> 00:05:33,880
+For the update statements.
+

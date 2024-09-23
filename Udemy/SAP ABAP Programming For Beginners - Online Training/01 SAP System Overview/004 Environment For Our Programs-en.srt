@@ -1,0 +1,563 @@
+1
+00:00:00,730 --> 00:00:05,360
+Now let's move on and have a look at the
+environment our program's running.
+
+2
+00:00:05,360 --> 00:00:07,580
+We're gonna discuss the work processes and
+
+3
+00:00:07,580 --> 00:00:10,150
+then we'll move on to the structure of an
+ABAP program.
+
+4
+00:00:13,110 --> 00:00:15,280
+Within an SAP system or
+
+5
+00:00:15,280 --> 00:00:19,820
+at least what we're looking at we have two
+types of programs.
+
+6
+00:00:19,820 --> 00:00:20,320
+We have report.
+
+7
+00:00:20,320 --> 00:00:23,400
+And we have dynpros.
+
+8
+00:00:23,400 --> 00:00:26,360
+Now reports, is pretty obvious.
+
+9
+00:00:26,360 --> 00:00:29,606
+Reports are just, [LAUGH] what it says on
+the [INAUDIBLE].
+
+10
+00:00:29,606 --> 00:00:34,460
+Reports are just programs that generate
+lists of data.
+
+11
+00:00:34,460 --> 00:00:38,180
+Or maybe they've got a little bit of
+interactivity in them.
+
+12
+00:00:38,180 --> 00:00:42,290
+But basically they supply data to the
+front end databases
+
+13
+00:00:42,290 --> 00:00:43,350
+the [UNKNOWN] and so on.
+
+14
+00:00:44,600 --> 00:00:48,800
+When a user runs a report, they typically
+get a selection screen.
+
+15
+00:00:50,250 --> 00:00:53,490
+Once they enter their selection parameters
+and
+
+16
+00:00:53,490 --> 00:00:59,290
+execute the report, they normally cannot
+intervene in the execution of the program.
+
+17
+00:00:59,290 --> 00:01:01,700
+The program runs and then displays the
+output.
+
+18
+00:01:03,620 --> 00:01:05,550
+Dynpro's are a little bit different.
+
+19
+00:01:06,600 --> 00:01:08,490
+Dynpro's are dynamic programs.
+
+20
+00:01:09,630 --> 00:01:14,130
+They allow the user to intervene in the
+execution of the program and
+
+21
+00:01:14,130 --> 00:01:19,670
+they work by processing a series of
+screens that we call dialogue screens.
+
+22
+00:01:19,670 --> 00:01:22,800
+The user determines the flow of the
+program itself
+
+23
+00:01:22,800 --> 00:01:26,760
+by choosing which buttons or fields to
+interact with on the screen.
+
+24
+00:01:27,910 --> 00:01:31,770
+That action then triggers different
+functions that have been coded
+
+25
+00:01:31,770 --> 00:01:33,500
+within the flow logic of a program.
+
+26
+00:01:34,570 --> 00:01:38,480
+While we're creating a report we will be
+generating interfaces
+
+27
+00:01:38,480 --> 00:01:42,570
+that clusters dim prose for all our
+selection criteria.
+
+28
+00:01:42,570 --> 00:01:43,510
+Now don't fret,
+
+29
+00:01:43,510 --> 00:01:50,170
+because most of the work that ABAP people
+do is actually inside report programs.
+
+30
+00:01:50,170 --> 00:01:53,320
+And even though these programs are classed
+as reports,
+
+31
+00:01:53,320 --> 00:01:54,720
+they don't always generate output.
+
+32
+00:01:56,540 --> 00:02:01,500
+The report programs are there to process
+all the logic,
+
+33
+00:02:01,500 --> 00:02:04,150
+reading and writing to the database.
+
+34
+00:02:04,150 --> 00:02:08,880
+Try to make your systems work let's have a
+look at word processors.
+
+35
+00:02:10,840 --> 00:02:15,760
+Every program that runs an NSAP system
+runs on what we call
+
+36
+00:02:15,760 --> 00:02:19,770
+word processors, and these actually run on
+the application server.
+
+37
+00:02:20,820 --> 00:02:24,680
+What processes themselves work
+independently
+
+38
+00:02:24,680 --> 00:02:29,360
+of the computer's operating system and the
+database that it interacts with?
+
+39
+00:02:29,360 --> 00:02:33,320
+This gives us that program independence
+that we discussed earlier when
+
+40
+00:02:33,320 --> 00:02:36,560
+looking at the technical architecture of
+an SAP system.
+
+41
+00:02:37,590 --> 00:02:42,610
+When an SAP system is initially set up
+your basis consultants.
+
+42
+00:02:42,610 --> 00:02:46,910
+They're the guys who actually install SAP
+and keep it running, you know,
+
+43
+00:02:46,910 --> 00:02:48,620
+manage all the memory and so on.
+
+44
+00:02:48,620 --> 00:02:53,940
+They configure SAP in such away that it
+automatically sets the number of work
+
+45
+00:02:53,940 --> 00:02:58,880
+processes your programs use when they
+start, and that's the equivalent of like,
+
+46
+00:02:58,880 --> 00:03:02,750
+setting up a predefined number of channels
+or
+
+47
+00:03:02,750 --> 00:03:05,310
+connections to the database system itself.
+
+48
+00:03:05,310 --> 00:03:09,010
+Each of which tend to have their own
+different properties and
+
+49
+00:03:09,010 --> 00:03:09,740
+different functions.
+
+50
+00:03:10,990 --> 00:03:14,620
+You might come across something referred
+to as the dispatcher.
+
+51
+00:03:15,780 --> 00:03:19,490
+Your SAP system has no technical limits
+
+52
+00:03:19,490 --> 00:03:24,090
+on the number of users who can actually
+log on and use an SAP system.
+
+53
+00:03:24,090 --> 00:03:30,660
+Generally the number of users that can
+access an SAP system is a lot larger than
+
+54
+00:03:30,660 --> 00:03:35,200
+the number of available work processes
+that your system is configured for.
+
+55
+00:03:35,200 --> 00:03:39,040
+This is because not everybody is you know,
+
+56
+00:03:39,040 --> 00:03:41,720
+sending instructions to the application
+server.
+
+57
+00:03:41,720 --> 00:03:43,790
+At exactly the same time.
+
+58
+00:03:43,790 --> 00:03:47,340
+It's a bit like the old mainframe time
+sharing scenario.
+
+59
+00:03:47,340 --> 00:03:48,700
+And because of this.
+
+60
+00:03:48,700 --> 00:03:50,050
+Users cannot be assigned,
+
+61
+00:03:50,050 --> 00:03:53,350
+you know, a certain number of processes
+while they're logged on.
+
+62
+00:03:53,350 --> 00:03:57,510
+It is the dispatcher that controls
+
+63
+00:03:57,510 --> 00:04:02,695
+the distribution of the work processes to
+the system users.
+
+64
+00:04:02,695 --> 00:04:07,585
+The dispatcher will keep an eye on how
+many work processes are available and
+
+65
+00:04:07,585 --> 00:04:13,185
+when a user triggers a transaction, the
+dispatcher's job is to say, here you go.
+
+66
+00:04:13,185 --> 00:04:14,797
+Here's a free work process.
+
+67
+00:04:14,797 --> 00:04:18,387
+Go and use it the dispatcher
+
+68
+00:04:18,387 --> 00:04:22,627
+tries as much as possible to optimize
+things so that the same work
+
+69
+00:04:22,627 --> 00:04:26,277
+process receives the sequential dialogue
+steps of an application.
+
+70
+00:04:27,420 --> 00:04:31,630
+If you can't do this, lets say because the
+user takes a long
+
+71
+00:04:31,630 --> 00:04:35,930
+time between click in on different aspects
+of this screen.
+
+72
+00:04:35,930 --> 00:04:39,976
+He will then, have to select a different
+web process take carry on with
+
+73
+00:04:39,976 --> 00:04:43,340
+the processing of the dialogue program.
+
+74
+00:04:43,340 --> 00:04:47,990
+Is the work process that executes an
+application, and it's the work process
+
+75
+00:04:47,990 --> 00:04:52,020
+that has access to the memory areas that
+contain all the data and
+
+76
+00:04:52,020 --> 00:04:54,300
+objects that an application uses.
+
+77
+00:04:55,310 --> 00:04:59,400
+It also makes three very important
+elements available.
+
+78
+00:04:59,400 --> 00:05:02,905
+The first one is the Dynpro processor.
+
+79
+00:05:02,905 --> 00:05:06,840
+All Dynpro programs have flow and
+processing logic.
+
+80
+00:05:06,840 --> 00:05:11,440
+And it's the Dynpro processor's job to
+handle the actual flow logic itself.
+
+81
+00:05:12,520 --> 00:05:18,625
+It responds to the user's interaction and
+controls the further flow of the program.
+
+82
+00:05:18,625 --> 00:05:21,120
+Depending on the users interaction.
+
+83
+00:05:21,120 --> 00:05:27,570
+What I'm trying to say is it's responsible
+for dialog control in the screen itself,
+
+84
+00:05:27,570 --> 00:05:31,920
+but one important thing to remember is it
+cannot perform calculations.
+
+85
+00:05:33,140 --> 00:05:37,380
+It's just there to manage the flow logic
+of a program.
+
+86
+00:05:39,090 --> 00:05:43,020
+The next important element is the ABAP
+processor.
+
+87
+00:05:43,020 --> 00:05:48,320
+And this is responsible for the actual
+processing logic for our programs.
+
+88
+00:05:48,320 --> 00:05:52,270
+It receives screen entries from the Dynpro
+processor, and
+
+89
+00:05:52,270 --> 00:05:55,150
+transmits the screen output to our
+program.
+
+90
+00:05:56,240 --> 00:06:01,730
+Now it's the ABAP processor that can
+perform the logical operations and
+
+91
+00:06:01,730 --> 00:06:04,700
+arithmetical calculations in our programs.
+
+92
+00:06:04,700 --> 00:06:07,620
+It can check authorizations and read and
+
+93
+00:06:07,620 --> 00:06:12,850
+write the database over the database
+interface, and
+
+94
+00:06:12,850 --> 00:06:17,400
+it's the database interface that is our
+third important element.
+
+95
+00:06:18,590 --> 00:06:23,440
+Now the database interface is actually a
+state of ABAP statements
+
+96
+00:06:23,440 --> 00:06:26,520
+that are database independent.
+
+97
+00:06:28,380 --> 00:06:33,540
+Now what I mean by database independent is
+that we can use a set of ABAP
+
+98
+00:06:33,540 --> 00:06:38,980
+statements that in turn can communicate
+with any
+
+99
+00:06:38,980 --> 00:06:44,690
+type of database that is being installed,
+when our system was set up.
+
+100
+00:06:44,690 --> 00:06:49,000
+So whether it's, you know, a Microsoft
+Sequel server or an Oracle database,
+
+101
+00:06:49,000 --> 00:06:54,470
+we can use the same ABAP statements, that
+is actually called Open SQL to
+
+102
+00:06:54,470 --> 00:07:00,620
+control our database reading and writing
+over the database interface.
+
+103
+00:07:00,620 --> 00:07:08,040
+Now the great benefit of this means that
+our ABAP code, our ABAP statements have
+
+104
+00:07:08,040 --> 00:07:13,410
+encapsulation which means our programmers
+don't need to know which physical
+
+105
+00:07:13,410 --> 00:07:18,200
+database system the actual SAP system that
+they're using actually supports.
+
+106
+00:07:19,310 --> 00:07:24,110
+Now there are times when maybe you do want
+to use a specific
+
+107
+00:07:24,110 --> 00:07:29,230
+SQL statement that is native to the
+database that is installed.
+
+108
+00:07:29,230 --> 00:07:33,910
+So SAP have designed ABAP in such a way
+that if this
+
+109
+00:07:33,910 --> 00:07:38,710
+type of coding is necessary you do have
+that facility.
+
+110
+00:07:39,810 --> 00:07:42,960
+You can directly access the database
+
+111
+00:07:42,960 --> 00:07:46,550
+through your programs using native SQL
+statements.
+
+112
+00:07:46,550 --> 00:07:48,850
+But its not encouraged.
+
+113
+00:07:48,850 --> 00:07:54,690
+You know, if you gonna be programming ABAP
+make sure you use the open SQL.
+
+114
+00:07:54,690 --> 00:07:58,470
+Because then, everybody else that comes
+and sees your programs afterwards,
+
+115
+00:07:58,470 --> 00:08:01,640
+they'll totally understand what you're
+trying to do.
+
+116
+00:08:01,640 --> 00:08:05,600
+And I'll just add that, normally, [LAUGH]
+when systems are set up,
+
+117
+00:08:05,600 --> 00:08:09,780
+your systems administrator normally
+forbids this practice
+
+118
+00:08:09,780 --> 00:08:12,920
+mainly because of the different security
+risks.
+
+119
+00:08:14,460 --> 00:08:18,250
+Stability risks to the system that you may
+introduce to your programs.
+

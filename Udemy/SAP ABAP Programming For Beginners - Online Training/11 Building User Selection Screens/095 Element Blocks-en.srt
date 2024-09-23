@@ -1,0 +1,288 @@
+1
+00:00:01,850 --> 00:00:04,060
+This video is going to be about element
+logs.
+
+2
+00:00:06,430 --> 00:00:08,370
+And when we define selection screens for
+
+3
+00:00:08,370 --> 00:00:12,500
+our users, it's common practice to group
+certain fields together.
+
+4
+00:00:12,500 --> 00:00:16,670
+And we can use these element blocks
+
+5
+00:00:16,670 --> 00:00:20,510
+which will draw frames around the groups
+of fields we choose.
+
+6
+00:00:20,510 --> 00:00:23,060
+We also have the option of adding frame
+labels.
+
+7
+00:00:24,970 --> 00:00:27,360
+As we take a look at element blocks,
+
+8
+00:00:27,360 --> 00:00:32,200
+bear in mind that you can nest element
+blocks within other blocks,
+
+9
+00:00:32,200 --> 00:00:35,860
+allowing you to subdivide individual
+sections of your screen.
+
+10
+00:00:38,690 --> 00:00:42,550
+Let's get straight onto the code and you
+can see how element blocks get defined.
+
+11
+00:00:45,050 --> 00:00:46,770
+So this is the program we've been working
+on.
+
+12
+00:00:48,090 --> 00:00:52,460
+And in the previous videos we had a look
+at the begin of line edition.
+
+13
+00:00:54,950 --> 00:00:56,630
+Well element blocks are very similar.
+
+14
+00:00:58,100 --> 00:01:01,890
+So what we will do is key in selection
+screen.
+
+15
+00:01:05,430 --> 00:01:10,230
+Then instead of begin of line we just
+write begin of block.
+
+16
+00:01:10,230 --> 00:01:15,100
+And what we do, we then add a name.
+
+17
+00:01:15,100 --> 00:01:17,210
+So we give our block a name.
+
+18
+00:01:17,210 --> 00:01:21,420
+We'll call this my block one.
+
+19
+00:01:24,490 --> 00:01:29,220
+As you can see, the syntax is very basic
+and it looks very similar to the begin of
+
+20
+00:01:29,220 --> 00:01:33,720
+line with just that one addition of
+defining a block name.
+
+21
+00:01:35,400 --> 00:01:39,901
+Now you have the option of choosing
+whether you want to apply a frame around
+
+22
+00:01:39,901 --> 00:01:42,597
+a block of fields in your selection
+screen.
+
+23
+00:01:42,597 --> 00:01:46,194
+We do that by using the width frame
+edition.
+
+24
+00:01:46,194 --> 00:01:49,047
+So let's add that in.
+
+25
+00:01:49,047 --> 00:01:51,790
+So all we do is type width frame.
+
+26
+00:01:51,790 --> 00:01:52,915
+Simple.
+
+27
+00:01:52,915 --> 00:01:53,971
+Pretty it up.
+
+28
+00:01:53,971 --> 00:01:57,884
+[BLANK_AUDIO]
+
+29
+00:01:57,884 --> 00:02:01,803
+And now another addition is we can add a
+frame label.
+
+30
+00:02:01,803 --> 00:02:04,235
+And we call these labels titles.
+
+31
+00:02:04,235 --> 00:02:06,005
+So we add a title to the frame.
+
+32
+00:02:07,175 --> 00:02:11,045
+And as with comments we can use text
+symbols or
+
+33
+00:02:11,045 --> 00:02:13,659
+field names with a maximum length of eight
+characters.
+
+34
+00:02:14,820 --> 00:02:19,670
+Type in the addition title, and then we
+add add the text elements.
+
+35
+00:02:22,540 --> 00:02:29,200
+Now because we defined the start of a
+block, with the begin block addition.
+
+36
+00:02:29,200 --> 00:02:32,550
+We also have to remember to include an
+ender block.
+
+37
+00:02:35,050 --> 00:02:36,240
+So, let's copy this line.
+
+38
+00:02:40,130 --> 00:02:42,740
+And we'll go down and let's put the ender
+block here.
+
+39
+00:02:42,740 --> 00:02:48,429
+Let's group these together and there we
+have a block.
+
+40
+00:02:50,110 --> 00:02:57,190
+And instead of beginner block, all we do
+is type, you'll never guess, end of block.
+
+41
+00:02:58,920 --> 00:03:02,430
+Again, keep the block name to define which
+block you're ending.
+
+42
+00:03:04,520 --> 00:03:05,230
+And then a full stop.
+
+43
+00:03:09,330 --> 00:03:11,180
+Let's check our code and see what it looks
+like.
+
+44
+00:03:15,120 --> 00:03:17,530
+And there you go, you can see we defined a
+frame.
+
+45
+00:03:18,690 --> 00:03:19,940
+We gave it a title, and
+
+46
+00:03:19,940 --> 00:03:23,960
+it's picking up the text element, which
+has the text surname.
+
+47
+00:03:26,070 --> 00:03:29,560
+And now your screen starts to look, well,
+
+48
+00:03:29,560 --> 00:03:32,740
+I won't say a whole lot better [LAUGH] but
+it starts to look a bit better.
+
+49
+00:03:34,490 --> 00:03:37,980
+Element blocks help give your field some
+context, and
+
+50
+00:03:37,980 --> 00:03:39,590
+to help group your fields together.
+
+51
+00:03:40,820 --> 00:03:43,380
+And you'll see them used all over the
+place in SAP.
+
+52
+00:03:43,380 --> 00:03:48,920
+So when you're designing your screens keep
+element blocks in mind.
+
+53
+00:03:48,920 --> 00:03:50,230
+Make sure you make use of them,
+
+54
+00:03:50,230 --> 00:03:55,200
+because it looks a lot better from the
+user's perspective.
+
+55
+00:03:55,200 --> 00:03:58,460
+So we have looked at many different
+elements of designing screens
+
+56
+00:03:58,460 --> 00:03:59,030
+for our programs.
+
+57
+00:04:00,520 --> 00:04:06,520
+We've discussed events parameters, select
+options How we can use text elements,
+
+58
+00:04:07,580 --> 00:04:11,660
+to saving variance, and how the user can
+actually change the screen layout as well.
+
+59
+00:04:11,660 --> 00:04:16,450
+And then finally how we, let's say, pretty
+up our screens.
+
+60
+00:04:16,450 --> 00:04:17,980
+Group fields together.
+
+61
+00:04:17,980 --> 00:04:20,290
+Make it look a lot more presentable to the
+user.
+
+62
+00:04:21,420 --> 00:04:23,320
+And that covers our selection screen
+statement.
+

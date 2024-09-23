@@ -1,0 +1,301 @@
+1
+00:00:01,520 --> 00:00:05,870
+It's now time to have a look at what we
+called sub-fields.
+
+2
+00:00:05,870 --> 00:00:07,280
+Now we have the option, within ABAP,
+
+3
+00:00:07,280 --> 00:00:10,870
+of referring to specific characters within
+a field.
+
+4
+00:00:10,870 --> 00:00:15,770
+This is referred to as processing
+sub-fields,
+
+5
+00:00:15,770 --> 00:00:19,790
+whereby we reference a specific character
+position within the field itself.
+
+6
+00:00:21,110 --> 00:00:22,330
+Let's have a look at an example.
+
+7
+00:00:22,330 --> 00:00:23,760
+And we'll go through it line by line.
+
+8
+00:00:23,760 --> 00:00:26,879
+So you become familiar with how to use
+this.
+
+9
+00:00:26,879 --> 00:00:30,848
+[BLANK_AUDIO]
+
+10
+00:00:30,848 --> 00:00:32,107
+So I've added some code here.
+
+11
+00:00:32,107 --> 00:00:35,034
+[BLANK_AUDIO]
+
+12
+00:00:35,034 --> 00:00:38,680
+And the first section shows we're
+declaring three new variables.
+
+13
+00:00:38,680 --> 00:00:42,130
+International telephone number, country
+code and telephone number.
+
+14
+00:00:43,480 --> 00:00:46,248
+And you can see the different size of each
+field.
+
+15
+00:00:46,248 --> 00:00:49,685
+[BLANK_AUDIO]
+
+16
+00:00:49,685 --> 00:00:53,822
+And the first line we have, I am assigning
+a character string to international
+
+17
+00:00:53,822 --> 00:00:58,160
+telephone number, write in the results to
+the screen, followed by a blank line.
+
+18
+00:00:59,380 --> 00:01:02,779
+And then we come down to the actual
+sub-field processing itself.
+
+19
+00:01:05,020 --> 00:01:09,620
+So our first line of code shows that we
+are filling the country code field
+
+20
+00:01:11,050 --> 00:01:15,640
+with the first three characters of the
+international telephone number field.
+
+21
+00:01:17,220 --> 00:01:18,470
+That's quite straightforward.
+
+22
+00:01:20,080 --> 00:01:21,300
+Let's have a look at our second line.
+
+23
+00:01:23,210 --> 00:01:27,980
+In this example, we can see the field
+telephone number,
+
+24
+00:01:27,980 --> 00:01:34,250
+is going to be filled with 13 characters
+of the international telephone
+
+25
+00:01:34,250 --> 00:01:39,304
+number field starting after the fourth
+character.
+
+26
+00:01:41,200 --> 00:01:46,280
+So how we'd write this is telephone number
+equals international telephone number
+
+27
+00:01:46,280 --> 00:01:50,240
+plus 4, which means start after the fourth
+character,
+
+28
+00:01:50,240 --> 00:01:55,070
+open brackets 13 close brackets, which
+references 13 characters.
+
+29
+00:01:56,150 --> 00:01:58,040
+Then we're going to move the output to the
+screen.
+
+30
+00:01:59,880 --> 00:02:05,090
+Then the last example we have Is instead
+of just moving specific
+
+31
+00:02:05,090 --> 00:02:09,530
+characters of the international telephone
+number field, to telephone number.
+
+32
+00:02:11,090 --> 00:02:13,806
+We're actually going to be updating the
+country
+
+33
+00:02:13,806 --> 00:02:18,490
+code sub-fields with the literal 01.
+
+34
+00:02:18,490 --> 00:02:21,510
+So how we write this is,
+
+35
+00:02:21,510 --> 00:02:26,440
+our country code field +1,
+
+36
+00:02:26,440 --> 00:02:33,540
+which means stat after the first character
+and fill the next two characters.
+
+37
+00:02:33,540 --> 00:02:38,740
+So the country code field is only three
+characters in total anyway, so in effect,
+
+38
+00:02:38,740 --> 00:02:43,695
+it's gonna fill the last 2 characters of
+this field with the value of 01.
+
+39
+00:02:45,270 --> 00:02:46,530
+And the last line of the code,
+
+40
+00:02:46,530 --> 00:02:49,370
+is just going to produce the outputs on
+the screen for us to check.
+
+41
+00:02:50,950 --> 00:02:51,754
+So first of all,
+
+42
+00:02:51,754 --> 00:02:55,320
+let me move this data statement to the top
+of the program where it belongs.
+
+43
+00:02:55,320 --> 00:03:00,987
+[BLANK_AUDIO]
+
+44
+00:03:00,987 --> 00:03:02,845
+Now do the necessary formatting.
+
+45
+00:03:02,845 --> 00:03:12,845
+[BLANK_AUDIO]
+
+46
+00:03:15,080 --> 00:03:21,260
+Have a quick check of the program, make
+sure the syntax is correct.
+
+47
+00:03:21,260 --> 00:03:23,700
+Activate it, and then we'll run the test.
+
+48
+00:03:25,860 --> 00:03:27,820
+Here we can see the results.
+
+49
+00:03:27,820 --> 00:03:28,860
+So first of all,
+
+50
+00:03:28,860 --> 00:03:32,150
+we're outputting the full international
+telephone number to the screen.
+
+51
+00:03:33,790 --> 00:03:38,710
+Then the next field, the country code
+field, we filled with
+
+52
+00:03:38,710 --> 00:03:41,920
+the first three characters of the
+international telephone number field.
+
+53
+00:03:44,550 --> 00:03:47,300
+The next one, the actual telephone number,
+
+54
+00:03:47,300 --> 00:03:52,210
+we reference 13 characters after the
+fourth character.
+
+55
+00:03:52,210 --> 00:03:57,020
+So the fourth character was the Dutch
+sign, so we can see
+
+56
+00:03:57,020 --> 00:04:01,705
+the next 13 characters starts with the
+open brackets and ends with the number 6.
+
+57
+00:04:04,520 --> 00:04:10,030
+In our last example it updated the country
+code field, but as a sub-field.
+
+58
+00:04:10,030 --> 00:04:15,600
+So it only updated the second and third
+character of the field.
+
+59
+00:04:17,530 --> 00:04:18,990
+So it's quite straightforward.
+
+60
+00:04:18,990 --> 00:04:23,580
+And you'll see this used a lot in SAP
+programs, and you'll probably
+
+61
+00:04:23,580 --> 00:04:28,350
+find yourself needing to refer to
+sub-fields quite often, and
+
+62
+00:04:28,350 --> 00:04:33,220
+instead of creating brand-new fields,
+holding values there, this's often a lot
+
+63
+00:04:33,220 --> 00:04:38,930
+easier just to use the subfield ten times,
+instead of holding additional values.
+
+64
+00:04:38,930 --> 00:04:40,027
+As a variables in memory.
+
+65
+00:04:40,027 --> 00:04:44,369
+[BLANK_AUDIO]
+

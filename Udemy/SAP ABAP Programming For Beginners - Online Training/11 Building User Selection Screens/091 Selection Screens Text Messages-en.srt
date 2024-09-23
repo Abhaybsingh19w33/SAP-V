@@ -1,0 +1,1025 @@
+1
+00:00:00,586 --> 00:00:04,710
+Now moving on, the next thing we'll look
+at, is messages.
+
+2
+00:00:05,850 --> 00:00:08,980
+When we want to provide feedback to the
+user,
+
+3
+00:00:08,980 --> 00:00:11,640
+we could use literals in our program.
+
+4
+00:00:11,640 --> 00:00:14,830
+But I'm sure you know by now, we don't
+wanna be doing this.
+
+5
+00:00:14,830 --> 00:00:17,520
+We need to avoid using literals where we
+can.
+
+6
+00:00:17,520 --> 00:00:20,700
+So, that we don't have to recompile our
+program every time they change.
+
+7
+00:00:21,940 --> 00:00:23,180
+And plus.
+
+8
+00:00:23,180 --> 00:00:26,680
+We also want to allow the facility for
+
+9
+00:00:26,680 --> 00:00:30,990
+our messages to be translated into other
+languages.
+
+10
+00:00:30,990 --> 00:00:32,500
+So how do we use messages?
+
+11
+00:00:33,510 --> 00:00:34,850
+Well the first thing we need to do,
+
+12
+00:00:34,850 --> 00:00:39,780
+we need to store our messages in what we
+call a message class.
+
+13
+00:00:41,670 --> 00:00:45,230
+Which in turn gets stored in a database
+table called T100.
+
+14
+00:00:45,230 --> 00:00:49,360
+Let's have a look at T100.
+
+15
+00:00:50,420 --> 00:00:51,510
+I'll open up a new session.
+
+16
+00:00:53,890 --> 00:01:00,210
+Go to se11, t100.
+Choose display.
+
+17
+00:01:00,210 --> 00:01:07,520
+And there we can see this table, called
+messages.
+
+18
+00:01:07,520 --> 00:01:09,510
+And it only contains four fields.
+
+19
+00:01:11,940 --> 00:01:14,590
+Lets have a look at the contents, so it's
+easier to understand.
+
+20
+00:01:17,220 --> 00:01:17,720
+And here we go.
+
+21
+00:01:19,400 --> 00:01:21,503
+You can see we have a language key.
+
+22
+00:01:21,503 --> 00:01:24,420
+D represents German language.
+
+23
+00:01:24,420 --> 00:01:29,586
+We have an application area and we have a
+message code and then the actual text
+
+24
+00:01:29,586 --> 00:01:36,045
+[BLANK_AUDIO]
+
+25
+00:01:36,045 --> 00:01:39,170
+So, let's go to the message to your screen
+right now.
+
+26
+00:01:39,170 --> 00:01:43,436
+Now we can if we have messages already
+existing is to go to,
+
+27
+00:01:43,436 --> 00:01:47,840
+on the messages option, go to create new
+messages.
+
+28
+00:01:47,840 --> 00:01:54,540
+You can either use forward navigation or
+go directly to transaction SE91.
+
+29
+00:01:54,540 --> 00:02:04,240
+Now, the messages we create get stored
+within message classes.
+
+30
+00:02:04,240 --> 00:02:07,089
+So, when we create messages, we need to
+create a message class.
+
+31
+00:02:08,140 --> 00:02:10,080
+And when creating a message class,
+
+32
+00:02:10,080 --> 00:02:14,260
+you need to take into account the customer
+name space rules.
+
+33
+00:02:14,260 --> 00:02:16,810
+So, this means for us, start with the
+letter zed.
+
+34
+00:02:16,810 --> 00:02:19,570
+And for this example,
+
+35
+00:02:19,570 --> 00:02:25,020
+I'm just gonna do zmes1.
+
+36
+00:02:25,020 --> 00:02:29,128
+Now, we'll leave the messages radio button
+selected, and I'll choose create.
+
+37
+00:02:29,128 --> 00:02:32,336
+[BLANK_AUDIO]
+
+38
+00:02:32,336 --> 00:02:38,619
+Now it's important to realize, and keep in
+mind, that messages are different
+
+39
+00:02:38,619 --> 00:02:44,730
+from text elements in that they are not
+objects that are part of your program.
+
+40
+00:02:46,100 --> 00:02:50,340
+Messages are stored within the table we
+just looked at, table T100.
+
+41
+00:02:52,300 --> 00:02:56,980
+And because of this, we can reuse messages
+across any number of programs.
+
+42
+00:02:59,100 --> 00:03:00,010
+Now back to this screen.
+
+43
+00:03:01,870 --> 00:03:05,930
+When you first create a message class, you
+have to fill in the attributes.
+
+44
+00:03:09,540 --> 00:03:12,086
+Now I'll just give it some short text.
+
+45
+00:03:12,086 --> 00:03:14,170
+[BLANK_AUDIO]
+
+46
+00:03:14,170 --> 00:03:17,960
+[BLANK_AUDIO]
+
+47
+00:03:17,960 --> 00:03:20,378
+And then we save it and it'll ask for a
+transport.
+
+48
+00:03:20,378 --> 00:03:24,212
+[BLANK_AUDIO]
+
+49
+00:03:24,212 --> 00:03:27,295
+And once it's saved we can then click on
+the messages tab.
+
+50
+00:03:27,295 --> 00:03:29,461
+[BLANK_AUDIO]
+
+51
+00:03:29,461 --> 00:03:30,630
+And key in the messages.
+
+52
+00:03:34,820 --> 00:03:38,887
+So let's create a message, and if you
+remember back to our program,
+
+53
+00:03:38,887 --> 00:03:41,003
+let's see if we can jump back to it.
+
+54
+00:03:41,003 --> 00:03:44,503
+>> [BLANK_AUDIO]
+
+55
+00:03:44,503 --> 00:03:49,330
+We have a selection screen, where we're
+looking for an employee number.
+
+56
+00:03:50,420 --> 00:03:53,790
+We have some radio buttons then we have a
+selection option for date of birth.
+
+57
+00:03:57,130 --> 00:04:01,070
+Well, some time back, we created this app
+selection screen event.
+
+58
+00:04:02,640 --> 00:04:03,720
+So let's bring this back in.
+
+59
+00:04:08,410 --> 00:04:10,460
+And this is where we can check.
+
+60
+00:04:10,460 --> 00:04:11,104
+To make sure,
+
+61
+00:04:11,104 --> 00:04:14,670
+the employee number is not greater than
+the last employee number in our table.
+
+62
+00:04:14,670 --> 00:04:17,586
+[BLANK_AUDIO]
+
+63
+00:04:17,586 --> 00:04:22,378
+So, in that case, we need to bring back in
+our initialization section.
+
+64
+00:04:22,378 --> 00:04:26,998
+So, remember, this is going to be run as
+soon as the program is run, and
+
+65
+00:04:26,998 --> 00:04:31,779
+it will store the last employee number in
+this variable, wa_employee.
+
+66
+00:04:33,570 --> 00:04:37,310
+And when the selection screen is shown, we
+can do this check.
+
+67
+00:04:38,950 --> 00:04:41,770
+If the value the user entered is greater
+than
+
+68
+00:04:43,220 --> 00:04:47,920
+the employee number we have stored in
+wa_employee, we can display a message.
+
+69
+00:04:50,570 --> 00:04:52,910
+So what message do we display?
+
+70
+00:04:52,910 --> 00:04:58,129
+Well, let's go here and we can key in a
+message that's going to tell
+
+71
+00:04:58,129 --> 00:05:03,442
+the user that the employee number they
+entered on for the screen is too
+
+72
+00:05:03,442 --> 00:05:08,586
+high in value and they need to choose a
+lower one so we can just type.
+
+73
+00:05:08,586 --> 00:05:15,086
+[BLANK_AUDIO]
+
+74
+00:05:15,086 --> 00:05:16,753
+Employee number is too high.
+
+75
+00:05:16,753 --> 00:05:19,290
+[BLANK_AUDIO]
+
+76
+00:05:19,290 --> 00:05:20,128
+And click save.
+
+77
+00:05:20,128 --> 00:05:23,337
+[BLANK_AUDIO]
+
+78
+00:05:23,337 --> 00:05:26,067
+So let's go back to our program and
+
+79
+00:05:26,067 --> 00:05:30,410
+take a look how we can use this message
+within our code.
+
+80
+00:05:31,730 --> 00:05:34,410
+So we just need to locate the line where
+we need to put the message,
+
+81
+00:05:35,440 --> 00:05:39,630
+which is right here, and key in the
+relevant number.
+
+82
+00:05:41,220 --> 00:05:45,780
+Now before we do, I want to tell you about
+the different message types that we can
+
+83
+00:05:47,370 --> 00:05:48,110
+use in the program.
+
+84
+00:05:51,270 --> 00:05:54,760
+Now, I have graphic here that comes from
+the SAP website
+
+85
+00:05:56,470 --> 00:06:01,510
+that lists the message types and you can
+see we have A, E, I, S, W, X.
+
+86
+00:06:01,510 --> 00:06:04,970
+So A, a termination message.
+
+87
+00:06:06,190 --> 00:06:07,640
+You can just read the text here.
+
+88
+00:06:08,690 --> 00:06:12,440
+And it just tells you a message is thrown
+up and then the program terminates.
+
+89
+00:06:14,300 --> 00:06:16,410
+Next one is E, error message.
+
+90
+00:06:16,410 --> 00:06:19,650
+And this is the one we're gonna use in our
+example.
+
+91
+00:06:19,650 --> 00:06:22,310
+Because we want to tell the user this is
+an error.
+
+92
+00:06:23,730 --> 00:06:26,240
+But depending on where we use this,
+
+93
+00:06:26,240 --> 00:06:28,480
+it can have a different effect within our
+program.
+
+94
+00:06:30,070 --> 00:06:33,230
+We're gonna use it in the selection string
+event.
+
+95
+00:06:33,230 --> 00:06:39,850
+So, what's gonna happen is processing of
+the event will stop, the message
+
+96
+00:06:39,850 --> 00:06:44,360
+will be shown on the screen, and the user
+will be able to amend their entry.
+
+97
+00:06:45,930 --> 00:06:47,700
+When they press execute or
+
+98
+00:06:47,700 --> 00:06:51,990
+press Enter, the add selection screen
+event will fire again.
+
+99
+00:06:52,990 --> 00:06:55,550
+And then the if statements will
+
+100
+00:06:55,550 --> 00:06:59,450
+test the condition to see if the user
+entered the correct values.
+
+101
+00:06:59,450 --> 00:07:03,120
+if it's incorrect again, another error
+message will be shown on the screen.
+
+102
+00:07:04,140 --> 00:07:06,790
+If everything's okay, then processing will
+continue.
+
+103
+00:07:08,800 --> 00:07:13,620
+Now if we used an error message outside of
+an event like the at selection screen,
+
+104
+00:07:13,620 --> 00:07:16,400
+let's just say it was in the body of the
+program.
+
+105
+00:07:16,400 --> 00:07:18,860
+Well this would cause our program to
+close.
+
+106
+00:07:18,860 --> 00:07:22,610
+So you've got to be aware of where you're
+using this type of message.
+
+107
+00:07:24,270 --> 00:07:28,360
+And you can read the rest here, we have
+information status warning and
+
+108
+00:07:28,360 --> 00:07:29,060
+an exist again.
+
+109
+00:07:30,720 --> 00:07:32,640
+So let's get back to our example.
+
+110
+00:07:34,770 --> 00:07:37,110
+And we'll put in the code for displaying
+the message.
+
+111
+00:07:38,160 --> 00:07:42,120
+Now it's really easy if we refer back to
+our message class.
+
+112
+00:07:42,120 --> 00:07:44,700
+Let's make it a bit smaller.
+
+113
+00:07:47,635 --> 00:07:49,485
+And we'll pop it over here.
+
+114
+00:07:49,485 --> 00:07:51,445
+Our message class is ZMES1.
+
+115
+00:07:51,445 --> 00:07:54,495
+Now our message is three zeros.
+
+116
+00:07:54,495 --> 00:07:59,171
+So down here in the code,
+
+117
+00:07:59,171 --> 00:08:06,086
+[SOUND] we would write [SOUND] Message.
+
+118
+00:08:06,086 --> 00:08:09,503
+[BLANK_AUDIO]
+
+119
+00:08:09,503 --> 00:08:10,878
+Then the message type.
+
+120
+00:08:10,878 --> 00:08:14,790
+And in this case it's going to be an error
+represented by the E.
+
+121
+00:08:16,170 --> 00:08:20,370
+And then the message number which is three
+zeroes.
+
+122
+00:08:24,560 --> 00:08:28,670
+And then, open bracket, and we put the
+message class.
+
+123
+00:08:28,670 --> 00:08:29,630
+ZMES1.
+
+124
+00:08:33,330 --> 00:08:34,520
+Close bracket, full stop.
+
+125
+00:08:36,240 --> 00:08:37,680
+And that's it.
+
+126
+00:08:37,680 --> 00:08:40,540
+That's all there is to displaying
+messages.
+
+127
+00:08:40,540 --> 00:08:43,600
+So, let's check our code,
+
+128
+00:08:43,600 --> 00:08:49,140
+make sure everything's correct [LAUGH]
+and
+
+129
+00:08:49,140 --> 00:08:54,080
+of course, it's not so we'll just make
+that into a comment.
+
+130
+00:08:54,080 --> 00:08:55,100
+Like it should be.
+
+131
+00:08:57,330 --> 00:08:58,920
+Okay.
+Everything is good.
+
+132
+00:08:58,920 --> 00:09:01,170
+We'll activate the program and now we'll
+test it out.
+
+133
+00:09:02,380 --> 00:09:04,330
+And what I'll do, I'll put a break point
+here.
+
+134
+00:09:07,330 --> 00:09:09,810
+So we can see the code in action.
+
+135
+00:09:10,880 --> 00:09:12,040
+Now press F8 to start.
+
+136
+00:09:13,090 --> 00:09:17,483
+So just as a note, first of all we'll have
+the initialization section,
+
+137
+00:09:17,483 --> 00:09:20,878
+that'll execute and load up the last
+employee number.
+
+138
+00:09:20,878 --> 00:09:24,003
+[BLANK_AUDIO]
+
+139
+00:09:24,003 --> 00:09:27,711
+Okay, now.
+
+140
+00:09:27,711 --> 00:09:31,077
+We do have a default value, which is
+greater than our highest
+
+141
+00:09:31,077 --> 00:09:35,367
+number in the table, but because the user
+hasn't triggered any action yet,
+
+142
+00:09:35,367 --> 00:09:37,480
+our error message hasn't kicked in.
+
+143
+00:09:38,960 --> 00:09:43,360
+Which means the app selection screen event
+hasn't fired.
+
+144
+00:09:43,360 --> 00:09:47,360
+So let's just key in 55555.
+
+145
+00:09:47,360 --> 00:09:48,640
+Now press Enter.
+
+146
+00:09:51,210 --> 00:09:55,890
+And just by pressing Enter, that's caused
+this event to trigger,
+
+147
+00:09:55,890 --> 00:10:01,090
+app selection screen and don't forget
+we're basing it on the employee field.
+
+148
+00:10:02,510 --> 00:10:04,000
+And now we're gonna check our condition.
+
+149
+00:10:05,400 --> 00:10:06,540
+So double click my_ee.
+
+150
+00:10:06,540 --> 00:10:10,230
+There's the fives, that we've entered.
+
+151
+00:10:13,180 --> 00:10:17,300
+Our highest number in our work area
+employee.
+
+152
+00:10:17,300 --> 00:10:20,450
+As you can see, is one lots of zeros and
+six.
+
+153
+00:10:20,450 --> 00:10:22,570
+So this should trigger our message.
+
+154
+00:10:22,570 --> 00:10:24,440
+I will press F8.
+
+155
+00:10:24,440 --> 00:10:30,130
+And there, there you can see at the bottom
+of the screen we
+
+156
+00:10:30,130 --> 00:10:33,090
+have an error message, employee number is
+too high.
+
+157
+00:10:34,950 --> 00:10:38,290
+And that just represents what we keyed in
+for the message text.
+
+158
+00:10:39,990 --> 00:10:42,580
+So that's it.
+That's how you can use messages
+
+159
+00:10:42,580 --> 00:10:46,700
+within your program to prompt the user to
+do something or
+
+160
+00:10:46,700 --> 00:10:50,850
+tell them why a program was terminated, or
+just for information purposes.
+
+161
+00:10:54,570 --> 00:10:59,460
+So one thing, because it's an error
+message here, oops,
+
+162
+00:10:59,460 --> 00:11:00,850
+sorry, I pressed Enter again.
+
+163
+00:11:02,700 --> 00:11:07,810
+Okay, it's forcing us to enter a good
+employee number, so I'm just gonna do one.
+
+164
+00:11:07,810 --> 00:11:10,690
+And this one, and now it should be good.
+
+165
+00:11:10,690 --> 00:11:12,610
+I'll press Enter again.
+
+166
+00:11:12,610 --> 00:11:14,620
+It's doing this event.
+
+167
+00:11:14,620 --> 00:11:18,450
+I'll press F5 to step through.
+
+168
+00:11:21,180 --> 00:11:24,350
+And that's it, it's just gone through the
+program, the error message wasn't
+
+169
+00:11:24,350 --> 00:11:27,620
+triggered, so the error message has now
+disappeared from the screen.
+
+170
+00:11:27,620 --> 00:11:33,260
+I'll step back out, and we'll get rid of
+this break point.
+
+171
+00:11:34,880 --> 00:11:35,720
+Now before moving on,
+
+172
+00:11:36,950 --> 00:11:40,860
+let's talk about the addition that we can
+include with our messages.
+
+173
+00:11:42,680 --> 00:11:49,590
+And the addition for messages that we're
+gonna discuss, uses the word with.
+
+174
+00:11:51,370 --> 00:11:53,490
+And then we can specify a field.
+
+175
+00:11:55,690 --> 00:12:00,690
+Now this width addition is very handy, it
+allows us to include up to
+
+176
+00:12:00,690 --> 00:12:06,300
+four different operands, or parameters,
+that we can pass into our message.
+
+177
+00:12:06,300 --> 00:12:08,130
+So, for example, here,
+
+178
+00:12:08,130 --> 00:12:11,970
+we're displaying an error message, based
+on the employee number field.
+
+179
+00:12:13,320 --> 00:12:18,050
+Well we can actually include the value
+that the user entered onto the screen,
+
+180
+00:12:18,050 --> 00:12:19,970
+to display inside our message.
+
+181
+00:12:19,970 --> 00:12:22,550
+And the way we do this
+
+182
+00:12:22,550 --> 00:12:27,460
+is by first of all making sure we have an
+error message that can accept parameters.
+
+183
+00:12:29,720 --> 00:12:33,250
+So let's bring this across, and let's
+create duplicate of this.
+
+184
+00:12:34,400 --> 00:12:37,310
+Let's use error message 001.
+
+185
+00:12:37,310 --> 00:12:43,470
+And what we need to do, is edit this
+message with the ampersand character.
+
+186
+00:12:43,470 --> 00:12:45,270
+So, I'm going to say the employee number.
+
+187
+00:12:45,270 --> 00:12:48,740
+And then we'll put the ampersand here.
+
+188
+00:12:50,560 --> 00:12:51,300
+Is too hard.
+
+189
+00:12:52,300 --> 00:12:55,250
+So, in effect that will insert the
+employee number,
+
+190
+00:12:55,250 --> 00:13:00,560
+the user entered onto the screen and we
+captured in
+
+191
+00:13:00,560 --> 00:13:05,540
+our my_ee variable, so let's save this
+message, move
+
+192
+00:13:07,880 --> 00:13:12,035
+it out of the way come back to our code.
+
+193
+00:13:14,685 --> 00:13:19,851
+And now, with this with addition, all I
+need to do is send
+
+194
+00:13:19,851 --> 00:13:25,782
+my_ee into the message.
+
+195
+00:13:25,782 --> 00:13:29,315
+So it's gonna display the message saying,
+with my_ee variable.
+
+196
+00:13:29,315 --> 00:13:32,675
+Let's do a code check.
+
+197
+00:13:35,220 --> 00:13:35,720
+Execute.
+
+198
+00:13:37,130 --> 00:13:40,170
+I won't do a break point this time, we'll
+just execute the program.
+
+199
+00:13:40,170 --> 00:13:45,050
+Let's key in our fives, now press Enter.
+
+200
+00:13:47,510 --> 00:13:48,460
+And it didn't work.
+
+201
+00:13:48,460 --> 00:13:49,670
+Why didn't it work?
+
+202
+00:13:49,670 --> 00:13:50,680
+Oh I know, sorry.
+
+203
+00:13:50,680 --> 00:13:52,120
+My mistake.
+
+204
+00:13:52,120 --> 00:13:53,600
+We're using the wrong message number.
+
+205
+00:13:54,670 --> 00:13:57,390
+So we created a new message number.
+
+206
+00:13:57,390 --> 00:14:02,420
+Zero zero one, so we need to specify that
+in our program,
+
+207
+00:14:04,380 --> 00:14:09,660
+I will activate it again, fingers crossed
+its gonna work this time.
+
+208
+00:14:11,610 --> 00:14:17,720
+Press Enter and there we can see, employee
+number five's is too high.
+
+209
+00:14:19,160 --> 00:14:23,670
+That much is exactly with the message we
+set up.
+
+210
+00:14:23,670 --> 00:14:27,378
+[NOISE].
+
+211
+00:14:27,378 --> 00:14:31,480
+Now, this, with addition to the messages
+statement,
+
+212
+00:14:31,480 --> 00:14:36,640
+allows you to send up to four different
+parameters into your message.
+
+213
+00:14:38,090 --> 00:14:43,550
+You'll find this type of error reporting
+throughout lots and
+
+214
+00:14:43,550 --> 00:14:48,150
+lots of programs in SAP, and you'll find
+that there are hundreds,
+
+215
+00:14:48,150 --> 00:14:52,346
+if not thousands of different messages set
+up all throughout the system.
+
+216
+00:14:52,346 --> 00:14:58,750
+And remember, because messages can be used
+across all programs.
+
+217
+00:14:59,930 --> 00:15:03,440
+It makes sense to see if there is some
+messages already set up
+
+218
+00:15:03,440 --> 00:15:05,340
+by colleagues that you can reuse.
+
+219
+00:15:06,400 --> 00:15:09,860
+They'll be standard message classes set up
+for HR,
+
+220
+00:15:09,860 --> 00:15:14,690
+finance, and different other modules of
+SAP systems.
+
+221
+00:15:14,690 --> 00:15:17,570
+That you can probably go into, have a
+look, and
+
+222
+00:15:17,570 --> 00:15:21,930
+reuse those message classes and the
+individual messages inside.
+
+223
+00:15:24,170 --> 00:15:25,540
+That wraps up messages.
+
+224
+00:15:25,540 --> 00:15:26,253
+Let's move on.
+
+225
+00:15:26,253 --> 00:15:28,219
+[BLANK_AUDIO]
+

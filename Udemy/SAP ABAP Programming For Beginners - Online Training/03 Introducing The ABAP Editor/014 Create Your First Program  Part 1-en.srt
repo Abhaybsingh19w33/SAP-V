@@ -1,0 +1,363 @@
+1
+00:00:00,620 --> 00:00:03,290
+To create our first program from your SAP
+[UNKNOWN],
+
+2
+00:00:03,290 --> 00:00:06,880
+you can either key in transaction SE38 or
+
+3
+00:00:08,730 --> 00:00:13,250
+you can navigate to the ABAP Editor
+through the SAP menu tree.
+
+4
+00:00:15,150 --> 00:00:21,350
+Go to tools, ABAP Workbench Developments
+
+5
+00:00:22,510 --> 00:00:25,750
+and there you'll see SE38 ABAP Editor.
+
+6
+00:00:25,750 --> 00:00:27,030
+Double click and execute it.
+
+7
+00:00:28,480 --> 00:00:33,350
+Now, just before we create out program,
+just something to keep in mind.
+
+8
+00:00:33,350 --> 00:00:38,900
+Try and keep your programs as simple as
+possible do not make your programs
+
+9
+00:00:38,900 --> 00:00:41,350
+any more complicated than they need to be.
+
+10
+00:00:43,060 --> 00:00:47,320
+Now I say this because, through my many
+years of experience with SAP,
+
+11
+00:00:47,320 --> 00:00:51,570
+more often than not, you have to pick up
+somebody else's program, try and
+
+12
+00:00:51,570 --> 00:00:54,960
+understand it, and either make
+enhancements to it, or
+
+13
+00:00:54,960 --> 00:00:59,500
+fix bugs that have been identified
+sometime after it has gone live.
+
+14
+00:01:00,790 --> 00:01:05,658
+The worst thing in the world is opening up
+a program and seeing 100 and
+
+15
+00:01:05,658 --> 00:01:11,530
+100 of 1000 lines of code with very few
+comments and
+
+16
+00:01:11,530 --> 00:01:15,200
+it takes just an absolute age to
+understand.
+
+17
+00:01:16,260 --> 00:01:18,790
+I advise you all to keep things really
+simple.
+
+18
+00:01:19,910 --> 00:01:23,540
+Add lots of comments into your code, so
+that anybody else, and
+
+19
+00:01:23,540 --> 00:01:28,480
+yourself, that comes to look at the
+program later on, can easily understand
+
+20
+00:01:28,480 --> 00:01:32,620
+what the program is doing, and the flow of
+the logic as it's executed.
+
+21
+00:01:33,860 --> 00:01:36,820
+It makes everybody's life just that much
+easier.
+
+22
+00:01:38,240 --> 00:01:39,280
+So let's get going.
+
+23
+00:01:39,280 --> 00:01:41,140
+We'll enter our first program name.
+
+24
+00:01:42,340 --> 00:01:46,090
+Now remember, we have to use our customer
+naming conventions.
+
+25
+00:01:47,160 --> 00:01:50,020
+In this case that means we're going to
+start the program with the letter Z.
+
+26
+00:01:51,480 --> 00:01:53,600
+After a Z, you can name it whatever you
+want we're
+
+27
+00:01:55,250 --> 00:01:58,210
+going to stick with the employee theme.
+
+28
+00:01:58,210 --> 00:02:00,770
+That we used when we created our table.
+
+29
+00:02:00,770 --> 00:02:08,856
+So I'm going to enter
+said_employee_list_01.
+
+30
+00:02:08,856 --> 00:02:14,570
+You noticed that I used underscores just
+to separate the words within the program.
+
+31
+00:02:14,570 --> 00:02:16,960
+Just to make things a little easier on the
+eyes.
+
+32
+00:02:19,140 --> 00:02:21,670
+Ensure that the source code radio button
+is selected.
+
+33
+00:02:23,310 --> 00:02:24,490
+And then click the Create button.
+
+34
+00:02:30,200 --> 00:02:34,380
+We're then presented with this Program
+Attributes window.
+
+35
+00:02:36,210 --> 00:02:39,140
+And the first thing you need to key in is
+the title for your program.
+
+36
+00:02:40,330 --> 00:02:47,795
+So I'm just going to enter some text that
+describes what the program does.
+
+37
+00:02:47,795 --> 00:02:49,839
+[SOUND]
+
+38
+00:02:49,839 --> 00:02:58,836
+My Employee List Report.
+
+39
+00:02:58,836 --> 00:03:02,670
+Ensure that the original language is set
+to EN, which it is by default.
+
+40
+00:03:02,670 --> 00:03:04,940
+And just something to note.
+
+41
+00:03:04,940 --> 00:03:07,580
+The language of the program
+
+42
+00:03:07,580 --> 00:03:11,610
+has an effect on what text entries are
+displayed within certain programs.
+
+43
+00:03:11,610 --> 00:03:16,500
+You will see that the original language
+field has automatically been filled in
+
+44
+00:03:16,500 --> 00:03:21,320
+with EN, for English It's important to
+note that any text
+
+45
+00:03:21,320 --> 00:03:26,290
+entries you create within your program are
+language specific and
+
+46
+00:03:26,290 --> 00:03:31,410
+they can be maintained for each country by
+using a translation tool.
+
+47
+00:03:31,410 --> 00:03:35,020
+Now we're not gonna be doing this right
+now, but it's just something for
+
+48
+00:03:35,020 --> 00:03:36,000
+you to keep in mind.
+
+49
+00:03:37,550 --> 00:03:42,940
+Now come down to the attributes and you'll
+see the type click the drop down
+
+50
+00:03:42,940 --> 00:03:48,570
+button and select executable program now
+this means
+
+51
+00:03:48,570 --> 00:03:53,950
+our program can be executed without the
+need for us to create a transaction code.
+
+52
+00:03:55,080 --> 00:03:58,300
+And it also means the program can be run
+as a background job.
+
+53
+00:04:00,520 --> 00:04:04,360
+We'll set the status of our program to
+test program and
+
+54
+00:04:04,360 --> 00:04:06,550
+we'll set the application to basis.
+
+55
+00:04:08,390 --> 00:04:11,600
+Now these two fields are just used to help
+manage the program within
+
+56
+00:04:11,600 --> 00:04:13,650
+the sub system itself.
+
+57
+00:04:13,650 --> 00:04:16,780
+And it describes what the programs will be
+used for, and
+
+58
+00:04:16,780 --> 00:04:18,820
+also the program development status.
+
+59
+00:04:19,960 --> 00:04:22,480
+Now we don't need to touch any other field
+here.
+
+60
+00:04:22,480 --> 00:04:27,540
+So, leave the Authorization Group, Logical
+database, and Selection screen empty.
+
+61
+00:04:29,180 --> 00:04:33,110
+And make sure the Editor lock field is
+left clear.
+
+62
+00:04:33,110 --> 00:04:38,170
+If you do turn on Editor lock it will
+prevent the program from being edited.
+
+63
+00:04:39,250 --> 00:04:42,850
+That's not what we want [LAUGH].
+
+64
+00:04:42,850 --> 00:04:44,290
+Leave unicode checked active.
+
+65
+00:04:45,540 --> 00:04:50,330
+And I suggest you always leave it active
+for every program you create.
+
+66
+00:04:50,330 --> 00:04:53,680
+This ensures your program can cater for
+multibyte coding.
+
+67
+00:04:56,010 --> 00:04:59,370
+Ensure you leave the fixed point
+arithmetic checked,
+
+68
+00:04:59,370 --> 00:05:04,690
+because without this any packed decimal
+fields that we use within our program
+
+69
+00:05:04,690 --> 00:05:06,510
+will all be rounded to whole numbers.
+
+70
+00:05:07,810 --> 00:05:11,350
+And we will leave the start using variants
+check box blank.
+
+71
+00:05:12,890 --> 00:05:17,410
+We will touch on variants later on, but
+for now just go ahead and
+
+72
+00:05:17,410 --> 00:05:18,245
+click the Save button.
+
+73
+00:05:18,245 --> 00:05:26,758
+[SOUND] You should be familiar with this
+object directory entry box.
+
+74
+00:05:26,758 --> 00:05:30,804
+And because we're not going to be
+transporting our programs,
+
+75
+00:05:30,804 --> 00:05:33,857
+just click the local object button to
+assign our
+
+76
+00:05:33,857 --> 00:05:36,850
+program to our temporary development
+class.
+
+77
+00:05:38,590 --> 00:05:42,070
+And now you've made it you finally got to
+the coding screen.
+

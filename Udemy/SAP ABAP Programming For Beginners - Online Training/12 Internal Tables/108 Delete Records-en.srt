@@ -1,0 +1,309 @@
+1
+00:00:02,490 --> 00:00:07,120
+Next, let's take a look at how we can
+delete records from our internal table.
+
+2
+00:00:08,960 --> 00:00:11,650
+And it's really simple, we just use the
+delete statement.
+
+3
+00:00:12,880 --> 00:00:17,340
+And we can use the delete statement to
+remove individual records or
+
+4
+00:00:17,340 --> 00:00:20,100
+groups of records from our table at any
+one time.
+
+5
+00:00:21,490 --> 00:00:25,480
+The fastest way of achieving this is by
+using the table index.
+
+6
+00:00:26,500 --> 00:00:28,160
+Just like we did with the read statement.
+
+7
+00:00:29,530 --> 00:00:34,940
+But note this only applies to standard
+tables and sorted tables not hash tables.
+
+8
+00:00:36,430 --> 00:00:38,590
+Only these two types of tables have an
+index.
+
+9
+00:00:39,950 --> 00:00:40,970
+So let's have a look at the code.
+
+10
+00:00:45,210 --> 00:00:49,080
+So we start off with the word delete,
+
+11
+00:00:49,080 --> 00:00:54,390
+we specify our internal table, and then we
+just give it an index.
+
+12
+00:00:57,280 --> 00:00:58,030
+It's pretty simple.
+
+13
+00:00:59,040 --> 00:01:01,810
+We make no use of the header line here.
+
+14
+00:01:01,810 --> 00:01:05,440
+Instead, we just directly address the
+recording dates
+
+15
+00:01:05,440 --> 00:01:08,970
+of the record we want to delete in the
+body of the internal table.
+
+16
+00:01:11,280 --> 00:01:12,360
+And with the delete statement,
+
+17
+00:01:12,360 --> 00:01:17,530
+we can also use it inside the loop,
+they're exactly the same type of syntax.
+
+18
+00:01:18,940 --> 00:01:21,410
+So for example, let's copy this loop.
+
+19
+00:01:24,780 --> 00:01:26,164
+I'm gonna paste it out here.
+
+20
+00:01:26,164 --> 00:01:31,226
+[BLANK_AUDIO]
+
+21
+00:01:31,226 --> 00:01:36,156
+What we can do, is if we have some logic
+to identify a specific record,
+
+22
+00:01:36,156 --> 00:01:37,170
+in this case.
+
+23
+00:01:37,170 --> 00:01:45,157
+[BLANK_AUDIO]
+
+24
+00:01:45,157 --> 00:01:52,077
+If our surname equals Smith, we can then
+say,
+
+25
+00:01:52,077 --> 00:01:57,060
+delete a record from my top 01.
+
+26
+00:01:57,060 --> 00:02:01,760
+We're gonna use the index, but instead of
+specifying the number, we can use a system
+
+27
+00:02:01,760 --> 00:02:07,280
+variable called sy-index, and when we are
+inside the loop,
+
+28
+00:02:08,440 --> 00:02:14,230
+this variable gets updated automatically
+by the system, so if we are in the fifth
+
+29
+00:02:14,230 --> 00:02:19,410
+iteration of a loop, this variable will
+contain the number five.
+
+30
+00:02:19,410 --> 00:02:23,599
+Which will equal the fifth record in the
+table that we want to delete.
+
+31
+00:02:23,599 --> 00:02:27,593
+[BLANK_AUDIO]
+
+32
+00:02:27,593 --> 00:02:30,474
+One thing to note is that you shouldn't
+use the delete
+
+33
+00:02:30,474 --> 00:02:32,660
+statement without the index addition.
+
+34
+00:02:32,660 --> 00:02:37,640
+If you went outside the loop, you will be
+given a run time error,
+
+35
+00:02:37,640 --> 00:02:39,770
+which in turn will cause your program to
+crash.
+
+36
+00:02:41,220 --> 00:02:45,580
+If you are inside the loop, you need to
+make sure the index
+
+37
+00:02:45,580 --> 00:02:49,590
+addition is included to be compliant with
+future releases.
+
+38
+00:02:49,590 --> 00:02:50,410
+The ABAP syntax.
+
+39
+00:02:50,410 --> 00:02:56,990
+I want to introduce the where addition to
+the delete statement.
+
+40
+00:02:56,990 --> 00:02:59,580
+Because there are times when you don't
+know the actual
+
+41
+00:02:59,580 --> 00:03:01,420
+index of the record that you want to
+delete.
+
+42
+00:03:02,760 --> 00:03:07,700
+When your table has a non unique key, you
+need to use some other logic, as we've
+
+43
+00:03:07,700 --> 00:03:12,830
+already discussed, to determine which
+record or records you want to delete.
+
+44
+00:03:12,830 --> 00:03:15,980
+And this is where you can use the where
+edition.
+
+45
+00:03:17,220 --> 00:03:21,350
+Now you use the where clause to construct
+a logical expression
+
+46
+00:03:21,350 --> 00:03:25,880
+that contains the various conditions that
+will help you identify the record or
+
+47
+00:03:25,880 --> 00:03:29,706
+records you need to delete as uniquely as
+you can.
+
+48
+00:03:29,706 --> 00:03:32,620
+Now always try and
+
+49
+00:03:32,620 --> 00:03:37,460
+be as specific as possible when trying to
+identify records you want to delete.
+
+50
+00:03:37,460 --> 00:03:40,450
+Because the last thing you want is to
+delete data that
+
+51
+00:03:40,450 --> 00:03:41,430
+you shouldn't have deleted.
+
+52
+00:03:43,030 --> 00:03:43,960
+So let's have a look at the code.
+
+53
+00:03:45,690 --> 00:03:46,500
+It's real simple.
+
+54
+00:03:46,500 --> 00:03:48,320
+And what we're going to do.
+
+55
+00:03:50,700 --> 00:03:51,952
+Let's copy this statement here.
+
+56
+00:03:51,952 --> 00:03:56,100
+[UNKNOWN] down, and we'll edit it.
+
+57
+00:03:58,420 --> 00:04:01,820
+So we have delete, and we have the table.
+
+58
+00:04:03,530 --> 00:04:08,717
+But instead of using the index, we're
+going to say where,
+
+59
+00:04:08,717 --> 00:04:14,040
+and let's use surname again, where surname
+equals Smith.
+
+60
+00:04:14,040 --> 00:04:19,540
+You can see it's very straightforward,
+
+61
+00:04:19,540 --> 00:04:24,180
+and we have just included one logical
+expression
+
+62
+00:04:24,180 --> 00:04:28,970
+that attempts to identify any records with
+the surname Smith that we want to delete.
+
+63
+00:04:30,280 --> 00:04:33,650
+When a record is found that does match our
+logical expression,
+
+64
+00:04:33,650 --> 00:04:36,230
+the record will be removed from the
+internal table.
+
+65
+00:04:38,130 --> 00:04:40,367
+If the system finds multiple records,
+
+66
+00:04:40,367 --> 00:04:43,765
+all the records will be deleted that match
+the expression.
+
+67
+00:04:43,765 --> 00:04:46,859
+[BLANK_AUDIO]
+

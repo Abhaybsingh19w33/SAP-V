@@ -1,0 +1,59 @@
+1
+00:00:00,650 --> 00:00:04,721
+Let's now have a very quick look at
+subtraction.
+
+2
+00:00:04,721 --> 00:00:11,281
+[BLANK_AUDIO]
+
+3
+00:00:11,281 --> 00:00:19,760
+If I just copy the previous example.
+
+4
+00:00:19,760 --> 00:00:22,740
+So all I'm doing is changing the plus to a
+minus.
+
+5
+00:00:22,740 --> 00:00:25,590
+And then I'll take, take away the minus
+five point five from 22.
+
+6
+00:00:25,590 --> 00:00:32,860
+So I guess, in my eyes, I was going to add
+it to it.
+
+7
+00:00:34,940 --> 00:00:39,670
+There we go.
+So 22 minus, minus five point five,
+
+8
+00:00:39,670 --> 00:00:40,590
+is 27 point five.
+
+9
+00:00:40,590 --> 00:00:43,230
+I'll tell you what
+
+10
+00:00:44,730 --> 00:00:49,960
+I'm gonna do right now,
+
+11
+00:00:49,960 --> 00:00:55,340
+is take away this minus sign so it's a bit
+easier to to understand.
+
+12
+00:00:55,340 --> 00:00:57,980
+Well, for my old brain, anyway.
+
+13
+00:00:57,980 --> 00:01:02,610
+So I'll do a quick test, 22 minus 5.5 is
+then 16.5.
+

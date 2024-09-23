@@ -1,0 +1,1300 @@
+1
+00:00:02,230 --> 00:00:04,820
+I've created a new
+program that we will use
+
+2
+00:00:04,820 --> 00:00:08,770
+to take a look at how we use
+internal tables in our programs.
+
+3
+00:00:09,790 --> 00:00:13,210
+Now you will already be
+familiar with a data statement
+
+4
+00:00:13,210 --> 00:00:16,460
+that we use to declare fields, but
+
+5
+00:00:16,460 --> 00:00:20,337
+we use exactly the same statement when
+we want to declare internal tables.
+
+6
+00:00:21,460 --> 00:00:26,490
+Now when we declare internal tables, we
+have to define the start of the table and
+
+7
+00:00:26,490 --> 00:00:28,100
+the end of the table.
+
+8
+00:00:28,100 --> 00:00:29,540
+So let's have a look at how we do this.
+
+9
+00:00:30,730 --> 00:00:35,610
+So we start with the data statements, and
+
+10
+00:00:35,610 --> 00:00:43,190
+then we use the BEGIN OF addition,
+and then we specify the table name.
+
+11
+00:00:43,190 --> 00:00:45,070
+I'm going to use ITAB01.
+
+12
+00:00:45,070 --> 00:00:47,780
+You will see ITAB
+
+13
+00:00:47,780 --> 00:00:51,950
+being used as a temporary table
+name all throughout SAP programs.
+
+14
+00:00:53,310 --> 00:01:00,300
+ITAB01, and
+then we have to have an occurs addition.
+
+15
+00:01:02,706 --> 00:01:06,660
+Followed by a numeric.
+
+16
+00:01:06,660 --> 00:01:11,120
+So what this does,
+is the BEGIN OF means we are starting
+
+17
+00:01:11,120 --> 00:01:16,040
+the definition of something, and
+then we specify what we are declaring.
+
+18
+00:01:16,040 --> 00:01:20,879
+So this is going to be an internal table,
+and I've named it ITAB01.
+
+19
+00:01:20,879 --> 00:01:25,128
+Now the OCCURS clause, are pretty, too.
+
+20
+00:01:25,128 --> 00:01:30,984
+Now the OCCURS clause tells SAP we
+are declaring an internal table,
+
+21
+00:01:30,984 --> 00:01:36,030
+and we are declaring an internal
+table with zero records.
+
+22
+00:01:37,080 --> 00:01:42,300
+So OCCURS means this table is going
+to be made up of a number of records,
+
+23
+00:01:42,300 --> 00:01:45,790
+but we are going to define
+zero to begin with.
+
+24
+00:01:45,790 --> 00:01:49,724
+And then let the table expand
+as we fill it with data.
+
+25
+00:01:49,724 --> 00:01:53,420
+So, I key in the rest of
+our table definition.
+
+26
+00:01:56,212 --> 00:01:58,128
+Now, I'll create a field called Z_SURNAME.
+
+27
+00:02:01,711 --> 00:02:08,045
+I'm going to make it based on the field
+that we defined in our Z_EMPLOYEES table.
+
+28
+00:02:08,045 --> 00:02:12,630
+So first of all we specify the table name,
+
+29
+00:02:12,630 --> 00:02:18,660
+followed by the field name,
+which I think is surname.
+
+30
+00:02:20,110 --> 00:02:22,760
+I'm just gonna save this and
+
+31
+00:02:22,760 --> 00:02:25,519
+use forward navigation just to
+make sure I'm declaring it right.
+
+32
+00:02:28,640 --> 00:02:30,420
+Set employee surname.
+
+33
+00:02:39,128 --> 00:02:40,796
+Next, gonna declare date of birth.
+I can use the like statements.
+
+34
+00:02:51,379 --> 00:02:54,040
+I do like to keep everything
+lined up as well.
+
+35
+00:02:54,040 --> 00:02:58,620
+[LAUGH] This should have been a comma,
+not full stop.
+
+36
+00:02:58,620 --> 00:03:05,109
+And then, what we do is specify
+the end of our internal table.
+
+37
+00:03:06,270 --> 00:03:13,030
+So here we use end of and
+then specify the table name again, ITAB01.
+
+38
+00:03:13,030 --> 00:03:17,360
+And that's it,
+we've created the structure for
+
+39
+00:03:17,360 --> 00:03:21,340
+an internal table, and we can now
+write code to fill it with records.
+
+40
+00:03:23,160 --> 00:03:28,040
+Now, as I've mentioned previously, there
+are two types of declared end tables.
+
+41
+00:03:28,040 --> 00:03:30,320
+The old style,
+where we use header records, and
+
+42
+00:03:30,320 --> 00:03:33,510
+the new style where we use
+a separate work header.
+
+43
+00:03:33,510 --> 00:03:38,780
+But just by the fact that we're using this
+OCCURS clause, we're telling the system
+
+44
+00:03:38,780 --> 00:03:41,710
+we are going to create an internal
+table with a header record.
+
+45
+00:03:43,510 --> 00:03:49,630
+Now, just as I've completed this internal
+table, I'm gonna change it, because one of
+
+46
+00:03:49,630 --> 00:03:56,080
+the things I did here was name our fields
+in the internal table starting with a Z.
+
+47
+00:04:00,010 --> 00:04:02,520
+When you start to create internal tables,
+
+48
+00:04:02,520 --> 00:04:07,910
+you may find it useful to always make
+sure your field names are identical to
+
+49
+00:04:07,910 --> 00:04:12,930
+the field names in other internal tables
+or tables from the ABAP dictionary.
+
+50
+00:04:14,260 --> 00:04:18,320
+Now the reason I say this is because,
+well, we've already looked
+
+51
+00:04:18,320 --> 00:04:22,910
+at the move statement, which allows us
+to move data from one field to another.
+
+52
+00:04:24,300 --> 00:04:28,740
+Well there is another statement called
+move-corresponding which we will use
+
+53
+00:04:28,740 --> 00:04:33,170
+a little later on that is used
+quite often in ABAP programs.
+
+54
+00:04:33,170 --> 00:04:36,660
+And the reason why we use this
+move-corresponding is well,
+
+55
+00:04:36,660 --> 00:04:38,620
+I'll give you an example.
+
+56
+00:04:38,620 --> 00:04:44,160
+If you want to move five fields from
+table one to five fields from table two,
+
+57
+00:04:44,160 --> 00:04:49,286
+and both tables have same field names,
+we can just write one line of code,
+
+58
+00:04:49,286 --> 00:04:52,690
+using this move-corresponding statement.
+
+59
+00:04:52,690 --> 00:04:57,280
+Which will automatically search for
+any field names that are identical, and
+
+60
+00:04:57,280 --> 00:05:01,920
+make sure the data contained in
+the table one fields are moved
+
+61
+00:05:01,920 --> 00:05:04,990
+to the corresponding fields for table two.
+
+62
+00:05:06,630 --> 00:05:07,710
+And the good thing is,
+
+63
+00:05:07,710 --> 00:05:12,600
+it doesn't matter if these two different
+tables have a different structure.
+
+64
+00:05:12,600 --> 00:05:15,387
+What I mean is the fields can be
+in a completely different order,
+
+65
+00:05:15,387 --> 00:05:17,960
+the move-corresponding works it out.
+
+66
+00:05:17,960 --> 00:05:20,530
+It matches the actual name
+of the field together.
+
+67
+00:05:22,130 --> 00:05:25,731
+We will take a look at how we do
+this a little later on, but for
+
+68
+00:05:25,731 --> 00:05:29,420
+now, just bear it in mind and
+keep your field names the same.
+
+69
+00:05:31,670 --> 00:05:35,330
+Let's just make sure our
+code is all complete.
+
+70
+00:05:35,330 --> 00:05:36,140
+We will check.
+
+71
+00:05:36,140 --> 00:05:37,250
+Yes, everything looks good.
+
+72
+00:05:39,040 --> 00:05:43,470
+So now we've seen how to create an old
+style table with header records.
+
+73
+00:05:43,470 --> 00:05:45,590
+Let's have a look at how
+we do the new style.
+
+74
+00:05:47,360 --> 00:05:48,280
+So remember,
+
+75
+00:05:48,280 --> 00:05:52,150
+this is the way you want to define
+your internal tables moving forward,
+
+76
+00:05:53,730 --> 00:05:59,800
+because it complies with the new style of
+coding and can be used with ABAP objects.
+
+77
+00:05:59,800 --> 00:06:03,450
+Which is now the standard way
+in writing new programs and
+
+78
+00:06:03,450 --> 00:06:08,650
+you will see lots of ABAP objects code
+when you dip into standard SAP programs.
+
+79
+00:06:10,600 --> 00:06:14,560
+And just so you know we are not going to
+dip into ABAP objects programming right
+
+80
+00:06:14,560 --> 00:06:19,260
+now, we're just gonna concentrate on
+how to declare internal tables and
+
+81
+00:06:19,260 --> 00:06:23,600
+structures using object
+oriented techniques.
+
+82
+00:06:23,600 --> 00:06:27,460
+Because you will see this being
+used in the majority of programs,
+
+83
+00:06:27,460 --> 00:06:30,600
+whether they are object
+oriented programs or not.
+
+84
+00:06:32,640 --> 00:06:36,470
+Now for those that don't know, the whole
+thing about object oriented programming
+
+85
+00:06:37,580 --> 00:06:42,500
+is that we want to keep each part of
+our program separate from other parts,
+
+86
+00:06:42,500 --> 00:06:46,990
+which allows you and others to reuse
+all these individual objects throughout
+
+87
+00:06:46,990 --> 00:06:48,950
+your program and in other programs.
+
+88
+00:06:51,080 --> 00:06:54,280
+So in our case,
+when we create an internal table,
+
+89
+00:06:54,280 --> 00:06:58,270
+we need to separate out
+the individual data objects.
+
+90
+00:06:58,270 --> 00:07:00,990
+Sort of like tiny building blocks.
+
+91
+00:07:00,990 --> 00:07:04,230
+We can then put these building blocks
+together to create any type of
+
+92
+00:07:04,230 --> 00:07:04,990
+object we want.
+
+93
+00:07:06,126 --> 00:07:11,720
+So put another way, we're making use
+of modularization and reusability
+
+94
+00:07:11,720 --> 00:07:17,550
+of data objects to enable us to create
+new data objects later on down the line.
+
+95
+00:07:19,520 --> 00:07:20,950
+Okay, let's have a look at this code.
+
+96
+00:07:21,980 --> 00:07:26,150
+Now first off we have to define
+what is called a line type.
+
+97
+00:07:27,280 --> 00:07:32,200
+And at first glance when, when you look
+at what we're gonna do now, you may think
+
+98
+00:07:32,200 --> 00:07:37,068
+this is an awful lot more work than
+defining a table using the old syntax.
+
+99
+00:07:37,068 --> 00:07:40,414
+But don't worry, it's quite simple, and
+
+100
+00:07:40,414 --> 00:07:46,473
+you will quickly see the benefit of using
+this when you are dealing with larger,
+
+101
+00:07:46,473 --> 00:07:50,924
+more complex programs,
+by being able to reuse your code.
+
+102
+00:07:50,924 --> 00:07:56,357
+So we start off with using
+the types statement.
+
+103
+00:07:56,357 --> 00:08:00,586
+And, and think of this as We're
+declaring new data types.
+
+104
+00:08:00,586 --> 00:08:04,570
+So, just as we have integers,
+character strings.
+
+105
+00:08:04,570 --> 00:08:07,740
+Well, we're using types to
+declare a new data type.
+
+106
+00:08:07,740 --> 00:08:11,270
+In our case, we're creating
+structures of existing data types.
+
+107
+00:08:12,640 --> 00:08:14,830
+So, back to the code, TYPES.
+
+108
+00:08:14,830 --> 00:08:19,217
+And then,
+you should be familiar with BEGIN OF.
+
+109
+00:08:19,217 --> 00:08:24,630
+And then, we specify our own
+name to identify this line type.
+
+110
+00:08:26,260 --> 00:08:33,883
+So, I'm going to use line01, and
+we'll put underscore typ on the end.
+
+111
+00:08:33,883 --> 00:08:39,383
+Then, [SOUND] I'm gonna copy and paste.
+
+112
+00:08:39,383 --> 00:08:46,164
+[SOUND] Now, with two fields,
+
+113
+00:08:46,164 --> 00:08:50,508
+exactly the same.
+
+114
+00:08:50,508 --> 00:08:55,422
+[SOUND] And then,
+
+115
+00:08:55,422 --> 00:09:01,740
+I will use END OF [SOUND]
+
+116
+00:09:01,740 --> 00:09:07,008
+line01_typ.
+
+117
+00:09:07,008 --> 00:09:10,008
+So, it looks very similar
+to the old style.
+
+118
+00:09:10,008 --> 00:09:13,802
+[SOUND] Let's add a comma in here.
+
+119
+00:09:13,802 --> 00:09:23,802
+[SOUND]
+
+120
+00:09:47,050 --> 00:09:49,530
+In this statement, we declare the table.
+
+121
+00:09:49,530 --> 00:09:53,175
+So, that consists of a line,
+and also saying to the system,
+
+122
+00:09:53,175 --> 00:09:56,840
+we're going to store
+multiple lines in the table.
+
+123
+00:09:56,840 --> 00:10:00,120
+Or, here we just define
+the structure of one line.
+
+124
+00:10:00,120 --> 00:10:02,970
+This does not define
+the internal table yet.
+
+125
+00:10:02,970 --> 00:10:03,990
+We will come on to that.
+
+126
+00:10:05,740 --> 00:10:10,720
+Now, the first thing you'll notice is
+that instead of using the data statement,
+
+127
+00:10:10,720 --> 00:10:12,900
+we're using the type statement.
+
+128
+00:10:12,900 --> 00:10:16,186
+And of course, there's no occurs edition,
+
+129
+00:10:16,186 --> 00:10:20,900
+because we're not defining
+an internal table at this point.
+
+130
+00:10:20,900 --> 00:10:23,630
+We are just defining a line of a table.
+
+131
+00:10:25,600 --> 00:10:27,960
+We then declare our surname and
+
+132
+00:10:27,960 --> 00:10:31,310
+date of birth fields,
+as we did with the old syntax.
+
+133
+00:10:32,710 --> 00:10:35,074
+And just as with the data statement,
+
+134
+00:10:35,074 --> 00:10:40,106
+we used the colon to tell the system we
+are going to chain statements together,
+
+135
+00:10:40,106 --> 00:10:43,633
+so we don't have to retype
+the word types all the time.
+
+136
+00:10:43,633 --> 00:10:51,700
+And the last line, we're saying this is
+the end of our line by using the END OF.
+
+137
+00:10:51,700 --> 00:10:59,590
+Now, once we have defined our line,
+the next step is to define our table type.
+
+138
+00:10:59,590 --> 00:11:03,610
+Now again, we're not quite at
+the point of creating the table yet.
+
+139
+00:11:03,610 --> 00:11:07,330
+We're going to say,
+we're going to create a type of table.
+
+140
+00:11:07,330 --> 00:11:09,325
+So, we're just defining
+the structure of it.
+
+141
+00:11:09,325 --> 00:11:12,598
+[SOUND] And again,
+
+142
+00:11:12,598 --> 00:11:18,716
+we do this with a type statement.
+
+143
+00:11:18,716 --> 00:11:21,830
+Then, we declare our internal table.
+
+144
+00:11:21,830 --> 00:11:25,340
+So, just as we did up here.
+
+145
+00:11:25,340 --> 00:11:28,466
+I will declare an internal
+table down here.
+
+146
+00:11:28,466 --> 00:11:33,883
+[SOUND] And, I'm gonna call this itab02.
+
+147
+00:11:33,883 --> 00:11:36,923
+Don't forget this is a type
+that we are doing, so
+
+148
+00:11:36,923 --> 00:11:39,675
+I am sticking the underscore
+typ on the end.
+
+149
+00:11:39,675 --> 00:11:45,145
+Then, I add TYPE STANDARD TABLE OF,
+
+150
+00:11:45,145 --> 00:11:50,091
+and then I specify the line type.
+
+151
+00:11:53,383 --> 00:11:57,984
+Line01_typ.
+[SOUND] Now, again, as I've mentioned,
+
+152
+00:11:57,984 --> 00:12:04,884
+we've used the type statement
+instead of the data statement.
+
+153
+00:12:04,884 --> 00:12:11,680
+We give our new type the name, itab02_typ.
+
+154
+00:12:11,680 --> 00:12:16,890
+And then, we follow this with the word
+type to indicate we're going to define our
+
+155
+00:12:16,890 --> 00:12:23,880
+table based on a type that already exists,
+which is this one.
+
+156
+00:12:23,880 --> 00:12:26,900
+Then, we include the term
+STANDARD TABLE OF
+
+157
+00:12:28,920 --> 00:12:33,160
+to indicate we're going to
+create a standard table type.
+
+158
+00:12:33,160 --> 00:12:38,880
+And remember, a standard table can
+have multiple identical records.
+
+159
+00:12:38,880 --> 00:12:41,460
+Meaning, we have no unique key.
+
+160
+00:12:41,460 --> 00:12:44,900
+So, that means we don't have
+to include any unique key
+
+161
+00:12:44,900 --> 00:12:46,760
+in this table type definition.
+
+162
+00:12:48,150 --> 00:12:50,230
+We just need to declare it just as we did.
+
+163
+00:12:51,780 --> 00:12:54,650
+Also in the old statement,
+we use the occurs clause
+
+164
+00:12:55,920 --> 00:12:59,840
+up here to define the initial
+size of our table.
+
+165
+00:12:59,840 --> 00:13:00,640
+And we used zero,
+
+166
+00:13:00,640 --> 00:13:04,580
+which meant really we don't know
+how big the table is going to be.
+
+167
+00:13:04,580 --> 00:13:07,841
+So, just leave it up to
+the system to determine it.
+
+168
+00:13:07,841 --> 00:13:12,037
+But in this new style, using the types,
+
+169
+00:13:12,037 --> 00:13:17,469
+instead of using the occurs clause,
+we can add [SOUND]
+
+170
+00:13:17,469 --> 00:13:22,425
+initial size, and
+then we can give it a number.
+
+171
+00:13:22,425 --> 00:13:24,240
+So, it could be zero.
+
+172
+00:13:24,240 --> 00:13:28,790
+But, this is completely optional,
+and if you don't know the exact size
+
+173
+00:13:28,790 --> 00:13:33,610
+of the table you are creating,
+you can just leave this off.
+
+174
+00:13:33,610 --> 00:13:36,320
+And actually,
+you'll very rarely see this in programs.
+
+175
+00:13:37,900 --> 00:13:41,350
+So, just leave your statement like this.
+
+176
+00:13:41,350 --> 00:13:44,950
+And lastly,
+let's also consider how we can create
+
+177
+00:13:44,950 --> 00:13:49,290
+a sorted table type instead
+of a standard table type.
+
+178
+00:13:49,290 --> 00:13:53,320
+Now before moving on from this statement,
+let's also consider how we can create
+
+179
+00:13:53,320 --> 00:13:56,910
+a sorted table type instead
+of a standard table type.
+
+180
+00:13:58,220 --> 00:14:03,026
+Well, we can do this by a,
+I'll tell you what, I'll just copy this,
+
+181
+00:14:03,026 --> 00:14:05,966
+this line, so you can see the difference.
+
+182
+00:14:05,966 --> 00:14:11,035
+So, where we have our type defined,
+
+183
+00:14:11,035 --> 00:14:16,430
+we just go past the type statement, and
+
+184
+00:14:16,430 --> 00:14:23,800
+here we can add SORTED TABLE OF
+[SOUND] line01_typ.
+
+185
+00:14:23,800 --> 00:14:26,820
+And then, we specify our table key.
+
+186
+00:14:28,340 --> 00:14:31,770
+So, because our table is made of
+both surname and date of birth,
+
+187
+00:14:34,070 --> 00:14:37,770
+we can then say, WITH UNIQUE KEY,
+
+188
+00:14:37,770 --> 00:14:42,690
+and then we add the key.
+
+189
+00:14:42,690 --> 00:14:44,560
+So, we can put surname.
+
+190
+00:14:46,100 --> 00:14:53,383
+Just going to two lines, so
+let's [SOUND] put it like this.
+
+191
+00:14:53,383 --> 00:14:56,587
+So, you can see it's very similar but
+we're saying, you know,
+
+192
+00:14:56,587 --> 00:15:01,050
+with the proper words, we're creating a
+sorted table instead of a standard table.
+
+193
+00:15:01,050 --> 00:15:03,010
+And because we're gonna
+create a sorted table,
+
+194
+00:15:03,010 --> 00:15:05,520
+we need to say what we're
+gonna sort the table by.
+
+195
+00:15:06,530 --> 00:15:09,170
+So, we're gonna say we got unique key, and
+
+196
+00:15:09,170 --> 00:15:14,550
+we're using the field surname
+which is part of our line type.
+
+197
+00:15:16,720 --> 00:15:19,180
+Sorry, which is this one there.
+
+198
+00:15:19,180 --> 00:15:24,060
+Now, this is just an example because
+we know that the table we created and
+
+199
+00:15:24,060 --> 00:15:29,380
+the records we have in there, we actually
+have duplicate records based on surname.
+
+200
+00:15:30,940 --> 00:15:36,300
+So, later on, when we create a sorted
+table, we will specify a unique key,
+
+201
+00:15:36,300 --> 00:15:40,470
+where we will use more than one field
+that defines the unique record.
+
+202
+00:15:41,910 --> 00:15:46,254
+Just to show you how you can do that now,
+all you need to do is
+
+203
+00:15:46,254 --> 00:15:51,071
+list the fields at the end of
+the statement separated by a comma.
+
+204
+00:15:51,071 --> 00:15:55,817
+So because our table only exists
+in two fields, in this case,
+
+205
+00:15:55,817 --> 00:15:58,386
+I would just say comma, field b.
+
+206
+00:15:58,386 --> 00:15:59,024
+Okay.
+
+207
+00:15:59,024 --> 00:16:04,830
+Next up, remember we have still
+only declared types at this point.
+
+208
+00:16:06,030 --> 00:16:09,333
+So next,
+we want to declare the table itself.
+
+209
+00:16:20,546 --> 00:16:22,409
+So, as the comment says,
+
+210
+00:16:22,409 --> 00:16:28,523
+we're gonna declare our table based on our
+Table Type that we just declared up there.
+
+211
+00:16:34,306 --> 00:16:39,510
+Let's make it so it works so
+we'll just comment out, the sorted table.
+
+212
+00:16:39,510 --> 00:16:44,160
+So up to now we have
+defined the line type, and
+
+213
+00:16:44,160 --> 00:16:47,470
+then we have defined the table type
+that is based on the line type.
+
+214
+00:16:48,620 --> 00:16:51,530
+But all these are just type definitions,
+
+215
+00:16:51,530 --> 00:16:54,620
+we've just created the blueprints
+to make up a table.
+
+216
+00:16:55,880 --> 00:16:58,110
+We do not have an internal table yet.
+
+217
+00:16:59,190 --> 00:17:00,420
+So how do we do this?
+
+218
+00:17:00,420 --> 00:17:04,030
+Well, let's have a look at the code,
+and it's really, really simple.
+
+219
+00:17:05,230 --> 00:17:12,347
+We use the data statement again, then
+we declare now our internal table name.
+
+220
+00:17:16,095 --> 00:17:20,198
+Or by type, and then we specify,
+
+221
+00:17:20,198 --> 00:17:25,450
+tell you what, let's change this.
+
+222
+00:17:25,450 --> 00:17:31,330
+And then we specify the type our
+table is going to be based on.
+
+223
+00:17:32,570 --> 00:17:36,590
+So because we've already defined
+our line type and our table type,
+
+224
+00:17:36,590 --> 00:17:41,680
+all we need to do now is use the data
+statement to say we're going
+
+225
+00:17:41,680 --> 00:17:46,710
+to create a new table
+called itab02 that is based
+
+226
+00:17:46,710 --> 00:17:51,680
+on the table type we declared, itab02_typ.
+
+227
+00:17:51,680 --> 00:17:56,260
+And when declaring
+internal tables this way,
+
+228
+00:17:56,260 --> 00:17:58,870
+we have the option of whether
+to use a header line or not.
+
+229
+00:17:58,870 --> 00:18:03,050
+If you do want to use a header line,
+
+230
+00:18:03,050 --> 00:18:07,590
+you must specify this explicitly
+in the data statement.
+
+231
+00:18:07,590 --> 00:18:09,899
+So it would read, let's have a look.
+
+232
+00:18:12,916 --> 00:18:18,190
+Data type, and then you would say,
+WITH HEADER LINE.
+
+233
+00:18:21,120 --> 00:18:24,020
+But remember, I'm saying don't do this.
+
+234
+00:18:24,020 --> 00:18:31,073
+Cuz if you do, you'll not be able to use
+this style of table in ABAP objects.
+
+235
+00:18:31,073 --> 00:18:33,490
+So the next thing to do,
+let's get rid of it.
+
+236
+00:18:36,290 --> 00:18:38,550
+Now, we're not done quite yet.
+
+237
+00:18:39,940 --> 00:18:43,840
+The last thing we need to
+do is define our work area.
+
+238
+00:18:45,060 --> 00:18:48,480
+And we will use this
+work area in conjunction
+
+239
+00:18:48,480 --> 00:18:50,010
+with the table we've just defined.
+
+240
+00:18:51,630 --> 00:18:52,985
+Now before we put the code in,
+
+241
+00:18:52,985 --> 00:18:58,170
+just note that the work area is actually
+not part of the internal table.
+
+242
+00:18:58,170 --> 00:19:02,118
+We have actually declared the complete
+internal table now in the previous step.
+
+243
+00:19:02,118 --> 00:19:08,340
+But we declared our work area to
+work in conjunction with the table.
+
+244
+00:19:08,340 --> 00:19:12,760
+Meaning we move data to our work area,
+we work with it, and
+
+245
+00:19:12,760 --> 00:19:16,076
+then we update our table
+from the work area.
+
+246
+00:19:16,076 --> 00:19:23,100
+Or we read data from our table into our
+work area to allow us to work with it.
+
+247
+00:19:24,350 --> 00:19:26,650
+The work area is completely separate.
+
+248
+00:19:27,740 --> 00:19:32,220
+And because it is separate,
+if we have multiple internal tables
+
+249
+00:19:32,220 --> 00:19:36,640
+with the same structure,
+we can also use one work area to read and
+
+250
+00:19:36,640 --> 00:19:40,900
+write data to and from multiple tables.
+
+251
+00:19:40,900 --> 00:19:43,350
+And that's an example
+of reusing your code.
+
+252
+00:19:45,120 --> 00:19:47,698
+So let's have a look how
+we define the work area.
+
+253
+00:20:01,465 --> 00:20:04,270
+So once again we use the data statement.
+
+254
+00:20:04,270 --> 00:20:09,860
+And I am just gonna call this now,
+wa, stands for work area.
+
+255
+00:20:11,230 --> 00:20:16,400
+And it's gonna be a work area that
+we're gonna associate with itab02.
+
+256
+00:20:16,400 --> 00:20:21,980
+Now, the association is just in my mind,
+it's not anything in the system.
+
+257
+00:20:21,980 --> 00:20:24,650
+So it's just, you know,
+a mental association.
+
+258
+00:20:24,650 --> 00:20:29,110
+So I'm just gonna say, wa_itab02.
+
+259
+00:20:29,110 --> 00:20:33,513
+Just so I know what work area
+matches what internal table.
+
+260
+00:20:33,513 --> 00:20:38,755
+Then we use the word type, and
+then we have to specify the line type.
+
+261
+00:20:38,755 --> 00:20:42,775
+Well, we've already declared it, up here.
+
+262
+00:20:48,174 --> 00:20:50,990
+So, we can just copy and
+paste, and bring it down.
+
+263
+00:20:54,740 --> 00:20:55,790
+And that's it.
+
+264
+00:20:55,790 --> 00:20:57,560
+That's how we declared our work area.
+
+265
+00:20:59,010 --> 00:21:01,010
+Use a data statement.
+
+266
+00:21:01,010 --> 00:21:02,789
+We give our work area a name.
+
+267
+00:21:04,020 --> 00:21:09,190
+And we specify the type as
+the line type we already declared.
+
+268
+00:21:09,190 --> 00:21:15,790
+And that completes everything we need
+to work with our internal table now.
+
+269
+00:21:17,980 --> 00:21:20,440
+Now I know the first statement
+
+270
+00:21:20,440 --> 00:21:24,891
+declaring an internal table with a header
+line was only four lines of code.
+
+271
+00:21:24,891 --> 00:21:28,912
+And we had to actually
+use seven lines of code.
+
+272
+00:21:31,594 --> 00:21:34,390
+To use the new style of internal table.
+
+273
+00:21:34,390 --> 00:21:39,070
+But believe me,
+it is much better to code this way.
+
+274
+00:21:39,070 --> 00:21:43,770
+And just as an example, we want to
+create a brand new internal table on
+
+275
+00:21:43,770 --> 00:21:47,267
+the same structure,
+well all we need to do is this.
+
+276
+00:21:51,191 --> 00:21:54,310
+Itab03 using 02 as line type.
+
+277
+00:21:55,470 --> 00:21:58,490
+And it can go on and on,
+we can create any internal tables,
+
+278
+00:21:58,490 --> 00:22:00,700
+all based on the same line type.
+
+279
+00:22:02,280 --> 00:22:04,466
+So that's how we can reuse our code.
+

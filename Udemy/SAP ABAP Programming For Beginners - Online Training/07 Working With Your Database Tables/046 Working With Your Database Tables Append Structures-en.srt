@@ -1,0 +1,361 @@
+1
+00:00:02,810 --> 00:00:04,330
+So we're taking a look at foreign keys.
+
+2
+00:00:05,390 --> 00:00:09,760
+Now what i want to do, is discuss what's
+called appendix structures.
+
+3
+00:00:11,900 --> 00:00:15,460
+And in our last example we added some
+fields to our table.
+
+4
+00:00:16,780 --> 00:00:23,070
+We also have the option of using append
+structures to add additional fields.
+
+5
+00:00:23,070 --> 00:00:28,860
+And this is the preferred method of
+maintaining SAP delivered tables and
+
+6
+00:00:28,860 --> 00:00:33,750
+quite often extending your own customer
+specific tables, why would
+
+7
+00:00:33,750 --> 00:00:37,540
+we use appendix structures rather than
+just adding fields to our table?
+
+8
+00:00:38,850 --> 00:00:43,270
+Well, if it's a standard SAP table and we
+add fields to it.
+
+9
+00:00:44,470 --> 00:00:47,610
+What if SAP released a new version of
+software,
+
+10
+00:00:47,610 --> 00:00:49,740
+where they add some fields themselves?
+
+11
+00:00:51,010 --> 00:00:52,720
+Well, when we come to do an upgrade.
+
+12
+00:00:53,800 --> 00:00:56,560
+We're gonna have some serious
+difficulties.
+
+13
+00:00:56,560 --> 00:00:59,800
+Because we could have added fields to the
+table and
+
+14
+00:00:59,800 --> 00:01:04,330
+we tried to apply the update we could end
+up with some serious errors.
+
+15
+00:01:04,330 --> 00:01:08,860
+Our fields could get overwritten by those
+new fields that SAP have added.
+
+16
+00:01:10,390 --> 00:01:11,910
+You never want to be in that situation.
+
+17
+00:01:13,140 --> 00:01:16,170
+So to insure you don't come up against
+this problem,
+
+18
+00:01:16,170 --> 00:01:18,690
+this is where append structures are a
+great help.
+
+19
+00:01:20,255 --> 00:01:24,520
+Append structures give us a safe way to
+enhance our tables and
+
+20
+00:01:24,520 --> 00:01:26,920
+standard sub-tables.
+
+21
+00:01:26,920 --> 00:01:32,040
+When we use append structures the existing
+table remains unchanged
+
+22
+00:01:32,040 --> 00:01:35,650
+which removes any risk of our changes
+being overwritten.
+
+23
+00:01:37,290 --> 00:01:39,960
+And quite often in an SAP system
+
+24
+00:01:39,960 --> 00:01:44,390
+you will see a table having multiple
+append structures applied to it
+
+25
+00:01:44,390 --> 00:01:48,460
+because there have been different
+development needs as time has gone by and
+
+26
+00:01:48,460 --> 00:01:53,780
+people want to add more fields to the
+underlying standard sub-table.
+
+27
+00:01:53,780 --> 00:01:58,080
+So let's have a look at append structures,
+how we create them how they are used.
+
+28
+00:02:00,170 --> 00:02:05,140
+So as you can see, we are already in
+transaction SE11 with our table loaded.
+
+29
+00:02:06,380 --> 00:02:10,975
+What we need to do is use our mouse and go
+to the append structure button.
+
+30
+00:02:10,975 --> 00:02:14,186
+[SOUND] We'll give it a click and
+
+31
+00:02:14,186 --> 00:02:19,878
+the system is automatically suggesting a
+name for us.
+
+32
+00:02:19,878 --> 00:02:24,317
+And notice it's automatically telling us
+to use our customer
+
+33
+00:02:24,317 --> 00:02:29,280
+name space making sure our pen structure
+starts with the letter zed.
+
+34
+00:02:30,730 --> 00:02:35,067
+Let's accept this choice by the system
+[SOUND] and
+
+35
+00:02:35,067 --> 00:02:41,211
+now we're displayed with what looks like
+an empty table structure.
+
+36
+00:02:41,211 --> 00:02:45,128
+So let's go ahead and fill it in just like
+we would with a normal table.
+
+37
+00:02:45,128 --> 00:02:53,086
+[BLANK_AUDIO]
+
+38
+00:02:53,086 --> 00:02:54,720
+Extra fields for employees.
+
+39
+00:02:55,990 --> 00:02:58,510
+And when we come down to the body of the
+screen,
+
+40
+00:02:58,510 --> 00:03:01,280
+notice this field now is called component.
+
+41
+00:03:03,320 --> 00:03:05,320
+And this is just where we create our new
+fields.
+
+42
+00:03:07,140 --> 00:03:13,020
+But one thing to keep in mind, it would be
+nice to differentiate our customer fields
+
+43
+00:03:13,020 --> 00:03:18,940
+in our table from our new custom
+components in our append structure.
+
+44
+00:03:18,940 --> 00:03:23,050
+So the best way to do this is still stay
+with the customer name space.
+
+45
+00:03:24,110 --> 00:03:29,586
+But where we'll use Z in the field name,
+let's use ZZ.
+
+46
+00:03:29,586 --> 00:03:32,923
+And what we'll do is create a department
+field.
+
+47
+00:03:32,923 --> 00:03:36,336
+[BLANK_AUDIO]
+
+48
+00:03:36,336 --> 00:03:42,435
+And same thing with component type [SOUND]
+use ZZ,
+
+49
+00:03:42,435 --> 00:03:45,420
+i choose yes to create.
+
+50
+00:03:45,420 --> 00:03:53,129
+[SOUND] It's just asking us to save the
+append structure which we will do.
+
+51
+00:03:53,129 --> 00:03:55,461
+[BLANK_AUDIO]
+
+52
+00:03:55,461 --> 00:03:59,920
+It's asking us what type of object we want
+to create and it's a data element.
+
+53
+00:03:59,920 --> 00:04:06,961
+[BLANK_AUDIO]
+
+54
+00:04:06,961 --> 00:04:10,670
+[SOUND] And let's choose.
+
+55
+00:04:10,670 --> 00:04:12,670
+Should we have a code or description?
+
+56
+00:04:12,670 --> 00:04:15,711
+Well let's choose 10 character code.
+
+57
+00:04:15,711 --> 00:04:22,003
+Let's say copy this [SOUND] choose a field
+label.
+
+58
+00:04:22,003 --> 00:04:26,170
+[SOUND]
+[BLANK_AUDIO]
+
+59
+00:04:26,170 --> 00:04:28,378
+And activate the data element.
+
+60
+00:04:28,378 --> 00:04:32,460
+[SOUND] [INAUDIBLE]
+
+61
+00:04:32,460 --> 00:04:35,961
+or step back.
+
+62
+00:04:35,961 --> 00:04:38,346
+Now we're back to our append structure,
+
+63
+00:04:38,346 --> 00:04:42,802
+is brought through the properties of the
+data element and we can activate it.
+
+64
+00:04:42,802 --> 00:04:49,711
+[SOUND] So let's step back and it should
+take us back to our table.
+
+65
+00:04:49,711 --> 00:04:54,681
+And now we have an extra row that shows
+the actual append structure we've just
+
+66
+00:04:54,681 --> 00:04:55,378
+created.
+
+67
+00:04:55,378 --> 00:04:57,754
+[BLANK_AUDIO]
+
+68
+00:04:57,754 --> 00:05:01,475
+If we want to go back to it, you just
+double-click the append structure.
+
+69
+00:05:01,475 --> 00:05:07,457
+[SOUND] So that's a very easy way to add
+additional fields to our tables and
+
+70
+00:05:07,457 --> 00:05:14,336
+standard sub-tables without effecting the
+structure of the sub-table itself.
+
+71
+00:05:14,336 --> 00:05:17,428
+Now let's take a look at the data within
+our table and
+
+72
+00:05:17,428 --> 00:05:20,818
+have a look at what field the append
+structure has added.
+
+73
+00:05:20,818 --> 00:05:25,545
+[SOUND]
+[BLANK_AUDIO]
+
+74
+00:05:25,545 --> 00:05:30,380
+[SOUND] If we scroll to the right, you'll
+see our brand new department field
+
+75
+00:05:30,380 --> 00:05:34,461
+has been added as though it's just a
+normal field in our table.
+
+76
+00:05:34,461 --> 00:05:38,048
+And we can enter data into the field, just
+like any other field.
+
+77
+00:05:38,048 --> 00:05:40,779
+[BLANK_AUDIO]
+

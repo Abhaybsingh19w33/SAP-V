@@ -1,0 +1,129 @@
+1
+00:00:01,220 --> 00:00:03,950
+Let's now take a look at the restatements.
+
+2
+00:00:03,950 --> 00:00:07,850
+And as you can probably guess, the
+restatement follows a similar logic in
+
+3
+00:00:07,850 --> 00:00:12,234
+that we must use our work area with our
+restatements.
+
+4
+00:00:12,234 --> 00:00:15,568
+And if we go straight to the code, we can
+have a look at how we write it.
+
+5
+00:00:15,568 --> 00:00:21,990
+So we would say READ TABLE and
+
+6
+00:00:21,990 --> 00:00:29,791
+then we specify the table we want to read,
+which is itab02.
+
+7
+00:00:29,791 --> 00:00:31,870
+We specify the index of the record we want
+to read.
+
+8
+00:00:31,870 --> 00:00:36,150
+But instead of leaving it there with a
+full stop, we continue on to say and
+
+9
+00:00:36,150 --> 00:00:43,086
+store the record into
+
+10
+00:00:43,086 --> 00:00:48,623
+our work area.
+
+11
+00:00:48,623 --> 00:00:53,257
+[SOUND] Now just like in previous
+examples,
+
+12
+00:00:53,257 --> 00:01:01,238
+quite often you do not know the index
+number of the record you want to read,
+
+13
+00:01:01,238 --> 00:01:05,503
+so you would use the with key addition.
+
+14
+00:01:05,503 --> 00:01:10,526
+So the way we write that is instead of
+
+15
+00:01:10,526 --> 00:01:16,051
+using the index again, we do retable,
+
+16
+00:01:16,051 --> 00:01:23,600
+internal table which is itab02 into our
+work area.
+
+17
+00:01:26,960 --> 00:01:32,628
+And we specify with key, and then we
+specify the key we want to use.
+
+18
+00:01:32,628 --> 00:01:37,710
+So in our case let's use surname equals
+Smith.
+
+19
+00:01:40,290 --> 00:01:44,840
+So just as before when we specify the work
+area we want to read the record into,
+
+20
+00:01:44,840 --> 00:01:48,330
+the same thing happens here.
+
+21
+00:01:48,330 --> 00:01:52,280
+The record is transferred to our work area
+based on our key to
+
+22
+00:01:52,280 --> 00:01:54,680
+allow us to continue with the rest of our
+program.
+
+23
+00:01:57,400 --> 00:02:02,030
+Now I mentioned previously, when we were
+discussing the read statement.
+
+24
+00:02:02,030 --> 00:02:04,760
+With internal tables that have headlines.
+
+25
+00:02:04,760 --> 00:02:08,720
+You need to keep in mind that tables
+without unique keys
+
+26
+00:02:08,720 --> 00:02:10,060
+can have multiple records.
+
+27
+00:02:10,060 --> 00:02:14,586
+That match the criteria that you specify
+with your read statement.
+
+28
+00:02:14,586 --> 00:02:17,739
+[BLANK_AUDIO]
+

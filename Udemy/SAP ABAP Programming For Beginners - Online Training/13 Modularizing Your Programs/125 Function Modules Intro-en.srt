@@ -1,0 +1,151 @@
+1
+00:00:02,430 --> 00:00:07,640
+Function modules make up a major part of
+an SAP system.
+
+2
+00:00:07,640 --> 00:00:14,300
+Because for years SAP have modularized
+their code using function modules to allow
+
+3
+00:00:14,300 --> 00:00:19,790
+for code reuse, both by themselves, their
+own developers, and by their customers.
+
+4
+00:00:22,100 --> 00:00:27,270
+Now function modules are just specific
+procedures that defined
+
+5
+00:00:27,270 --> 00:00:32,240
+within function groups and can be called
+from any other ABAP program.
+
+6
+00:00:34,650 --> 00:00:37,730
+The function group acts like a container
+for
+
+7
+00:00:37,730 --> 00:00:40,960
+all the function modules that logically
+belong together.
+
+8
+00:00:41,990 --> 00:00:46,670
+For example, take all the function modules
+for your HR payroll system.
+
+9
+00:00:46,670 --> 00:00:48,670
+Group them together into a function group.
+
+10
+00:00:50,230 --> 00:00:54,400
+Maybe there's a bunch of function modules
+dealing with cost center reporting.
+
+11
+00:00:54,400 --> 00:00:57,800
+Well they can also be grouped together in
+function module groups.
+
+12
+00:00:59,760 --> 00:01:05,390
+SAP systems literally have thousands upon
+thousands of function modules
+
+13
+00:01:05,390 --> 00:01:07,470
+that are available for you to use in your
+programs.
+
+14
+00:01:08,610 --> 00:01:11,890
+So there is no need to re-invent the wheel
+all the time,
+
+15
+00:01:11,890 --> 00:01:14,650
+have a search around your SAP system.
+
+16
+00:01:14,650 --> 00:01:19,070
+To see if function modules already exist,
+I've performed a function
+
+17
+00:01:19,070 --> 00:01:21,750
+you need in your program before having to
+create it yourself.
+
+18
+00:01:23,840 --> 00:01:28,460
+Let's concentrate on how we can create
+function groups and function modules.
+
+19
+00:01:28,460 --> 00:01:31,770
+And to do this, we're going to take a look
+at the function build up.
+
+20
+00:01:36,310 --> 00:01:41,220
+So I'm going to step out of the ABAP
+editor,
+
+21
+00:01:41,220 --> 00:01:45,750
+[SOUND] and go back to the main menu is
+SAP.
+
+22
+00:01:45,750 --> 00:01:48,749
+Now way at the start this course,
+
+23
+00:01:48,749 --> 00:01:54,536
+I mentioned that the function builder can
+be found under tools,
+
+24
+00:01:54,536 --> 00:01:59,910
+ABAP workbench, developments, and you'll
+see it here.
+
+25
+00:01:59,910 --> 00:02:02,060
+Once you get used to the transactions,
+
+26
+00:02:02,060 --> 00:02:04,760
+you'll also be able to call it up using
+transaction SE37.
+
+27
+00:02:04,760 --> 00:02:09,937
+[SOUND] For our example exercise we're
+going to
+
+28
+00:02:09,937 --> 00:02:16,185
+write a program that uses an existing
+function module.
+
+29
+00:02:16,185 --> 00:02:20,739
+But before we get onto that, we'll take a
+look at the function module we're
+
+30
+00:02:20,739 --> 00:02:23,670
+going to use and explain how it's put
+together.
+
+31
+00:02:24,710 --> 00:02:28,450
+Which will then allow us to discuss how we
+can use it in our program.
+

@@ -1,0 +1,217 @@
+1
+00:00:03,010 --> 00:00:05,750
+When we are writing our programs using
+open SQL,
+
+2
+00:00:05,750 --> 00:00:11,130
+we need to bare in mind the concepts of
+authorization in an SAP system.
+
+3
+00:00:12,380 --> 00:00:16,500
+Now an SAP system has its own security
+
+4
+00:00:16,500 --> 00:00:21,800
+tools to ensure users can only access the
+data they are authorized to see.
+
+5
+00:00:21,800 --> 00:00:26,860
+This includes individual fields as well as
+individual records.
+
+6
+00:00:26,860 --> 00:00:33,980
+The way authorizations are set up can also
+limit how the data is used.
+
+7
+00:00:33,980 --> 00:00:38,460
+Whether a user can only display
+information or whether they can modify
+
+8
+00:00:38,460 --> 00:00:43,170
+the data such as adding, changing, and
+even deleting records.
+
+9
+00:00:44,940 --> 00:00:48,910
+And all these rules that make up a user's
+authorizations
+
+10
+00:00:48,910 --> 00:00:51,140
+as stored as authorization objects.
+
+11
+00:00:53,190 --> 00:00:56,800
+Now we're not gonna dig deep into
+authorizations here, but
+
+12
+00:00:56,800 --> 00:01:02,840
+as a general rule a user is assigned a
+relevant authorization profile or
+
+13
+00:01:02,840 --> 00:01:05,770
+composite profile against there user
+record.
+
+14
+00:01:06,830 --> 00:01:12,300
+Which for informational purposes is
+managed through transaction SU Z01.
+
+15
+00:01:12,300 --> 00:01:15,210
+This authorization profile
+
+16
+00:01:15,210 --> 00:01:20,720
+then gives the user the correct rites to
+carry out their job and SAP
+
+17
+00:01:20,720 --> 00:01:25,490
+delivers lots of predefined authorization
+profiles with their bay system.
+
+18
+00:01:25,490 --> 00:01:30,290
+The system of administrators can use and
+enhance to apply to their users
+
+19
+00:01:32,040 --> 00:01:37,200
+for example, there are standard developer
+roles or HR administrator roles.
+
+20
+00:01:37,200 --> 00:01:42,410
+The system administrators more than likely
+take these delivered
+
+21
+00:01:42,410 --> 00:01:47,320
+authorization profiles files, tweak them a
+little bit to ensure they work
+
+22
+00:01:47,320 --> 00:01:51,450
+just how their company wants them to work,
+and then apply them to individual users.
+
+23
+00:01:53,730 --> 00:01:55,600
+Once a user is assigned a role, and
+
+24
+00:01:55,600 --> 00:02:00,550
+tries to execute a program, depending on
+the authorization role of the user,
+
+25
+00:02:00,550 --> 00:02:03,010
+they will be allowed to execute the
+transaction or not.
+
+26
+00:02:04,120 --> 00:02:08,680
+And a typical example is being able to run
+transaction SE38.
+
+27
+00:02:08,680 --> 00:02:09,390
+The ABAP editor.
+
+28
+00:02:09,390 --> 00:02:15,020
+A user can be given a role to allow them
+to access that transaction, but
+
+29
+00:02:15,020 --> 00:02:21,380
+also it can be tweaked so that yeah, they
+can access it, but only in display mode.
+
+30
+00:02:21,380 --> 00:02:25,900
+Or in a live system maybe, they can access
+the transaction in display mode.
+
+31
+00:02:25,900 --> 00:02:30,500
+And be allowed to debug the program in the
+live environment, but
+
+32
+00:02:30,500 --> 00:02:32,960
+not be able to make changes to the code
+itself.
+
+33
+00:02:34,430 --> 00:02:40,250
+So coming back to our ABAP programs, where
+specific authorizations have
+
+34
+00:02:40,250 --> 00:02:45,170
+not been implemented we can get our
+programmers to carry out an authority
+
+35
+00:02:45,170 --> 00:02:50,220
+check using the ABAP statement authority
+check.
+
+36
+00:02:50,220 --> 00:02:53,200
+This has to be used if the transaction or
+
+37
+00:02:53,200 --> 00:02:57,330
+the ABAP program itself is not
+sufficiently protected
+
+38
+00:02:57,330 --> 00:03:01,770
+by the standard authorization profiles
+already set up in the system.
+
+39
+00:03:03,810 --> 00:03:08,000
+Now, we won't go any further into
+authorization checking in this course
+
+40
+00:03:08,000 --> 00:03:11,270
+because it is a massive topic in itself.
+
+41
+00:03:11,270 --> 00:03:14,280
+But you do need to be aware of
+authorizations.
+
+42
+00:03:14,280 --> 00:03:19,177
+And make sure any programs that you create
+take into account authorizations
+
+43
+00:03:19,177 --> 00:03:22,161
+already set up by the system or, if
+required,
+
+44
+00:03:22,161 --> 00:03:26,464
+implement your own authorization checking,
+as just mentioned.
+
+45
+00:03:26,464 --> 00:03:29,719
+[BLANK_AUDIO]
+

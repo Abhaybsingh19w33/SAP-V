@@ -1,0 +1,97 @@
+1
+00:00:01,570 --> 00:00:06,310
+Before we move on to looking at how we
+actually create internal tables, you know,
+
+2
+00:00:06,310 --> 00:00:11,995
+the specific syntax, I want to spend a few
+moments regarding best practices.
+
+3
+00:00:11,995 --> 00:00:15,410
+SAP has been around for
+
+4
+00:00:15,410 --> 00:00:20,000
+a long time, and as such, there are many
+programs that exist.
+
+5
+00:00:20,000 --> 00:00:25,490
+In the current version of SAP software
+that themselves have been around for
+
+6
+00:00:25,490 --> 00:00:31,560
+many years and conform to using the older
+style of internal tables in their code.
+
+7
+00:00:33,310 --> 00:00:36,870
+When you create your own programs, please
+use the newer style.
+
+8
+00:00:38,200 --> 00:00:42,390
+This will ensure your programs will be
+able to be used well into the future.
+
+9
+00:00:43,690 --> 00:00:46,690
+This does not mean you cant use the older
+way of programming.
+
+10
+00:00:48,350 --> 00:00:52,120
+But if you have a choice, why not use the
+newest syntax.
+
+11
+00:00:52,120 --> 00:00:55,820
+Because everything SAP is developing right
+now and
+
+12
+00:00:55,820 --> 00:01:00,030
+in the future, we will use the newer
+object oriented syntax.
+
+13
+00:01:01,180 --> 00:01:04,910
+And as we work through how to create
+internal tables,
+
+14
+00:01:04,910 --> 00:01:08,650
+I will cover both the old and the new
+style of coding, so
+
+15
+00:01:08,650 --> 00:01:13,710
+that you are familiar with how ABAP has
+changed over the years.
+
+16
+00:01:13,710 --> 00:01:17,050
+And this will enable you to recognize the
+old and
+
+17
+00:01:17,050 --> 00:01:20,770
+new style of coding in the programs that
+you come into contact with.
+
+18
+00:01:22,070 --> 00:01:23,510
+Now that's enough of that.
+
+19
+00:01:23,510 --> 00:01:25,894
+Let's crack on and have a look at some
+code.
+
+20
+00:01:25,894 --> 00:01:30,559
+[BLANK_AUDIO]
+

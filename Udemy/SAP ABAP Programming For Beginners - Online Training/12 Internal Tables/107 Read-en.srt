@@ -1,0 +1,331 @@
+1
+00:00:02,100 --> 00:00:06,010
+The loop statement is great for looping
+through all the records of our table.
+
+2
+00:00:06,010 --> 00:00:09,320
+But there is another statement we can
+
+3
+00:00:09,320 --> 00:00:11,610
+use to access the records of an internal
+table.
+
+4
+00:00:12,980 --> 00:00:16,080
+This statement is called the read
+statement,
+
+5
+00:00:16,080 --> 00:00:20,700
+this statement allows you to specifically
+read individual records from a table.
+
+6
+00:00:22,000 --> 00:00:26,993
+So in our case, because we are using a
+headline, when we use the read
+
+7
+00:00:26,993 --> 00:00:31,430
+statement the record will be read into the
+header line of our internal table.
+
+8
+00:00:32,660 --> 00:00:35,900
+When you use the read statement in your
+program,
+
+9
+00:00:35,900 --> 00:00:40,830
+you've got to be aware of how your
+internal table has been declared
+
+10
+00:00:40,830 --> 00:00:44,481
+because that will affect how you write
+your read statement code.
+
+11
+00:00:45,950 --> 00:00:51,020
+And what I mean is, what type of internal
+table are you working with?
+
+12
+00:00:51,020 --> 00:00:53,746
+Is it a standard table, hash table, etc.
+
+13
+00:00:53,746 --> 00:00:58,943
+If you're working with a standard table
+with a non-unique standard key,
+
+14
+00:00:58,943 --> 00:01:02,500
+then you would write the read statement
+like this.
+
+15
+00:01:02,500 --> 00:01:09,651
+[BLANK_AUDIO].
+
+16
+00:01:09,651 --> 00:01:15,038
+Read table, and we specify the table,
+which is itab01.
+
+17
+00:01:15,038 --> 00:01:18,420
+And we can specify the index number.
+
+18
+00:01:20,670 --> 00:01:24,990
+This means we're reading the fifth record
+of our internal table
+
+19
+00:01:24,990 --> 00:01:26,240
+into our header record.
+
+20
+00:01:28,260 --> 00:01:31,050
+The beauty of using the read statements
+
+21
+00:01:31,050 --> 00:01:34,820
+is it is the fastest way to access the
+records of an internal table.
+
+22
+00:01:36,320 --> 00:01:39,970
+And using the index specifically is the
+fastest form
+
+23
+00:01:39,970 --> 00:01:41,589
+of this read statement itself.
+
+24
+00:01:43,120 --> 00:01:47,940
+This type of access is about three times
+faster than using a hash algorithm,
+
+25
+00:01:47,940 --> 00:01:49,528
+which as I mentioned previously,
+
+26
+00:01:49,528 --> 00:01:55,040
+is our best-performing internal table when
+dealing with lots of data.
+
+27
+00:01:56,790 --> 00:02:00,030
+As well as being three times faster than a
+hash algorithm.
+
+28
+00:02:01,160 --> 00:02:06,290
+It can be up to 14 times faster than using
+a normal table key.
+
+29
+00:02:06,290 --> 00:02:08,150
+But the problem is,
+
+30
+00:02:08,150 --> 00:02:13,030
+we don't always know what the index number
+of the record is that we want to read.
+
+31
+00:02:13,030 --> 00:02:16,330
+And that's why we nearly always end up
+using table keys.
+
+32
+00:02:17,940 --> 00:02:21,160
+So let's add an internal table to our
+code.
+
+33
+00:02:21,160 --> 00:02:23,990
+And define some key fields as our table
+key.
+
+34
+00:02:26,240 --> 00:02:30,105
+So the way we write a read statement is in
+a table key.
+
+35
+00:02:30,105 --> 00:02:36,701
+[SOUND] Is again, read statement so I go
+pretty top.
+
+36
+00:02:36,701 --> 00:02:42,540
+[BLANK AUDIO].
+
+37
+00:02:42,540 --> 00:02:43,950
+Okay.
+
+38
+00:02:43,950 --> 00:02:47,080
+We have read table and we specify our
+table name.
+
+39
+00:02:47,080 --> 00:02:50,840
+Instead of using index and the index
+number,
+
+40
+00:02:54,500 --> 00:03:01,250
+what we do is type with key and then we
+specify our key fields.
+
+41
+00:03:01,250 --> 00:03:02,350
+So I'll just go onto a new line.
+
+42
+00:03:03,480 --> 00:03:04,590
+We'll indent it a little bit.
+
+43
+00:03:06,050 --> 00:03:11,270
+And because our itab01 is made up of, of
+these fields up here,
+
+44
+00:03:11,270 --> 00:03:15,550
+we will say, our key field is employee.
+
+45
+00:03:15,550 --> 00:03:21,630
+So we'd say, employee, equals, and then we
+specify an employee number.
+
+46
+00:03:25,630 --> 00:03:26,350
+Simple as that.
+
+47
+00:03:27,980 --> 00:03:30,840
+You're not just limited to using a unique
+key.
+
+48
+00:03:30,840 --> 00:03:33,110
+You can use other fields as well.
+
+49
+00:03:33,110 --> 00:03:39,690
+But the problem there is that it is
+difficult to know exactly which record
+
+50
+00:03:39,690 --> 00:03:44,930
+you will be reading, because let's say if
+we use the surname field and
+
+51
+00:03:44,930 --> 00:03:46,850
+we add three people called Smith.
+
+52
+00:03:48,400 --> 00:03:50,320
+Well you wouldn't know which record has
+been read.
+
+53
+00:03:50,320 --> 00:03:51,910
+Is it the first, second or third?
+
+54
+00:03:53,770 --> 00:03:55,753
+Well with a non-unique key,
+
+55
+00:03:55,753 --> 00:03:59,780
+the read statement reads sequentially
+through your table.
+
+56
+00:03:59,780 --> 00:04:03,430
+So actually you'll get the first record
+that appears in your table
+
+57
+00:04:03,430 --> 00:04:04,310
+that matches your key.
+
+58
+00:04:05,980 --> 00:04:09,500
+Again, you won't have a clue if there are
+any more records
+
+59
+00:04:09,500 --> 00:04:14,270
+that match without adding extra code to
+carry out some extra checking.
+
+60
+00:04:14,270 --> 00:04:18,310
+You know, such as check to see if the
+record was found, if it was found,
+
+61
+00:04:18,310 --> 00:04:21,690
+read the next record and again, see if
+that record was found.
+
+62
+00:04:22,820 --> 00:04:26,250
+You know, that type of thing is the only
+way you'd know if there are more records
+
+63
+00:04:26,250 --> 00:04:27,140
+with the same key.
+
+64
+00:04:29,090 --> 00:04:33,149
+Now, this read statement we've just seen
+can also be used for
+
+65
+00:04:33,149 --> 00:04:36,240
+sorted tables and hash tables.
+
+66
+00:04:36,240 --> 00:04:39,720
+When you specify the key fields to use in
+your search.
+
+67
+00:04:39,720 --> 00:04:44,470
+The system will run a binary search for
+sorted tables and
+
+68
+00:04:44,470 --> 00:04:49,050
+use a hash algorithm for hash tables.
+
+69
+00:04:49,050 --> 00:04:52,830
+If the fields you choose to use are not
+key fields, the system will
+
+70
+00:04:52,830 --> 00:04:56,407
+carry out a sequential search for both the
+sorted out hash tables.
+
+71
+00:04:56,407 --> 00:04:56,907
+[BLANK AUDIO].
+

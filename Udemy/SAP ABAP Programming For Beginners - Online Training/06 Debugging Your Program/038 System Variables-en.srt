@@ -1,0 +1,79 @@
+1
+00:00:01,510 --> 00:00:03,740
+Now you'll also see at the bottom of the
+screen.
+
+2
+00:00:03,740 --> 00:00:07,129
+We have three fields, SY-SUBRC,
+
+3
+00:00:07,129 --> 00:00:12,018
+SY-TAPIX, and SY-DBCNT.
+
+4
+00:00:12,018 --> 00:00:16,430
+And you'll note that the actual value
+boxes are gray down.
+
+5
+00:00:16,430 --> 00:00:19,480
+Which means we can't change the values of
+these fields ourself.
+
+6
+00:00:21,770 --> 00:00:27,750
+These fields are system fields, and
+actually belong to a table called S-Y-S-T.
+
+7
+00:00:27,750 --> 00:00:32,390
+This system table actually contains a
+whole lot more system
+
+8
+00:00:32,390 --> 00:00:36,350
+fields that get filled in at runtime.
+
+9
+00:00:36,350 --> 00:00:39,440
+These system fields are updated
+automatically
+
+10
+00:00:39,440 --> 00:00:41,000
+while your program is executing.
+
+11
+00:00:42,080 --> 00:00:46,790
+Most statements within ABAP cause the
+system fields to be filled with zero
+
+12
+00:00:46,790 --> 00:00:49,040
+when they are executed successfully.
+
+13
+00:00:49,040 --> 00:00:54,620
+But it's important to remember that these
+fields are completely statement dependant,
+
+14
+00:00:54,620 --> 00:00:57,190
+meaning that they will contain different
+values,
+
+15
+00:00:57,190 --> 00:00:59,520
+depending on which statement is executed.
+
+16
+00:01:00,990 --> 00:01:04,480
+And we will take a closer look to the
+system return codes and
+
+17
+00:01:04,480 --> 00:01:07,530
+system variables later on in this ABAP
+course.
+

@@ -1,0 +1,429 @@
+1
+00:00:02,780 --> 00:00:07,650
+For us to be able to build our selection
+screens and use selection screens in
+
+2
+00:00:07,650 --> 00:00:11,970
+our program, the first thing we have to
+understand are things called events.
+
+3
+00:00:14,110 --> 00:00:16,760
+Events are what we call processing blocks.
+
+4
+00:00:16,760 --> 00:00:21,290
+And what I mean is just a section of code
+that's specific for the selection screens.
+
+5
+00:00:22,470 --> 00:00:27,160
+Now the structure of an event starts with
+the event keyword, but
+
+6
+00:00:27,160 --> 00:00:29,290
+doesn't have an ending event keyword.
+
+7
+00:00:30,610 --> 00:00:35,870
+The end of the event block of code is just
+implicit,
+
+8
+00:00:35,870 --> 00:00:40,910
+because the start of the next event block
+will terminate the first one.
+
+9
+00:00:40,910 --> 00:00:45,500
+So what I mean is, the event that we
+define will end when a new event starts,
+
+10
+00:00:47,640 --> 00:00:51,790
+such as a sub program, or our report
+actually ends.
+
+11
+00:00:51,790 --> 00:00:52,740
+We're at the end of our code.
+
+12
+00:00:53,930 --> 00:00:57,050
+Now, when we run our executable programs,
+
+13
+00:00:57,050 --> 00:01:02,420
+the program is controlled by a predefined
+process in the runtime environment.
+
+14
+00:01:02,420 --> 00:01:05,570
+And a series of processes are called one
+after another.
+
+15
+00:01:06,950 --> 00:01:11,830
+These processes trigger events for which
+we can define event logs for
+
+16
+00:01:11,830 --> 00:01:12,950
+in our program.
+
+17
+00:01:12,950 --> 00:01:16,010
+When we start our program,
+
+18
+00:01:16,010 --> 00:01:19,970
+there are certain events that get fired in
+a certain order.
+
+19
+00:01:22,380 --> 00:01:27,302
+This image is taken from the SAP help
+website, and it explains it quite well.
+
+20
+00:01:27,302 --> 00:01:29,335
+[BLANK_AUDIO]
+
+21
+00:01:29,335 --> 00:01:32,660
+Here we have the SAP GUI, so that's what
+the user sees.
+
+22
+00:01:32,660 --> 00:01:34,200
+And you can see we have a selection
+screen.
+
+23
+00:01:34,200 --> 00:01:36,300
+And then we have our list output.
+
+24
+00:01:37,880 --> 00:01:41,350
+Now when our program starts, the first
+thing the system does
+
+25
+00:01:41,350 --> 00:01:45,050
+is check your program to see if you have
+included any processing blocks.
+
+26
+00:01:46,490 --> 00:01:50,220
+And if you have, it'll determine which
+ones you are using and
+
+27
+00:01:50,220 --> 00:01:53,650
+will follow this sequence of events to
+execute those blocks.
+
+28
+00:01:55,160 --> 00:02:00,923
+So we can see when the program starts, our
+program global variables are declared,
+
+29
+00:02:00,923 --> 00:02:03,571
+so the system reserves memory space.
+
+30
+00:02:03,571 --> 00:02:06,149
+[BLANK_AUDIO]
+
+31
+00:02:06,149 --> 00:02:11,611
+And then the runtime environment will look
+to see if you have an initialization
+
+32
+00:02:11,611 --> 00:02:16,095
+event block, and if you do, this event
+block will be executed.
+
+33
+00:02:16,095 --> 00:02:20,624
+Now bear in mind, initialization event
+block will only be run once and
+
+34
+00:02:20,624 --> 00:02:23,157
+that's at the start of your program and
+
+35
+00:02:23,157 --> 00:02:27,611
+the things you include in the
+initialization block of code are things
+
+36
+00:02:27,611 --> 00:02:32,100
+like setting up initial values for fields
+in your selection screen.
+
+37
+00:02:33,430 --> 00:02:38,133
+The runtime environment will then check
+whether a selection screen has
+
+38
+00:02:38,133 --> 00:02:40,100
+been defined in your report.
+
+39
+00:02:40,100 --> 00:02:44,670
+So if at least one input field is being
+used, then control will be passed
+
+40
+00:02:44,670 --> 00:02:48,140
+to the selection screen processor, which
+is this piece right here.
+
+41
+00:02:49,160 --> 00:02:53,980
+Now, this selection screen processor will
+display the screen to the user, and
+
+42
+00:02:53,980 --> 00:02:58,980
+once it is shown, the user can then
+interact with the screen,
+
+43
+00:02:58,980 --> 00:03:04,460
+filling fields, select data from drop down
+boxes, etc.
+
+44
+00:03:04,460 --> 00:03:08,080
+And when the user clicks on execute to run
+the report
+
+45
+00:03:08,080 --> 00:03:09,880
+after filling in all the fields,
+
+46
+00:03:09,880 --> 00:03:15,620
+a screen processor will then trigger the
+app selection screen event block.
+
+47
+00:03:15,620 --> 00:03:19,750
+And this is where you can write your own
+code to check all
+
+48
+00:03:19,750 --> 00:03:24,570
+the entries the user has keyed in to the
+individual fields on the selection screen.
+
+49
+00:03:26,150 --> 00:03:31,150
+If the user has entered any incorrect
+values, your code can capture
+
+50
+00:03:31,150 --> 00:03:35,980
+these mistakes and instead of processing
+your program, you can force the selection
+
+51
+00:03:35,980 --> 00:03:41,120
+screen to be displayed again to the user,
+to allow them to correct any errors.
+
+52
+00:03:43,520 --> 00:03:45,920
+Now of course, if they make some errors,
+
+53
+00:03:45,920 --> 00:03:50,770
+you need to tell the user where the errors
+are, so you will use error messages
+
+54
+00:03:50,770 --> 00:03:55,450
+to inform the user they need to check the
+entries they have made and
+
+55
+00:03:55,450 --> 00:03:59,050
+key in some correct values before the
+program can be run.
+
+56
+00:04:00,120 --> 00:04:04,840
+Now this type of action can just run round
+in a big loop.
+
+57
+00:04:04,840 --> 00:04:08,630
+If the user keeps making mistakes, you can
+capture those mistakes and
+
+58
+00:04:08,630 --> 00:04:10,620
+present the screen again and again.
+
+59
+00:04:13,030 --> 00:04:17,940
+Once the user has no errors, or at least
+your code hasn't captured any errors, then
+
+60
+00:04:17,940 --> 00:04:24,230
+the runtime environment passes control to
+the start of selection event block.
+
+61
+00:04:24,230 --> 00:04:29,180
+This event block can hold your code that
+you create for setting up the values
+
+62
+00:04:29,180 --> 00:04:34,470
+of internal tables, internal fields used
+within your program,
+
+63
+00:04:34,470 --> 00:04:37,240
+and maybe writing out header information
+on the report.
+
+64
+00:04:37,240 --> 00:04:43,700
+Now there are other event blocks, as you
+can see, in the rest of this diagram.
+
+65
+00:04:43,700 --> 00:04:47,018
+And there are many that actually don't
+appear on the diagram.
+
+66
+00:04:47,018 --> 00:04:51,673
+But the ones we have been through are the
+main event blocks used to display
+
+67
+00:04:51,673 --> 00:04:54,421
+a selection screen to capture user input,
+
+68
+00:04:54,421 --> 00:04:58,030
+which we can then use to process the rest
+of our program.
+
+69
+00:05:00,730 --> 00:05:04,410
+Once all the event blocks that you have
+defined in your program have been
+
+70
+00:05:04,410 --> 00:05:09,970
+processed, the ABAP processor will then
+execute the rest of the program and
+
+71
+00:05:09,970 --> 00:05:13,840
+pass control to the list processor to
+output your report,
+
+72
+00:05:13,840 --> 00:05:16,930
+which is this section right here.
+
+73
+00:05:16,930 --> 00:05:21,360
+So once the program's done everything It
+can send the output to the screen for
+
+74
+00:05:21,360 --> 00:05:22,130
+the user to see.
+
+75
+00:05:25,310 --> 00:05:27,370
+Now just say, you see this down arrow
+here.
+
+76
+00:05:27,370 --> 00:05:28,660
+I would just explain that one.
+
+77
+00:05:30,050 --> 00:05:35,490
+Up to now, we've been producing output on
+the screen for the user to read.
+
+78
+00:05:35,490 --> 00:05:39,380
+Well these list screens can be interactive
+as well.
+
+79
+00:05:39,380 --> 00:05:42,138
+So for example, if you wanted to drill
+down on a report.
+
+80
+00:05:42,138 --> 00:05:46,920
+You can double-click a line or
+double-click an individual field.
+
+81
+00:05:46,920 --> 00:05:50,660
+And the list processor will capture the
+action and
+
+82
+00:05:50,660 --> 00:05:52,700
+fire the at selection screen event block.
+
+83
+00:05:54,290 --> 00:05:59,520
+And that's where you can include more code
+to determine what the user clicked on and
+
+84
+00:05:59,520 --> 00:06:04,460
+then carry out some other activity, like
+going to read some more tables
+
+85
+00:06:04,460 --> 00:06:08,480
+to find some more detailed information
+that you can then output to the screen.
+
+86
+00:06:10,250 --> 00:06:11,500
+But we're not gonna dig into that.
+
+87
+00:06:12,560 --> 00:06:15,040
+We're gonna focus on the selection screen
+and
+
+88
+00:06:15,040 --> 00:06:19,580
+making sure the user enters the right
+values for our report.
+
+89
+00:06:19,580 --> 00:06:24,580
+And also make yourself a selection screen
+as a good interface using various
+
+90
+00:06:24,580 --> 00:06:29,150
+text boxes and radio buttons that make our
+program look a bit more inviting.
+

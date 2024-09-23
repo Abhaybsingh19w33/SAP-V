@@ -1,0 +1,114 @@
+1
+00:00:00,000 --> 00:00:03,180
+[BLANK_AUDIO]
+
+2
+00:00:03,180 --> 00:00:05,461
+And the last one we'll try, oops.
+
+3
+00:00:05,461 --> 00:00:10,295
+[BLANK_AUDIO]
+
+4
+00:00:10,295 --> 00:00:12,711
+As you can guess, is multiplication.
+
+5
+00:00:12,711 --> 00:00:17,461
+[BLANK_AUDIO]
+
+6
+00:00:17,461 --> 00:00:18,390
+And there we go.
+
+7
+00:00:20,530 --> 00:00:23,045
+All very simple.
+
+8
+00:00:23,045 --> 00:00:29,645
+Now just before we move on to the topic of
+conversion rules,
+
+9
+00:00:29,645 --> 00:00:35,585
+I'll just add in that when we talk about
+arithmetic,
+
+10
+00:00:35,585 --> 00:00:43,109
+you also have the option of using some
+other statements called ADD,
+
+11
+00:00:43,109 --> 00:00:47,212
+SUBTRACT, DIVIDE, and MULTIPLY.
+
+12
+00:00:47,212 --> 00:00:53,373
+Now the syntax for these is a little bit
+different,
+
+13
+00:00:53,373 --> 00:00:58,530
+because the way it works, let's make that
+
+14
+00:00:58,530 --> 00:01:04,128
+into a comment, is we can say ADD 8 to
+result.
+
+15
+00:01:04,128 --> 00:01:09,801
+And then 8 would contain, let's have a
+look in this case,
+
+16
+00:01:09,801 --> 00:01:15,253
+22 plus, that's 27.5 plus 8 would be 35.5.
+
+17
+00:01:15,253 --> 00:01:25,253
+[BLANK_AUDIO]
+
+18
+00:01:29,170 --> 00:01:30,462
+Let's do a syntax check.
+
+19
+00:01:30,462 --> 00:01:33,503
+Haven't used this in years, actually.
+
+20
+00:01:33,503 --> 00:01:35,446
+Hope I got, yeah, I got it right.
+
+21
+00:01:35,446 --> 00:01:38,963
+[LAUGH] Let's just test it out.
+
+22
+00:01:38,963 --> 00:01:43,754
+Here we go.
+So we can see the result is 35.5.
+
+23
+00:01:43,754 --> 00:01:46,810
+So it's adding in the value of 8 to
+result.
+
+24
+00:01:46,810 --> 00:01:50,860
+But I've gotta say you hardly ever see
+this used in programs.
+
+25
+00:01:50,860 --> 00:01:54,100
+And why would you want to use it when you
+can use really simple
+
+26
+00:01:56,160 --> 00:01:57,530
+calculations just like this?
+

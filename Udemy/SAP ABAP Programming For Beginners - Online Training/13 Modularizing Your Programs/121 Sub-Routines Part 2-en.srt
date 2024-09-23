@@ -1,0 +1,912 @@
+1
+00:00:02,910 --> 00:00:05,530
+Now there are some other things to
+consider here.
+
+2
+00:00:05,530 --> 00:00:08,710
+Up to now, we have worked with global
+variables only.
+
+3
+00:00:10,000 --> 00:00:12,750
+And what I mean is, all the variables we
+have used
+
+4
+00:00:14,380 --> 00:00:18,690
+have been declared in the header of our
+program and in our case here
+
+5
+00:00:21,480 --> 00:00:27,350
+as well as being declared in the header,
+we've also declared them in the include.
+
+6
+00:00:30,250 --> 00:00:34,720
+So going back down to our form, this will
+tell you
+
+7
+00:00:34,720 --> 00:00:39,925
+that your form can access what are
+considered global variables.
+
+8
+00:00:39,925 --> 00:00:42,210
+It can access all the variables.
+
+9
+00:00:42,210 --> 00:00:46,470
+So in this case, we are changing the
+contents of a global variable, or
+
+10
+00:00:46,470 --> 00:00:48,840
+a global internal table itab02.
+
+11
+00:00:48,840 --> 00:00:54,160
+Now, what we haven't discussed is the use
+of
+
+12
+00:00:54,160 --> 00:00:58,870
+variables defined exclusively within our
+subroutine.
+
+13
+00:00:58,870 --> 00:01:01,120
+Which we will class as a local variable.
+
+14
+00:01:03,810 --> 00:01:07,430
+Local variables can only be accessed
+
+15
+00:01:07,430 --> 00:01:09,850
+within the subroutine where they are
+declared.
+
+16
+00:01:11,180 --> 00:01:15,500
+Once the system finishes processing code
+within our subroutine and
+
+17
+00:01:15,500 --> 00:01:19,420
+control passes back to the main body of
+our program,
+
+18
+00:01:19,420 --> 00:01:22,170
+all the local variables can no longer be
+referenced.
+
+19
+00:01:22,170 --> 00:01:26,960
+Now some of the benefits of using local
+variables
+
+20
+00:01:26,960 --> 00:01:29,970
+are that the variables only have to be
+available in this routine,
+
+21
+00:01:29,970 --> 00:01:33,660
+so there's no point making them available
+outside.
+
+22
+00:01:34,770 --> 00:01:39,820
+So by declaring them inside the
+subroutine, we save a little bit
+
+23
+00:01:39,820 --> 00:01:45,380
+of memory usage, and because we are trying
+to modularize our code,
+
+24
+00:01:45,380 --> 00:01:50,340
+by declaring local variables and using
+local variables, we don't have
+
+25
+00:01:50,340 --> 00:01:53,820
+to worry about the variables being
+declared in the main body of our program.
+
+26
+00:01:53,820 --> 00:01:56,080
+You know, everything is self contained.
+
+27
+00:01:58,090 --> 00:02:03,050
+Now I mentioned a little while ago, that
+subroutines have an interface and
+
+28
+00:02:03,050 --> 00:02:07,730
+we can use local variables in our
+subroutine to be used in the interface,
+
+29
+00:02:07,730 --> 00:02:12,600
+and we can give them any name we want, and
+at the same time,
+
+30
+00:02:12,600 --> 00:02:16,240
+the calling program, so in our case the
+main body.
+
+31
+00:02:17,290 --> 00:02:18,880
+That can use its own variable as well.
+
+32
+00:02:20,100 --> 00:02:24,070
+It doesn't have to use the same name that
+we defined in the subroutine.
+
+33
+00:02:26,790 --> 00:02:30,660
+So to declare a variable in our
+subroutine, there's no magic.
+
+34
+00:02:30,660 --> 00:02:31,880
+You already know the code.
+
+35
+00:02:32,910 --> 00:02:37,830
+All we do is make sure we are inside the
+subroutine and we just start coding.
+
+36
+00:02:37,830 --> 00:02:43,622
+So we would use the data statement.
+
+37
+00:02:43,622 --> 00:02:47,928
+Let's say employee if I can spell.
+
+38
+00:02:47,928 --> 00:02:49,820
+Now, let's give it a different name.
+
+39
+00:02:49,820 --> 00:02:50,716
+Z employee.
+
+40
+00:02:50,716 --> 00:02:52,942
+Z, E-M-P-L.
+
+41
+00:02:52,942 --> 00:02:54,651
+How's that?
+
+42
+00:02:55,690 --> 00:02:58,780
+And we can say, it is like our z employees
+table.
+
+43
+00:02:58,780 --> 00:03:01,860
+The fields, surname.
+
+44
+00:03:01,860 --> 00:03:08,790
+So here we have just defined a local data
+variable within the form.
+
+45
+00:03:10,230 --> 00:03:15,010
+And it can only be referenced from the
+code we place inside the form,
+
+46
+00:03:15,010 --> 00:03:16,695
+which we don't have much of just yet.
+
+47
+00:03:16,695 --> 00:03:20,190
+[LAUGH]
+Now I mentioned we can declare
+
+48
+00:03:20,190 --> 00:03:23,440
+variables to be used in the interface of
+our form.
+
+49
+00:03:23,440 --> 00:03:27,308
+And when we do that, we're telling the
+system we're going to transfer
+
+50
+00:03:27,308 --> 00:03:30,020
+data throughout the subroutine data
+interface.
+
+51
+00:03:31,360 --> 00:03:33,750
+So let's have a look at the code and see
+how we do it.
+
+52
+00:03:33,750 --> 00:03:37,860
+So what I'm gonna do is go back to the top
+of our program,
+
+53
+00:03:40,940 --> 00:03:47,140
+well, scroll down, hm, and we'll do
+another perform statement.
+
+54
+00:03:47,140 --> 00:03:53,878
+So I'm gonna say perform itab 02 fill, now
+let's say, again.
+
+55
+00:03:53,878 --> 00:03:59,818
+But this time, I'm going
+
+56
+00:03:59,818 --> 00:04:05,218
+to say using z field 1,
+
+57
+00:04:05,218 --> 00:04:08,738
+and z field 2.
+
+58
+00:04:08,738 --> 00:04:10,107
+So what are these z fields?
+
+59
+00:04:10,107 --> 00:04:14,031
+Well they can be anything at all.
+
+60
+00:04:14,031 --> 00:04:17,165
+So let's say up here, we have another data
+statement.
+
+61
+00:04:17,165 --> 00:04:21,902
+We will say z field 1.
+
+62
+00:04:21,902 --> 00:04:26,988
+We will say like z employees.
+
+63
+00:04:26,988 --> 00:04:28,461
+Let's say surname this time.
+
+64
+00:04:28,461 --> 00:04:34,405
+[BLANK_AUDIO]
+
+65
+00:04:34,405 --> 00:04:38,468
+And z field 2, we can say line forename.
+
+66
+00:04:38,468 --> 00:04:48,468
+[BLANK_AUDIO]
+
+67
+00:04:49,833 --> 00:04:52,420
+Let's just do a syntax check, make sure we
+got no errors.
+
+68
+00:04:53,430 --> 00:04:54,220
+And we do.
+
+69
+00:04:54,220 --> 00:04:54,780
+Let's have a look.
+
+70
+00:04:54,780 --> 00:04:55,856
+Oh, of course.
+
+71
+00:04:55,856 --> 00:04:59,460
+[LAUGH] I haven't created the subroutine
+yet.
+
+72
+00:04:59,460 --> 00:05:01,670
+Let me just comment this out.
+
+73
+00:05:01,670 --> 00:05:02,190
+There we go.
+
+74
+00:05:03,580 --> 00:05:04,700
+Okay, everything is good.
+
+75
+00:05:05,740 --> 00:05:07,890
+So we'll put the code back in.
+
+76
+00:05:07,890 --> 00:05:11,510
+And now we will use forward navigation to
+create this brand new form.
+
+77
+00:05:11,510 --> 00:05:15,520
+Says, do you want to create it?
+
+78
+00:05:15,520 --> 00:05:17,030
+I'll choose Yes.
+
+79
+00:05:17,030 --> 00:05:18,820
+And we'll say pop it in our main program.
+
+80
+00:05:20,590 --> 00:05:21,833
+And we're down at the bottom.
+
+81
+00:05:21,833 --> 00:05:29,343
+Now, add a few spaces.
+
+82
+00:05:29,343 --> 00:05:33,198
+Now notice how this differs.
+
+83
+00:05:33,198 --> 00:05:40,398
+Because we declared this perform statement
+and
+
+84
+00:05:40,398 --> 00:05:46,160
+added the USING, now the two fields.
+
+85
+00:05:46,160 --> 00:05:51,810
+Our form was generated and included two
+fields that will be used in the interface.
+
+86
+00:05:53,350 --> 00:05:56,225
+So this is one of the benefits of using
+forward navigation.
+
+87
+00:05:56,225 --> 00:06:00,938
+You don't have to think too hard about the
+actual syntax you need to use to
+
+88
+00:06:00,938 --> 00:06:01,948
+create a form.
+
+89
+00:06:01,948 --> 00:06:07,579
+Cuz double clicking using full navigation,
+it creates the syntax for you.
+
+90
+00:06:07,579 --> 00:06:13,918
+But what I would say is, rename the fields
+so that they are easier to understand.
+
+91
+00:06:13,918 --> 00:06:17,006
+They represent what you're passing
+through.
+
+92
+00:06:17,006 --> 00:06:20,988
+So in our case, I'm gonna say z surname.
+
+93
+00:06:20,988 --> 00:06:23,787
+[BLANK_AUDIO]
+
+94
+00:06:23,787 --> 00:06:25,980
+Now I'm gonna rename this to z forename.
+
+95
+00:06:27,900 --> 00:06:34,470
+Now, something else to note is, the form
+here is declared in two fields
+
+96
+00:06:34,470 --> 00:06:38,620
+that will be used in the interface of the
+form, but notice there's no data type.
+
+97
+00:06:41,580 --> 00:06:43,540
+And they were taken from our perform
+statement.
+
+98
+00:06:43,540 --> 00:06:46,340
+So, the fields used in our form
+
+99
+00:06:47,350 --> 00:06:51,350
+are declared exactly the same as those
+declared in the main body of the program.
+
+100
+00:06:52,640 --> 00:06:57,370
+When our program is executed and
+processing reaches the perform statements,
+
+101
+00:06:58,480 --> 00:07:02,990
+the contents of z field 1 and z field 2
+will be copied in
+
+102
+00:07:02,990 --> 00:07:06,920
+to our P Z surname and P Z forename within
+the form.
+
+103
+00:07:08,440 --> 00:07:13,120
+Now one thing to bear in mind, is if we
+change the contents of our local
+
+104
+00:07:13,120 --> 00:07:16,700
+fields that have been declared in the form
+header, so these two,
+
+105
+00:07:16,700 --> 00:07:21,140
+you will also be changing the values of
+the fields
+
+106
+00:07:21,140 --> 00:07:24,180
+that were passed into the form by our
+perform statement.
+
+107
+00:07:26,526 --> 00:07:30,717
+So let's add a line of code to see how
+well this works,
+
+108
+00:07:30,717 --> 00:07:33,241
+and then we'll debug the code.
+
+109
+00:07:33,241 --> 00:07:37,377
+So in this form, I'm gonna say P,
+
+110
+00:07:37,377 --> 00:07:42,228
+here's that surname, no, actually,
+
+111
+00:07:42,228 --> 00:07:48,660
+what I'll do is write p_zsurname, then a
+new line.
+
+112
+00:07:48,660 --> 00:07:54,301
+[BLANK_AUDIO]
+
+113
+00:07:54,301 --> 00:07:55,578
+Now do the same for forename.
+
+114
+00:07:55,578 --> 00:08:05,575
+[BLANK_AUDIO]
+
+115
+00:08:05,575 --> 00:08:08,234
+Then I'm going to change the contents of
+surname.
+
+116
+00:08:08,234 --> 00:08:17,915
+[BLANK_AUDIO]
+
+117
+00:08:17,915 --> 00:08:19,819
+And that's it.
+
+118
+00:08:19,819 --> 00:08:26,117
+Now higher up in our program, where we
+have the perform statement,
+
+119
+00:08:26,117 --> 00:08:31,641
+I'm just gonna make sure we're gonna pass
+in some values,
+
+120
+00:08:31,641 --> 00:08:35,631
+so I will say Z field1 is equal to
+ANDREWS.
+
+121
+00:08:35,631 --> 00:08:45,631
+[BLANK_AUDIO]
+
+122
+00:08:49,936 --> 00:08:52,300
+That's it, z field2 is equal to SUSAN.
+
+123
+00:08:53,610 --> 00:08:55,490
+So when the perform statement is executed,
+
+124
+00:08:55,490 --> 00:08:59,780
+these values will be passed through to the
+form subroutine.
+
+125
+00:08:59,780 --> 00:09:06,525
+So let's check our code.
+
+126
+00:09:06,525 --> 00:09:07,825
+We have a missing full stop?
+
+127
+00:09:07,825 --> 00:09:12,781
+Of course we do.
+
+128
+00:09:12,781 --> 00:09:13,410
+Okay.
+
+129
+00:09:13,410 --> 00:09:19,863
+And we'll activate.
+
+130
+00:09:19,863 --> 00:09:24,611
+And then I will add a break point to the
+first perform.
+
+131
+00:09:24,611 --> 00:09:25,840
+And then let's test it out.
+
+132
+00:09:28,820 --> 00:09:31,830
+So the first statement, it says perform
+itab02 fill.
+
+133
+00:09:31,830 --> 00:09:35,150
+So let's step into this.
+
+134
+00:09:36,310 --> 00:09:37,700
+You can see it jumped down to the form.
+
+135
+00:09:40,000 --> 00:09:43,290
+Let's have a look at itab02, it's initial
+at the moment.
+
+136
+00:09:46,960 --> 00:09:50,288
+Executes the statement, fills the table,
+we've reached the end form.
+
+137
+00:09:50,288 --> 00:09:58,460
+Now processing passes back to the top of
+that program.
+
+138
+00:09:58,460 --> 00:09:59,930
+We fill z field 1 and z field 2.
+
+139
+00:10:03,750 --> 00:10:06,678
+And then we perform our second subroutine.
+
+140
+00:10:06,678 --> 00:10:08,975
+I tab 02, fill again.
+
+141
+00:10:08,975 --> 00:10:11,200
+And we're parsing in these two fields.
+
+142
+00:10:14,590 --> 00:10:19,726
+So, let's move these up a little bit,
+[SOUND] and
+
+143
+00:10:19,726 --> 00:10:25,131
+here, I'm gonna bring in z pname, and z
+forname.
+
+144
+00:10:25,131 --> 00:10:30,067
+So here you can see the values
+
+145
+00:10:30,067 --> 00:10:35,208
+of z field 1 and z field 2 were
+
+146
+00:10:35,208 --> 00:10:40,155
+passed into the interface.
+
+147
+00:10:40,155 --> 00:10:47,396
+Oh sorry, were used in the interface so
+that the local variables p_z surname and
+
+148
+00:10:47,396 --> 00:10:52,520
+p_z forename were filled with those
+interface values.
+
+149
+00:10:54,010 --> 00:10:55,401
+We then have two write statements.
+
+150
+00:10:55,401 --> 00:10:59,315
+[BLANK_AUDIO]
+
+151
+00:10:59,315 --> 00:11:00,754
+Which we can see on the screen.
+
+152
+00:11:00,754 --> 00:11:03,621
+[BLANK_AUDIO]
+
+153
+00:11:03,621 --> 00:11:07,990
+And then, we're going to update z surname,
+or p_z surname.
+
+154
+00:11:11,570 --> 00:11:13,070
+And see what happened?
+
+155
+00:11:13,070 --> 00:11:20,095
+Because the field is used in the
+interface, our global variable,
+
+156
+00:11:20,095 --> 00:11:24,742
+z field 1 was also updated at the same
+time.
+
+157
+00:11:24,742 --> 00:11:31,832
+So, this is a real important thing to keep
+in mind when you're using fields in
+
+158
+00:11:31,832 --> 00:11:36,864
+the interface, and you're using the using
+edition.
+
+159
+00:11:36,864 --> 00:11:41,484
+Any fields used in this declaration will
+be changed as well.
+
+160
+00:11:41,484 --> 00:11:48,044
+So, I zoom through, well, we'll step
+through.
+
+161
+00:11:48,044 --> 00:11:52,119
+Once that form is filled, then it
+continues with the rest of the program,
+
+162
+00:11:52,119 --> 00:11:55,140
+which I can't remember really what it
+does.
+
+163
+00:11:55,140 --> 00:11:56,740
+I guess it's doing a loop.
+
+164
+00:11:56,740 --> 00:12:02,368
+Better stick a break point here, so we can
+zoom through this.
+
+165
+00:12:02,368 --> 00:12:11,644
+[BLANK_AUDIO]
+
+166
+00:12:11,644 --> 00:12:15,475
+Zoom through that.
+
+167
+00:12:15,475 --> 00:12:19,510
+Simple describe.
+
+168
+00:12:19,510 --> 00:12:23,281
+And then the program crashed.
+
+169
+00:12:23,281 --> 00:12:24,175
+Let's have a look.
+
+170
+00:12:24,175 --> 00:12:32,372
+[BLANK_AUDIO]
+
+171
+00:12:32,372 --> 00:12:34,440
+And yeah, there we go, there's the
+problem.
+
+172
+00:12:36,330 --> 00:12:37,780
+We have this clear statement, so
+
+173
+00:12:37,780 --> 00:12:43,770
+the internal tables are actually empty at
+the time we try to insert a record.
+
+174
+00:12:44,950 --> 00:12:48,350
+So here we should have some logic to say
+If line count.
+
+175
+00:12:48,350 --> 00:12:51,910
+Let's add that.
+
+176
+00:12:51,910 --> 00:12:58,653
+If line count is greater than 0, perform
+our insert statement.
+
+177
+00:12:58,653 --> 00:13:02,492
+And actually,
+
+178
+00:13:02,492 --> 00:13:07,200
+let's include.
+
+179
+00:13:07,200 --> 00:13:08,610
+Al this in this if statement.
+
+180
+00:13:14,380 --> 00:13:18,970
+Looks good.
+
+181
+00:13:18,970 --> 00:13:22,830
+So now, when we got down to the the insert
+statements, right now,
+
+182
+00:13:22,830 --> 00:13:25,380
+it shouldn't do anything, because we have
+this clear.
+
+183
+00:13:25,380 --> 00:13:28,348
+But if this was taken out, than the if
+statement would be true.
+
+184
+00:13:28,348 --> 00:13:32,980
+Let's run it again.
+
+185
+00:13:32,980 --> 00:13:40,330
+I'll press the F6 key to execute this
+first form fill.
+
+186
+00:13:40,330 --> 00:13:41,420
+F6 again.
+
+187
+00:13:41,420 --> 00:13:46,981
+[BLANK_AUDIO]
+
+188
+00:13:46,981 --> 00:13:50,122
+Stick a breakpoint there.
+
+189
+00:13:50,122 --> 00:13:57,691
+So we go through that loop.
+
+190
+00:13:57,691 --> 00:14:00,652
+Cleared out the work area, and internal
+table.
+
+191
+00:14:00,652 --> 00:14:05,503
+So now this loop should actually now
+execute.
+
+192
+00:14:05,503 --> 00:14:08,349
+There we go.
+
+193
+00:14:08,349 --> 00:14:10,332
+Describe line count.
+
+194
+00:14:10,332 --> 00:14:13,190
+If it's greater than 0, perform the
+insert.
+
+195
+00:14:13,190 --> 00:14:22,160
+If not, and the program's finished.
+
+196
+00:14:22,160 --> 00:14:27,785
+So a little detour into debugging my
+error.
+
+197
+00:14:27,785 --> 00:14:29,400
+Their all examples are good examples.
+
+198
+00:14:31,520 --> 00:14:33,960
+But that's it.
+That gives you a good
+
+199
+00:14:33,960 --> 00:14:37,420
+flavor of how to use sub-routines within
+your program.
+
+200
+00:14:39,260 --> 00:14:42,030
+Now we're not going to subroutines just
+yet.
+
+201
+00:14:42,030 --> 00:14:45,620
+We're going to look at some of the other
+additions, and
+
+202
+00:14:45,620 --> 00:14:48,850
+how we can pass more than just fields
+through the interface.
+

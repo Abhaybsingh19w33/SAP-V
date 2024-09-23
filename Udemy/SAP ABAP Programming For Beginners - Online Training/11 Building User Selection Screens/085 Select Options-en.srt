@@ -1,0 +1,901 @@
+1
+00:00:03,310 --> 00:00:08,265
+So we have looked at parameters, and now
+we're gonna take a look at select-options.
+
+2
+00:00:10,030 --> 00:00:12,080
+Now parameters are fantastic for
+
+3
+00:00:12,080 --> 00:00:17,200
+letting the user select individual values
+that we want to filter on in our reports.
+
+4
+00:00:19,160 --> 00:00:23,660
+But what do we do when we want to allow a
+range of values on multiple
+
+5
+00:00:23,660 --> 00:00:25,640
+individual values?
+
+6
+00:00:25,640 --> 00:00:28,250
+Well it would be incorrect to create lots
+of separate
+
+7
+00:00:28,250 --> 00:00:32,660
+parameters to store these values all based
+on the same field.
+
+8
+00:00:32,660 --> 00:00:35,910
+So this is where the select-option
+statement comes into play.
+
+9
+00:00:35,910 --> 00:00:41,750
+Now the first thing we need to consider
+when using a select-option,
+
+10
+00:00:41,750 --> 00:00:44,300
+is that we're going to be using internal
+tables
+
+11
+00:00:45,360 --> 00:00:47,960
+to start our values that use entering into
+the fields.
+
+12
+00:00:49,310 --> 00:00:53,940
+A much more detailed discussion on how we
+create internal tables is coming up.
+
+13
+00:00:55,330 --> 00:00:59,000
+But for now, we will just deal with what
+we need to know.
+
+14
+00:00:59,000 --> 00:01:01,200
+To use the select-options statement in our
+program.
+
+15
+00:01:03,910 --> 00:01:10,340
+So when an individual user wants to enter
+multiple individual values or select
+
+16
+00:01:10,340 --> 00:01:17,435
+a value range we need to install them in a
+table in memory that our program can use.
+
+17
+00:01:17,435 --> 00:01:22,375
+An internal table we create for a select
+table has a similar restriction to
+
+18
+00:01:22,375 --> 00:01:27,382
+parameters in that we can only give them a
+name of up to eight characters in length.
+
+19
+00:01:28,482 --> 00:01:33,232
+And the select tables themselves contain
+four separate fields,
+
+20
+00:01:33,232 --> 00:01:37,137
+which get defined when we create our
+select-option statement.
+
+21
+00:01:37,137 --> 00:01:41,292
+These fields are sign,
+
+22
+00:01:41,292 --> 00:01:45,870
+option, low, and high.
+
+23
+00:01:48,020 --> 00:01:52,190
+So before going any further, let's get
+these down in our program,
+
+24
+00:01:54,110 --> 00:01:56,490
+just so you've got something to reference
+as I'm talking.
+
+25
+00:01:59,150 --> 00:02:03,581
+So I said when we use a select-option
+statement,
+
+26
+00:02:03,581 --> 00:02:08,973
+we have these four fields, SIGN, OPTION,
+LOW, and HIGH.
+
+27
+00:02:08,973 --> 00:02:19,293
+[BLANK_AUDIO]
+
+28
+00:02:19,293 --> 00:02:24,517
+When a user makes a choice by filling in a
+selection field on the screen,
+
+29
+00:02:24,517 --> 00:02:28,174
+whether that is a single value or range of
+values,
+
+30
+00:02:28,174 --> 00:02:32,460
+a record is generated, and put into this
+internal table.
+
+31
+00:02:35,650 --> 00:02:37,180
+And because it's a table,
+
+32
+00:02:37,180 --> 00:02:41,000
+this allows the user to enter as many
+records, as they wish.
+
+33
+00:02:42,110 --> 00:02:45,460
+And all these records will be used to
+filter our data.
+
+34
+00:02:45,460 --> 00:02:49,840
+So let's now get a little more granular,
+and
+
+35
+00:02:49,840 --> 00:02:52,410
+have a look at each one of these fields in
+the internal table.
+
+36
+00:02:54,150 --> 00:03:00,620
+Now the sign field has a data type of c, a
+character, with a length of one.
+
+37
+00:03:01,720 --> 00:03:07,520
+The data stored in this field determines,
+for each record, whether or not the record
+
+38
+00:03:07,520 --> 00:03:13,080
+is to be included or excluded from the
+result set that our report selects.
+
+39
+00:03:14,130 --> 00:03:20,340
+And the possible values that get stored in
+this field are I and E.
+
+40
+00:03:22,300 --> 00:03:27,890
+Now, I stands for inclusive, so we are
+including the criteria, and
+
+41
+00:03:27,890 --> 00:03:31,375
+E stands for exclusive, it's an exclusion
+criteria.
+
+42
+00:03:31,375 --> 00:03:37,570
+At the options field also has a type of c
+character,
+
+43
+00:03:37,570 --> 00:03:39,780
+but this one has a length of two.
+
+44
+00:03:42,220 --> 00:03:45,310
+And this field holds the selection
+operator.
+
+45
+00:03:47,190 --> 00:03:53,961
+So for example it can hold a value of EQ
+for equals and E for not equals.
+
+46
+00:03:53,961 --> 00:03:56,393
+GT, I'm sure you can work these out.
+
+47
+00:03:56,393 --> 00:03:59,238
+[BLANK_AUDIO]
+
+48
+00:03:59,238 --> 00:04:05,828
+And we have a couple of special ones CP,
+and lastly, NP.
+
+49
+00:04:05,828 --> 00:04:10,758
+And as you can see they're the same type
+of logical operators as those
+
+50
+00:04:10,758 --> 00:04:14,329
+that are used for logical expressions, but
+CP and
+
+51
+00:04:14,329 --> 00:04:20,210
+NP do not have the full functional scope
+they have in normal logical expressions.
+
+52
+00:04:23,310 --> 00:04:26,320
+Now if wild card characters are entered
+onto the selection screen,
+
+53
+00:04:27,320 --> 00:04:30,360
+the system will automatically use the
+operator CP.
+
+54
+00:04:35,230 --> 00:04:39,740
+Now the low field is used to enter the
+lower limit for
+
+55
+00:04:39,740 --> 00:04:42,570
+a range of values that a user can enter.
+
+56
+00:04:42,570 --> 00:04:46,870
+And you might guess, the high field is
+used as the upper limit for
+
+57
+00:04:46,870 --> 00:04:47,590
+a range of values.
+
+58
+00:04:50,210 --> 00:04:53,090
+Now both of these are low and high fields.
+
+59
+00:04:53,090 --> 00:04:57,670
+The data type is determined by the
+database table
+
+60
+00:04:57,670 --> 00:05:00,380
+to which our selection criteria is linked.
+
+61
+00:05:01,500 --> 00:05:03,130
+So the data type will vary.
+
+62
+00:05:04,390 --> 00:05:07,760
+If the field we are selecting on is an
+integer,
+
+63
+00:05:07,760 --> 00:05:10,130
+they will take on the data type of an
+integer.
+
+64
+00:05:10,130 --> 00:05:13,090
+If it's a character, they'll use a
+character data type.
+
+65
+00:05:14,940 --> 00:05:20,350
+When we define our select-options, we can
+of course refer to fields
+
+66
+00:05:20,350 --> 00:05:25,210
+in the database table as well as defining
+individual fields in our program.
+
+67
+00:05:26,540 --> 00:05:31,330
+When we define a select-option field that
+refers to a database table field,
+
+68
+00:05:31,330 --> 00:05:34,230
+the attributes of that field will
+automatically
+
+69
+00:05:34,230 --> 00:05:36,320
+apply to the input fields on the selection
+screen.
+
+70
+00:05:38,030 --> 00:05:40,960
+Why would we use a Select-Option instead
+of a parameter?
+
+71
+00:05:43,570 --> 00:05:47,200
+Well if you recall back on our z employees
+table we created,
+
+72
+00:05:48,330 --> 00:05:50,520
+one of the fields is data birth.
+
+73
+00:05:52,100 --> 00:05:55,960
+Now we could create a parameter on the
+date of birth field, and
+
+74
+00:05:55,960 --> 00:05:58,700
+have the user enter a date of birth that
+
+75
+00:05:58,700 --> 00:06:03,010
+we could then use in our program to select
+data from a database table.
+
+76
+00:06:03,010 --> 00:06:07,510
+But you know, the date of birth field is
+very, very unique.
+
+77
+00:06:09,100 --> 00:06:14,080
+Most of the records in our database table
+are going to have a unique date of birth.
+
+78
+00:06:15,790 --> 00:06:18,510
+So if we use this field where, at best,
+
+79
+00:06:18,510 --> 00:06:24,130
+we can get one record returned for our
+program, and it's not flexible,
+
+80
+00:06:24,130 --> 00:06:27,870
+we would require the user to know the
+exact date of birth of an employee.
+
+81
+00:06:28,980 --> 00:06:34,000
+Whereas, if we use a select-option we can
+give the user
+
+82
+00:06:34,000 --> 00:06:37,640
+the functionality to allow them to use
+wild cards.
+
+83
+00:06:37,640 --> 00:06:41,620
+They can use date ranges to select
+employees.
+
+84
+00:06:41,620 --> 00:06:45,240
+You know, they could say the first of
+January 1960,
+
+85
+00:06:45,240 --> 00:06:50,180
+to the 31st of December 1980, and return a
+whole bunch of records.
+
+86
+00:06:51,200 --> 00:06:57,102
+They can exclude certain values, and they
+exclude ranges of values too.
+
+87
+00:06:57,102 --> 00:07:02,220
+The select-option is so much more
+functional in a single parameter field.
+
+88
+00:07:03,990 --> 00:07:07,160
+You'll find users requesting this type of
+
+89
+00:07:07,160 --> 00:07:09,380
+input field a lot more than the standard
+parameter.
+
+90
+00:07:11,780 --> 00:07:13,617
+So enough of the talk,
+
+91
+00:07:13,617 --> 00:07:19,624
+let's get straight on to having a look at
+how we define select-options.
+
+92
+00:07:19,624 --> 00:07:23,761
+So let me clear out, this piece of text,
+
+93
+00:07:23,761 --> 00:07:27,535
+[SOUND] and we'll come back up here and
+
+94
+00:07:27,535 --> 00:07:33,643
+then just below parameters we can take a
+look at the syntax.
+
+95
+00:07:33,643 --> 00:07:38,240
+So I just mentioned the date of birth
+field, so let's use that as our example.
+
+96
+00:07:39,520 --> 00:07:43,410
+So the way we define a select option is
+simply by typing select-options.
+
+97
+00:07:43,410 --> 00:07:50,390
+Then we declare the field we are going to
+use for
+
+98
+00:07:50,390 --> 00:07:55,540
+our select-option, so let's say, my date
+of birth.
+
+99
+00:07:55,540 --> 00:08:01,267
+Then just after the parameters, we have to
+identify the field type.
+
+100
+00:08:01,267 --> 00:08:02,741
+For the select-option.
+
+101
+00:08:02,741 --> 00:08:06,576
+And this is where we include FOR and
+
+102
+00:08:06,576 --> 00:08:12,402
+then we can say zemployees, and I think
+it's zdob.
+
+103
+00:08:12,402 --> 00:08:15,897
+[BLANK_AUDIO]
+
+104
+00:08:15,897 --> 00:08:17,939
+And if we say this, and I'll just double
+check.
+
+105
+00:08:17,939 --> 00:08:23,582
+[BLANK_AUDIO]
+
+106
+00:08:23,582 --> 00:08:30,652
+Oh, it's not z dob, it's just dob.
+
+107
+00:08:30,652 --> 00:08:32,426
+And just pretty it up, and
+
+108
+00:08:32,426 --> 00:08:37,517
+there we go that's all you need to do to
+define a selection-option field.
+
+109
+00:08:39,360 --> 00:08:43,020
+Let's have a look at how it gets displayed
+on the screen.
+
+110
+00:08:43,020 --> 00:08:44,888
+So, I'll just execute the program.
+
+111
+00:08:44,888 --> 00:08:46,691
+Oop, after I've activated it.
+
+112
+00:08:46,691 --> 00:08:50,754
+[BLANK_AUDIO]
+
+113
+00:08:50,754 --> 00:08:51,938
+Oop, we have some errors.
+
+114
+00:08:51,938 --> 00:08:57,151
+[BLANK_AUDIO]
+
+115
+00:08:57,151 --> 00:09:00,630
+Oh, I didn't take away all the rubbish
+text.
+
+116
+00:09:00,630 --> 00:09:01,312
+There we go.
+
+117
+00:09:01,312 --> 00:09:06,350
+[BLANK_AUDIO]
+
+118
+00:09:06,350 --> 00:09:09,315
+Let me just get rid of this other program
+I was working on.
+
+119
+00:09:09,315 --> 00:09:16,515
+So now it's active, we can execute, and
+here we go.
+
+120
+00:09:16,515 --> 00:09:21,260
+You can see the my date of birth field,
+that we just declared.
+
+121
+00:09:21,260 --> 00:09:26,290
+And you can see, we have two fields we can
+input, and a button.
+
+122
+00:09:27,900 --> 00:09:32,750
+Users can now entire a single value into
+the low field,
+
+123
+00:09:32,750 --> 00:09:36,050
+which is this one on the left, and
+
+124
+00:09:36,050 --> 00:09:40,210
+they can also enter a value into the right
+hand field which is the high field.
+
+125
+00:09:41,650 --> 00:09:43,982
+So just by having these two fields
+
+126
+00:09:43,982 --> 00:09:53,663
+[BLANK_AUDIO]
+
+127
+00:09:53,663 --> 00:09:57,212
+Let's do this, we can have a range, so
+
+128
+00:09:57,212 --> 00:10:03,022
+now our select-option low field will
+contain the 1st of July,
+
+129
+00:10:03,022 --> 00:10:07,665
+and the high field will contain the 30th
+of July.
+
+130
+00:10:07,665 --> 00:10:10,725
+Now if a user didn't enter anything into
+this field,
+
+131
+00:10:10,725 --> 00:10:13,180
+and our table is going to be blank.
+
+132
+00:10:13,180 --> 00:10:15,370
+It won't have, any records generated.
+
+133
+00:10:16,600 --> 00:10:19,380
+And you might be wondering what's that
+button on the right?
+
+134
+00:10:19,380 --> 00:10:22,410
+Well this is where, we get a load more
+functionality.
+
+135
+00:10:22,410 --> 00:10:25,550
+Let me click it and then, I will explain.
+
+136
+00:10:26,700 --> 00:10:29,000
+So now we get this pop-up box.
+
+137
+00:10:29,000 --> 00:10:31,420
+And as you can see we got four tabs along
+the top.
+
+138
+00:10:32,920 --> 00:10:36,590
+Here we can enter individual single values
+for this field.
+
+139
+00:10:36,590 --> 00:10:40,432
+[BLANK_AUDIO]
+
+140
+00:10:40,432 --> 00:10:45,081
+And it doesn't matter what sequence you
+put them in.
+
+141
+00:10:45,081 --> 00:10:47,860
+You can enter as many individual values as
+you wish.
+
+142
+00:10:49,130 --> 00:10:54,960
+And also, hopefully you're familiar with
+how these work, but if you have let's
+
+143
+00:10:54,960 --> 00:11:00,040
+say a, a 50 entries, 50 single values you
+want to put in there,
+
+144
+00:11:00,040 --> 00:11:03,440
+that you are having a spreadsheet or
+something like that.
+
+145
+00:11:03,440 --> 00:11:05,540
+You can copy those values to the
+clipboard.
+
+146
+00:11:07,650 --> 00:11:10,360
+Click on an empty line, and just Paste
+them in.
+
+147
+00:11:12,920 --> 00:11:18,370
+So you got functionality down here, to
+allow you to Paste, Remove records,
+
+148
+00:11:18,370 --> 00:11:22,090
+Delete every record there is on the
+screen.
+
+149
+00:11:22,090 --> 00:11:23,440
+So go through these and have a look.
+
+150
+00:11:25,320 --> 00:11:28,320
+Now, let's move on to the next hub.
+
+151
+00:11:28,320 --> 00:11:29,380
+And this is ranges.
+
+152
+00:11:33,870 --> 00:11:40,400
+To where we could enter a single range,
+and now a first low and high value here.
+
+153
+00:11:41,400 --> 00:11:45,810
+We can actually go to ranges, and enter
+multiple range values.
+
+154
+00:11:45,810 --> 00:11:50,220
+So we could say, the 1st of May to the 5th
+of May, and
+
+155
+00:11:50,220 --> 00:11:52,890
+the 10th of May to the 15th of May, and so
+on.
+
+156
+00:11:53,920 --> 00:11:58,570
+Now, you'll notice, two of these tabs have
+got the green square,
+
+157
+00:11:58,570 --> 00:12:01,810
+and then two have got red circles.
+
+158
+00:12:01,810 --> 00:12:09,312
+So the green, that indicates we're gonna
+include values in our selection criteria.
+
+159
+00:12:09,312 --> 00:12:16,090
+And if we click on to the red, any values
+we enter here, will be excluded.
+
+160
+00:12:18,430 --> 00:12:22,587
+So the internal table, if we step back to
+it.
+
+161
+00:12:22,587 --> 00:12:27,802
+[BLANK_AUDIO]
+
+162
+00:12:27,802 --> 00:12:32,734
+As I mentioned previously as a sign field,
+an option field,
+
+163
+00:12:32,734 --> 00:12:36,520
+a high, sorry, it's a low first then a
+high.
+
+164
+00:12:39,860 --> 00:12:43,300
+So by filling in those field on the green
+square tabs,
+
+165
+00:12:44,780 --> 00:12:48,480
+our sign field will get filled with the
+inclusion.
+
+166
+00:12:50,370 --> 00:12:56,018
+And if we fill in anything on the red
+circle tabs this value
+
+167
+00:12:56,018 --> 00:13:01,910
+will be equal to E indicating we're gonna
+exclude values.
+
+168
+00:13:01,910 --> 00:13:04,711
+And we'll just comment that out, and we'll
+go back to the screen again.
+
+169
+00:13:04,711 --> 00:13:08,496
+[BLANK_AUDIO]
+
+170
+00:13:08,496 --> 00:13:09,580
+Actually, let's step back here.
+
+171
+00:13:10,670 --> 00:13:13,910
+Now, the other thing to highlight is these
+fields.
+
+172
+00:13:14,930 --> 00:13:19,530
+I mentioned you can include wildcard
+characters and things like that, but you
+
+173
+00:13:19,530 --> 00:13:24,762
+can also include the logical operators, so
+remember we have the option field.
+
+174
+00:13:24,762 --> 00:13:28,900
+If I right-click here, and choose Options
+
+175
+00:13:30,950 --> 00:13:36,590
+then we get a list of logical operators
+that we can assign to the individual
+
+176
+00:13:36,590 --> 00:13:41,030
+fields on our select-option records so by
+default.
+
+177
+00:13:42,840 --> 00:13:44,720
+It's always going to use the equal sign.
+
+178
+00:13:45,800 --> 00:13:50,788
+But if we want it to say less than or
+equal to, we can double-click, and
+
+179
+00:13:50,788 --> 00:13:55,695
+we get the little graphical representation
+of less than and equal to,
+
+180
+00:13:55,695 --> 00:13:58,048
+and then we can fill in the value.
+
+181
+00:13:58,048 --> 00:14:03,783
+[BLANK_AUDIO]
+
+182
+00:14:03,783 --> 00:14:07,109
+And the same on the two, just right click
+select-option, and
+
+183
+00:14:07,109 --> 00:14:09,090
+you can choose any you want.
+
+184
+00:14:09,090 --> 00:14:14,030
+And you'll notice, we also have the, the
+green and the red options down here.
+
+185
+00:14:14,030 --> 00:14:15,560
+So it's include or exclude.
+
+186
+00:14:20,610 --> 00:14:22,130
+Just as we have on this single line,
+
+187
+00:14:22,130 --> 00:14:26,740
+you'll bring up the multiple selection
+dialog box.
+
+188
+00:14:26,740 --> 00:14:29,840
+You can see it's carried through the
+single selection, and
+
+189
+00:14:29,840 --> 00:14:32,790
+as with the other terms, we can do exactly
+the same type of thing.
+
+190
+00:14:34,260 --> 00:14:39,006
+Just instead of right clicking, we just
+click on the little button at the side.
+
+191
+00:14:39,006 --> 00:14:40,812
+And it will bring up the select-options.
+
+192
+00:14:40,812 --> 00:14:48,949
+[BLANK_AUDIO]
+

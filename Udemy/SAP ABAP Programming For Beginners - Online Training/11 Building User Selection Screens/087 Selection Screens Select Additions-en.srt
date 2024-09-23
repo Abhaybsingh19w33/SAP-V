@@ -1,0 +1,99 @@
+1
+00:00:01,700 --> 00:00:03,800
+As with most ABAP statements in SAP,
+
+2
+00:00:03,800 --> 00:00:08,160
+we have a number of additions we can
+include with the select option statement.
+
+3
+00:00:09,540 --> 00:00:13,381
+So let's have a look at those.
+
+4
+00:00:13,381 --> 00:00:20,770
+So very similar to the parameters
+statement,
+
+5
+00:00:20,770 --> 00:00:25,127
+the select options also has
+
+6
+00:00:25,127 --> 00:00:31,005
+the obligatory [SOUND] also lower case
+
+7
+00:00:31,005 --> 00:00:41,836
+[BLANK_AUDIO]
+
+8
+00:00:41,836 --> 00:00:45,530
+And some more, but they are very similar
+to the parameters, so
+
+9
+00:00:45,530 --> 00:00:48,730
+we don't really need to go through them.
+
+10
+00:00:48,730 --> 00:00:52,610
+They all work in exactly the same way, no
+difference whatsoever.
+
+11
+00:00:54,270 --> 00:00:58,750
+Now the one thing I do want to discuss
+though,
+
+12
+00:00:58,750 --> 00:01:04,630
+is a no extensions edition.
+
+13
+00:01:04,630 --> 00:01:08,545
+This allows us to prevent the use of
+making multiple selections.
+
+14
+00:01:08,545 --> 00:01:14,130
+So we can still give the user the ability
+to make our value range selection.
+
+15
+00:01:14,130 --> 00:01:18,460
+But we can stop them from entering
+multiple value ranges
+
+16
+00:01:20,050 --> 00:01:21,620
+and it's quite straightforward.
+
+17
+00:01:21,620 --> 00:01:22,420
+This is how we do it.
+
+18
+00:01:23,590 --> 00:01:28,223
+All we do is our no extensions onto
+
+19
+00:01:28,223 --> 00:01:32,458
+our sort option statement.
+
+20
+00:01:32,458 --> 00:01:39,045
+[SOUND] Let's activate our code take a
+look and low and behold.
+
+21
+00:01:39,045 --> 00:01:42,010
+That additional button has now
+disappeared.
+
+22
+00:01:42,010 --> 00:01:46,810
+We can still do our individual value and
+include one range.
+

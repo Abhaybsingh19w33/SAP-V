@@ -1,0 +1,412 @@
+1
+00:00:02,550 --> 00:00:05,900
+Subroutines are not only limited to
+passing individual fields.
+
+2
+00:00:05,900 --> 00:00:11,868
+You can also pass internal tables as well
+as a combination of individual fields and
+
+3
+00:00:11,868 --> 00:00:12,570
+tables.
+
+4
+00:00:14,050 --> 00:00:19,097
+Just remember you've always got to get the
+sequence of fields correct when you're
+
+5
+00:00:19,097 --> 00:00:24,000
+passing fields and internal tables from
+the main program to your form.
+
+6
+00:00:25,170 --> 00:00:30,554
+Because it's the sequence of the fields
+when you create your perform statement
+
+7
+00:00:30,554 --> 00:00:35,792
+that determine which field is passed to
+the interface variable of your form.
+
+8
+00:00:35,792 --> 00:00:37,370
+[BLANK_AUDIO]
+
+9
+00:00:37,370 --> 00:00:39,080
+So let's have a look how we can do this.
+
+10
+00:00:39,080 --> 00:00:41,935
+So what I'm going to do is create a brand
+new form.
+
+11
+00:00:41,935 --> 00:00:42,901
+[SOUND]
+
+12
+00:00:42,901 --> 00:00:51,224
+[BLANK_AUDIO]
+
+13
+00:00:51,224 --> 00:00:57,700
+Now I'll say, let's, let's call this
+itab02 write.
+
+14
+00:00:57,700 --> 00:01:01,720
+Why don't we go and write out the contents
+of itab02?
+
+15
+00:01:01,720 --> 00:01:06,235
+[BLANK_AUDIO]
+
+16
+00:01:06,235 --> 00:01:08,963
+And instead of having the using addition,
+
+17
+00:01:08,963 --> 00:01:14,100
+what we do is include tables followed by
+the table we want to pass through.
+
+18
+00:01:14,100 --> 00:01:18,086
+So in this case it's going to be itab02.
+
+19
+00:01:18,086 --> 00:01:21,766
+[BLANK_AUDIO]
+
+20
+00:01:21,766 --> 00:01:23,287
+So we'll save our program
+
+21
+00:01:23,287 --> 00:01:26,131
+[BLANK_AUDIO]
+
+22
+00:01:26,131 --> 00:01:30,009
+And then let's create our form by using
+forward navigation.
+
+23
+00:01:30,009 --> 00:01:36,986
+[BLANK_AUDIO]
+
+24
+00:01:36,986 --> 00:01:42,407
+[SOUND] We select the "create a form" in
+our program itself.
+
+25
+00:01:42,407 --> 00:01:45,404
+[BLANK_AUDIO]
+
+26
+00:01:45,404 --> 00:01:46,660
+And it gets created at the bottom.
+
+27
+00:01:47,860 --> 00:01:50,155
+I'm just going to adjust a few things
+here.
+
+28
+00:01:50,155 --> 00:01:54,654
+[SOUND] This code here is not actually
+needed, so
+
+29
+00:01:54,654 --> 00:01:59,714
+we can remove that, and we'll just focus
+on the basic
+
+30
+00:01:59,714 --> 00:02:04,227
+form of how it's generated, our
+subroutine.
+
+31
+00:02:04,227 --> 00:02:07,670
+So as you can see, it looks fairly simple.
+
+32
+00:02:07,670 --> 00:02:11,120
+But there's a fundamental change that's
+gone on here.
+
+33
+00:02:11,120 --> 00:02:14,010
+We have replaced the Using edition with
+the Tables edition.
+
+34
+00:02:15,990 --> 00:02:21,500
+So now when the program is executed, the
+perform statement ensures the contents of
+
+35
+00:02:21,500 --> 00:02:27,210
+our internal table that transferred to the
+sub-routine installed
+
+36
+00:02:27,210 --> 00:02:33,440
+in the internal table Pitab02.
+
+37
+00:02:33,440 --> 00:02:37,690
+Once processing reaches the end of the
+form, the contents of the local internal
+
+38
+00:02:37,690 --> 00:02:41,520
+table are then passed back to our global
+internal table.
+
+39
+00:02:43,230 --> 00:02:47,390
+And just know this is for a table without
+a header line.
+
+40
+00:02:49,240 --> 00:02:54,766
+If we are using the older techniques of
+passing tables with header lines and
+
+41
+00:02:54,766 --> 00:02:59,251
+this perform statement structure that
+we've just declared
+
+42
+00:02:59,251 --> 00:03:02,793
+[BLANK_AUDIO]
+
+43
+00:03:02,793 --> 00:03:09,020
+Up here, would only pass the headline of
+the internal table to the sub-routine.
+
+44
+00:03:09,020 --> 00:03:09,900
+And that's not what we want.
+
+45
+00:03:09,900 --> 00:03:13,750
+To be able to pass the whole table
+contents when
+
+46
+00:03:13,750 --> 00:03:17,870
+using an internal table with a header
+line, you need to use square brackets.
+
+47
+00:03:19,200 --> 00:03:22,022
+So the Performs statement would look like
+this.
+
+48
+00:03:24,550 --> 00:03:26,960
+Don't forget, I don't want you to be
+coding this way.
+
+49
+00:03:26,960 --> 00:03:31,800
+So we always want to use work headers and
+internal tables without header lines.
+
+50
+00:03:31,800 --> 00:03:34,063
+[BLANK_AUDIO]
+
+51
+00:03:34,063 --> 00:03:35,650
+So let's go back down to our form.
+
+52
+00:03:37,420 --> 00:03:40,330
+And let's discuss the internal table
+that's created for
+
+53
+00:03:40,330 --> 00:03:42,190
+us when the form was generated.
+
+54
+00:03:43,890 --> 00:03:48,400
+Now when an internal table is passed into
+this subroutine, this local
+
+55
+00:03:49,660 --> 00:03:53,410
+internal table is actually always declared
+with a header on.
+
+56
+00:03:53,410 --> 00:03:56,840
+And we can see this if we debug our
+program.
+
+57
+00:03:56,840 --> 00:03:58,664
+So let's add some code.
+
+58
+00:03:58,664 --> 00:04:03,048
+So we'll start with creating a data
+statement first.
+
+59
+00:04:03,048 --> 00:04:08,180
+And we'll declare temporary field, and
+don't forget we we
+
+60
+00:04:08,180 --> 00:04:13,610
+already have our work, well we have our
+line type already declared.
+
+61
+00:04:14,730 --> 00:04:18,220
+So I'm just creating a work edit here, the
+same as the line time for
+
+62
+00:04:18,220 --> 00:04:18,960
+our internal table.
+
+63
+00:04:21,000 --> 00:04:25,060
+Which, stands to type wrong, so I think
+it's this one.
+
+64
+00:04:25,060 --> 00:04:28,660
+And then we can do a loop statement.
+
+65
+00:04:29,980 --> 00:04:36,406
+Put P underscore itab02
+
+66
+00:04:36,406 --> 00:04:41,665
+into [SOUND] wa_tmp.
+
+67
+00:04:41,665 --> 00:04:48,826
+[SOUND] And we can write wa_tmp surname
+
+68
+00:04:48,826 --> 00:04:54,425
+to the screen, end the loop.
+
+69
+00:04:54,425 --> 00:05:01,206
+[SOUND] Let's pretty it up and do a check.
+
+70
+00:05:01,206 --> 00:05:04,150
+Everything looks good.
+
+71
+00:05:04,150 --> 00:05:06,665
+So now let's stick a break point in here.
+
+72
+00:05:06,665 --> 00:05:12,970
+[SOUND] That's right.
+
+73
+00:05:12,970 --> 00:05:17,540
+We need to activate, of course.
+
+74
+00:05:17,540 --> 00:05:20,250
+And do a break point.
+
+75
+00:05:20,250 --> 00:05:23,427
+[SOUND] And we'll test our code.
+
+76
+00:05:23,427 --> 00:05:28,921
+So now we have jumped straight into the
+form.
+
+77
+00:05:28,921 --> 00:05:34,417
+[SOUND] We'll have a look at our itab02
+table.
+
+78
+00:05:34,417 --> 00:05:38,487
+You can see it's got five records in and
+we can see it's the newer style,
+
+79
+00:05:38,487 --> 00:05:41,658
+internal table, because we've got no
+header record.
+
+80
+00:05:41,658 --> 00:05:48,221
+[SOUND] And if we have a look at this p
+table.
+
+81
+00:05:48,221 --> 00:05:51,611
+[BLANK_AUDIO]
+
+82
+00:05:51,611 --> 00:05:54,084
+[SOUND] You can see here we got the hat
+sign and
+
+83
+00:05:54,084 --> 00:05:56,163
+you can see we have a header record.
+
+84
+00:05:56,163 --> 00:05:57,010
+It's the old style.
+
+85
+00:05:58,630 --> 00:06:04,018
+But being good coders, what we've done
+we've made sure we've used a brand
+
+86
+00:06:04,018 --> 00:06:09,677
+new work area when we're looping through
+our local copy of the internal table.
+
+87
+00:06:09,677 --> 00:06:13,916
+[BLANK_AUDIO]
+
+88
+00:06:13,916 --> 00:06:17,618
+So i'll just execute this as the output
+
+89
+00:06:17,618 --> 00:06:20,173
+[BLANK_AUDIO]
+
+90
+00:06:20,173 --> 00:06:21,229
+[SOUND]
+
+91
+00:06:21,229 --> 00:06:23,709
+[BLANK_AUDIO]
+

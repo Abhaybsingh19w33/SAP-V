@@ -1,0 +1,237 @@
+1
+00:00:01,780 --> 00:00:05,870
+Our next topic is all about sorting
+records in our internal table.
+
+2
+00:00:08,040 --> 00:00:11,080
+So it's probably not gonna be a shock to
+learn that the statement
+
+3
+00:00:11,080 --> 00:00:13,800
+we use to sort our data is actually called
+sort.
+
+4
+00:00:13,800 --> 00:00:17,110
+And the basic format is really, really
+simple.
+
+5
+00:00:17,110 --> 00:00:19,878
+Let's have a look.
+
+6
+00:00:19,878 --> 00:00:29,003
+[BLANK_AUDIO]
+
+7
+00:00:29,003 --> 00:00:35,950
+Well it consists of a salt and then the
+table name.
+
+8
+00:00:35,950 --> 00:00:40,170
+As you can see the syntax is super easy
+and in this case,
+
+9
+00:00:40,170 --> 00:00:44,720
+because we have got no additions to the
+statement, our internal table
+
+10
+00:00:44,720 --> 00:00:49,250
+will be sorted in ascending order based on
+the defined table key.
+
+11
+00:00:49,250 --> 00:00:52,950
+Now this works for sorted tables and hash
+tables.
+
+12
+00:00:54,160 --> 00:01:00,166
+If we are using standard tables then you
+are required to use the buy addition and
+
+13
+00:01:00,166 --> 00:01:02,170
+that will look like this.
+
+14
+00:01:02,170 --> 00:01:07,045
+[BLANK_AUDIO]
+
+15
+00:01:07,045 --> 00:01:10,270
+We just add the word BY followed by the
+fields we want.
+
+16
+00:01:11,670 --> 00:01:16,180
+In this case, I'm just specifying one
+field and by specifying
+
+17
+00:01:16,180 --> 00:01:20,260
+the field name the internal name will be
+salted in accordance with the contents.
+
+18
+00:01:21,870 --> 00:01:26,500
+Now don't forget, SAP caters for all sorts
+of languages and
+
+19
+00:01:26,500 --> 00:01:30,010
+we need to take that into account if we're
+working on programs for
+
+20
+00:01:30,010 --> 00:01:33,200
+a company where their systems are used
+throughout the world.
+
+21
+00:01:34,390 --> 00:01:39,820
+So to ensure your internal table is sorted
+according to language specific criteria.
+
+22
+00:01:41,210 --> 00:01:46,370
+Use the AS TEXT addition directly after
+the name of your internal table.
+
+23
+00:01:49,430 --> 00:01:55,470
+So then we build up the sort statement
+just a little bit more by using AS TEXT.
+
+24
+00:01:57,470 --> 00:01:58,930
+Now our source statement, you know,
+
+25
+00:01:58,930 --> 00:02:03,300
+is just using one field right now but
+you're not just limited to one.
+
+26
+00:02:03,300 --> 00:02:07,345
+You can list up to 250 fields to use in
+your source statement.
+
+27
+00:02:07,345 --> 00:02:12,190
+[LAUGH] I've never seen anywhere close to
+that being used but
+
+28
+00:02:12,190 --> 00:02:18,210
+just to show how we can extend it, we can
+say sort by surname and then by forename.
+
+29
+00:02:20,290 --> 00:02:24,930
+And note, there's no need for a comma
+separator, all we do is a space and
+
+30
+00:02:24,930 --> 00:02:27,355
+then list our field [UNKNOWN].
+
+31
+00:02:27,355 --> 00:02:33,620
+Now just one extra thing is, we specified
+AS TEXT
+
+32
+00:02:33,620 --> 00:02:38,630
+in our source statement and because of
+where we placed it within the statement.
+
+33
+00:02:40,150 --> 00:02:47,100
+This country specific sorting is going to
+be applied to all fields that we specify.
+
+34
+00:02:48,190 --> 00:02:53,980
+If you only want the AS TEXT edition to be
+applied to specific fields,
+
+35
+00:02:53,980 --> 00:02:57,630
+you need to repeat this addition after
+every field in your list.
+
+36
+00:02:59,420 --> 00:03:06,211
+So let's say we just wanted AS TEXT to
+apply only to the forename.
+
+37
+00:03:06,211 --> 00:03:09,546
+[BLANK_AUDIO]
+
+38
+00:03:09,546 --> 00:03:15,096
+We would remove it from this point and
+then place it after our forename field.
+
+39
+00:03:15,096 --> 00:03:20,440
+Now let's [UNKNOWN] with the, just
+
+40
+00:03:20,440 --> 00:03:25,155
+a one sort of statement we have in our
+example and let's discuss the sort order.
+
+41
+00:03:25,155 --> 00:03:33,145
+Now the default is for our sort statement
+to sort our records using ascending order.
+
+42
+00:03:33,145 --> 00:03:36,185
+But we can if we wish specify ascending or
+
+43
+00:03:36,185 --> 00:03:38,870
+descending within the SORT statement
+itself.
+
+44
+00:03:40,140 --> 00:03:44,400
+And we do this by SORT itab01 and
+
+45
+00:03:44,400 --> 00:03:47,800
+then this is where we would specify
+ascending or descending.
+
+46
+00:03:47,800 --> 00:03:50,680
+So if we wanted it in reverse order,
+
+47
+00:03:50,680 --> 00:03:54,336
+[SOUND] we would include the word
+descending.
+
+48
+00:03:54,336 --> 00:03:56,170
+Nice and easy.
+
+49
+00:03:56,170 --> 00:03:57,961
+And that's about it for the SORT
+statement.
+
+50
+00:03:57,961 --> 00:04:01,509
+[BLANK_AUDIO]
+

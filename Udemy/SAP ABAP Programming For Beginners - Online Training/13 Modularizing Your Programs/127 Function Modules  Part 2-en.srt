@@ -1,0 +1,287 @@
+1
+00:00:02,320 --> 00:00:05,950
+Now, because function modules are created
+separate to our normal programs,
+
+2
+00:00:05,950 --> 00:00:11,610
+we are given various tools that allow us
+to test out function modules,
+
+3
+00:00:11,610 --> 00:00:13,620
+without having to write the code to call
+them.
+
+4
+00:00:16,130 --> 00:00:18,470
+So, similar to how we would test our
+program.
+
+5
+00:00:19,550 --> 00:00:24,520
+We are also given the tools to test
+function modules, completely in isolation.
+
+6
+00:00:26,150 --> 00:00:29,790
+We can test the function module by
+pressing the F8 key
+
+7
+00:00:29,790 --> 00:00:30,740
+once we're in this screen.
+
+8
+00:00:32,230 --> 00:00:35,509
+Or just click the icon, the little wrench
+icon.
+
+9
+00:00:35,509 --> 00:00:39,166
+[BLANK_AUDIO]
+
+10
+00:00:39,166 --> 00:00:42,661
+Now I'm gonna step back, I'll step back
+again.
+
+11
+00:00:42,661 --> 00:00:49,627
+Once we're at the first screen of SE38, we
+can also test it from this location.
+
+12
+00:00:49,627 --> 00:00:53,167
+[BLANK_AUDIO]
+
+13
+00:00:53,167 --> 00:00:58,460
+Now every function module that you try and
+test will look a little bit different.
+
+14
+00:00:58,460 --> 00:01:03,340
+Because the screen you see is determined
+from the import parameters,
+
+15
+00:01:03,340 --> 00:01:05,240
+changing parameters, and tables.
+
+16
+00:01:06,590 --> 00:01:11,150
+So depending on all those settings, your
+screen will look different,
+
+17
+00:01:11,150 --> 00:01:13,750
+depending on the different function module
+you want to test.
+
+18
+00:01:15,610 --> 00:01:20,607
+So in this case, we know that all the
+fields are optional, so we could just test
+
+19
+00:01:20,607 --> 00:01:25,787
+this without inputting any data, and let's
+do that and see what gets returned.
+
+20
+00:01:25,787 --> 00:01:30,501
+[BLANK_AUDIO]
+
+21
+00:01:30,501 --> 00:01:32,490
+So this is the output.
+
+22
+00:01:32,490 --> 00:01:35,850
+It shows us the input, and then this is
+what's returned.
+
+23
+00:01:36,890 --> 00:01:38,570
+Seems a bit gibberish, doesn't it?
+
+24
+00:01:40,290 --> 00:01:41,430
+It all makes sense, actually.
+
+25
+00:01:42,640 --> 00:01:44,100
+Because, we get this little button here.
+
+26
+00:01:46,600 --> 00:01:50,320
+And this lets us focus on the result that
+have been returned by the function module.
+
+27
+00:01:51,570 --> 00:01:55,680
+Now in this case, it's telling us, the
+number zero.
+
+28
+00:01:55,680 --> 00:01:57,740
+Well, we didn't key anything in.
+
+29
+00:01:57,740 --> 00:01:59,020
+Number of decimals is zero.
+
+30
+00:01:59,020 --> 00:02:01,270
+We didn't specify the currency.
+
+31
+00:02:01,270 --> 00:02:05,200
+But look, it has returned the word zero to
+us.
+
+32
+00:02:05,200 --> 00:02:09,601
+So actually, the function module ran
+perfectly fine.
+
+33
+00:02:09,601 --> 00:02:13,676
+So now, let's key in an amount, and
+
+34
+00:02:13,676 --> 00:02:18,284
+this time, let's key in 123456.
+
+35
+00:02:18,284 --> 00:02:23,324
+So that's 123,456.
+
+36
+00:02:23,324 --> 00:02:27,840
+We will leave CURRENCY, FILLER and
+LANGUAGE blank, and just execute.
+
+37
+00:02:27,840 --> 00:02:35,170
+Here you can see, this was the input, and
+it's
+
+38
+00:02:35,170 --> 00:02:40,429
+returned to us ONE HUNDRED TWENTY-THREE
+THOUSAND FOUR HUNDRED FIFTY-SIX.
+
+39
+00:02:41,710 --> 00:02:43,340
+So that worked just as we wanted.
+
+40
+00:02:44,570 --> 00:02:46,030
+Now we do have some other options, don't
+we?
+
+41
+00:02:46,030 --> 00:02:47,010
+We have currency.
+
+42
+00:02:47,010 --> 00:02:49,120
+Let's have a look what happens when we key
+that in.
+
+43
+00:02:51,720 --> 00:02:57,496
+My currency is Great British Pounds, so
+I'll key in GBP and then execute.
+
+44
+00:02:57,496 --> 00:03:00,748
+[BLANK_AUDIO]
+
+45
+00:03:00,748 --> 00:03:03,031
+Now this function module, this time,
+
+46
+00:03:03,031 --> 00:03:08,490
+because it knows in Britain we have two
+decimal places, it's identified that.
+
+47
+00:03:08,490 --> 00:03:13,899
+Let's focus in on the table that it's
+returned.
+
+48
+00:03:13,899 --> 00:03:17,579
+So it knows we have two decimal places, so
+
+49
+00:03:17,579 --> 00:03:22,955
+it's returned ONE THOUSAND TWO HUNDRED and
+THIRTY-FOUR.
+
+50
+00:03:22,955 --> 00:03:26,519
+And it's treated the 56 as the two decimal
+places.
+
+51
+00:03:26,519 --> 00:03:32,417
+[BLANK_AUDIO]
+
+52
+00:03:32,417 --> 00:03:39,251
+If we chose a currency again of no decimal
+places, I think that the Hungarian forint.
+
+53
+00:03:42,540 --> 00:03:43,610
+Then we're back to the full text.
+
+54
+00:03:44,650 --> 00:03:48,610
+It knows that the Hungarian forint has no
+decimal places, so
+
+55
+00:03:48,610 --> 00:03:54,380
+we get ONE HUNDRED and TWENTY-THREE
+THOUSAND FOUR HUNDRED and FIFTY-SIX.
+
+56
+00:03:54,380 --> 00:03:58,940
+So, a very small function module, but you
+can see, it's got its uses.
+
+57
+00:03:58,940 --> 00:04:03,540
+But it shows exactly how we can test a
+function module in isolation.
+
+58
+00:04:03,540 --> 00:04:08,070
+So that we don't have to worry about
+getting the coding right in our program
+
+59
+00:04:08,070 --> 00:04:11,540
+before ensuring, yep, this is the function
+module we want to use.
+
+60
+00:04:13,570 --> 00:04:17,790
+And it lets us test out the parameters
+that we need to fill in very quickly,
+
+61
+00:04:17,790 --> 00:04:19,850
+so that when we come to do our coding,
+
+62
+00:04:19,850 --> 00:04:23,930
+we know what fields we're actually gonna
+fill in in our ABAP code
+

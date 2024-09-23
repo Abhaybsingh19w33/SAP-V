@@ -1,0 +1,503 @@
+1
+00:00:01,960 --> 00:00:04,970
+We have covered parameters and select
+options.
+
+2
+00:00:04,970 --> 00:00:09,340
+And no doubt, you will have noticed that
+each field on the selection screen
+
+3
+00:00:09,340 --> 00:00:13,640
+contains the technical name of the field
+which we declared in our program.
+
+4
+00:00:15,190 --> 00:00:16,770
+Let's have a look how we can change that.
+
+5
+00:00:18,190 --> 00:00:24,030
+Our program still needs to reference these
+types of fields, using the technical name.
+
+6
+00:00:24,030 --> 00:00:27,510
+But the user always prefers to see the
+descriptive text.
+
+7
+00:00:28,740 --> 00:00:33,120
+And to do this, we may use a special text
+element called selection text.
+
+8
+00:00:35,530 --> 00:00:42,160
+Now, as you know, every ABAP program is
+made up of its own sub-objects.
+
+9
+00:00:42,160 --> 00:00:43,210
+Like text elements.
+
+10
+00:00:44,830 --> 00:00:52,165
+If we go back to the SE-38 screen, you can
+see here, that when we create our program,
+
+11
+00:00:52,165 --> 00:00:56,545
+or probably a better example is when we
+choose copy.
+
+12
+00:00:56,545 --> 00:01:02,586
+Let's create one called screens three.
+
+13
+00:01:02,586 --> 00:01:06,507
+You can see here, it's saying, do you want
+to copy these sub-objects,
+
+14
+00:01:06,507 --> 00:01:10,440
+the documents, the variants, user
+interface, screens and includes?
+
+15
+00:01:11,500 --> 00:01:15,086
+Well notice we have got two types of
+objects.
+
+16
+00:01:15,086 --> 00:01:19,670
+They are always copied no matter what you
+select on the screen.
+
+17
+00:01:19,670 --> 00:01:22,791
+First one is obvious, it's the source
+code, but
+
+18
+00:01:22,791 --> 00:01:25,253
+then the next one is the text elements.
+
+19
+00:01:25,253 --> 00:01:28,674
+And your text elements that you create for
+your program,
+
+20
+00:01:28,674 --> 00:01:32,961
+belong to your program, and that's why
+they have to be copied across.
+
+21
+00:01:32,961 --> 00:01:38,461
+So let me cancel this and we'll just go
+back into our original program.
+
+22
+00:01:38,461 --> 00:01:44,628
+Now when we create text elements, we
+create them in what are called text pools.
+
+23
+00:01:44,628 --> 00:01:48,670
+And these text pools hold all the text
+elements of our program.
+
+24
+00:01:49,820 --> 00:01:53,980
+Now every program that we create is
+language independent.
+
+25
+00:01:53,980 --> 00:01:57,990
+This means we create text elements for our
+program.
+
+26
+00:01:57,990 --> 00:02:02,460
+That can be quickly and easily translated
+into other languages,
+
+27
+00:02:02,460 --> 00:02:04,800
+without the need for changing our source
+code.
+
+28
+00:02:06,700 --> 00:02:11,545
+There are three kinds of text elements
+that we can use in our program.
+
+29
+00:02:11,545 --> 00:02:15,937
+I've already hinted at one called
+selection text, but
+
+30
+00:02:15,937 --> 00:02:20,336
+there are two others, text symbols and
+list headings.
+
+31
+00:02:20,336 --> 00:02:25,312
+Now tech symbols, these are text elements
+that we can create for
+
+32
+00:02:25,312 --> 00:02:28,721
+our program, to give us some flexibility
+so
+
+33
+00:02:28,721 --> 00:02:33,253
+we don't have to have code literals into
+our source code.
+
+34
+00:02:33,253 --> 00:02:35,300
+We can use these text symbols instead.
+
+35
+00:02:37,240 --> 00:02:38,753
+List headings.
+
+36
+00:02:38,753 --> 00:02:42,785
+Well as you might guess from the name,
+when building reports,
+
+37
+00:02:42,785 --> 00:02:44,545
+we create report headers.
+
+38
+00:02:44,545 --> 00:02:49,790
+You know, the title and field names, or
+column headings and that type of thing.
+
+39
+00:02:51,270 --> 00:02:56,080
+By using list headings instead of hard
+coding the headings into our program,
+
+40
+00:02:56,080 --> 00:02:59,980
+we can ensure they get translated into any
+of the languages we need.
+
+41
+00:03:01,270 --> 00:03:06,085
+And also if the headings have to change
+later on, but we can just go in and
+
+42
+00:03:06,085 --> 00:03:10,635
+change the list headings text elements,
+instead of changing the source code.
+
+43
+00:03:12,435 --> 00:03:17,477
+And the last one, selection text, this is
+what we're working on right now.
+
+44
+00:03:17,477 --> 00:03:22,647
+And this is where you can display text
+elements on the screen, so
+
+45
+00:03:22,647 --> 00:03:25,607
+that the user doesn't have to see the
+technical name,
+
+46
+00:03:25,607 --> 00:03:28,487
+as we've seen in all of our examples up to
+now.
+
+47
+00:03:29,900 --> 00:03:34,442
+So sticking with selection texts, as with
+many things in SAP,
+
+48
+00:03:34,442 --> 00:03:40,013
+there are many different ways we can
+navigate to the screen where we create and
+
+49
+00:03:40,013 --> 00:03:42,170
+change these text elements.
+
+50
+00:03:42,170 --> 00:03:47,847
+Again, I'll step back to SE-38, and you
+can see we have an option for
+
+51
+00:03:47,847 --> 00:03:51,211
+creating text elements from this screen.
+
+52
+00:03:51,211 --> 00:03:55,298
+Now alternatively, if you are in your
+program,
+
+53
+00:03:55,298 --> 00:03:58,885
+like we are now, you can use the Go To
+menu,
+
+54
+00:03:58,885 --> 00:04:04,780
+select text elements, and go to selection
+text from there.
+
+55
+00:04:04,780 --> 00:04:08,489
+And as you can see, the other two, list
+headings and
+
+56
+00:04:08,489 --> 00:04:12,295
+text symbols can also be navigated to from
+this menu.
+
+57
+00:04:12,295 --> 00:04:17,080
+So let's click on selection texts, and
+notice anything familiar?
+
+58
+00:04:19,190 --> 00:04:24,220
+Well the fields that appear here on the
+left hand side in the screen,
+
+59
+00:04:24,220 --> 00:04:27,890
+they're the technical names for the fields
+we defined for our program.
+
+60
+00:04:27,890 --> 00:04:29,003
+Let's step back and have a look.
+
+61
+00:04:29,003 --> 00:04:35,461
+[BLANK_AUDIO]
+
+62
+00:04:35,461 --> 00:04:36,003
+Oops.
+
+63
+00:04:36,003 --> 00:04:39,712
+[BLANK_AUDIO]
+
+64
+00:04:39,712 --> 00:04:41,128
+So here's our program.
+
+65
+00:04:41,128 --> 00:04:45,268
+We have parameters, we have my employee,
+my box one,
+
+66
+00:04:45,268 --> 00:04:47,878
+the [UNKNOWN] green, blue and red.
+
+67
+00:04:47,878 --> 00:04:54,003
+Let's go back to the text elements.
+
+68
+00:04:54,003 --> 00:04:55,290
+And there you can see it.
+
+69
+00:04:55,290 --> 00:04:58,922
+My employee, my box one, and we've got my
+date of birth as well,
+
+70
+00:04:58,922 --> 00:05:00,253
+I didn't see that one.
+
+71
+00:05:00,253 --> 00:05:02,250
+But we have DWA green, blue and red.
+
+72
+00:05:03,660 --> 00:05:08,240
+So, the system automatically knows that
+you've declared parameters and
+
+73
+00:05:08,240 --> 00:05:10,080
+select options.
+
+74
+00:05:10,080 --> 00:05:16,010
+Fills in records here, and all it requires
+is for you to enter some descriptive text.
+
+75
+00:05:17,610 --> 00:05:20,000
+Now, there's one thing to notice here.
+
+76
+00:05:20,000 --> 00:05:25,253
+We have this third column, that refers to
+dictionary references.
+
+77
+00:05:25,253 --> 00:05:30,105
+And what this is, it's recognizing that
+some of your fields refer to field
+
+78
+00:05:30,105 --> 00:05:35,980
+setup in the about dictionary, and we're
+able to use this chatbox button.
+
+79
+00:05:35,980 --> 00:05:38,580
+So when I click this, and choose Save,
+
+80
+00:05:40,740 --> 00:05:44,300
+notice how it brings the actual field name
+from the ABAP dictionary.
+
+81
+00:05:44,300 --> 00:05:49,545
+You know, the table we created earlier,
+and just populates it for us.
+
+82
+00:05:49,545 --> 00:05:52,253
+This is one of the beauties of an SAP
+system.
+
+83
+00:05:52,253 --> 00:05:54,670
+Everything works together.
+
+84
+00:05:54,670 --> 00:06:00,586
+So we don't have to declare our own text
+for these fields.
+
+85
+00:06:00,586 --> 00:06:05,962
+Now you can of course choose not to use
+these dictionary objects,
+
+86
+00:06:05,962 --> 00:06:10,961
+and just overwrite them yourself, put in
+any text you want.
+
+87
+00:06:10,961 --> 00:06:11,878
+But why bother?
+
+88
+00:06:11,878 --> 00:06:12,378
+[BLANK_AUDIO]
+
+89
+00:06:15,510 --> 00:06:19,586
+Now for the others, all we need to do, is
+just key in the text ourselves.
+
+90
+00:06:19,586 --> 00:06:26,879
+[BLANK_AUDIO]
+
+91
+00:06:26,879 --> 00:06:32,450
+We'll have blue and we'll have green, and
+red.
+
+92
+00:06:34,360 --> 00:06:36,780
+And just before we leave this screen, I'll
+just say,
+
+93
+00:06:36,780 --> 00:06:40,720
+you're limited to 30 characters in length
+for your text element.
+
+94
+00:06:40,720 --> 00:06:41,610
+So just bear that in mind.
+
+95
+00:06:43,860 --> 00:06:48,970
+Now before these text elements can be
+used, just like programs and
+
+96
+00:06:48,970 --> 00:06:53,100
+dictionary objects, we need to activate
+our text elements,
+
+97
+00:06:53,100 --> 00:06:57,365
+which will automatically save them into
+the text pool for our programs to use.
+
+98
+00:06:57,365 --> 00:07:03,295
+So I just activate, job done, and come
+back.
+
+99
+00:07:03,295 --> 00:07:06,628
+[BLANK_AUDIO]
+
+100
+00:07:06,628 --> 00:07:08,322
+Now when we run our program,
+
+101
+00:07:08,322 --> 00:07:13,060
+we can see the proper text coming through
+that we declared in our text elements.
+
+102
+00:07:15,120 --> 00:07:15,980
+And you know what?
+
+103
+00:07:15,980 --> 00:07:17,780
+That's as difficult as it gets.
+
+104
+00:07:20,210 --> 00:07:24,240
+So just remember, when you're declaring
+screen elements, your parameter
+
+105
+00:07:24,240 --> 00:07:28,270
+select options, just go to your text
+elements, key in the text you want, and
+
+106
+00:07:28,270 --> 00:07:31,503
+then it will be dragged through to the
+screen automatically.
+
+107
+00:07:31,503 --> 00:07:32,003
+[BLANK_AUDIO]
+

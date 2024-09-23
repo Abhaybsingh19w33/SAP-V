@@ -1,0 +1,93 @@
+1
+00:00:01,090 --> 00:00:03,850
+Now the Insert statement follows similar
+lines.
+
+2
+00:00:03,850 --> 00:00:08,560
+Let me bring in the code from the header
+record example.
+
+3
+00:00:10,570 --> 00:00:16,634
+Here we used a Describe statement
+
+4
+00:00:16,634 --> 00:00:21,615
+to find out how many records
+
+5
+00:00:21,615 --> 00:00:26,164
+in the internal table and
+
+6
+00:00:26,164 --> 00:00:31,794
+hold that value in line count,
+
+7
+00:00:31,794 --> 00:00:38,091
+which I will declare again [SOUND].
+
+8
+00:00:38,091 --> 00:00:42,544
+And it looks like I got the last example
+wrong because I specified the work
+
+9
+00:00:42,544 --> 00:00:43,789
+area incorrectly.
+
+10
+00:00:43,789 --> 00:00:46,987
+That'll teach me to check my code.
+
+11
+00:00:46,987 --> 00:00:50,190
+So back to the insert,
+
+12
+00:00:50,190 --> 00:00:56,261
+the Describe statement holds the number of
+
+13
+00:00:56,261 --> 00:01:01,657
+records in the Line Count variable and
+
+14
+00:01:01,657 --> 00:01:07,054
+the Insert statement would say insert
+
+15
+00:01:07,054 --> 00:01:13,459
+a record from our work area, into our
+table,
+
+16
+00:01:13,459 --> 00:01:19,890
+using the index position held in Line
+Count.
+
+17
+00:01:21,970 --> 00:01:26,860
+So the syntax is a little bit different
+from standard where we actually say,
+
+18
+00:01:26,860 --> 00:01:31,530
+first of all, insert our work area record
+into our table
+
+19
+00:01:31,530 --> 00:01:35,730
+rather than specifying the table first
+like we did with the Modify statement.
+
+20
+00:01:36,920 --> 00:01:37,870
+The work area is second.
+
+21
+00:01:39,485 --> 00:01:47,310
+[SOUND] But nonetheless it's still
+relatively simple.
+

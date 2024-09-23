@@ -1,0 +1,153 @@
+1
+00:00:02,150 --> 00:00:06,591
+Let's now take a look at declaring the
+other type of variable, called constants.
+
+2
+00:00:09,328 --> 00:00:14,120
+So a constant is a field within our
+program whose value
+
+3
+00:00:14,120 --> 00:00:18,450
+stays the same during the complete
+execution of the program.
+
+4
+00:00:18,450 --> 00:00:20,830
+We never want it to change.
+
+5
+00:00:20,830 --> 00:00:21,500
+Hence the term, constant.
+
+6
+00:00:24,170 --> 00:00:28,906
+We can declare constants by using the
+constants statement instead of
+
+7
+00:00:28,906 --> 00:00:30,385
+the data statement.
+
+8
+00:00:30,385 --> 00:00:35,963
+And when we declare a constant, we must
+also assign a value to that field.
+
+9
+00:00:35,963 --> 00:00:41,281
+When we are writing code, we can then only
+ever reference the constant variable,
+
+10
+00:00:41,281 --> 00:00:43,454
+but never change the value of it.
+
+11
+00:00:43,454 --> 00:00:47,424
+If you do try and change the value of a
+constant within your program,
+
+12
+00:00:47,424 --> 00:00:50,711
+you'll usually get a runtime error, so
+don't try it.
+
+13
+00:00:50,711 --> 00:00:57,182
+[LAUGH] So let's have a look at the syntax
+for declaring a constant variable.
+
+14
+00:00:57,182 --> 00:01:00,422
+The syntax is very similar to the data
+statement, but
+
+15
+00:01:00,422 --> 00:01:02,300
+with a few minor differences.
+
+16
+00:01:03,410 --> 00:01:06,803
+First of all, you have to use the word
+constants.
+
+17
+00:01:06,803 --> 00:01:09,672
+[BLANK_AUDIO]
+
+18
+00:01:09,672 --> 00:01:13,660
+Give it a name.
+
+19
+00:01:13,660 --> 00:01:16,263
+Now, it was supposed to say MYCONSTANT1.
+
+20
+00:01:16,263 --> 00:01:21,081
+[BLANK_AUDIO]
+
+21
+00:01:21,081 --> 00:01:22,462
+Give it a type.
+
+22
+00:01:22,462 --> 00:01:32,462
+[BLANK_AUDIO]
+
+23
+00:01:35,235 --> 00:01:36,022
+And there we have it.
+
+24
+00:01:36,022 --> 00:01:38,232
+We're done.
+
+25
+00:01:38,232 --> 00:01:45,093
+We want to do another one.
+
+26
+00:01:45,093 --> 00:01:50,615
+This time we'll make it a normal integer.
+
+27
+00:01:50,615 --> 00:01:54,546
+[BLANK_AUDIO]
+
+28
+00:01:54,546 --> 00:01:55,510
+Very easy.
+
+29
+00:01:56,860 --> 00:02:02,753
+And just one thing to note, you cannot
+define
+
+30
+00:02:02,753 --> 00:02:07,871
+constants for data types, X strings,
+
+31
+00:02:07,871 --> 00:02:13,145
+for references, internal tables, and
+
+32
+00:02:13,145 --> 00:02:18,745
+structures containing internal tables.
+
+33
+00:02:18,745 --> 00:02:28,745
+[BLANK_AUDIO]
+
+34
+00:02:32,690 --> 00:02:33,869
+So just remember,
+
+35
+00:02:33,869 --> 00:02:38,590
+we will come on to those data types at a
+later stage of this training program.
+

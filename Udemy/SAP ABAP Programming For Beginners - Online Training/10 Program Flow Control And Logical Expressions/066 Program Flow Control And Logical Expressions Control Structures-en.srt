@@ -1,0 +1,82 @@
+1
+00:00:00,000 --> 00:00:02,332
+[BLANK_AUDIO]
+
+2
+00:00:02,332 --> 00:00:04,197
+In this section of the course,
+
+3
+00:00:04,197 --> 00:00:08,880
+we're going to take a look at program flow
+control and logical expressions.
+
+4
+00:00:11,590 --> 00:00:15,200
+This really is the meat of ABAP program.
+
+5
+00:00:15,200 --> 00:00:17,290
+This is where it all happens.
+
+6
+00:00:17,290 --> 00:00:20,800
+How you structure your program using
+logical expressions.
+
+7
+00:00:21,800 --> 00:00:25,870
+Determine the complete flow of your
+program and
+
+8
+00:00:25,870 --> 00:00:29,200
+in what sequence actions are taken.
+
+9
+00:00:29,200 --> 00:00:32,990
+So first of all, let's have a look at
+control structures.
+
+10
+00:00:32,990 --> 00:00:35,200
+Now, when we create a program,
+
+11
+00:00:36,200 --> 00:00:40,620
+we break a program up into some multiple
+tasks and subtasks.
+
+12
+00:00:40,620 --> 00:00:46,450
+We control how and when these sections of
+our program are executed
+
+13
+00:00:46,450 --> 00:00:48,900
+using logical expressions and
+
+14
+00:00:48,900 --> 00:00:53,700
+conditional loops, often referred to as
+control structures.
+
+15
+00:00:55,000 --> 00:00:57,760
+So, let's get straight down to the ABAP
+code, and
+
+16
+00:00:57,760 --> 00:01:01,040
+have a look at how we define these control
+structures.
+
+17
+00:01:01,040 --> 00:01:03,975
+To make it easy to understand what I'm
+talking about.
+
+18
+00:01:03,975 --> 00:01:07,009
+[BLANK_AUDIO]
+

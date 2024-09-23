@@ -1,0 +1,448 @@
+1
+00:00:01,470 --> 00:00:07,340
+Now at this point, I want to introduce a
+new statement called the clear statement.
+
+2
+00:00:07,340 --> 00:00:09,890
+And the reason why I want to do this is
+because,
+
+3
+00:00:12,820 --> 00:00:18,580
+in our other programs, you won't just see
+programs that start at the top,
+
+4
+00:00:18,580 --> 00:00:22,450
+fill data like we have just done, do the
+insert,
+
+5
+00:00:22,450 --> 00:00:26,140
+check that it was successful and then
+process another record.
+
+6
+00:00:26,140 --> 00:00:28,910
+You would have loops set up and things
+like that so
+
+7
+00:00:28,910 --> 00:00:34,000
+that you can write just a small section of
+code, that maybe could insert 100 records.
+
+8
+00:00:35,650 --> 00:00:38,120
+And to do that, we're going to reuse
+variables and
+
+9
+00:00:38,120 --> 00:00:41,850
+structures in our program over and over
+again, so
+
+10
+00:00:41,850 --> 00:00:46,830
+the clear statement, enables us to clear
+out a field,
+
+11
+00:00:46,830 --> 00:00:52,260
+a variable or structure, so that we can
+reuse it and make sure that
+
+12
+00:00:52,260 --> 00:00:56,800
+none of the data that currently exists in
+the structure Get supply to a new record.
+
+13
+00:00:57,880 --> 00:01:01,420
+Now you will see the clear statement being
+used in awful lots of programs.
+
+14
+00:01:02,610 --> 00:01:07,960
+Because every program that makes use of
+existing fields within that program,
+
+15
+00:01:09,420 --> 00:01:10,340
+time and time again.
+
+16
+00:01:12,420 --> 00:01:18,020
+So in the scenario we have here, we fill
+our work area with data.
+
+17
+00:01:18,020 --> 00:01:20,100
+Let's take off this break point.
+
+18
+00:01:22,010 --> 00:01:24,998
+And this one up here that I set
+accidentally.
+
+19
+00:01:24,998 --> 00:01:30,310
+So, our program fills our work area,
+structure,
+
+20
+00:01:31,520 --> 00:01:36,470
+then inserts the data into the table, and
+then we do some validation checking.
+
+21
+00:01:37,880 --> 00:01:43,855
+Well, now if we want to insert a new
+record, in this case all I'm going to do,
+
+22
+00:01:43,855 --> 00:01:45,570
+is just copy the code.
+
+23
+00:01:45,570 --> 00:01:53,750
+Add just a little break there just to show
+that we've got something new.
+
+24
+00:01:56,370 --> 00:01:58,330
+Change the employee number.
+
+25
+00:01:58,330 --> 00:02:05,710
+So now to do this, well, let's say, this
+didn't exist.
+
+26
+00:02:05,710 --> 00:02:13,230
+If we did an insert statement, again at
+this point, our work area
+
+27
+00:02:13,230 --> 00:02:18,710
+contains all the values from our previous
+insert and we wouldn't want that.
+
+28
+00:02:18,710 --> 00:02:19,700
+We want to clear it out.
+
+29
+00:02:23,910 --> 00:02:29,110
+So once you finish working with a variable
+or structure.
+
+30
+00:02:29,110 --> 00:02:33,920
+Use the clear statement and specify what
+you
+
+31
+00:02:35,040 --> 00:02:38,180
+are going to clear out.
+
+32
+00:02:38,180 --> 00:02:40,560
+You have a couple of options.
+
+33
+00:02:40,560 --> 00:02:45,030
+If we use clear WA employees, is gonna
+clear the complete structure, so
+
+34
+00:02:45,030 --> 00:02:49,010
+every field within the structure would be
+wiped clean.
+
+35
+00:02:49,010 --> 00:02:52,545
+Alternatively, you can specify individual
+fields.
+
+36
+00:02:52,545 --> 00:02:58,969
+[SOUND] So let's bring back in the fields
+we commented out.
+
+37
+00:02:58,969 --> 00:03:08,894
+[BLANK_AUDIO]
+
+38
+00:03:08,894 --> 00:03:12,180
+Just so oh, we'll just leave them like
+that.
+
+39
+00:03:14,010 --> 00:03:16,489
+And then we'll, we'll run our program in
+[UNKNOWN] mode.
+
+40
+00:03:16,489 --> 00:03:18,290
+So you can see the clear statement in
+action.
+
+41
+00:03:18,290 --> 00:03:22,480
+So first of all we'll check the program.
+
+42
+00:03:22,480 --> 00:03:23,390
+Everything is good.
+
+43
+00:03:23,390 --> 00:03:25,320
+And we'll activate it.
+
+44
+00:03:28,450 --> 00:03:29,700
+Set a break point.
+
+45
+00:03:31,810 --> 00:03:32,310
+And let's go.
+
+46
+00:03:36,670 --> 00:03:38,460
+So instead of, well, I'll do it again.
+
+47
+00:03:38,460 --> 00:03:42,847
+I'll double-click zed employees, which is
+the whole structure, but this time,
+
+48
+00:03:42,847 --> 00:03:44,658
+let's do the individual fields.
+
+49
+00:03:44,658 --> 00:03:47,756
+I'm just going to double-click each field
+and as you can see,
+
+50
+00:03:47,756 --> 00:03:49,638
+it's added to the list at the bottom.
+
+51
+00:03:49,638 --> 00:03:52,833
+[BLANK_AUDIO]
+
+52
+00:03:52,833 --> 00:03:54,434
+And we'll wipe this one out.
+
+53
+00:03:54,434 --> 00:04:00,297
+[BLANK_AUDIO]
+
+54
+00:04:00,297 --> 00:04:02,080
+Oops, sorry, wiped them all out.
+
+55
+00:04:02,080 --> 00:04:06,310
+Start again.
+Let's do these four.
+
+56
+00:04:06,310 --> 00:04:09,259
+I could do a fifth, but we'd have to page
+down.
+
+57
+00:04:09,259 --> 00:04:12,557
+So see the date of birth, so I'll just
+keep it at four.
+
+58
+00:04:12,557 --> 00:04:18,296
+I'll do F5 to go step by step and we can
+see everything being inserted,
+
+59
+00:04:18,296 --> 00:04:24,051
+and the insert statement, the record gets
+written into the database.
+
+60
+00:04:24,051 --> 00:04:29,406
+Now, we still have the original record in
+the database, and check this out.
+
+61
+00:04:29,406 --> 00:04:33,054
+Our SY sub RC has given us a return value
+of 4,
+
+62
+00:04:33,054 --> 00:04:36,520
+indicating we've got some sort of error.
+
+63
+00:04:37,600 --> 00:04:42,330
+So now our WRITE statement will write out
+the return code to the report,
+
+64
+00:04:42,330 --> 00:04:43,410
+telling us about the error.
+
+65
+00:04:44,830 --> 00:04:47,860
+And this is because the record already
+exists.
+
+66
+00:04:47,860 --> 00:04:52,630
+So we're trying to create a brand new
+record with the same key.
+
+67
+00:04:52,630 --> 00:04:54,010
+And, and this just won't work.
+
+68
+00:04:55,320 --> 00:04:58,180
+Our table requires unique records.
+
+69
+00:04:58,180 --> 00:05:00,480
+So the system here is saying uh-uh,
+
+70
+00:05:00,480 --> 00:05:04,200
+the insert statement didn't execute
+properly We have a problem.
+
+71
+00:05:04,200 --> 00:05:07,150
+It's giving us the return code, we are
+checking for
+
+72
+00:05:07,150 --> 00:05:10,430
+it, and then it's going to write out this
+comment to the report.
+
+73
+00:05:13,710 --> 00:05:16,080
+And now we come to our clear statement.
+
+74
+00:05:16,080 --> 00:05:20,220
+This is what I wanted to demonstrate, not
+so much the error.
+
+75
+00:05:20,220 --> 00:05:25,450
+But we're going to execute the clear
+statements on this individual field.
+
+76
+00:05:25,450 --> 00:05:27,380
+And it's going to clear out employee only.
+
+77
+00:05:29,050 --> 00:05:29,810
+There we go.
+
+78
+00:05:29,810 --> 00:05:32,570
+See it's been initialized to zeros.
+
+79
+00:05:32,570 --> 00:05:35,820
+We don't have the clear statement for
+surname and forname.
+
+80
+00:05:35,820 --> 00:05:41,970
+But because we are filling all the fields
+again, there's the employee number.
+
+81
+00:05:41,970 --> 00:05:43,410
+Everything will work.
+
+82
+00:05:43,410 --> 00:05:46,550
+But in practice, I should of cleared out
+the whole stretcher not
+
+83
+00:05:46,550 --> 00:05:50,710
+the employee, so we go along.
+
+84
+00:05:50,710 --> 00:05:53,020
+Insert, this time we do have a unique
+record,
+
+85
+00:05:53,020 --> 00:05:55,410
+because we changed the employee number.
+
+86
+00:05:55,410 --> 00:05:59,940
+So we can see SY sub RC0 and
+
+87
+00:05:59,940 --> 00:06:03,840
+this time it will write out a row saying
+record inserted correctly.
+
+88
+00:06:06,420 --> 00:06:09,254
+And that's the end of our program.
+
+89
+00:06:09,254 --> 00:06:11,728
+And there we can see the first one.
+
+90
+00:06:11,728 --> 00:06:15,593
+We have a return code of four and
+
+91
+00:06:15,593 --> 00:06:19,910
+then record inserted correctly.
+
+92
+00:06:19,910 --> 00:06:24,290
+So, before I forget, I'm gonna wipe out
+these records.
+
+93
+00:06:26,030 --> 00:06:26,690
+Right now.
+
+94
+00:06:26,690 --> 00:06:30,209
+If I do a refresh, yeah we'll see the
+seventh one.
+
+95
+00:06:30,209 --> 00:06:41,145
+[BLANK_AUDIO]
+
+96
+00:06:41,145 --> 00:06:43,481
+There we go, we're back to where we were.
+
+97
+00:06:43,481 --> 00:06:51,420
+[BLANK_AUDIO]
+
+98
+00:06:51,420 --> 00:06:53,190
+Let's move on to the update statements.
+

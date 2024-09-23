@@ -1,0 +1,219 @@
+1
+00:00:02,990 --> 00:00:06,490
+Let's now start looking at some of the
+open SQL statements
+
+2
+00:00:06,490 --> 00:00:08,130
+we can use in our ABAP programs.
+
+3
+00:00:09,550 --> 00:00:14,960
+Now in a previous video, I mentioned that
+open SQL statements we use in our programs
+
+4
+00:00:14,960 --> 00:00:20,350
+allow us to indirectly access or modify
+records held in the database tables.
+
+5
+00:00:22,340 --> 00:00:25,160
+Many of the examples we have used in this
+course so
+
+6
+00:00:25,160 --> 00:00:28,280
+far have used the select statements.
+
+7
+00:00:28,280 --> 00:00:29,690
+So you should be familiar with them.
+
+8
+00:00:31,410 --> 00:00:34,880
+The select statement is very similar to
+the standard
+
+9
+00:00:34,880 --> 00:00:39,980
+SQL select statements that is used by many
+other programming languages.
+
+10
+00:00:39,980 --> 00:00:44,790
+The beauty about open SQL is that we can
+use these type of statements
+
+11
+00:00:44,790 --> 00:00:48,920
+in our ABAP programs, no matter what the
+underlying database is.
+
+12
+00:00:50,540 --> 00:00:53,870
+Our system could be running an oracle
+database,
+
+13
+00:00:53,870 --> 00:00:57,760
+Microsoft SQL database or any other.
+
+14
+00:00:57,760 --> 00:01:04,260
+By using Open SQL in our ABAP programs In
+conjunction with using the ABAP dictionary
+
+15
+00:01:04,260 --> 00:01:09,880
+to create and modify our database tables,
+we can be 100% certain that
+
+16
+00:01:09,880 --> 00:01:15,150
+our ABAP code will not have any issues in
+accessing the data held
+
+17
+00:01:15,150 --> 00:01:19,840
+by the specific type of database our SAP
+system uses.
+
+18
+00:01:21,550 --> 00:01:25,360
+Now cast your mind back to when we created
+our first database table.
+
+19
+00:01:26,380 --> 00:01:30,708
+We included the field Mandt, M-A-N-D-T,
+
+20
+00:01:30,708 --> 00:01:36,650
+which represents the client number and
+forms part of our database table key.
+
+21
+00:01:38,950 --> 00:01:40,050
+If you recall,
+
+22
+00:01:40,050 --> 00:01:45,220
+when we created our database table we
+included a field called client.
+
+23
+00:01:45,220 --> 00:01:47,045
+Let's take a quick peak as a reminder.
+
+24
+00:01:47,045 --> 00:01:53,045
+[BLANK_AUDIO]
+
+25
+00:01:53,045 --> 00:01:55,003
+Here it is.
+
+26
+00:01:55,003 --> 00:01:59,057
+Now this field represents the client
+number and
+
+27
+00:01:59,057 --> 00:02:03,170
+forms part of our database table key.
+
+28
+00:02:03,170 --> 00:02:08,510
+So in our ABAP programs, you would think
+we would have to use this field
+
+29
+00:02:08,510 --> 00:02:13,450
+when we're using our open SQL statements,
+but actually we don't.
+
+30
+00:02:13,450 --> 00:02:14,620
+This is like a hidden field.
+
+31
+00:02:15,810 --> 00:02:21,030
+All our transactional tables and the
+majority of our master data and
+
+32
+00:02:21,030 --> 00:02:24,600
+configuration tables include this field in
+them.
+
+33
+00:02:24,600 --> 00:02:29,300
+And the SAP system has been built in such
+a way that it will automatically
+
+34
+00:02:29,300 --> 00:02:33,750
+apply a filter on this field based on the
+client id.
+
+35
+00:02:34,860 --> 00:02:35,730
+The user is using.
+
+36
+00:02:35,730 --> 00:02:39,280
+So if I'm logged in to client 100,
+
+37
+00:02:39,280 --> 00:02:45,900
+the SAP system will automatically filter
+all the records held in the database
+
+38
+00:02:45,900 --> 00:02:50,100
+on this client key, and only return me the
+record for client 100.
+
+39
+00:02:50,100 --> 00:02:52,750
+This is done all automatically.
+
+40
+00:02:54,350 --> 00:02:57,720
+So when we use open SQL in the programs
+that we create,
+
+41
+00:02:57,720 --> 00:03:00,830
+the system will manage this for us.
+
+42
+00:03:00,830 --> 00:03:05,200
+Meaning we never have to include this
+field in any selection or
+
+43
+00:03:05,200 --> 00:03:07,910
+any update statements we use in our
+programs.
+
+44
+00:03:09,750 --> 00:03:13,670
+This also has the added benefit of giving
+a security.
+
+45
+00:03:13,670 --> 00:03:18,670
+In the knowledge that any SQL statement we
+execute in our program.
+
+46
+00:03:18,670 --> 00:03:22,129
+Will only effect the records held in our
+current clients.
+
+47
+00:03:22,129 --> 00:03:22,629
+[BLANK_AUDIO]
+

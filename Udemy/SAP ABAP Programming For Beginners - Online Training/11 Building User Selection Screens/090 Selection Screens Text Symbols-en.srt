@@ -1,0 +1,344 @@
+1
+00:00:01,690 --> 00:00:06,050
+There are a couple more things we need to
+look at to complete covering text objects
+
+2
+00:00:06,050 --> 00:00:10,180
+in general to enable you to completely set
+up your own selection screens for
+
+3
+00:00:10,180 --> 00:00:10,680
+your programs.
+
+4
+00:00:11,830 --> 00:00:14,020
+These are text symbols and messages.
+
+5
+00:00:16,100 --> 00:00:16,980
+So what are these?
+
+6
+00:00:16,980 --> 00:00:23,030
+Well, text symbols were used to replace
+literals in our program.
+
+7
+00:00:25,060 --> 00:00:29,780
+For example, when we use the right
+statement, we can choose to use text
+
+8
+00:00:29,780 --> 00:00:35,375
+symbols, which will enable us to reuse
+text we have already set up.
+
+9
+00:00:35,375 --> 00:00:40,315
+And it gives us the added functionality of
+being able to use translated text
+
+10
+00:00:40,315 --> 00:00:41,145
+within our program.
+
+11
+00:00:42,315 --> 00:00:47,475
+So basically we stay away from using any
+hard coded literals in our program, and
+
+12
+00:00:47,475 --> 00:00:48,705
+use text symbols instead.
+
+13
+00:00:50,425 --> 00:00:52,539
+Now let me go back into SE-38.
+
+14
+00:00:55,940 --> 00:00:57,340
+And we'll have a look at our program.
+
+15
+00:00:57,340 --> 00:01:02,390
+And we'll discuss, well, what are text
+symbols.
+
+16
+00:01:02,390 --> 00:01:06,795
+Well, quite simply, they are just place
+holders for text
+
+17
+00:01:06,795 --> 00:01:09,057
+[BLANK_AUDIO]
+
+18
+00:01:09,057 --> 00:01:17,392
+Instead of having a write statement such
+as [NOISE] let's say,
+
+19
+00:01:17,392 --> 00:01:22,040
+write new line surname as a title,
+
+20
+00:01:22,040 --> 00:01:26,541
+we can use a text symbol instead.
+
+21
+00:01:26,541 --> 00:01:31,993
+And we would do this by creating our right
+statement again,
+
+22
+00:01:31,993 --> 00:01:36,248
+but instead of having a literal same
+surname,
+
+23
+00:01:36,248 --> 00:01:40,300
+we would say use text dash and then a
+number.
+
+24
+00:01:41,330 --> 00:01:44,660
+And this represents a text symbol that we
+can set up.
+
+25
+00:01:46,020 --> 00:01:49,100
+Now it's important you take note how the
+text symbol is declared.
+
+26
+00:01:50,880 --> 00:01:55,448
+You must use text, which is this word
+here,
+
+27
+00:01:55,448 --> 00:01:59,032
+followed by a three digit number.
+
+28
+00:01:59,032 --> 00:02:03,049
+[BLANK_AUDIO]
+
+29
+00:02:03,049 --> 00:02:08,881
+[SOUND] You are allowed to use up to 1,000
+text symbols in your program,
+
+30
+00:02:08,881 --> 00:02:14,357
+of which each one can be translated into
+as many languages as you wish.
+
+31
+00:02:14,357 --> 00:02:18,857
+Now, there is a limitation to the length
+of a text symbol and
+
+32
+00:02:18,857 --> 00:02:21,110
+that's 132 characters.
+
+33
+00:02:22,220 --> 00:02:24,420
+But as you can imagine, that's probably
+enough for
+
+34
+00:02:24,420 --> 00:02:26,150
+any situation you'll come up against.
+
+35
+00:02:27,230 --> 00:02:30,170
+Now we have already seen how to get to
+text elements
+
+36
+00:02:30,170 --> 00:02:33,230
+by using the menus when we had a look at
+selection text.
+
+37
+00:02:34,840 --> 00:02:37,020
+But there is also another way we can get
+to it.
+
+38
+00:02:38,160 --> 00:02:40,220
+And that's by using forward navigation.
+
+39
+00:02:41,340 --> 00:02:46,450
+So because I have just used this text
+double one, I can use forward
+
+40
+00:02:46,450 --> 00:02:51,300
+navigation just like when we did with
+creating a database table.
+
+41
+00:02:51,300 --> 00:02:53,770
+You know, when we created the data
+elements and
+
+42
+00:02:53,770 --> 00:02:57,770
+the fields, we use forward navigation to
+actually create objects.
+
+43
+00:02:57,770 --> 00:02:58,870
+We can do the same here.
+
+44
+00:02:59,970 --> 00:03:05,242
+So all I'll need to do is double-click
+this text-001.
+
+45
+00:03:05,242 --> 00:03:10,120
+And now the system says do you want to
+create the object.
+
+46
+00:03:10,120 --> 00:03:10,940
+We'll choose Yes.
+
+47
+00:03:12,570 --> 00:03:15,090
+And yes, we'll save the program first so
+we don't lose it.
+
+48
+00:03:16,640 --> 00:03:19,860
+And now it takes us straight into our text
+element screen.
+
+49
+00:03:21,070 --> 00:03:25,670
+You can see it's using the code 001 that
+we defined in the program, and
+
+50
+00:03:25,670 --> 00:03:29,600
+now all we need to do is enter some basic
+text into this field.
+
+51
+00:03:30,950 --> 00:03:34,915
+Now, previously we used surname as our
+text, so let's do the same.
+
+52
+00:03:34,915 --> 00:03:38,046
+[SOUND] Let's just use surname.
+
+53
+00:03:38,046 --> 00:03:43,250
+The field here on the right, D-length,
+that's just the length.
+
+54
+00:03:43,250 --> 00:03:44,330
+I've just pressed enter, and
+
+55
+00:03:44,330 --> 00:03:47,070
+that's just the length of the text that
+we've keyed in.
+
+56
+00:03:47,070 --> 00:03:50,320
+In the field on the far right is the
+maximum length.
+
+57
+00:03:51,460 --> 00:03:52,930
+So let's activate this object.
+
+58
+00:03:56,860 --> 00:03:58,544
+Now we can step back to our program.
+
+59
+00:03:58,544 --> 00:04:00,726
+[BLANK_AUDIO]
+
+60
+00:04:00,726 --> 00:04:07,330
+And what I'll do, just in this example,
+let's just remove the select statements.
+
+61
+00:04:07,330 --> 00:04:08,510
+What else have we got in the program?
+
+62
+00:04:10,310 --> 00:04:12,990
+That's fine.
+We'll leave the selection screen in and
+
+63
+00:04:12,990 --> 00:04:19,120
+we'll run this report and then you'll see
+the word surname output twice.
+
+64
+00:04:19,120 --> 00:04:23,410
+First by our write statement outputting a
+literal, and
+
+65
+00:04:23,410 --> 00:04:24,960
+then by who's using the text symbol.
+
+66
+00:04:27,520 --> 00:04:28,480
+I'll activate the program.
+
+67
+00:04:30,140 --> 00:04:36,600
+Press F8, click execute, and there you can
+see, surname is output twice.
+
+68
+00:04:37,790 --> 00:04:40,330
+First by the literal and then by our tech
+symbol.
+
+69
+00:04:44,030 --> 00:04:48,710
+So as you can see, tech symbols are super
+easy, super easy to define and set up.
+
+70
+00:04:49,950 --> 00:04:52,920
+And I advise you do use them wherever you
+can,
+
+71
+00:04:52,920 --> 00:04:56,670
+because if you ever need to change any
+text that you have up on the screen,
+
+72
+00:04:56,670 --> 00:05:00,740
+you can just change the text symbol value
+without having to recompile your program.
+
+73
+00:05:01,750 --> 00:05:06,770
+And plus, it has the added benefit of
+allowing you to use translations for
+
+74
+00:05:06,770 --> 00:05:07,360
+other languages
+

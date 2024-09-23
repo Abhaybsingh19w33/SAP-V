@@ -1,0 +1,322 @@
+1
+00:00:01,410 --> 00:00:03,527
+Before we do execute it, I've noticed a
+mistake or two.
+
+2
+00:00:03,527 --> 00:00:12,003
+[NOISE] Got way too many zeros, oops.
+
+3
+00:00:12,003 --> 00:00:14,824
+[NOISE] I think it's six,
+
+4
+00:00:14,824 --> 00:00:20,336
+because I think it's an eight character
+field.
+
+5
+00:00:20,336 --> 00:00:21,830
+Let's go and check.
+
+6
+00:00:21,830 --> 00:00:23,310
+Yes, it's eight characters.
+
+7
+00:00:25,030 --> 00:00:32,010
+And also, now I think I think
+
+8
+00:00:32,010 --> 00:00:36,930
+it's it's definitely my keyboard playing
+up, it's not me not being able to spell.
+
+9
+00:00:36,930 --> 00:00:39,340
+Honest.
+[LAUGH] Okay, so
+
+10
+00:00:39,340 --> 00:00:40,390
+now we'll check the program.
+
+11
+00:00:42,330 --> 00:00:43,000
+Everything's good,
+
+12
+00:00:43,000 --> 00:00:48,670
+make sure it's saved, then we'll activate
+it, and then we'll test it.
+
+13
+00:00:48,670 --> 00:00:53,670
+So, if I bring up the database
+
+14
+00:00:53,670 --> 00:01:01,878
+table as it currently is [SOUND] and view
+the data.
+
+15
+00:01:01,878 --> 00:01:03,670
+There are the current records we have.
+
+16
+00:01:03,670 --> 00:01:05,480
+So I'll move it over to the side.
+
+17
+00:01:05,480 --> 00:01:07,950
+We'll execute our program.
+
+18
+00:01:10,110 --> 00:01:11,570
+Record inserted successfully.
+
+19
+00:01:11,570 --> 00:01:17,680
+So, I'll come back over here and we'll do
+a refresh,
+
+20
+00:01:19,830 --> 00:01:25,630
+and there's our new record at the bottom.
+
+21
+00:01:25,630 --> 00:01:31,160
+So, let's now, just for practice, let's go
+through this in d book mode.
+
+22
+00:01:32,900 --> 00:01:34,650
+Now, we'll change the contents.
+
+23
+00:01:34,650 --> 00:01:36,280
+No we won't, we'll leave it lying down.
+
+24
+00:01:36,280 --> 00:01:38,920
+What we'll do is delete the record from
+the table.
+
+25
+00:01:40,360 --> 00:01:44,170
+So whilst we're here, highlight that one,
+
+26
+00:01:44,170 --> 00:01:48,295
+table entries and choose Delete and it's
+gone.
+
+27
+00:01:48,295 --> 00:01:52,961
+[BLANK_AUDIO]
+
+28
+00:01:52,961 --> 00:01:54,710
+And then, I'll put a break point.
+
+29
+00:01:55,770 --> 00:02:00,643
+[NOISE] Oops, cursor was
+
+30
+00:02:00,643 --> 00:02:06,246
+placed on the wrong place,
+
+31
+00:02:06,246 --> 00:02:09,420
+do apologize.
+
+32
+00:02:09,420 --> 00:02:13,870
+Just do the breakpoint there.
+
+33
+00:02:13,870 --> 00:02:18,681
+Okay, now we'll execute the program and
+we'll step through it one line at a time
+
+34
+00:02:18,681 --> 00:02:21,171
+and check the value of the SY sub RC
+field.
+
+35
+00:02:21,171 --> 00:02:25,295
+[BLANK_AUDIO]
+
+36
+00:02:25,295 --> 00:02:27,140
+Okay so we're in debug mode.
+
+37
+00:02:27,140 --> 00:02:30,920
+So press F5 which is the single step.
+
+38
+00:02:30,920 --> 00:02:33,087
+[BLANK_AUDIO]
+
+39
+00:02:33,087 --> 00:02:38,160
+And you can see here that we're going to
+fill our work area.
+
+40
+00:02:38,160 --> 00:02:41,860
+So what I'll do, I'll double click on the
+work area structure up here first.
+
+41
+00:02:44,180 --> 00:02:46,050
+Now you can see the work area, and
+
+42
+00:02:46,050 --> 00:02:50,650
+they actually, if we hover over, you can
+see it's completely empty.
+
+43
+00:02:50,650 --> 00:02:54,770
+But what we'd like to do is display the
+whole structure.
+
+44
+00:02:54,770 --> 00:03:02,310
+So see the individual fields, So, I'm
+going to double click it.
+
+45
+00:03:02,310 --> 00:03:06,766
+And now it's jumped to the structure view,
+where we can
+
+46
+00:03:06,766 --> 00:03:12,370
+see each field within our structure.
+
+47
+00:03:12,370 --> 00:03:13,930
+Now, due to the limitation in size here,
+
+48
+00:03:13,930 --> 00:03:16,840
+we can always get very small preview of
+the code.
+
+49
+00:03:18,140 --> 00:03:20,630
+Well let's go to the actual line of code
+we're working with.
+
+50
+00:03:20,630 --> 00:03:26,080
+So we have executed this one,
+
+51
+00:03:26,080 --> 00:03:29,200
+and you can see we have filled the
+employee field.
+
+52
+00:03:30,860 --> 00:03:36,980
+The next field, surname, gets filled, and
+so on for
+
+53
+00:03:36,980 --> 00:03:42,430
+name, title, date of birth and now we have
+the insert statements.
+
+54
+00:03:42,430 --> 00:03:48,030
+And what I'm gonna do is go back to this
+fields view and
+
+55
+00:03:48,030 --> 00:03:52,456
+I'm going to bring up the xy sub rc field.
+
+56
+00:03:52,456 --> 00:03:55,320
+But I say bring up, here it is down here.
+
+57
+00:03:55,320 --> 00:03:56,730
+It's always on the screen.
+
+58
+00:03:56,730 --> 00:04:02,045
+So at the moment, it has a value of zero,
+and as we execute the insert
+
+59
+00:04:02,045 --> 00:04:07,830
+statements If there were any problems at
+all this would change to a four for
+
+60
+00:04:07,830 --> 00:04:13,270
+a warning and then an eight for an error
+or to say it was unsuccessful.
+
+61
+00:04:13,270 --> 00:04:16,230
+So, let's execute the insert statement.
+
+62
+00:04:17,910 --> 00:04:22,350
+We can see the value is still 0 so,
+everything has worked correctly.
+
+63
+00:04:24,560 --> 00:04:28,940
+We're now going to clear the sy sub rc
+then write out the message
+
+64
+00:04:30,760 --> 00:04:32,990
+and then the program will finish.
+
+65
+00:04:32,990 --> 00:04:38,600
+Step back to come out
+
+66
+00:04:41,070 --> 00:04:46,190
+and then we'll do a refresh on the table
+and there we have it.
+
+67
+00:04:46,190 --> 00:04:48,150
+The new record has been added.
+
+68
+00:04:49,800 --> 00:04:55,700
+So that's the insert statement, using a
+separate work area.
+
+69
+00:04:55,700 --> 00:05:01,070
+Now, as we move on, there is a separate
+module looking at internal tables
+
+70
+00:05:01,070 --> 00:05:04,760
+where we will discuss internal tables with
+header record and
+
+71
+00:05:04,760 --> 00:05:07,710
+internal tables with separate work areas.
+
+72
+00:05:07,710 --> 00:05:12,470
+So we will come back to the work area
+header record topic a bit later on.
+

@@ -1,0 +1,298 @@
+1
+00:00:01,440 --> 00:00:06,690
+This next topic is gonna be quite small,
+and it's important that you know about it.
+
+2
+00:00:06,690 --> 00:00:09,490
+And this is Deleting Internal Tables.
+
+3
+00:00:09,490 --> 00:00:12,740
+First of all with header lines, and then
+with work areas.
+
+4
+00:00:13,950 --> 00:00:19,020
+When working with Internal Tables, you
+will see that there are many occasions
+
+5
+00:00:19,020 --> 00:00:22,780
+when you want to delete all the records of
+the Internal Table in one go.
+
+6
+00:00:22,780 --> 00:00:27,230
+And this obviously depends on the specific
+task you are trying to
+
+7
+00:00:27,230 --> 00:00:31,080
+complete with your program, and
+whereabouts in the program flow you are.
+
+8
+00:00:32,110 --> 00:00:35,620
+As an example, if you were to fill in the
+Internal Table
+
+9
+00:00:35,620 --> 00:00:39,480
+whilst you were inside that higher level
+loop, more often than not,
+
+10
+00:00:39,480 --> 00:00:44,800
+you will need to make sure your table is
+empty at the start of the loop.
+
+11
+00:00:44,800 --> 00:00:48,530
+So that when the next iteration of the
+loop comes around,
+
+12
+00:00:48,530 --> 00:00:51,920
+you are not left with any records from the
+previous iteration.
+
+13
+00:00:53,730 --> 00:00:58,610
+Now there's a certain sequence of tasks
+that you should really adhere to,
+
+14
+00:00:58,610 --> 00:01:02,790
+when deleting the contents of a table with
+a header line.
+
+15
+00:01:02,790 --> 00:01:06,240
+First, you have to make sure you clear out
+the header line.
+
+16
+00:01:06,240 --> 00:01:09,260
+Then make sure you clear out the body of
+the Internal Table.
+
+17
+00:01:10,500 --> 00:01:13,570
+So, let's have a look at the code and see
+exactly how we would do this.
+
+18
+00:01:16,300 --> 00:01:20,250
+So I've loaded in one of the previous
+examples, where we fill an Internal Table.
+
+19
+00:01:25,140 --> 00:01:26,190
+And it's very simple.
+
+20
+00:01:26,190 --> 00:01:27,320
+There's our Internal Table.
+
+21
+00:01:27,320 --> 00:01:30,920
+We have a select statement to fill in, and
+
+22
+00:01:30,920 --> 00:01:32,880
+a simple write statement to help with
+debugging.
+
+23
+00:01:34,750 --> 00:01:40,230
+So now, once we've used our Internal
+Table, we want to clear it out.
+
+24
+00:01:40,230 --> 00:01:45,230
+So first of all, clear out the header
+line, and we use the clear statements.
+
+25
+00:01:46,480 --> 00:01:48,140
+Very simple.
+
+26
+00:01:48,140 --> 00:01:50,190
+And all we do is say clear, and then the
+table name.
+
+27
+00:01:52,930 --> 00:01:55,380
+And this will clear out the header line
+only.
+
+28
+00:01:55,380 --> 00:02:00,100
+By specifying the Internal Table after the
+clear statement, the header
+
+29
+00:02:00,100 --> 00:02:04,900
+line will be wiped clean, meaning all
+fields will be set to their initial value.
+
+30
+00:02:06,280 --> 00:02:09,560
+Then, to deal with the table body that
+contains all your records.
+
+31
+00:02:11,210 --> 00:02:13,560
+We use the clear statement again but this
+time,
+
+32
+00:02:13,560 --> 00:02:16,640
+we used two square brackets at the end of
+the table name.
+
+33
+00:02:20,874 --> 00:02:25,250
+So what we do is this, followed by two
+square brackets,
+
+34
+00:02:26,650 --> 00:02:30,700
+and this results in all the records from
+the body of the table being deleted.
+
+35
+00:02:33,050 --> 00:02:36,350
+Now there is another way clearing out the
+records of a table, and
+
+36
+00:02:36,350 --> 00:02:39,542
+that's by using the refresh statements.
+
+37
+00:02:39,542 --> 00:02:42,180
+And the syntax is super simple.
+
+38
+00:02:42,180 --> 00:02:48,330
+All we do is say Refresh and the table
+name.
+
+39
+00:02:50,680 --> 00:02:53,930
+And by using this statement, you delete
+all the records in the table,
+
+40
+00:02:53,930 --> 00:02:59,760
+but you still have to keep in mind your
+header record still contains values.
+
+41
+00:02:59,760 --> 00:03:02,870
+It is untouched by the refresh statement.
+
+42
+00:03:02,870 --> 00:03:07,890
+So, just remember to use the clear
+statement that we defined first.
+
+43
+00:03:10,300 --> 00:03:13,680
+Now before moving on there's actually
+another statement and
+
+44
+00:03:13,680 --> 00:03:15,900
+this one is called the Free Statement.
+
+45
+00:03:17,030 --> 00:03:20,480
+And as you might guess this syntax is
+super simple again,
+
+46
+00:03:20,480 --> 00:03:21,690
+all we do is type Free.
+
+47
+00:03:24,630 --> 00:03:26,990
+And then the table name.
+
+48
+00:03:26,990 --> 00:03:32,100
+Now, not only does this statement empty
+out the records from the Internal Table,
+
+49
+00:03:32,100 --> 00:03:35,370
+but, it also frees up the memory being
+used by your program.
+
+50
+00:03:35,370 --> 00:03:39,640
+It doesn't mean your Internal Table no
+longer exists,
+
+51
+00:03:40,860 --> 00:03:44,210
+it just means that it's been emptied out
+of memory.
+
+52
+00:03:44,210 --> 00:03:47,740
+So if you need to access the Internal
+Table again,
+
+53
+00:03:47,740 --> 00:03:50,670
+maybe to fill it with records, then you
+can do so.
+
+54
+00:03:50,670 --> 00:03:52,975
+It's just that the program when it does
+that,
+
+55
+00:03:52,975 --> 00:03:55,830
+it needs to reserve the memory space
+again.
+
+56
+00:03:58,590 --> 00:04:01,630
+So the free statement does, you know, the
+same job
+
+57
+00:04:01,630 --> 00:04:04,930
+as the clear statement with the two square
+brackets and the refresh statement.
+
+58
+00:04:05,950 --> 00:04:11,050
+But, it has the added benefit of emptying
+out the memory used from your program,
+
+59
+00:04:11,050 --> 00:04:12,750
+it clears it out.
+
+60
+00:04:12,750 --> 00:04:15,600
+So, it releases the memory to be used by
+some other process.
+
+61
+00:04:15,600 --> 00:04:20,470
+And just like with the other two
+statements, the header line is unaffected.
+
+62
+00:04:20,470 --> 00:04:24,290
+So don't forget to use the clear
+statement, to clear your header line.
+

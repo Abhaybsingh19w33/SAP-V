@@ -1,0 +1,383 @@
+1
+00:00:02,020 --> 00:00:06,300
+But we'll now take a look at watchpoints
+so first of all,
+
+2
+00:00:06,300 --> 00:00:11,120
+click on the watchpoints button and you'll
+see that the screen changes
+
+3
+00:00:12,180 --> 00:00:15,690
+so that we see the program code in the top
+section and
+
+4
+00:00:15,690 --> 00:00:19,490
+then we see a watchpoint table in the
+lower part of the screen.
+
+5
+00:00:20,750 --> 00:00:22,930
+Now we have previously discussed break
+points.
+
+6
+00:00:22,930 --> 00:00:25,420
+And you will no doubt understand how
+
+7
+00:00:25,420 --> 00:00:27,890
+useful break points are when debugging
+your program.
+
+8
+00:00:27,890 --> 00:00:33,570
+But there are often times when break
+points are not the ideal
+
+9
+00:00:33,570 --> 00:00:38,380
+tool to use to pause our code so we can
+interrogate the contents of
+
+10
+00:00:38,380 --> 00:00:43,030
+individual fields and internal tables and
+to analyze the logic of our program.
+
+11
+00:00:44,130 --> 00:00:48,180
+Imagine our program was processing a table
+containing 1,000 records.
+
+12
+00:00:49,880 --> 00:00:53,320
+And we wanted to debug the logic in our
+program.
+
+13
+00:00:53,320 --> 00:00:56,711
+But only when a certain condition occurs.
+
+14
+00:00:56,711 --> 00:01:01,671
+And this condition is dependent on the
+data held within the records we're
+
+15
+00:01:01,671 --> 00:01:04,960
+processing by using break points.
+
+16
+00:01:04,960 --> 00:01:10,040
+We would have to debug each record
+individually, which could take us a long,
+
+17
+00:01:10,040 --> 00:01:11,450
+long time.
+
+18
+00:01:11,450 --> 00:01:13,130
+And this is where watchpoints come in.
+
+19
+00:01:14,530 --> 00:01:19,470
+We can actually tell our program to stop,
+just like a break point, but instead at
+
+20
+00:01:19,470 --> 00:01:24,665
+a specific line of code, we can tell it to
+stop based on the value in a field.
+
+21
+00:01:24,665 --> 00:01:27,780
+So we, now, an example.
+
+22
+00:01:27,780 --> 00:01:33,500
+If a specific value we wanted to analyze
+only occurred
+
+23
+00:01:33,500 --> 00:01:39,760
+on the 200th record within our large
+table, setting a watchpoint
+
+24
+00:01:39,760 --> 00:01:43,780
+would allow us to skip the first 199
+records and
+
+25
+00:01:43,780 --> 00:01:47,880
+focusing specifically on that 200th record
+that is of interest.
+
+26
+00:01:50,090 --> 00:01:52,135
+So let's take a look at how we can create
+a watchpoint.
+
+27
+00:01:53,930 --> 00:01:58,960
+First thing we need to do is make sure
+you've pressed the watchpoints button,
+
+28
+00:01:58,960 --> 00:02:03,040
+and then go up to the create watchpoints
+button in the toolbar.
+
+29
+00:02:04,050 --> 00:02:06,250
+You can also use the Shift F8 shortcut
+keys.
+
+30
+00:02:08,410 --> 00:02:12,370
+Once you press the button, a dialog box
+will appear, and
+
+31
+00:02:12,370 --> 00:02:14,310
+it will already have the program name
+filled in.
+
+32
+00:02:14,310 --> 00:02:18,370
+And what you need to fill in is the field
+name that you want to watch.
+
+33
+00:02:19,620 --> 00:02:24,230
+So in our example, let's say we want to
+watch the employee surname.
+
+34
+00:02:25,470 --> 00:02:29,370
+So the first thing I need to do is key in
+the table name which is Z employees.
+
+35
+00:02:32,540 --> 00:02:34,628
+Followed by a dash and then surname.
+
+36
+00:02:34,628 --> 00:02:37,628
+[BLANK_AUDIO]
+
+37
+00:02:37,628 --> 00:02:41,090
+We then need to set the relational
+operator.
+
+38
+00:02:41,090 --> 00:02:46,410
+In our case we'll look for surname
+equalling a value of Mills.
+
+39
+00:02:47,520 --> 00:02:50,530
+So we would use the equal relational
+operator.
+
+40
+00:02:50,530 --> 00:02:52,490
+I'll show you the drop down box just so
+
+41
+00:02:52,490 --> 00:02:56,090
+you can see all the different values you
+can choose.
+
+42
+00:02:57,240 --> 00:02:59,400
+We'll chose the equals sign.
+
+43
+00:02:59,400 --> 00:03:04,180
+And then I'll key in the bottom field the
+value of Mills
+
+44
+00:03:06,560 --> 00:03:12,860
+now one note here is you don't have to use
+a specific value here.
+
+45
+00:03:12,860 --> 00:03:16,740
+You can get your watchpoint to compare
+your field
+
+46
+00:03:16,740 --> 00:03:19,460
+against another field in your program.
+
+47
+00:03:19,460 --> 00:03:22,640
+All you need to do is click this
+comparison field and
+
+48
+00:03:22,640 --> 00:03:23,510
+fill in the field name.
+
+49
+00:03:24,570 --> 00:03:27,820
+But in our case we'll just stick with the
+specific value of Mills.
+
+50
+00:03:29,470 --> 00:03:33,860
+Once you've done this, click the create
+stroke change watchpoint button.
+
+51
+00:03:36,850 --> 00:03:39,730
+And then you'll see your entry has been
+added into the list at
+
+52
+00:03:39,730 --> 00:03:40,620
+the bottom of the screen.
+
+53
+00:03:41,800 --> 00:03:45,650
+Now just keep an eye on this section at
+the bottom down here.
+
+54
+00:03:45,650 --> 00:03:50,250
+Where it says current field contents of
+the last watchpoint reached.
+
+55
+00:03:50,250 --> 00:03:55,460
+It's currently empty, but now when we
+execute our program, the program
+
+56
+00:03:55,460 --> 00:04:00,250
+should then pause when the employee
+surname contains a value of Mills.
+
+57
+00:04:00,250 --> 00:04:05,160
+So just before we execute the code, we'll
+take a quick look at
+
+58
+00:04:05,160 --> 00:04:09,230
+the output to see whereabouts in the
+processing we are up to.
+
+59
+00:04:09,230 --> 00:04:15,710
+And we can see the second site loop has
+just completed.
+
+60
+00:04:17,540 --> 00:04:22,190
+So the next select statement should select
+the record Stephen Brown.
+
+61
+00:04:23,450 --> 00:04:27,320
+It'll then need to cycle through
+additional records until it gets
+
+62
+00:04:27,320 --> 00:04:31,990
+to the fifth record of Alex Mills, and
+that's where the program should stop.
+
+63
+00:04:33,100 --> 00:04:38,650
+So let's step back and we'll press the F8
+button to continue.
+
+64
+00:04:41,210 --> 00:04:43,390
+And now you can see the program has
+paused.
+
+65
+00:04:45,950 --> 00:04:49,920
+The blue arrow is pointing to our next
+select statement, and
+
+66
+00:04:49,920 --> 00:04:55,890
+if we have looked at the outputs, it
+should have output four records and paused
+
+67
+00:04:55,890 --> 00:05:00,610
+before it's outputting the fifth record
+which should contain the surname Mills.
+
+68
+00:05:03,520 --> 00:05:05,550
+And that's exactly what it's done.
+
+69
+00:05:05,550 --> 00:05:11,530
+So this is the start of the next select
+loop we can see it's output four records,
+
+70
+00:05:11,530 --> 00:05:17,930
+the next one would be Haleys Mills but it
+is paused and just to double check that
+
+71
+00:05:19,060 --> 00:05:26,870
+in the fields mode let's key in the actual
+field and
+
+72
+00:05:26,870 --> 00:05:32,010
+have a look at the contents so key in Z
+employees dash
+
+73
+00:05:32,010 --> 00:05:37,160
+surname press enter and there we can see
+the actual value at the moment in memory.
+
+74
+00:05:37,160 --> 00:05:39,310
+Does equal Mills and
+
+75
+00:05:39,310 --> 00:05:44,280
+also if you click the watch point button
+again you'll see those fields right
+
+76
+00:05:44,280 --> 00:05:48,210
+down at the bottom of the screen actually
+contain the values we are looking for.
+
+77
+00:05:50,805 --> 00:05:52,240
+Watchpoints are a real handy tool that
+
+78
+00:05:53,690 --> 00:05:56,830
+can save you a lot of time debugging your
+code.
+
+79
+00:05:56,830 --> 00:05:59,754
+When your test data contains many, many
+records.
+
+80
+00:05:59,754 --> 00:06:02,249
+[BLANK_AUDIO]
+

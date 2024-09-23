@@ -1,0 +1,642 @@
+1
+00:00:02,920 --> 00:00:07,043
+We already have our select option defined,
+so let's start some code.
+
+2
+00:00:07,043 --> 00:00:11,303
+[BLANK_AUDIO].
+
+3
+00:00:11,303 --> 00:00:16,085
+We'll go to the end and all I'm going to
+do,
+
+4
+00:00:16,085 --> 00:00:20,105
+is recreate the select statements.
+
+5
+00:00:20,105 --> 00:00:24,349
+Select star from z employees, so
+
+6
+00:00:24,349 --> 00:00:28,450
+here, we're creating a loop.
+
+7
+00:00:28,450 --> 00:00:31,080
+I'll put the n select in.
+
+8
+00:00:31,080 --> 00:00:35,340
+And now, I'll include an if statement.
+
+9
+00:00:35,340 --> 00:00:42,708
+If, for z employee record,
+
+10
+00:00:42,708 --> 00:00:48,237
+date of birth field.
+
+11
+00:00:48,237 --> 00:00:50,570
+In my DOB.
+
+12
+00:00:50,570 --> 00:00:58,326
+[BLANK_AUDIO].
+
+13
+00:00:58,326 --> 00:01:00,502
+We will just write out the full record to
+the screen.
+
+14
+00:01:00,502 --> 00:01:09,708
+[BLANK_AUDIO].
+
+15
+00:01:09,708 --> 00:01:10,701
+So now we have this code.
+
+16
+00:01:10,701 --> 00:01:18,188
+Let's just format it correctly,
+
+17
+00:01:18,188 --> 00:01:24,650
+ended up with our full stock.
+
+18
+00:01:24,650 --> 00:01:26,330
+There we go.
+So what this is going to do is
+
+19
+00:01:26,330 --> 00:01:30,775
+select all the records from the employee
+file if our date of birth
+
+20
+00:01:32,615 --> 00:01:36,665
+matches any record from our select option.
+
+21
+00:01:36,665 --> 00:01:41,930
+So don't forget we can have, we could have
+20 different Individual records here,
+
+22
+00:01:41,930 --> 00:01:45,460
+with a mix of single values, a range of
+values to include,
+
+23
+00:01:45,460 --> 00:01:49,730
+a range of values to exclude, and
+
+24
+00:01:49,730 --> 00:01:53,850
+maybe a, a list of individual V\values to
+exclude as well.
+
+25
+00:01:55,670 --> 00:02:02,220
+Well just by using this in operator, the
+system will take care of the selection for
+
+26
+00:02:02,220 --> 00:02:07,320
+us, it will do all the work that is
+required to only return true if
+
+27
+00:02:07,320 --> 00:02:13,080
+the employees date of birth doesn't meet
+the criteria set up in the internal table.
+
+28
+00:02:15,250 --> 00:02:18,260
+And we will then write out the record onto
+the screen.
+
+29
+00:02:21,190 --> 00:02:25,190
+So let's debug this code and we can see it
+step by step and you can see how
+
+30
+00:02:25,190 --> 00:02:30,220
+the internal table for the select option
+for my date of birth, gets filled up.
+
+31
+00:02:32,030 --> 00:02:35,825
+Now first of all, I'm just gonna comment
+out some code.
+
+32
+00:02:35,825 --> 00:02:42,805
+[SOUND] Take this out and we'll take,
+
+33
+00:02:42,805 --> 00:02:47,313
+take these out as well.
+
+34
+00:02:47,313 --> 00:02:50,454
+Just so we've got our very simple select
+option.
+
+35
+00:02:50,454 --> 00:02:59,214
+[BLANK AUDIO].
+
+36
+00:02:59,214 --> 00:03:00,793
+I got attack of the typos once again.
+
+37
+00:03:00,793 --> 00:03:07,345
+[BLANK_AUDIO].
+
+38
+00:03:07,345 --> 00:03:07,942
+What have I got here?
+
+39
+00:03:07,942 --> 00:03:12,075
+Select start from, oh, look at that.
+
+40
+00:03:12,075 --> 00:03:18,860
+We need the fingers don't seem to be
+working quite correct.
+
+41
+00:03:18,860 --> 00:03:20,240
+There we go.
+
+42
+00:03:20,240 --> 00:03:21,390
+I'll stick a break point here as well.
+
+43
+00:03:23,970 --> 00:03:27,780
+Now we'll execute the code.
+
+44
+00:03:27,780 --> 00:03:33,240
+So first of all, we get presented with the
+select screen, and what I'm gonna do
+
+45
+00:03:33,240 --> 00:03:38,096
+is not enter anything into date of birth,
+just so you can see what's presented.
+
+46
+00:03:38,096 --> 00:03:41,840
+I'll press F8 to execute.
+
+47
+00:03:43,750 --> 00:03:46,200
+Now, we come to the break point.
+
+48
+00:03:46,200 --> 00:03:49,260
+And if I double click my DOB.
+
+49
+00:03:49,260 --> 00:03:56,060
+We can see, by this icon here, it actually
+represents an internal table.
+
+50
+00:03:57,740 --> 00:03:58,540
+So I'll double click them.
+
+51
+00:04:00,230 --> 00:04:02,430
+And now, you can see the individual
+fields.
+
+52
+00:04:03,620 --> 00:04:04,560
+And make up this table.
+
+53
+00:04:07,770 --> 00:04:13,640
+The heart symbol and we will come to
+later, that represents a header line.
+
+54
+00:04:13,640 --> 00:04:17,590
+And then, here, we would have the
+individual entries.
+
+55
+00:04:17,590 --> 00:04:20,410
+One for each record that makes a power
+select option.
+
+56
+00:04:21,600 --> 00:04:28,040
+But because we didn't enter anything,
+we've got no records here.
+
+57
+00:04:28,040 --> 00:04:29,660
+So, I'm just going to F5.
+
+58
+00:04:32,010 --> 00:04:34,810
+We should loop through the table and
+output every record.
+
+59
+00:04:34,810 --> 00:04:37,490
+It shouldn't be too many, five or six.
+
+60
+00:04:39,350 --> 00:04:42,170
+There we go.
+
+61
+00:04:42,170 --> 00:04:43,818
+And I'll just make a note of the date of
+births here.
+
+62
+00:04:43,818 --> 00:04:47,312
+So we've got 1969, 77, 58.
+
+63
+00:04:47,312 --> 00:04:51,364
+So we've ranged from 58 up to 2000.
+
+64
+00:04:51,364 --> 00:04:55,042
+Just so I know what to use in the
+selection criteria.
+
+65
+00:04:56,470 --> 00:04:56,977
+Now, let's run it again.
+
+66
+00:04:56,977 --> 00:05:01,025
+[BLANK_AUDIO].
+
+67
+00:05:01,025 --> 00:05:02,958
+And, this time, we'll fill in a value.
+
+68
+00:05:02,958 --> 00:05:05,880
+So let's say, greater than.
+
+69
+00:05:05,880 --> 00:05:08,976
+Now, I'll tell you what.
+
+70
+00:05:08,976 --> 00:05:11,777
+F8.
+[BLANK_AUDIO].
+
+71
+00:05:11,777 --> 00:05:13,245
+Let me pick a specific date.
+
+72
+00:05:13,245 --> 00:05:16,983
+Let's choose this guy here.
+
+73
+00:05:16,983 --> 00:05:21,641
+All into one value,
+
+74
+00:05:21,641 --> 00:05:27,395
+of course one two what was
+
+75
+00:05:27,395 --> 00:05:33,423
+the value 021258.
+
+76
+00:05:33,423 --> 00:05:39,327
+F8, now we will look
+
+77
+00:05:39,327 --> 00:05:45,891
+at date of birth [SOUND].
+
+78
+00:05:45,891 --> 00:05:48,062
+And now you can see we are one record.
+
+79
+00:05:48,062 --> 00:05:52,930
+The sign has been included, that's the
+inclusion.
+
+80
+00:05:54,270 --> 00:06:01,560
+And we're saying equal to, and there's our
+date-of-birth field in the low field.
+
+81
+00:06:01,560 --> 00:06:05,750
+So now when we step through our code, the
+if statement
+
+82
+00:06:05,750 --> 00:06:10,536
+gets evaluated.
+
+83
+00:06:10,536 --> 00:06:14,684
+We'll go
+
+84
+00:06:14,684 --> 00:06:20,370
+back to fields and show the employee's
+DOB.
+
+85
+00:06:20,370 --> 00:06:25,540
+We can make out individual entries right
+here, so this is 18th of November,
+
+86
+00:06:25,540 --> 00:06:30,550
+1969, and you can see what the 2nd of
+December 58.
+
+87
+00:06:30,550 --> 00:06:32,790
+So this shouldn't match.
+
+88
+00:06:32,790 --> 00:06:33,310
+And it doesn't.
+
+89
+00:06:33,310 --> 00:06:37,140
+And it skips straight through.
+
+90
+00:06:37,140 --> 00:06:38,400
+Our next record shouldn't match either.
+
+91
+00:06:38,400 --> 00:06:42,520
+This one does match
+
+92
+00:06:43,650 --> 00:06:47,930
+week of the second of December.
+
+93
+00:06:47,930 --> 00:06:50,790
+And as you can see, using this N operator.
+
+94
+00:06:50,790 --> 00:06:52,690
+A statement has been evaluated as true.
+
+95
+00:06:52,690 --> 00:06:55,020
+So therefore we will write a record to
+this screen.
+
+96
+00:06:56,490 --> 00:07:00,040
+I just zoomed through, and I guess we will
+see one record display on the screen.
+
+97
+00:07:00,040 --> 00:07:01,810
+And there we go.
+
+98
+00:07:01,810 --> 00:07:03,360
+Let's run it again.
+
+99
+00:07:03,360 --> 00:07:05,730
+And we'll include some more options.
+
+100
+00:07:05,730 --> 00:07:12,570
+So the first thing we did, was that one.
+
+101
+00:07:14,790 --> 00:07:18,590
+Let's click the multiple selection tool.
+
+102
+00:07:18,590 --> 00:07:22,300
+[SOUND] And you know what, I forgot on the
+other values.
+
+103
+00:07:22,300 --> 00:07:25,033
+[LAUGH] I need to open another session.
+
+104
+00:07:25,033 --> 00:07:30,392
+[BLANK_AUDIO].
+
+105
+00:07:30,392 --> 00:07:34,338
+Let's put this over here, and z employees.
+
+106
+00:07:34,338 --> 00:07:34,838
+[BLANK AUDIO].
+
+107
+00:07:40,070 --> 00:07:40,890
+There we go.
+
+108
+00:07:40,890 --> 00:07:45,479
+Now lets just change this a little bit,
+
+109
+00:07:45,479 --> 00:07:53,975
+choose fields now all I want is the data
+birth field, with the employee.
+
+110
+00:07:53,975 --> 00:07:58,080
+[BLANK_AUDIO].
+
+111
+00:07:58,080 --> 00:07:58,690
+That part there.
+
+112
+00:07:58,690 --> 00:07:59,630
+Shorten this one.
+
+113
+00:07:59,630 --> 00:08:02,828
+[BLANK_AUDIO].
+
+114
+00:08:02,828 --> 00:08:03,397
+That's all we need.
+
+115
+00:08:03,397 --> 00:08:08,940
+Now, go to the multiple selection tool.
+
+116
+00:08:08,940 --> 00:08:11,295
+I will also choose the 13th of December.
+
+117
+00:08:11,295 --> 00:08:18,777
+[SOUND] And then let's exclude,
+
+118
+00:08:18,777 --> 00:08:25,156
+how many dates have we got.
+
+119
+00:08:25,156 --> 00:08:27,165
+58 to 92.
+
+120
+00:08:27,165 --> 00:08:36,621
+Let's exclude [SOUND].
+
+121
+00:08:36,621 --> 00:08:40,754
+First of January, 1999.
+
+122
+00:08:40,754 --> 00:08:47,731
+To the 20th of December 2002.
+
+123
+00:08:47,731 --> 00:08:53,518
+[BLANK_AUDIO].
+
+124
+00:08:53,518 --> 00:08:59,160
+Click execute, and just a note, when you
+do fill additional entries in,
+
+125
+00:08:59,160 --> 00:09:03,622
+on the multiple selection screen, the icon
+does change.
+
+126
+00:09:03,622 --> 00:09:07,530
+We have this little green square to
+indicate we have got multiple selections.
+
+127
+00:09:08,910 --> 00:09:14,000
+So I will execute and now we will take a
+look at the my date of birth table.
+
+128
+00:09:16,750 --> 00:09:18,860
+That's the first record.
+
+129
+00:09:18,860 --> 00:09:20,510
+Let's do this.
+
+130
+00:09:20,510 --> 00:09:22,130
+So now we can see the three entries.
+
+131
+00:09:23,570 --> 00:09:25,740
+The first one which we saw before.
+
+132
+00:09:27,740 --> 00:09:28,870
+And the second one and
+
+133
+00:09:28,870 --> 00:09:33,080
+the multiple selection screen and we can
+see it's the same.
+
+134
+00:09:33,080 --> 00:09:35,000
+It's the inclusion equals to sine.
+
+135
+00:09:35,000 --> 00:09:38,930
+And then we have a range that we are
+excluding.
+
+136
+00:09:38,930 --> 00:09:44,543
+So, you can see we are excluding the first
+of January 99.
+
+137
+00:09:47,160 --> 00:09:48,150
+The 20th of December, 2002.
+
+138
+00:09:48,150 --> 00:09:55,470
+And bt, that equals between, so between
+this date, and this date.
+
+139
+00:09:57,790 --> 00:10:03,870
+So now when our if statement gets
+evaluated, just this simple, in operator,
+
+140
+00:10:05,900 --> 00:10:11,610
+triggers the system to automatically check
+all the records in this internal table.
+
+141
+00:10:11,610 --> 00:10:13,790
+And if you ask me, I think that's really,
+really neat.
+
+142
+00:10:15,120 --> 00:10:18,670
+Because you just don't have to think about
+All the different type of logic,
+
+143
+00:10:18,670 --> 00:10:22,040
+the different permutations you would have
+to code for
+
+144
+00:10:22,040 --> 00:10:26,320
+yourself to be able to check against all
+these different types of entries.
+
+145
+00:10:27,550 --> 00:10:33,240
+You can just say, if our field, in, then
+the select option field.
+
+146
+00:10:33,240 --> 00:10:36,260
+And that's it, all of your logic is done.
+
+147
+00:10:37,510 --> 00:10:43,360
+So F8, and then we get to records return.
+

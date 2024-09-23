@@ -1,0 +1,398 @@
+1
+00:00:03,200 --> 00:00:08,450
+Now I want to discuss key fields in a
+little more detail.
+
+2
+00:00:08,450 --> 00:00:14,170
+If we want to add fields or take fields
+away that are key fields, then we need to
+
+3
+00:00:14,170 --> 00:00:19,630
+take into consideration exactly what will
+be going on in the database itself.
+
+4
+00:00:21,840 --> 00:00:26,400
+Up to now we have added fields to the
+table included depend structures and
+
+5
+00:00:26,400 --> 00:00:27,140
+include structures.
+
+6
+00:00:27,140 --> 00:00:32,030
+But the system actually applies these
+changes to the ABAP dictionary,
+
+7
+00:00:32,030 --> 00:00:33,060
+not the underlying database.
+
+8
+00:00:34,730 --> 00:00:37,660
+When we adjust any key fields the system
+
+9
+00:00:37,660 --> 00:00:40,630
+has to apply changes to the underlying
+database itself.
+
+10
+00:00:41,740 --> 00:00:43,200
+And you need to think about this.
+
+11
+00:00:43,200 --> 00:00:46,920
+If you've got data in your table and
+you're changing key fields,
+
+12
+00:00:46,920 --> 00:00:49,500
+who knows what effect it can have.
+
+13
+00:00:50,560 --> 00:00:55,290
+If you're introducing a new key field and
+it probably won't have a massive effect.
+
+14
+00:00:55,290 --> 00:01:02,370
+It will probably still allow you to at the
+field, activate it, so you can go in and
+
+15
+00:01:02,370 --> 00:01:06,270
+add new data to the new field ensuring
+that your records stay unique.
+
+16
+00:01:08,010 --> 00:01:12,370
+If you try and change a field from being a
+key field to not a key field
+
+17
+00:01:12,370 --> 00:01:15,190
+then you need to put your thinking cap on.
+
+18
+00:01:15,190 --> 00:01:20,498
+Because if you've got lots of data in the
+underlying database, by taking away a key
+
+19
+00:01:20,498 --> 00:01:26,680
+field, it could mean that you introduce
+duplicate records into your table
+
+20
+00:01:29,520 --> 00:01:33,330
+because now your table key is not as
+unique as before.
+
+21
+00:01:33,330 --> 00:01:38,130
+You could end up with some undesired
+effects, such as corrupt data, or
+
+22
+00:01:38,130 --> 00:01:39,840
+records being deleted from your table.
+
+23
+00:01:41,750 --> 00:01:46,560
+Let's dive in and have a look at how we
+can introduce new fields and
+
+24
+00:01:46,560 --> 00:01:51,300
+take fields away, change fields, and that
+sort of thing.
+
+25
+00:01:51,300 --> 00:01:55,510
+So you can see we've got the employee's
+table here that we've been working with.
+
+26
+00:01:55,510 --> 00:01:59,900
+And what we will do is turn our surname
+field into a key field.
+
+27
+00:02:01,070 --> 00:02:02,290
+And it's quite simple.
+
+28
+00:02:02,290 --> 00:02:08,130
+We just click the little tick to say it's
+a key field.
+
+29
+00:02:08,130 --> 00:02:11,380
+And we might as well click the initial
+values field as well.
+
+30
+00:02:12,870 --> 00:02:14,045
+And then we just need to activate.
+
+31
+00:02:14,045 --> 00:02:19,934
+[SOUND] It's activated fine.
+
+32
+00:02:19,934 --> 00:02:22,221
+We can view our data
+
+33
+00:02:22,221 --> 00:02:23,287
+[BLANK_AUDIO]
+
+34
+00:02:23,287 --> 00:02:28,478
+[SOUND] And now you see the changing color
+for surname, indicating it's a key field.
+
+35
+00:02:28,478 --> 00:02:32,621
+All our records are still the same, we
+know they're unique,
+
+36
+00:02:32,621 --> 00:02:34,701
+so nothing much has happened.
+
+37
+00:02:34,701 --> 00:02:41,159
+[SOUND] But now, let's take away this key
+field.
+
+38
+00:02:41,159 --> 00:02:45,440
+We'll still keep it in the table, but
+we'll say it's not part of the key.
+
+39
+00:02:45,440 --> 00:02:48,920
+Now the system doesn't know what records
+are in the table right now, so
+
+40
+00:02:50,130 --> 00:02:55,330
+when we try to activate it, we should get
+some error messages warning us that,
+
+41
+00:02:55,330 --> 00:02:59,620
+hey, you're removing a field that was part
+of the key, and
+
+42
+00:02:59,620 --> 00:03:03,310
+you could have some, you know, undesired
+effects happening to the data.
+
+43
+00:03:05,310 --> 00:03:09,050
+So we'll activate, and truly know if we
+got an error message
+
+44
+00:03:10,650 --> 00:03:14,190
+indicating that the old key had surname in
+it, but now it doesn't.
+
+45
+00:03:15,930 --> 00:03:21,160
+And this is, this is not just a warning,
+you know, it's an error.
+
+46
+00:03:21,160 --> 00:03:24,150
+It's telling us No, I'm not gonna activate
+the table for
+
+47
+00:03:24,150 --> 00:03:26,730
+you because you may lose some data.
+
+48
+00:03:27,920 --> 00:03:29,070
+So how do we get around this?
+
+49
+00:03:30,130 --> 00:03:33,360
+We know that the data in our table is
+actually gonna be okay.
+
+50
+00:03:34,880 --> 00:03:38,700
+So we want to allow this but you know, the
+tool's saying we can't.
+
+51
+00:03:38,700 --> 00:03:41,880
+And that's why we need to open up a
+different transaction.
+
+52
+00:03:44,090 --> 00:03:46,720
+So we can either open up a new session, or
+
+53
+00:03:46,720 --> 00:03:51,066
+go direct to the transaction we want,
+which is SE14 from this screen.
+
+54
+00:03:51,066 --> 00:03:53,031
+Let's do that.
+
+55
+00:03:53,031 --> 00:03:55,970
+Utilities, then choose database utility.
+
+56
+00:03:57,520 --> 00:04:02,740
+When this screen appears, just keep in
+mind that in a production environment,
+
+57
+00:04:02,740 --> 00:04:07,690
+you may be dealing with a table with
+millions of records, and
+
+58
+00:04:07,690 --> 00:04:12,410
+you wouldn't want to execute this
+transaction on a table of that size with
+
+59
+00:04:12,410 --> 00:04:14,470
+a processing time of direct,
+
+60
+00:04:14,470 --> 00:04:19,300
+which means it's going to run while your
+screen is, is present right now.
+
+61
+00:04:19,300 --> 00:04:21,630
+It'd be best to run this program in the
+background.
+
+62
+00:04:23,030 --> 00:04:27,670
+But for us, we know our table is super
+small, so we can just
+
+63
+00:04:27,670 --> 00:04:31,150
+run the process in the foreground and it
+should get done within seconds.
+
+64
+00:04:31,150 --> 00:04:37,710
+So all we need to do is click the Activate
+and adjust database with save data.
+
+65
+00:04:41,160 --> 00:04:42,980
+Request adjust, we'll choose Yes.
+
+66
+00:04:44,600 --> 00:04:46,310
+And there we can see it's run
+successfully.
+
+67
+00:04:48,870 --> 00:04:53,390
+So now if we step back our table has now
+been activated.
+
+68
+00:04:56,400 --> 00:04:58,280
+We can view our data and
+
+69
+00:04:58,280 --> 00:05:03,770
+our surname field is back to how it was
+before we made it a key field.
+
+70
+00:05:03,770 --> 00:05:04,990
+So that's it for key fields, really.
+
+71
+00:05:04,990 --> 00:05:10,230
+There's just one more thing I forgot to
+mention, and that's these buttons up here.
+
+72
+00:05:10,230 --> 00:05:14,670
+If you did want to insert a new field as
+part of your table key,
+
+73
+00:05:14,670 --> 00:05:20,160
+then you need to be able to adjust the
+location of the fields on the screen.
+
+74
+00:05:20,160 --> 00:05:23,560
+So, let's say we wanted to insert a new
+field above the surname field.
+
+75
+00:05:24,790 --> 00:05:31,340
+We would highlight the surname field and
+then choose the insert button.
+
+76
+00:05:31,340 --> 00:05:33,210
+It moves everything down one, and we can
+add our new field.
+
+77
+00:05:33,210 --> 00:05:37,730
+I'll remove it.
+
+78
+00:05:39,270 --> 00:05:43,480
+Let's say we wanted to move title as part
+of the key, we can highlight it.
+
+79
+00:05:43,480 --> 00:05:49,283
+And then we have the cut, copy, and paste
+buttons up here, so I can just use cut and
+
+80
+00:05:49,283 --> 00:05:53,490
+then paste.
+
+81
+00:05:53,490 --> 00:05:56,830
+You get the idea and that's it for table
+keys.
+
+82
+00:05:56,830 --> 00:05:58,390
+Just so I don't screw this table up.
+
+83
+00:05:58,390 --> 00:06:01,920
+Let me exit out without saving.
+
+84
+00:06:01,920 --> 00:06:05,480
+Now go back in just to make sure
+everything is good.
+
+85
+00:06:06,660 --> 00:06:08,330
+Yeah it's back how it was all active
+

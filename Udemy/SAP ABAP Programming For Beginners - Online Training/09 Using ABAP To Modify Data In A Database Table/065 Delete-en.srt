@@ -1,0 +1,701 @@
+1
+00:00:01,640 --> 00:00:05,100
+The last statement we are going to
+look at is the delete statements.
+
+2
+00:00:06,250 --> 00:00:09,754
+There are no prizes for
+guessing what this statement does.
+
+3
+00:00:09,754 --> 00:00:14,885
+As I mentioned previously, you must be
+careful with this statement, because if
+
+4
+00:00:14,885 --> 00:00:19,878
+used incorrectly, you can end up wiping
+out the content of your entire table.
+
+5
+00:00:19,878 --> 00:00:22,720
+Don't let this put you off
+using the statement, though.
+
+6
+00:00:22,720 --> 00:00:26,000
+You just have to be aware of how it
+should be used within your programs.
+
+7
+00:00:27,310 --> 00:00:28,628
+So let's go and have a look.
+
+8
+00:00:28,628 --> 00:00:31,739
+So if we focus on the program again,
+
+9
+00:00:31,739 --> 00:00:36,628
+we will create a new section for
+our delete statements.
+
+10
+00:00:36,628 --> 00:00:39,545
+And as usual, I'll do the copy and paste.
+
+11
+00:01:08,670 --> 00:01:12,422
+I'll leave in some of
+the [INAUDIBLE] statements.
+
+12
+00:01:12,422 --> 00:01:14,711
+And delete what we don't want.
+
+13
+00:01:19,503 --> 00:01:25,635
+Okay, before I change anything else,
+let's just discuss this delete statement.
+
+14
+00:01:25,635 --> 00:01:29,435
+And in contrast to the other SQL
+statements that we have looked at already,
+
+15
+00:01:29,435 --> 00:01:36,890
+the delete statements only needs to
+take into account your primary key.
+
+16
+00:01:36,890 --> 00:01:41,520
+So what I mean is when we want to
+delete a record from our table,
+
+17
+00:01:41,520 --> 00:01:46,320
+we only have to tell the system what
+the primary key of the record is for
+
+18
+00:01:46,320 --> 00:01:47,480
+that record to be deleted.
+
+19
+00:01:48,910 --> 00:01:54,100
+So in our case all we need to do is first
+of all, let's clean out our work area.
+
+20
+00:01:59,240 --> 00:02:01,290
+So it's completely empty.
+
+21
+00:02:01,290 --> 00:02:05,490
+Then we will fill our employee field which
+
+22
+00:02:05,490 --> 00:02:10,820
+forms part of our primary key with
+the last record we have created.
+
+23
+00:02:10,820 --> 00:02:14,393
+So in this example,
+we will just delete the one record to ask
+
+24
+00:02:14,393 --> 00:02:17,190
+the employee number of one,
+zeros and a seven.
+
+25
+00:02:19,100 --> 00:02:20,700
+Let's take a look at our table again.
+
+26
+00:02:20,700 --> 00:02:23,545
+As a reminder of our primary key.
+
+27
+00:02:30,628 --> 00:02:33,578
+Now you can see the key's
+made up of two fields.
+
+28
+00:02:33,578 --> 00:02:37,810
+The client field and our employee number.
+
+29
+00:02:40,260 --> 00:02:45,140
+Now remember, the client field is
+handled automatically by the system.
+
+30
+00:02:45,140 --> 00:02:51,280
+So our programs never need to feed our
+rescueL statements the client field.
+
+31
+00:02:51,280 --> 00:02:52,740
+It's all automatic.
+
+32
+00:02:52,740 --> 00:02:57,730
+All we need to do in this case is
+specify the employee number that we want
+
+33
+00:02:57,730 --> 00:02:58,586
+to delete.
+
+34
+00:03:00,670 --> 00:03:07,210
+So let's go back to the table view and
+pop it to one side and back to our code.
+
+35
+00:03:08,600 --> 00:03:11,680
+So once we specify the employee number,
+
+36
+00:03:11,680 --> 00:03:14,030
+we then just need to create
+our delete statement.
+
+37
+00:03:14,030 --> 00:03:19,032
+The syntax for
+the delete statement is this,
+
+38
+00:03:19,032 --> 00:03:24,427
+we have the DELETE,
+followed by the table name,
+
+39
+00:03:24,427 --> 00:03:31,150
+followed by the from addition,
+followed by how a work area.
+
+40
+00:03:33,240 --> 00:03:39,500
+So this delete statement will say
+DELETE zemployees FROM wa_employees.
+
+41
+00:03:39,500 --> 00:03:45,580
+And wa_employees contains
+the table key 1 with 0s and
+
+42
+00:03:45,580 --> 00:03:49,367
+7 to ensure only that record
+
+43
+00:03:49,367 --> 00:03:54,570
+identifies specifically in the work area,
+will be deleted from our table.
+
+44
+00:03:59,290 --> 00:04:04,196
+And as per the other SQL statements,
+we need to check the SY sub RC field to
+
+45
+00:04:04,196 --> 00:04:07,504
+make sure the record was
+deleted successfully.
+
+46
+00:04:15,336 --> 00:04:18,980
+And we might as well leave this
+clear statement at the bottom.
+
+47
+00:04:20,790 --> 00:04:23,970
+I'll do a pretty print to
+make sure it all looks good.
+
+48
+00:04:23,970 --> 00:04:28,420
+And a check, and
+then we'll activate and debug.
+
+49
+00:04:33,711 --> 00:04:38,620
+So as it stands at the moment,
+we have all these records in the system.
+
+50
+00:04:42,420 --> 00:04:44,836
+This is where 07 is created.
+
+51
+00:04:47,003 --> 00:04:49,878
+This is where 06 is multified.
+
+52
+00:04:52,461 --> 00:04:55,004
+And we update it there,
+and we insert it there.
+
+53
+00:04:55,004 --> 00:04:56,297
+So.
+
+54
+00:04:59,628 --> 00:05:05,336
+What we will do is clear out 6 and
+7 from the table.
+
+55
+00:05:05,336 --> 00:05:09,878
+So they get deleted, sorry,
+they get created once again.
+
+56
+00:05:09,878 --> 00:05:13,795
+[NOISE] Oops.
+
+57
+00:05:13,795 --> 00:05:15,420
+I didn't do something.
+
+58
+00:05:20,086 --> 00:05:21,586
+Oh, maybe it's a refresh.
+
+59
+00:05:21,586 --> 00:05:25,086
+Yeah.
+
+60
+00:05:25,086 --> 00:05:28,211
+Okay.
+So now we can debug.
+
+61
+00:05:28,211 --> 00:05:32,740
+Let's stick a break point on and test.
+
+62
+00:05:34,700 --> 00:05:37,961
+One second, I need to react.
+
+63
+00:05:37,961 --> 00:05:44,586
+There we go,
+now I can put the break points on.
+
+64
+00:05:44,586 --> 00:05:49,333
+And the code is run through to our
+break point, so it should have created
+
+65
+00:05:49,333 --> 00:05:53,545
+record six and seven automatically for
+us, which it has done.
+
+66
+00:05:57,253 --> 00:06:00,336
+And then we'll keep an eye on SY sub RC.
+
+67
+00:06:08,379 --> 00:06:14,550
+And we'll just bring up
+these fields to monitor.
+
+68
+00:06:14,550 --> 00:06:20,380
+So the clear should
+clear out these fields.
+
+69
+00:06:23,370 --> 00:06:25,030
+And we'll populate the number.
+
+70
+00:06:25,030 --> 00:06:29,670
+Now remember this table had the O6 and
+
+71
+00:06:29,670 --> 00:06:33,586
+the O7 records, still there.
+
+72
+00:06:33,586 --> 00:06:40,550
+We will execute this next
+statement SY sub RC, is still 0.
+
+73
+00:06:40,550 --> 00:06:42,530
+That means everything worked correctly.
+
+74
+00:06:42,530 --> 00:06:47,086
+We go back to our table and do a refresh.
+
+75
+00:06:47,086 --> 00:06:51,306
+We can see 7 was deleted successfully.
+
+76
+00:06:51,306 --> 00:06:57,045
+So then the code should carry on and just
+output record was deleted successfully.
+
+77
+00:07:01,045 --> 00:07:02,170
+And there we go.
+
+78
+00:07:05,004 --> 00:07:06,836
+How simple can it get?
+
+79
+00:07:12,670 --> 00:07:17,543
+Now, before moving on, let's have
+another look at the delete statement,
+
+80
+00:07:17,543 --> 00:07:19,840
+but use a slightly different form.
+
+81
+00:07:21,310 --> 00:07:25,390
+We're not just restricted to
+filling in the table key and
+
+82
+00:07:25,390 --> 00:07:27,080
+deleting records that way.
+
+83
+00:07:27,080 --> 00:07:31,120
+We can also use logic to determine
+which records we want to delete.
+
+84
+00:07:33,750 --> 00:07:36,628
+So, &nbsp;for example,
+let's let's create some more code.
+
+85
+00:07:41,545 --> 00:07:44,904
+And what we're gonna do,
+
+86
+00:07:44,904 --> 00:07:49,791
+is just copy this section once again,
+
+87
+00:07:49,791 --> 00:07:54,230
+We don't need that separate one.
+
+88
+00:08:00,500 --> 00:08:03,628
+And we're gonna write the delete
+statements as follows.
+
+89
+00:08:03,628 --> 00:08:08,273
+We're gonna get rid of this filling
+in the key, but we're gonna say,
+
+90
+00:08:08,273 --> 00:08:13,730
+delete from employees, but this time,
+instead of from, we're gonna do where.
+
+91
+00:08:16,210 --> 00:08:17,370
+Then we specify a field.
+
+92
+00:08:19,000 --> 00:08:22,040
+So let's have a look at our table.
+
+93
+00:08:22,040 --> 00:08:28,580
+And we can choose to
+delete records on surname.
+
+94
+00:08:28,580 --> 00:08:32,270
+So if we say delete where
+surname equals Brown,
+
+95
+00:08:33,510 --> 00:08:37,030
+then it should delete any records
+that have a surname of Brown.
+
+96
+00:08:37,030 --> 00:08:41,940
+Now just to show that our example
+we'll delete more than one record.
+
+97
+00:08:43,450 --> 00:08:46,940
+Let's create a new record
+that has a surname of Brown.
+
+98
+00:08:49,080 --> 00:08:51,110
+So let's step accounts and
+then we'll do the oops.
+
+99
+00:08:55,030 --> 00:08:58,090
+Utilities table content create.
+
+100
+00:09:04,000 --> 00:09:09,586
+Use a number of let's,
+let's make it ten just to jump a few.
+
+101
+00:09:09,586 --> 00:09:16,010
+We'll create Brown, give it
+an excellent first name of Qwerty, and
+
+102
+00:09:16,010 --> 00:09:21,462
+there's a Mr., and
+let's choose 1st of January 77.
+
+103
+00:09:23,170 --> 00:09:28,795
+Save that record.
+
+104
+00:09:28,795 --> 00:09:30,045
+One step too far.
+
+105
+00:09:30,045 --> 00:09:31,461
+And [INAUDIBLE] our data.
+
+106
+00:09:33,420 --> 00:09:37,220
+There's a brand new record,
+with the surname of Brown.
+
+107
+00:09:37,220 --> 00:09:40,260
+So now let's get onto our code and
+delete all the Brown records.
+
+108
+00:09:43,610 --> 00:09:45,970
+So here we delete zed employees.
+
+109
+00:09:45,970 --> 00:09:51,160
+Where, specify the field, which is
+surname, and we'll say equals Brown.
+
+110
+00:09:51,160 --> 00:09:57,319
+And we'll check to see if the records
+
+111
+00:09:57,319 --> 00:10:02,287
+were deleted successfully,
+
+112
+00:10:02,287 --> 00:10:07,254
+and we know in this case we're
+
+113
+00:10:07,254 --> 00:10:11,836
+going to have two records.
+
+114
+00:10:11,836 --> 00:10:16,920
+And I'm going to leave the clear in
+there just in case we need it later on.
+
+115
+00:10:16,920 --> 00:10:18,336
+Pretty up the code.
+
+116
+00:10:18,336 --> 00:10:21,212
+Check the syntax.
+
+117
+00:10:21,212 --> 00:10:22,503
+Oops.
+
+118
+00:10:27,503 --> 00:10:30,503
+Oh, I do apologize,
+I've got the syntax wrong.
+
+119
+00:10:30,503 --> 00:10:37,940
+The statement, in this case,
+we actually say delete from ZED employees.
+
+120
+00:10:37,940 --> 00:10:43,675
+So delete from table name where the field
+equals In the contents of the field.
+
+121
+00:10:43,675 --> 00:10:48,442
+Double check, and
+
+122
+00:10:48,442 --> 00:10:54,320
+we activate, and then let's do a test.
+
+123
+00:10:54,320 --> 00:10:59,254
+Now we already have, let's look six.
+
+124
+00:10:59,254 --> 00:11:00,796
+So we'll delete that.
+
+125
+00:11:05,878 --> 00:11:09,254
+Because how a program will recreate it.
+
+126
+00:11:12,503 --> 00:11:19,590
+Scoot that across to the side, set our
+break point, and now let's test our code.
+
+127
+00:11:21,750 --> 00:11:26,003
+Let's bring the table in, refresh.
+
+128
+00:11:26,003 --> 00:11:27,211
+There's our 6.
+
+129
+00:11:27,211 --> 00:11:32,045
+We have the 10 and the 1.
+
+130
+00:11:32,045 --> 00:11:34,878
+We will go step by step again.
+
+131
+00:11:34,878 --> 00:11:36,920
+So see here.
+
+132
+00:11:36,920 --> 00:11:42,878
+Our Z employees.
+
+133
+00:11:42,878 --> 00:11:46,003
+Need to get the field name correct.
+
+134
+00:11:53,628 --> 00:11:58,128
+Kind of course, it's z employee,
+so [NOISE] [INAUDIBLE]?
+
+135
+00:12:05,753 --> 00:12:13,170
+To be employees,
+zed employees, is employee.
+
+136
+00:12:13,170 --> 00:12:14,628
+Oh, let's have a look.
+
+137
+00:12:14,628 --> 00:12:21,878
+I'll scoot up a little bit and make sure
+I get the field correct WA employees.
+
+138
+00:12:26,170 --> 00:12:27,260
+There we go.
+
+139
+00:12:31,720 --> 00:12:35,356
+So, if we step through, this one record,
+
+140
+00:12:35,356 --> 00:12:40,711
+sorry this one statement,
+should have deleted both records.
+
+141
+00:12:40,711 --> 00:12:46,690
+We know it was successful
+because that's why subIC is 0.
+
+142
+00:12:46,690 --> 00:12:49,900
+Come back, have a look at our table,
+do a refresh, hopefully 1 and
+
+143
+00:12:49,900 --> 00:12:50,576
+10 will disappear.
+
+144
+00:12:50,576 --> 00:12:52,295
+And they do.
+
+145
+00:12:56,711 --> 00:13:01,962
+And I will just zoom to
+the end of the program.
+
+146
+00:13:01,962 --> 00:13:03,420
+And there we have our output.
+
+147
+00:13:07,504 --> 00:13:11,045
+Take this break point off.
+
+148
+00:13:11,045 --> 00:13:13,795
+So that's the second form
+of the delete statement.
+
+149
+00:13:13,795 --> 00:13:16,504
+Where you can use logic.
+
+150
+00:13:16,504 --> 00:13:21,375
+And the last thing I just want to mention,
+
+151
+00:13:21,375 --> 00:13:28,750
+is that if you used the delete
+statement in the following form,
+
+152
+00:13:28,750 --> 00:13:33,220
+here we go, delete from z employees.
+
+153
+00:13:40,020 --> 00:13:45,030
+This form of it is what I said
+earlier you need to be careful about.
+
+154
+00:13:45,030 --> 00:13:48,628
+Because this will delete all
+the records on our table.
+
+155
+00:13:48,628 --> 00:13:50,170
+That wraps up the delete statement.
+

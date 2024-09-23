@@ -1,0 +1,31 @@
+1
+00:00:02,140 --> 00:00:04,104
+The next one,
+let's have a look at division.
+
+2
+00:00:10,559 --> 00:00:13,833
+Simple/ just a division sign.
+
+3
+00:00:19,244 --> 00:00:21,495
+See the results.
+
+4
+00:00:21,495 --> 00:00:27,432
+And we get a 4.
+
+5
+00:00:27,432 --> 00:00:31,364
+You know what, that was by pure chance.
+
+6
+00:00:31,364 --> 00:00:39,250
+[LAUGH] I didn't expect it to be a whole
+number, but yes, 5.5 multiply by 4 is 22.
+
+7
+00:00:39,250 --> 00:00:42,980
+If we did have a decimal within
+the result it would have been shown.
+

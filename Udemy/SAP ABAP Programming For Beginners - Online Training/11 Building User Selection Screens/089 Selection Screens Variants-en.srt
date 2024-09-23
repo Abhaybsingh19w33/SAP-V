@@ -1,0 +1,669 @@
+1
+00:00:00,000 --> 00:00:02,045
+[BLANK_AUDIO]
+
+2
+00:00:02,045 --> 00:00:06,001
+Now if you've used SAP systems for any
+length of time,
+
+3
+00:00:06,001 --> 00:00:08,670
+you will be familiar with variants.
+
+4
+00:00:08,670 --> 00:00:14,410
+Now for those that haven't used variants,
+it's really simple.
+
+5
+00:00:14,410 --> 00:00:18,030
+I'm just gonna run our program again and
+just show you our screen.
+
+6
+00:00:19,190 --> 00:00:23,720
+Now, when we fill in values, so we can
+fill in,
+
+7
+00:00:28,020 --> 00:00:31,240
+any values we want, let's just say this
+one,
+
+8
+00:00:31,240 --> 00:00:34,920
+we have the option of saving all the
+entries we make in this screen.
+
+9
+00:00:37,050 --> 00:00:39,800
+And the object that we save, we call a
+variant.
+
+10
+00:00:40,900 --> 00:00:46,440
+So once you make your selections and click
+the save button,
+
+11
+00:00:46,440 --> 00:00:48,450
+this allows you to save a variant.
+
+12
+00:00:48,450 --> 00:00:49,250
+Now, just click save.
+
+13
+00:00:49,250 --> 00:00:51,680
+Oops, give it a name, Z1.
+
+14
+00:00:51,680 --> 00:00:54,810
+Oops, oops.
+
+15
+00:00:54,810 --> 00:00:55,980
+I'll need to give it a description.
+
+16
+00:00:59,960 --> 00:01:00,490
+That's it.
+
+17
+00:01:00,490 --> 00:01:02,240
+Now all of that has been saved.
+
+18
+00:01:02,240 --> 00:01:05,950
+So what that allows us to do is next time
+when we come back to our program,
+
+19
+00:01:07,030 --> 00:01:12,300
+when we have a default screen we now have
+this button up here.
+
+20
+00:01:12,300 --> 00:01:16,620
+Get variance we can click that, select the
+variant we want,
+
+21
+00:01:16,620 --> 00:01:21,220
+and then it will populate the screen for
+us.
+
+22
+00:01:21,220 --> 00:01:26,520
+And that's it that's what a variant is,
+now what we've just done there
+
+23
+00:01:26,520 --> 00:01:27,960
+is what a user normally does.
+
+24
+00:01:27,960 --> 00:01:31,860
+They would make their screen entries, then
+click the save button and
+
+25
+00:01:31,860 --> 00:01:32,510
+save the variant.
+
+26
+00:01:32,510 --> 00:01:37,330
+But I want to show you some other ways of
+creating variants and
+
+27
+00:01:37,330 --> 00:01:41,790
+go through some of the specific properties
+of variants that can be useful for
+
+28
+00:01:41,790 --> 00:01:42,970
+us when creating programs.
+
+29
+00:01:45,520 --> 00:01:50,990
+So, first of all, back at the se38 screen
+We have the variance button.
+
+30
+00:01:52,340 --> 00:01:56,590
+And if we choose create, we can enter a
+brand new variant name.
+
+31
+00:01:57,620 --> 00:01:59,560
+Choose the create button.
+
+32
+00:01:59,560 --> 00:02:01,100
+He shows us our screen.
+
+33
+00:02:01,100 --> 00:02:02,519
+We can make our entries.
+
+34
+00:02:09,490 --> 00:02:10,080
+Give it a description.
+
+35
+00:02:10,080 --> 00:02:10,580
+Click save.
+
+36
+00:02:12,410 --> 00:02:16,775
+And we're done.
+We have another variant.
+
+37
+00:02:16,775 --> 00:02:21,445
+And if I do a drop down, you can see
+there's the first and
+
+38
+00:02:21,445 --> 00:02:22,785
+the second one we've just created.
+
+39
+00:02:22,785 --> 00:02:25,855
+Let me step back.
+
+40
+00:02:28,055 --> 00:02:30,275
+Now what I suggest is when you're creating
+your program,
+
+41
+00:02:30,275 --> 00:02:33,355
+you create your variants this way.
+
+42
+00:02:33,355 --> 00:02:36,415
+It's just cleaner and if we go in,
+
+43
+00:02:36,415 --> 00:02:40,135
+we have this additional screen where we
+can work with the variant.
+
+44
+00:02:41,850 --> 00:02:47,370
+Now what I'm gonna do, is select one, and
+then we're gonna choose change.
+
+45
+00:02:48,620 --> 00:02:52,560
+These are the values, let's step back, we
+got attributes as well.
+
+46
+00:02:54,255 --> 00:02:56,655
+Attributes take you into this second
+screen.
+
+47
+00:02:56,655 --> 00:03:01,215
+If you go to the values then do change,
+
+48
+00:03:01,215 --> 00:03:05,335
+you then have the option of clicking the
+variants attributes button from there.
+
+49
+00:03:08,715 --> 00:03:10,885
+Now let's work our way down this screen
+and
+
+50
+00:03:10,885 --> 00:03:13,670
+have a look at the different attributes,
+of the variant.
+
+51
+00:03:13,670 --> 00:03:20,760
+Well first of all, we have only for
+background processing and when we create
+
+52
+00:03:20,760 --> 00:03:25,950
+ABAP programs, quite often these programs,
+they might not be report programs.
+
+53
+00:03:25,950 --> 00:03:28,120
+They might just be batch jobs.
+
+54
+00:03:28,120 --> 00:03:31,260
+And we really only want to run them in the
+background.
+
+55
+00:03:31,260 --> 00:03:35,140
+Maybe we only want to trigger them in the
+early hours of the morning,
+
+56
+00:03:35,140 --> 00:03:38,790
+to do some batch updates when no one else
+is around using they system.
+
+57
+00:03:40,090 --> 00:03:43,600
+Well, we can save variance for those types
+of programs, and
+
+58
+00:03:43,600 --> 00:03:47,940
+specify, only allow this variant to be
+used
+
+59
+00:03:47,940 --> 00:03:51,830
+when the program is being run as a batch
+job in the background.
+
+60
+00:03:51,830 --> 00:03:58,660
+And when this happens, that means we don't
+have to have the program on the screen.
+
+61
+00:03:58,660 --> 00:04:03,760
+We can schedule the job to run overnight,
+by itself, without having to monitor it.
+
+62
+00:04:03,760 --> 00:04:09,078
+The next option is protect variant,and
+this allows us,
+
+63
+00:04:09,078 --> 00:04:14,000
+as you might guess, to protect the
+variant.
+
+64
+00:04:14,000 --> 00:04:17,916
+It stops other users from being able to
+select the variant,
+
+65
+00:04:17,916 --> 00:04:19,962
+and using it on their reports.
+
+66
+00:04:19,962 --> 00:04:24,378
+[BLANK_AUDIO]
+
+67
+00:04:24,378 --> 00:04:27,000
+The next option down, only display in
+catalog.
+
+68
+00:04:27,000 --> 00:04:30,760
+Well, this basically makes the variant
+inactive.
+
+69
+00:04:32,440 --> 00:04:37,560
+The variant will exist, but when a user
+does an F4 drop down to have
+
+70
+00:04:37,560 --> 00:04:40,360
+a look at the list of variants, it won't
+show in the list.
+
+71
+00:04:42,270 --> 00:04:47,290
+Now moving on down, we have this section
+in the middle, field attributes.
+
+72
+00:04:48,610 --> 00:04:55,120
+And if we work from left to right, which
+means bottom to top, we can see,
+
+73
+00:04:55,120 --> 00:04:59,660
+we can protect an individual field that is
+displayed on our screen.
+
+74
+00:05:01,160 --> 00:05:06,310
+We can hide a field, this one, and
+
+75
+00:05:06,310 --> 00:05:10,400
+we have another hide field, and selection
+variable,
+
+76
+00:05:10,400 --> 00:05:13,800
+save fields without values, switch GPA
+off, and required field.
+
+77
+00:05:14,920 --> 00:05:16,170
+Have a play around with these.
+
+78
+00:05:16,170 --> 00:05:20,840
+I mean, things like your required field,
+it will make field mandatory, so
+
+79
+00:05:20,840 --> 00:05:21,740
+it has to be filled in.
+
+80
+00:05:21,740 --> 00:05:26,290
+You can see we already made Employee
+Number mandatory.
+
+81
+00:05:26,290 --> 00:05:29,130
+So the users can do this themselves with
+variance.
+
+82
+00:05:31,340 --> 00:05:34,870
+Now in case you're wondering, the P and S
+down here,
+
+83
+00:05:34,870 --> 00:05:38,270
+P represents Parameter, and S is Select
+option.
+
+84
+00:05:39,780 --> 00:05:43,790
+Now just as a little practice, let's use
+some of these.
+
+85
+00:05:46,190 --> 00:05:49,080
+And let's protect a field so that we can't
+change the values.
+
+86
+00:05:51,080 --> 00:05:52,540
+Let's protect date of birth.
+
+87
+00:05:54,950 --> 00:05:55,836
+Oops.
+Click Save.
+
+88
+00:05:55,836 --> 00:06:00,547
+[BLANK_AUDIO]
+
+89
+00:06:00,547 --> 00:06:05,339
+Now, when we come back and run our
+reports, oops, wrong one.
+
+90
+00:06:05,339 --> 00:06:14,003
+[BLANK_AUDIO]
+
+91
+00:06:14,003 --> 00:06:15,360
+And we'll choose our variants.
+
+92
+00:06:17,280 --> 00:06:20,820
+Oh, it looks as though [LAUGH] I hid the
+variant, did I?
+
+93
+00:06:27,830 --> 00:06:28,780
+Hm.
+
+94
+00:06:28,780 --> 00:06:30,380
+Z1, change, oh, I did, didn't I?
+
+95
+00:06:30,380 --> 00:06:37,570
+Let's take that off and that one and that
+one.
+
+96
+00:06:37,570 --> 00:06:38,640
+Click save.
+
+97
+00:06:38,640 --> 00:06:45,790
+And we've still go the, protected data
+birth field.
+
+98
+00:06:46,910 --> 00:06:51,910
+Go to our source code, run our program,
+and now we can select variant.
+
+99
+00:06:53,420 --> 00:06:57,080
+Now, see we protected date of birth, it's
+grayed out.
+
+100
+00:06:57,080 --> 00:06:58,545
+We can't make any entries in there.
+
+101
+00:06:58,545 --> 00:07:04,461
+[BLANK_AUDIO]
+
+102
+00:07:04,461 --> 00:07:07,270
+If we load another variant, and it opens
+it up.
+
+103
+00:07:11,400 --> 00:07:13,260
+So have a play around with variants.
+
+104
+00:07:13,260 --> 00:07:17,760
+They're very useful and when you have
+large selection screens,
+
+105
+00:07:17,760 --> 00:07:21,310
+you'll find that users create loads of
+variants.
+
+106
+00:07:21,310 --> 00:07:25,770
+So if you've got 30 fields to fill in, or
+maybe you got 30 fields on the screen but
+
+107
+00:07:25,770 --> 00:07:27,230
+only need to fill in.
+
+108
+00:07:27,230 --> 00:07:28,270
+Say six or seven.
+
+109
+00:07:29,670 --> 00:07:33,380
+Users save variance so that other users
+can pick them up and
+
+110
+00:07:33,380 --> 00:07:38,050
+use them without having to really fully
+understand everything on the screen.
+
+111
+00:07:39,500 --> 00:07:44,610
+Every month they may save a variant that
+the rest of the team may use.
+
+112
+00:07:44,610 --> 00:07:46,920
+So they are all consistent when running
+the reports.
+
+113
+00:07:48,650 --> 00:07:52,820
+By using the different options, the
+different attributes of the variance,
+
+114
+00:07:52,820 --> 00:07:55,880
+they can remove fields to make it look a
+lot easier.
+
+115
+00:07:55,880 --> 00:07:58,190
+They can protect fields.
+
+116
+00:07:58,190 --> 00:08:02,210
+They can define default values and then
+hide the fields, so
+
+117
+00:08:02,210 --> 00:08:07,460
+that when other users are in the reports,
+it doesn't look so complicated.
+
+118
+00:08:07,460 --> 00:08:09,480
+They're really useful parts of the system.
+
+119
+00:08:11,680 --> 00:08:15,550
+There are various ways we can start a
+report with a variant.
+
+120
+00:08:15,550 --> 00:08:20,660
+Now, from this SE38 screen, we can see
+
+121
+00:08:20,660 --> 00:08:25,230
+a with a variant execution button up here,
+I think that's shift F6.
+
+122
+00:08:26,360 --> 00:08:27,710
+Yeah, that's right.
+
+123
+00:08:27,710 --> 00:08:32,150
+So when we click this one, it says choose
+a variant.
+
+124
+00:08:33,240 --> 00:08:33,740
+Green tick.
+
+125
+00:08:36,080 --> 00:08:37,190
+And it starts it automatically.
+
+126
+00:08:39,480 --> 00:08:42,650
+But you know, a user won't normally have
+access to SE38.
+
+127
+00:08:42,650 --> 00:08:48,200
+This is really only useful for us in a
+development environment.
+
+128
+00:08:49,880 --> 00:08:51,950
+When a user runs a transaction in SAP,
+
+129
+00:08:51,950 --> 00:08:57,300
+they usually select the transaction from
+the SAP menu tree, or
+
+130
+00:08:57,300 --> 00:09:01,020
+they enter the transaction code, in the
+top left hand corner of the screen.
+
+131
+00:09:01,020 --> 00:09:05,810
+Now another way of running a report,
+
+132
+00:09:07,010 --> 00:09:11,590
+is by the user going to the system menu
+and then the services option.
+
+133
+00:09:11,590 --> 00:09:13,780
+And choosing Reporting from there.
+
+134
+00:09:13,780 --> 00:09:20,390
+So they'll go System, Services and choose
+Reporting.
+
+135
+00:09:20,390 --> 00:09:23,680
+Now this is like a real cut down version
+of SE38.
+
+136
+00:09:23,680 --> 00:09:25,790
+Takes away all the added in functionality.
+
+137
+00:09:25,790 --> 00:09:27,660
+And just allows them to select the
+program.
+
+138
+00:09:28,800 --> 00:09:33,800
+And then they can choose to execute it
+directly or start with a variant.
+
+139
+00:09:36,330 --> 00:09:41,200
+Now most users will run our program
+directly and
+
+140
+00:09:41,200 --> 00:09:47,500
+then load a variant up.
+
+141
+00:09:47,500 --> 00:09:51,770
+Now by using the go to menu as well as our
+little variant button,
+
+142
+00:09:53,780 --> 00:09:57,050
+we can choose the variant option, and we
+choose get.
+
+143
+00:09:58,700 --> 00:10:01,290
+Then that'll display a list of variants
+for us to use.
+
+144
+00:10:04,080 --> 00:10:08,500
+Once a variant's loaded up, then the user
+and you, can just execute the program.
+

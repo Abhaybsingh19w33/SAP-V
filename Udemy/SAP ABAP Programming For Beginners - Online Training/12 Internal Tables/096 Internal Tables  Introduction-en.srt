@@ -1,0 +1,461 @@
+1
+00:00:01,400 --> 00:00:06,660
+It's now time to take a look at one of the
+most important elements of an ABAP program
+
+2
+00:00:06,660 --> 00:00:08,700
+and that's dealing with internal tables.
+
+3
+00:00:10,530 --> 00:00:14,610
+Now you've already covered tables in the
+ABAP dictionary.
+
+4
+00:00:14,610 --> 00:00:19,400
+And we've sort of hinted at internal
+tables throughout this course but
+
+5
+00:00:19,400 --> 00:00:22,330
+we haven't really dug deep into what they
+are.
+
+6
+00:00:22,330 --> 00:00:29,360
+How we use them under syntax and that's
+what we're gonna do right now.
+
+7
+00:00:29,360 --> 00:00:32,480
+If you were planning on writing any ABAP
+programs at all or
+
+8
+00:00:32,480 --> 00:00:35,790
+reading ABAP programs and really
+understanding them.
+
+9
+00:00:35,790 --> 00:00:37,830
+You've got to understand internal tables
+
+10
+00:00:39,650 --> 00:00:42,600
+because just about every program uses
+them.
+
+11
+00:00:42,600 --> 00:00:47,810
+You have to learn both the old method of
+using internal table with header lines
+
+12
+00:00:47,810 --> 00:00:51,610
+as well as the newer method of using
+separate work areas.
+
+13
+00:00:52,770 --> 00:00:54,630
+Why do we have to learn both?
+
+14
+00:00:54,630 --> 00:01:00,200
+Well, SAP has been around a long time and
+there are still a lot of programs
+
+15
+00:01:00,200 --> 00:01:05,260
+in the system that use the old method of
+using header lines with internal tables.
+
+16
+00:01:06,600 --> 00:01:09,820
+So when you're trying to recode, you've
+got to understand how they work.
+
+17
+00:01:11,540 --> 00:01:13,800
+But when you're creating your own code,
+
+18
+00:01:13,800 --> 00:01:17,050
+you want to use the newer method of
+creating separate work areas.
+
+19
+00:01:18,130 --> 00:01:22,540
+And this will also make it easier when you
+move on to understanding ABAP objects.
+
+20
+00:01:24,280 --> 00:01:28,520
+Now, internal tables only ever exist when
+your program is running.
+
+21
+00:01:29,790 --> 00:01:33,020
+They're internal to a running program
+only.
+
+22
+00:01:33,020 --> 00:01:36,490
+When you write your ABAP program, you've
+specified the structure for
+
+23
+00:01:36,490 --> 00:01:40,130
+an internal table and you write your
+program to make use of it.
+
+24
+00:01:41,250 --> 00:01:45,960
+And once your program finishes using the
+internal table, it is then destroyed.
+
+25
+00:01:47,540 --> 00:01:51,900
+When you start to use internal tables in
+your programs you will see that they
+
+26
+00:01:51,900 --> 00:01:55,840
+behave exactly the same way as structures
+that you define in your program.
+
+27
+00:01:55,840 --> 00:01:58,190
+And these structures are called work
+areas.
+
+28
+00:01:59,560 --> 00:02:03,870
+The only difference is that your
+structures have only one line
+
+29
+00:02:03,870 --> 00:02:07,980
+whereas an internal table can have an
+unlimited number of lines
+
+30
+00:02:09,190 --> 00:02:10,890
+just like a normal database table.
+
+31
+00:02:12,280 --> 00:02:16,960
+So let's ask ourselves what is the use an
+internal table.
+
+32
+00:02:16,960 --> 00:02:21,330
+Well, internal tables are used for an
+awful lot of things in our programs.
+
+33
+00:02:23,090 --> 00:02:25,760
+They allow us to hold results of
+calculations that we
+
+34
+00:02:25,760 --> 00:02:28,290
+can use later on in our program.
+
+35
+00:02:28,290 --> 00:02:33,770
+They allow us to hold records of data that
+we can access really,
+
+36
+00:02:33,770 --> 00:02:37,940
+really quickly instead of having to read
+data from database tables over and
+
+37
+00:02:37,940 --> 00:02:40,620
+over again and a whole host of other
+reasons.
+
+38
+00:02:42,380 --> 00:02:48,180
+And eternal tables are really flexible
+because they can be defined
+
+39
+00:02:48,180 --> 00:02:51,050
+using any number of other defined
+structures.
+
+40
+00:02:52,460 --> 00:02:57,220
+This allows you to have many normal table
+structures, grouped together and
+
+41
+00:02:57,220 --> 00:03:00,410
+placed into one internal table.
+
+42
+00:03:00,410 --> 00:03:03,010
+If you're familiar with other programming
+languages
+
+43
+00:03:03,010 --> 00:03:06,110
+think of multi-dimensional arrays.
+
+44
+00:03:06,110 --> 00:03:10,915
+You will see as we work with internal
+tables that the basic form
+
+45
+00:03:10,915 --> 00:03:16,055
+consists of a table body which is all the
+records within the table.
+
+46
+00:03:16,055 --> 00:03:17,795
+And then we have a header record.
+
+47
+00:03:19,005 --> 00:03:22,715
+Now remember, the header record means
+we're working with the older
+
+48
+00:03:22,715 --> 00:03:23,545
+style internal table.
+
+49
+00:03:24,780 --> 00:03:31,020
+But for the newer style, we would have the
+table body in a separate work area.
+
+50
+00:03:31,020 --> 00:03:35,830
+Defined exactly the same structure as the
+table but it is kept separate and
+
+51
+00:03:35,830 --> 00:03:36,660
+works separately.
+
+52
+00:03:38,550 --> 00:03:41,830
+Now flipping back to the older method, the
+header line or
+
+53
+00:03:41,830 --> 00:03:47,660
+work area is used when we read individual
+records from our internal tables.
+
+54
+00:03:48,670 --> 00:03:49,780
+And what do I mean by this?
+
+55
+00:03:49,780 --> 00:03:54,340
+Well, when we read a record for the older
+style table
+
+56
+00:03:54,340 --> 00:04:00,160
+that record gets placed into the header
+record which we can access directly.
+
+57
+00:04:00,160 --> 00:04:05,185
+For the newer style table, we read a
+record into a work area.
+
+58
+00:04:05,185 --> 00:04:08,825
+Very similar to a header record but
+remember it's separate.
+
+59
+00:04:08,825 --> 00:04:14,157
+And also when we want to add records to an
+internal table the older style,
+
+60
+00:04:14,157 --> 00:04:16,577
+we placed the content into the header
+area.
+
+61
+00:04:16,577 --> 00:04:21,417
+For the newer style, we place content into
+work area and
+
+62
+00:04:21,417 --> 00:04:24,887
+then we transfer the header record or work
+area
+
+63
+00:04:24,887 --> 00:04:29,178
+into the body of the internal table which
+results in us creating a new record.
+
+64
+00:04:32,098 --> 00:04:36,478
+During this course, we have introduced the
+table statement which we
+
+65
+00:04:36,478 --> 00:04:40,689
+used to declare an ABAP dictionary data
+table that we wanted to work with.
+
+66
+00:04:41,700 --> 00:04:44,750
+Now, internal tables are a little bit
+different,
+
+67
+00:04:44,750 --> 00:04:48,530
+in that we have to declare the internal
+table ourself.
+
+68
+00:04:48,530 --> 00:04:51,330
+And whilst we do this, we must declare
+
+69
+00:04:51,330 --> 00:04:56,172
+if we want to use a header line as our
+work area or a separate work area.
+
+70
+00:04:57,960 --> 00:05:03,290
+As I've mentioned before, you'll find that
+old SAP programs often use a header line
+
+71
+00:05:03,290 --> 00:05:09,450
+with their internal tables but today it's
+best practice to use a separate work area.
+
+72
+00:05:09,450 --> 00:05:15,090
+You see, using a header line has several
+restrictions and when
+
+73
+00:05:15,090 --> 00:05:20,930
+SAP introduced the possibility to work
+with internal tables without header lines.
+
+74
+00:05:20,930 --> 00:05:24,525
+By using our own work areas we were given
+the ability to create
+
+75
+00:05:24,525 --> 00:05:27,105
+multi-dimensional tables.
+
+76
+00:05:27,105 --> 00:05:31,005
+Which as I mentioned before with the multi
+dimensional rays,
+
+77
+00:05:31,005 --> 00:05:33,145
+it's just tables within tables.
+
+78
+00:05:34,695 --> 00:05:40,245
+Now we're not gonna dig that deep into
+multi-dimensional tables in this course
+
+79
+00:05:40,245 --> 00:05:44,525
+but just bare in mind it can be done and
+you'll find it used an awful lot.
+
+80
+00:05:46,575 --> 00:05:49,555
+Now, I mentioned earlier that internal
+tables can have
+
+81
+00:05:49,555 --> 00:05:52,010
+an unlimited number of records.
+
+82
+00:05:52,010 --> 00:05:53,680
+Well, I told a bit of a white lie there.
+
+83
+00:05:53,680 --> 00:05:59,360
+There are some restrictions, the
+architecture of a SAP system
+
+84
+00:05:59,360 --> 00:06:03,850
+limits the size of our internal tables to
+around two gigabytes in size.
+
+85
+00:06:03,850 --> 00:06:07,930
+You will also need to bear in mind, just
+
+86
+00:06:07,930 --> 00:06:12,680
+how powerful your specific SAP system is,
+you know take into account the hardware,
+
+87
+00:06:12,680 --> 00:06:15,930
+the operating system, the amount of memory
+there is, and so on.
+
+88
+00:06:18,260 --> 00:06:22,780
+Now even though we can create internal
+tables up to two gigabytes in size,
+
+89
+00:06:22,780 --> 00:06:26,140
+it's best practice to keep them as small
+as possible.
+
+90
+00:06:26,140 --> 00:06:31,250
+Because if you have multiple programs
+taking up so much memory in your system,
+
+91
+00:06:31,250 --> 00:06:34,630
+you'll run the risk of making your whole
+system run really, really slow.
+
+92
+00:06:34,630 --> 00:06:38,960
+And the last thing you want is a basis
+guy, coming up to you saying,
+
+93
+00:06:38,960 --> 00:06:41,920
+why is your program taking up so much
+memory?
+
+94
+00:06:41,920 --> 00:06:46,390
+You're causing everybody else's programs
+to run really slow.
+
+95
+00:06:46,390 --> 00:06:49,510
+The last thing you want is users
+complaining because then you start
+
+96
+00:06:49,510 --> 00:06:50,100
+getting some earache.
+

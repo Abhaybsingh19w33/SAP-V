@@ -1,0 +1,375 @@
+1
+00:00:02,290 --> 00:00:05,200
+Next up, we're going to take a look at the
+split statement.
+
+2
+00:00:06,450 --> 00:00:10,530
+You use the split statements if you want
+to separate the contents of a field
+
+3
+00:00:10,530 --> 00:00:12,620
+into two or more fields.
+
+4
+00:00:12,620 --> 00:00:17,050
+The statement is fairly simple to use, so
+I'll go ahead and create some code, and
+
+5
+00:00:17,050 --> 00:00:18,760
+then we'll go through it line by line.
+
+6
+00:00:21,210 --> 00:00:21,890
+Okay.
+
+7
+00:00:21,890 --> 00:00:26,640
+I've created the code, and the first
+section you'll see is that I've created
+
+8
+00:00:26,640 --> 00:00:31,390
+some new data statements, called mystring,
+and
+
+9
+00:00:31,390 --> 00:00:36,430
+then a1, a2, and a3, and sep2, which is a
+separator.
+
+10
+00:00:38,520 --> 00:00:39,440
+So, let's go through it.
+
+11
+00:00:39,440 --> 00:00:44,630
+The mystring variable is 30 characters in
+length and the a1,
+
+12
+00:00:44,630 --> 00:00:49,870
+a2, a3 is 10 characters in length and the
+separator is 2 characters and
+
+13
+00:00:49,870 --> 00:00:54,358
+you can see I've assigned a value of
+double asterisks.
+
+14
+00:00:54,358 --> 00:00:57,300
+And, that's just going to be used to
+identify
+
+15
+00:00:57,300 --> 00:00:59,998
+where we need to separate our string.
+
+16
+00:00:59,998 --> 00:01:04,940
+So, I'm gonna move the data statements
+into position at the top of the program.
+
+17
+00:01:04,940 --> 00:01:06,841
+So, we keep it all in order.
+
+18
+00:01:06,841 --> 00:01:16,841
+[BLANK_AUDIO]
+
+19
+00:01:26,240 --> 00:01:27,414
+There we go.
+
+20
+00:01:27,414 --> 00:01:33,649
+[BLANK_AUDIO]
+
+21
+00:01:33,649 --> 00:01:36,030
+And now, we'll take a look at the split
+statement itself.
+
+22
+00:01:37,270 --> 00:01:40,940
+So, I'm going to show you two examples,
+and the first one is,
+
+23
+00:01:40,940 --> 00:01:48,006
+I'm populating mystring with a value of a
+leading space and what you can see.
+
+24
+00:01:48,006 --> 00:01:55,400
+1234 asterisk, asterisk, ABCD, asterisk,
+asterisk, 6789.
+
+25
+00:01:58,400 --> 00:02:02,820
+Gonna write out the string on the report
+just so we can see it in the results, and
+
+26
+00:02:02,820 --> 00:02:07,000
+the blank line, and then, comes the split
+statements.
+
+27
+00:02:08,570 --> 00:02:12,140
+Now, this statement starts with the word
+split, and
+
+28
+00:02:12,140 --> 00:02:16,420
+then you add the string that you want to
+split.
+
+29
+00:02:16,420 --> 00:02:19,005
+So, in our case, we're going to split
+mystring.
+
+30
+00:02:20,580 --> 00:02:25,790
+Then, we have the addition AT, and
+following AT we have a separator.
+
+31
+00:02:25,790 --> 00:02:27,550
+Now, this could be a literal.
+
+32
+00:02:27,550 --> 00:02:32,500
+Sorry, I could do this, but
+
+33
+00:02:32,500 --> 00:02:36,517
+in this example we're just going to use a
+pre-defined variable,
+
+34
+00:02:36,517 --> 00:02:39,370
+sep2, which contains the double asterisks.
+
+35
+00:02:41,570 --> 00:02:43,685
+Then, we got into, and
+
+36
+00:02:43,685 --> 00:02:48,550
+then, these are the fields we want the
+split contents to be written to.
+
+37
+00:02:49,740 --> 00:02:53,810
+So, what we'll end up with if we go
+through it, I've specifically made
+
+38
+00:02:53,810 --> 00:02:59,310
+the string look a little bit odd, making
+sure we have a leading space and
+
+39
+00:02:59,310 --> 00:03:03,850
+we have an asterisk then space and we have
+a space before the asterisk.
+
+40
+00:03:05,170 --> 00:03:08,500
+So, you can see how the split statement
+
+41
+00:03:08,500 --> 00:03:11,600
+actually populates the fields the data
+wants to go into.
+
+42
+00:03:12,820 --> 00:03:17,650
+So, I'll execute the code and we'll go
+through the results.
+
+43
+00:03:21,420 --> 00:03:22,010
+So, here we go.
+
+44
+00:03:23,360 --> 00:03:29,440
+So, our split statement is splitting a
+leading 01234,
+
+45
+00:03:29,440 --> 00:03:33,600
+asterisk, asterisk, and it's gonna split
+at the first double asterisk.
+
+46
+00:03:33,600 --> 00:03:39,930
+So, we can see, our first A1 results field
+does contain the leading space.
+
+47
+00:03:41,110 --> 00:03:44,660
+It is then being split at the, the double
+asterisks, and
+
+48
+00:03:44,660 --> 00:03:50,360
+you'll note the result has filled in blank
+spaces for the rest of the field.
+
+49
+00:03:51,860 --> 00:03:55,830
+We then have the second field filled with
+from
+
+50
+00:03:55,830 --> 00:04:00,830
+the blank space all the way to the blank
+space before the next double asterisk.
+
+51
+00:04:03,280 --> 00:04:10,290
+This is A2, and also is filled with
+trailing spaces, and the last result
+
+52
+00:04:10,290 --> 00:04:16,740
+is 6789, and you'll see there's no space
+after the double asterisk.
+
+53
+00:04:16,740 --> 00:04:20,600
+So, that has gone one column further to
+the left and
+
+54
+00:04:20,600 --> 00:04:23,270
+filled the remainder of the field with
+blank spaces again.
+
+55
+00:04:24,560 --> 00:04:25,850
+So, that's quite straightforward.
+
+56
+00:04:27,270 --> 00:04:30,780
+Let's go back to the code, and what we'll
+do this time is
+
+57
+00:04:33,730 --> 00:04:38,970
+take a look at this, this second example,
+
+58
+00:04:38,970 --> 00:04:43,610
+and the way this differs is I've added
+another set of double asterisks for
+
+59
+00:04:43,610 --> 00:04:48,530
+our separator, and then added some more
+characters at the end of our string.
+
+60
+00:04:50,110 --> 00:04:55,120
+So, what I'm trying to show here is we
+want to split the contents of mystring
+
+61
+00:04:55,120 --> 00:05:01,210
+into three fields, but when we look at the
+contents, because we're using the double
+
+62
+00:05:01,210 --> 00:05:05,990
+asterisk as a separator, we've actually
+got enough to fit into four fields.
+
+63
+00:05:07,990 --> 00:05:12,020
+So, what the system does in this case, is
+for the last field that's going to be
+
+64
+00:05:12,020 --> 00:05:16,860
+filled, it will actually contain the
+remainder of the string as well.
+
+65
+00:05:19,980 --> 00:05:20,980
+So, we'll execute the code.
+
+66
+00:05:20,980 --> 00:05:23,945
+I've altered the results, and hopefully
+all will become clear.
+
+67
+00:05:23,945 --> 00:05:28,598
+[SOUND] Here we go.
+
+68
+00:05:28,598 --> 00:05:33,962
+So the difference here is, our third field
+is gonna be filled with 6789,
+
+69
+00:05:33,962 --> 00:05:37,015
+but because we have double asterisk again,
+
+70
+00:05:37,015 --> 00:05:42,380
+we're trying to split the remainder of my
+string into another field.
+
+71
+00:05:42,380 --> 00:05:47,710
+Well, we haven't declared a fourth field,
+so this becomes the remainder and
+
+72
+00:05:47,710 --> 00:05:50,480
+it gets appended into the last field we
+have declared.
+
+73
+00:05:52,360 --> 00:05:57,366
+So, it's important to keep in mind that if
+your separator would result
+
+74
+00:05:57,366 --> 00:06:00,780
+in more splits than there are fields
+available for
+
+75
+00:06:00,780 --> 00:06:06,330
+the contents to be moved into and the
+remainder will be put into the last field,
+
+76
+00:06:06,330 --> 00:06:09,580
+if the last field isn't big enough, then
+it will be truncated.
+
+77
+00:06:11,170 --> 00:06:15,660
+One last point, just a note that if the
+field you are trying to split does not
+
+78
+00:06:15,660 --> 00:06:20,630
+contain a valid separator string, then the
+whole contents of that field
+
+79
+00:06:20,630 --> 00:06:24,650
+will be moved to the first field that you
+are trying to split the contents into.
+

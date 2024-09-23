@@ -1,0 +1,273 @@
+1
+00:00:00,350 --> 00:00:07,080
+So, let's get back to our debugging
+session again the next option
+
+2
+00:00:09,130 --> 00:00:14,005
+you see is the display list option and
+that's Control+F12.
+
+3
+00:00:14,005 --> 00:00:19,515
+If we press this button, you can see it
+takes us to the output screen
+
+4
+00:00:19,515 --> 00:00:22,455
+as it currently stands within our debug
+session.
+
+5
+00:00:23,565 --> 00:00:26,725
+So at the moment we have executed the code
+
+6
+00:00:26,725 --> 00:00:30,105
+to output the results of the first select
+statements in our program.
+
+7
+00:00:31,275 --> 00:00:33,615
+We can press the F3 key to go back to the
+code.
+
+8
+00:00:35,300 --> 00:00:40,335
+And if we start to execute some more
+lines, and press it again,
+
+9
+00:00:40,335 --> 00:00:44,045
+[SOUND] we can see it outputs another two
+lines.
+
+10
+00:00:44,045 --> 00:00:48,722
+So it allows you to go see the results of
+your reports whilst the program is in
+
+11
+00:00:48,722 --> 00:00:49,400
+midflow.
+
+12
+00:00:49,400 --> 00:00:53,670
+And the last option we've got is
+watchpoint.
+
+13
+00:00:54,670 --> 00:00:57,240
+And we will come to watchpoint just in a
+little while.
+
+14
+00:00:59,700 --> 00:01:04,580
+Now the fields mode of our app debugger
+allows us to check and
+
+15
+00:01:04,580 --> 00:01:08,340
+modify the contents of the fields as we're
+debugging our program.
+
+16
+00:01:09,480 --> 00:01:14,240
+You can double click on the field itself
+in the code section of the screen, or
+
+17
+00:01:14,240 --> 00:01:18,660
+type in the field name in the lower
+section of the screen.
+
+18
+00:01:18,660 --> 00:01:19,380
+So for example,
+
+19
+00:01:19,380 --> 00:01:24,330
+if I navigate to a place in the code where
+we're dealing with individual fields.
+
+20
+00:01:26,220 --> 00:01:28,863
+I can double click on the field, and
+
+21
+00:01:28,863 --> 00:01:34,856
+you can see it's copied the contents down
+to the lowest section off the screen and
+
+22
+00:01:34,856 --> 00:01:40,086
+it shows the actual field name with the
+field content alternatively.
+
+23
+00:01:40,086 --> 00:01:43,420
+[BLANK_AUDIO]
+
+24
+00:01:43,420 --> 00:01:48,621
+I can type the name or in my case because
+I don't like pressing too many
+
+25
+00:01:48,621 --> 00:01:54,020
+keys I'll copy and paste the name into the
+lower section of the screen.
+
+26
+00:01:55,120 --> 00:01:55,780
+And press Enter.
+
+27
+00:01:58,330 --> 00:02:00,400
+You can see it has exactly the same
+effect.
+
+28
+00:02:02,300 --> 00:02:06,090
+And just to note, because I'm dealing with
+a table here,
+
+29
+00:02:06,090 --> 00:02:11,900
+I have to qualify the field name with the
+table name first.
+
+30
+00:02:11,900 --> 00:02:16,540
+So it's table name dash field name
+whichever method you choose,
+
+31
+00:02:17,590 --> 00:02:20,800
+the field name will always be on the
+left-hand side of this grid,
+
+32
+00:02:20,800 --> 00:02:23,880
+and the contents will be displayed on the
+right-hand side.
+
+33
+00:02:25,980 --> 00:02:30,290
+And this allows you to continue debugging
+your program, and watching
+
+34
+00:02:30,290 --> 00:02:34,910
+the contents of the field that you have
+specified in the field names list.
+
+35
+00:02:34,910 --> 00:02:41,820
+So if I do a single step, we're going
+through our code line by line, and
+
+36
+00:02:41,820 --> 00:02:45,520
+then the next select statement, we should
+see a change of surname and forename.
+
+37
+00:02:49,220 --> 00:02:50,400
+There we go.
+
+38
+00:02:50,400 --> 00:02:52,150
+So now it's changed to Brenda Nichols.
+
+39
+00:02:54,010 --> 00:02:54,620
+I'll do it again.
+
+40
+00:02:56,880 --> 00:03:00,520
+Execute the select and there we have a new
+employee coming in.
+
+41
+00:03:02,120 --> 00:03:06,030
+You'll notice there are only four rows
+available here but
+
+42
+00:03:06,030 --> 00:03:08,760
+you can actually monitor below that
+amount.
+
+43
+00:03:08,760 --> 00:03:11,320
+You can use this button to go down line by
+line.
+
+44
+00:03:14,410 --> 00:03:18,350
+Or, you can use the Next Page button to
+see fields five to eight.
+
+45
+00:03:21,520 --> 00:03:24,180
+And, quite often, when you're debugging a
+program,
+
+46
+00:03:24,180 --> 00:03:26,730
+you'll want to manually change the
+contents of a field.
+
+47
+00:03:27,890 --> 00:03:32,410
+And, you can do this by clicking on the
+field in question, in this case surname.
+
+48
+00:03:33,560 --> 00:03:38,390
+Typing in your new value, and then click
+this change button.
+
+49
+00:03:41,520 --> 00:03:44,240
+Now the contents of the surname field have
+been changed to Johnson.
+
+50
+00:03:46,290 --> 00:03:49,090
+This is very useful when you're debugging
+your program
+
+51
+00:03:49,090 --> 00:03:51,330
+because it saves you a lot of time.
+
+52
+00:03:51,330 --> 00:03:53,980
+Quite often you don't want to come out of
+your debugging session,
+
+53
+00:03:55,000 --> 00:04:00,280
+enter some new values in a variable, go
+back into your debugging session again,
+
+54
+00:04:00,280 --> 00:04:02,160
+and pick up where you left off.
+
+55
+00:04:02,160 --> 00:04:06,540
+This function allows you to change the
+contents of the field so, you can
+
+56
+00:04:06,540 --> 00:04:11,587
+dynamically check the logic within your
+program using whatever values you like.
+
+57
+00:04:11,587 --> 00:04:13,749
+[BLANK_AUDIO]
+

@@ -1,0 +1,720 @@
+1
+00:00:01,270 --> 00:00:06,595
+In this module, we're going to take a look
+at how we can change the transparent
+
+2
+00:00:06,595 --> 00:00:10,650
+tables that we created
+earlier on in the course.
+
+3
+00:00:10,650 --> 00:00:15,100
+It's important you know how to do this and
+the implications of adding and
+
+4
+00:00:15,100 --> 00:00:18,890
+taking away fields to the underlying
+data in your database table.
+
+5
+00:00:21,040 --> 00:00:28,140
+So as a reminder, let's take a look at
+the table we created called zemployees.
+
+6
+00:00:28,140 --> 00:00:33,980
+So in the SAP GUI, we can choose
+transaction SE11, or under the tools menu,
+
+7
+00:00:36,040 --> 00:00:40,930
+ABAP Workbench and then Development,
+you've got the ABAP Dictionary transaction
+
+8
+00:00:40,930 --> 00:00:44,300
+there in case you forget
+the transaction code.
+
+9
+00:00:45,610 --> 00:00:48,286
+So, here it's already entered
+the table name for me.
+
+10
+00:00:48,286 --> 00:00:51,440
+I'll choose display, and
+
+11
+00:00:51,440 --> 00:00:54,680
+we can see the six fields that
+we entered to create our table.
+
+12
+00:00:55,742 --> 00:01:01,580
+Remember MANDT is the client field that is
+automatically maintained by the system.
+
+13
+00:01:03,090 --> 00:01:07,718
+And then we have employee
+which is our employee number,
+
+14
+00:01:07,718 --> 00:01:12,161
+our surname, forename,
+title, and date of birth.
+
+15
+00:01:12,161 --> 00:01:15,686
+Now it's important to realize
+that whenever you want to change
+
+16
+00:01:15,686 --> 00:01:18,544
+a database table,
+you run the risk of losing data,
+
+17
+00:01:18,544 --> 00:01:23,070
+especially when you're affecting
+the key fields in your table.
+
+18
+00:01:23,070 --> 00:01:27,290
+The database system itself will try and
+determine if you can make adjustments
+
+19
+00:01:27,290 --> 00:01:31,830
+by deleting and creating new items which
+change the underlying database catalog.
+
+20
+00:01:32,865 --> 00:01:36,590
+Or whether you have to re-implement
+what you have already defined.
+
+21
+00:01:38,140 --> 00:01:42,360
+Quite often with large tables, you have
+to manage the manipulation of the data
+
+22
+00:01:42,360 --> 00:01:45,210
+yourself so as to be sure
+that you don't lose the data.
+
+23
+00:01:47,150 --> 00:01:51,580
+When your tasks involve just deleting
+fields, it's quite a simple task.
+
+24
+00:01:52,720 --> 00:01:55,030
+But, depending on the table structure and
+
+25
+00:01:55,030 --> 00:01:57,950
+the contents,
+this also has certain complications.
+
+26
+00:01:59,020 --> 00:02:03,380
+So, before you start any of
+these database change tasks,
+
+27
+00:02:03,380 --> 00:02:08,550
+it's a good idea to mitigate against
+as many risks as possible and
+
+28
+00:02:08,550 --> 00:02:10,830
+start by using a copy
+of your database table.
+
+29
+00:02:10,830 --> 00:02:15,977
+This will allow you to test out any
+change activities you want to make
+
+30
+00:02:15,977 --> 00:02:21,687
+without the risk of affecting the original
+table and the underlying data.
+
+31
+00:02:21,687 --> 00:02:27,050
+And when you copy a database table,
+you only copy the table structure itself.
+
+32
+00:02:27,050 --> 00:02:31,760
+This means just the table properties,
+the fields, not the actual data.
+
+33
+00:02:31,760 --> 00:02:35,670
+So let's have a look at
+how we can copy our table.
+
+34
+00:02:37,850 --> 00:02:43,170
+So we will step back,
+back to our initial SE 11 screen.
+
+35
+00:02:44,790 --> 00:02:48,741
+We already have our table name,
+ZEmployees, which we will copy.
+
+36
+00:02:48,741 --> 00:02:54,548
+Now all we need to do is go to
+the Copy button, which is Ctrl+F5.
+
+37
+00:02:57,545 --> 00:03:01,180
+And decide on the table name
+that we want to copy to.
+
+38
+00:03:01,180 --> 00:03:04,396
+So let's be very original and
+stick a number 2 on the end.
+
+39
+00:03:08,564 --> 00:03:12,399
+Click the green tick for the okay,
+and as normal, we'll be asked for
+
+40
+00:03:12,399 --> 00:03:14,555
+a development class.
+
+41
+00:03:14,555 --> 00:03:18,524
+And as in the last modules,
+what we will choose is local object.
+
+42
+00:03:23,062 --> 00:03:24,090
+That's all there is to it.
+
+43
+00:03:24,090 --> 00:03:26,095
+You've now got a copy of the table.
+
+44
+00:03:27,335 --> 00:03:30,635
+So we have ZEMPLOYEES2 in
+our database table there.
+
+45
+00:03:30,635 --> 00:03:32,375
+We can choose Display.
+
+46
+00:03:33,910 --> 00:03:36,850
+And we can see an exact
+copy of the original table.
+
+47
+00:03:39,370 --> 00:03:44,101
+Now one thing to note is that even though
+we've copied a table, we can't use it yet,
+
+48
+00:03:44,101 --> 00:03:47,114
+because if you have a look at the status,
+it says new.
+
+49
+00:03:47,114 --> 00:03:50,135
+We need to activate our program.
+
+50
+00:03:50,135 --> 00:03:51,450
+So we'll click the Change button.
+
+51
+00:03:54,430 --> 00:03:55,850
+And then we'll click the Activate button.
+
+52
+00:03:57,520 --> 00:04:01,680
+Now remember, or table uses data elements,
+
+53
+00:04:01,680 --> 00:04:05,000
+which use data domains that we've
+already set up in the previous module.
+
+54
+00:04:06,280 --> 00:04:08,840
+So all of those objects
+are already active.
+
+55
+00:04:08,840 --> 00:04:11,740
+And when we activate our table,
+
+56
+00:04:11,740 --> 00:04:17,440
+all it needs to do is just activate the
+table itself, no other objects behind it.
+
+57
+00:04:17,440 --> 00:04:22,120
+So now we can take a look at the table and
+if you remember, I've said,
+
+58
+00:04:22,120 --> 00:04:25,110
+all we do is copy the table structure,
+not the contents.
+
+59
+00:04:25,110 --> 00:04:28,286
+So if we look at the table contents.
+
+60
+00:04:31,482 --> 00:04:34,624
+We can see that we've got
+no records in the table.
+
+61
+00:04:37,666 --> 00:04:42,413
+So what we will do now is enter some
+records into our table so that later on,
+
+62
+00:04:42,413 --> 00:04:45,477
+when we try and add fields and
+take fields away,
+
+63
+00:04:45,477 --> 00:04:49,691
+we will see various warning signs
+coming up from the system to tell
+
+64
+00:04:49,691 --> 00:04:54,390
+us we may be about to delete data and
+it will be unrecoverable.
+
+65
+00:04:54,390 --> 00:04:59,152
+So, let's go ahead just choose the, sorry,
+
+66
+00:04:59,152 --> 00:05:05,256
+we'll step back,
+then we'll choose the Utilities menu,
+
+67
+00:05:05,256 --> 00:05:09,301
+Table contents, and Create entries.
+
+68
+00:05:09,301 --> 00:05:11,150
+So now you should be
+familiar with this screen.
+
+69
+00:05:11,150 --> 00:05:13,614
+We can just create a number of employees.
+
+70
+00:05:16,717 --> 00:05:18,296
+Super original.
+
+71
+00:05:26,028 --> 00:05:28,431
+Let's do the drop-down box for
+the date of birth.
+
+72
+00:05:33,818 --> 00:05:35,909
+Just so I get the format correct.
+
+73
+00:05:42,293 --> 00:05:43,849
+And save our record.
+
+74
+00:05:54,656 --> 00:05:59,539
+Okay, so now we've entered three records
+and that should be enough to then allow us
+
+75
+00:05:59,539 --> 00:06:03,190
+to change the database and
+see what effects it has on the data.
+
+76
+00:06:05,010 --> 00:06:08,876
+So just to make sure everything's
+been entered correctly,
+
+77
+00:06:08,876 --> 00:06:13,286
+we'll just choose the Contents view,
+and click Number of entries.
+
+78
+00:06:13,286 --> 00:06:17,760
+We have three, and we can execute and
+have a look at the contents.
+
+79
+00:06:21,310 --> 00:06:26,358
+So let's step back and
+go to the table design.
+
+80
+00:06:26,358 --> 00:06:31,887
+And what we're gonna do is add a brand new
+field, and we'll make it a non-key field.
+
+81
+00:06:31,887 --> 00:06:36,310
+And this is the same process that we went
+through when we added fields originally.
+
+82
+00:06:38,420 --> 00:06:40,757
+So let's have a field called initials.
+
+83
+00:06:52,355 --> 00:06:59,190
+And remember to use the Z, and
+remember this is a brand new data element.
+
+84
+00:07:01,060 --> 00:07:05,146
+So I will double-click and
+use forward navigation to generate it.
+
+85
+00:07:13,214 --> 00:07:18,349
+And for the domain, let's see if
+there's an existing one called Char3.
+
+86
+00:07:18,349 --> 00:07:19,884
+And there is.
+
+87
+00:07:19,884 --> 00:07:22,746
+Character field length three.
+
+88
+00:07:22,746 --> 00:07:24,489
+So we can use that one.
+
+89
+00:07:31,902 --> 00:07:37,079
+There are our field labels, and
+we'll activate that data element.
+
+90
+00:07:39,100 --> 00:07:39,995
+Local objects.
+
+91
+00:07:42,840 --> 00:07:44,900
+There we go,
+that data element's now active.
+
+92
+00:07:44,900 --> 00:07:48,990
+So now when we step back to the table
+we can see it's brought through
+
+93
+00:07:50,270 --> 00:07:55,130
+the field title and
+the actual data type of the field.
+
+94
+00:07:55,130 --> 00:07:57,575
+Let's add another field,
+this time called gender.
+
+95
+00:08:03,483 --> 00:08:08,145
+And no prizes to guess what we're
+gonna call the data elements.
+
+96
+00:08:11,268 --> 00:08:13,880
+We can see the data element doesn't exist.
+
+97
+00:08:13,880 --> 00:08:18,852
+So forward navigation,
+Yes to save the table,
+
+98
+00:08:18,852 --> 00:08:22,219
+Yes to create the data element.
+
+99
+00:08:22,219 --> 00:08:26,197
+I'll give it a name and
+just copy it to the clipboard for
+
+100
+00:08:26,197 --> 00:08:28,196
+when we do the field label.
+
+101
+00:08:28,196 --> 00:08:32,445
+And here we'll just make it Char01, and
+
+102
+00:08:32,445 --> 00:08:36,939
+we can see it already exists,
+which is fine.
+
+103
+00:08:45,577 --> 00:08:51,381
+Activate the object, then we'll step back.
+
+104
+00:08:51,381 --> 00:08:53,054
+And we have the field.
+
+105
+00:08:57,058 --> 00:08:58,824
+Let's have another one called salary.
+
+106
+00:09:04,639 --> 00:09:06,381
+ZSalary.
+
+107
+00:09:08,717 --> 00:09:09,921
+Double-click.
+
+108
+00:09:12,975 --> 00:09:14,522
+You know the drill.
+
+109
+00:09:22,357 --> 00:09:27,836
+Now this one is going to be
+a currency field cuz it's salary.
+
+110
+00:09:27,836 --> 00:09:30,634
+So what we're gonna choo, do,
+
+111
+00:09:30,634 --> 00:09:36,243
+is choose a currency field called Curi9,
+I think that exists.
+
+112
+00:09:36,243 --> 00:09:38,405
+Yeah, there we go.
+
+113
+00:09:38,405 --> 00:09:40,731
+And this is a currency field,
+
+114
+00:09:40,731 --> 00:09:45,484
+we can see it's got a length of
+nine with two decimal places.
+
+115
+00:09:45,484 --> 00:09:50,140
+You can create your own, or
+search in the the data dictionary and
+
+116
+00:09:50,140 --> 00:09:52,640
+use a different one if you like.
+
+117
+00:09:52,640 --> 00:09:57,065
+But I know this one exists and
+I've used it before.
+
+118
+00:09:57,065 --> 00:09:58,727
+Go to Field label.
+
+119
+00:10:06,285 --> 00:10:07,573
+Local object.
+
+120
+00:10:07,573 --> 00:10:14,189
+Activate it, and step back.
+
+121
+00:10:14,189 --> 00:10:20,978
+Now, one important thing with the,
+salary field is, because it's a currency,
+
+122
+00:10:20,978 --> 00:10:25,721
+we actually need to include
+a separate currency field that is
+
+123
+00:10:25,721 --> 00:10:30,751
+attached to ZSalary to indicate
+what currency the salary is in.
+
+124
+00:10:30,751 --> 00:10:36,882
+So I'm from the UK, so this, for me,
+would be, GBP, Great British Pounds.
+
+125
+00:10:36,882 --> 00:10:39,366
+If you're in the US, it'd be US Dollars.
+
+126
+00:10:39,366 --> 00:10:40,666
+So to do that.
+
+127
+00:10:43,326 --> 00:10:45,669
+Let's create a brand new co,
+I'll tell you what we'll do.
+
+128
+00:10:45,669 --> 00:10:49,662
+First of all, I'll show you
+the error message, if we try and
+
+129
+00:10:49,662 --> 00:10:53,750
+activate the table without
+a corresponding currency field.
+
+130
+00:10:57,071 --> 00:10:58,661
+Here we go, errors occurred.
+
+131
+00:10:58,661 --> 00:11:02,888
+Let's have a look.
+
+132
+00:11:02,888 --> 00:11:06,574
+So what this is saying is
+we need a reference field,
+
+133
+00:11:06,574 --> 00:11:10,189
+a reference table,
+to hold the type of currency.
+
+134
+00:11:10,189 --> 00:11:11,919
+So let's step back and do that.
+
+135
+00:11:17,631 --> 00:11:20,264
+Let's call it ECurrency.
+
+136
+00:11:20,264 --> 00:11:24,500
+And the actual data elements,
+we will use one that already exists,
+
+137
+00:11:26,630 --> 00:11:29,660
+because currency fields, there should
+be no need to create your own,
+
+138
+00:11:29,660 --> 00:11:32,540
+because they should already
+exist in the system.
+
+139
+00:11:32,540 --> 00:11:34,883
+And I know there's one called curcy.
+
+140
+00:11:34,883 --> 00:11:38,476
+I'll use that and press Enter.
+
+141
+00:11:38,476 --> 00:11:45,823
+And there we can see, it's a Currency Key
+field with the length of five.
+
+142
+00:11:45,823 --> 00:11:51,189
+Now that's all well and good, but
+what we need to do next is tell
+
+143
+00:11:51,189 --> 00:11:57,590
+the system that our salary field is
+going to reference our currency field.
+
+144
+00:11:57,590 --> 00:12:00,253
+So this brings us onto this currency tab.
+
+145
+00:12:03,353 --> 00:12:09,320
+And when we flip to it, we can see that
+because we are using field type currency,
+
+146
+00:12:09,320 --> 00:12:12,722
+this field is now available for
+us to fill in.
+
+147
+00:12:15,185 --> 00:12:19,520
+And what we will do is enter
+our currency field in there.
+
+148
+00:12:19,520 --> 00:12:22,660
+And we just need to put
+our table name in here.
+
+149
+00:12:24,010 --> 00:12:28,969
+So we're gonna say this
+currency key field is
+
+150
+00:12:28,969 --> 00:12:33,420
+a reference field for our salary field.
+
+151
+00:12:33,420 --> 00:12:38,870
+So now we can activate the table,
+and everything is good.
+
+152
+00:12:41,180 --> 00:12:44,470
+Let's have a look at
+what this actually does.
+
+153
+00:12:44,470 --> 00:12:48,261
+Let's go and enter another record,
+or change an existing one, and
+
+154
+00:12:48,261 --> 00:12:51,800
+see what options we have for
+entering our salary and currency.
+

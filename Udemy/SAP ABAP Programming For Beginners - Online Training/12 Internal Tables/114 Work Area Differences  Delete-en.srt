@@ -1,0 +1,50 @@
+1
+00:00:02,770 --> 00:00:06,110
+Now the last piece we want to look at in
+this small section
+
+2
+00:00:06,110 --> 00:00:07,040
+is the delete statement.
+
+3
+00:00:08,230 --> 00:00:12,920
+And if you remember back when we discussed
+the delete statement earlier, we mentioned
+
+4
+00:00:12,920 --> 00:00:17,090
+that we didn't use the header records to
+identify the record we wanted to delete.
+
+5
+00:00:18,340 --> 00:00:20,000
+We just specified the table index.
+
+6
+00:00:21,030 --> 00:00:26,510
+And exactly the same syntax used for
+internal tables that use work areas.
+
+7
+00:00:26,510 --> 00:00:28,970
+Because we're not touching the header
+record at all,
+
+8
+00:00:28,970 --> 00:00:31,200
+we don't need to touch a work area.
+
+9
+00:00:32,510 --> 00:00:34,530
+So there's actually no difference.
+
+10
+00:00:34,530 --> 00:00:37,702
+The same syntax applies in both
+situations.
+
+11
+00:00:37,702 --> 00:00:40,079
+[BLANK_AUDIO]
+

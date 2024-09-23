@@ -1,0 +1,169 @@
+1
+00:00:02,440 --> 00:00:04,830
+Our ABAP reports have two types of
+screens.
+
+2
+00:00:04,830 --> 00:00:09,490
+There are selection screens and list
+output screens, and
+
+3
+00:00:09,490 --> 00:00:14,250
+we have already used the output window to
+produce list output screens.
+
+4
+00:00:14,250 --> 00:00:18,010
+So now, let's focus on the selection
+screens themselves and
+
+5
+00:00:18,010 --> 00:00:22,990
+how we put individual fields on there,
+like drop downs,
+
+6
+00:00:22,990 --> 00:00:25,060
+text boxes, radio buttons and so on.
+
+7
+00:00:25,060 --> 00:00:27,630
+For the user to enter values themselves.
+
+8
+00:00:29,980 --> 00:00:32,630
+Now, if you have used SAP at all,
+
+9
+00:00:32,630 --> 00:00:35,950
+you will know no doubt have used selection
+screens already.
+
+10
+00:00:35,950 --> 00:00:40,600
+And just by looking at this course, you
+can see a selection screen right now.
+
+11
+00:00:40,600 --> 00:00:44,470
+In transaction SE38 natural selection
+screen that we see
+
+12
+00:00:46,030 --> 00:00:50,600
+has a textbox with a dropdown, has a
+button, there's some radio buttons.
+
+13
+00:00:50,600 --> 00:00:53,870
+So, you know, we're gonna reproduce this
+type of thing for our programs.
+
+14
+00:00:55,320 --> 00:00:59,420
+Everything that we produce will allow the
+user to select data
+
+15
+00:00:59,420 --> 00:01:02,360
+to be used as parameters in our programs.
+
+16
+00:01:02,360 --> 00:01:07,663
+And when we produce selection screens, we
+are actually creating dialogue screens.
+
+17
+00:01:07,663 --> 00:01:13,020
+But the beauty is we don't have to write
+the actual dim pro code ourselves.
+
+18
+00:01:13,020 --> 00:01:16,885
+All we need to do is use specific ABAP
+statements and and
+
+19
+00:01:16,885 --> 00:01:20,225
+the system will take care of all the
+screen flow logic for us.
+
+20
+00:01:21,915 --> 00:01:24,405
+Now, as already mentioned, list screens
+and
+
+21
+00:01:24,405 --> 00:01:27,245
+selection screens are both dialogue
+programs.
+
+22
+00:01:28,305 --> 00:01:32,030
+Every dialogue program has at least one
+dim pro
+
+23
+00:01:32,030 --> 00:01:34,620
+which is held in what's called a module
+pool.
+
+24
+00:01:36,280 --> 00:01:40,704
+Now, a dim pro report program called
+Standard Selection Screen,
+
+25
+00:01:40,704 --> 00:01:45,900
+is called and controlled automatically by
+the runtime environment.
+
+26
+00:01:45,900 --> 00:01:52,063
+While the program is executed the dim pro
+number itself is actually 1,000.
+
+27
+00:01:52,063 --> 00:01:56,925
+The user will only see the screen when the
+programmer includes the parameters
+
+28
+00:01:56,925 --> 00:02:00,160
+in their program using specific ABAP
+statements.
+
+29
+00:02:01,420 --> 00:02:05,760
+And it is these ABAP statements that cause
+the screen to be generated
+
+30
+00:02:05,760 --> 00:02:06,820
+undisplayed to the user.
+
+31
+00:02:06,820 --> 00:02:11,610
+This means it's really simple for the
+programmer to get started
+
+32
+00:02:11,610 --> 00:02:16,350
+writing their own programs without needing
+to think about code to control the screen.
+
+33
+00:02:17,530 --> 00:02:21,520
+However, there are a few specific pieces
+of information.
+
+34
+00:02:21,520 --> 00:02:26,231
+You need to understand in order to use
+selection screens with your programs.
+
+35
+00:02:26,231 --> 00:02:28,120
+Which is what we are going to cover next.
+

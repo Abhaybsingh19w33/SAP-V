@@ -1,0 +1,665 @@
+1
+00:00:02,710 --> 00:00:06,690
+What we're going to concentrate on first,
+is something called Source Code Modulars.
+
+2
+00:00:08,210 --> 00:00:12,470
+Now when we talk about modularizing our
+program, all we mean
+
+3
+00:00:12,470 --> 00:00:16,760
+is we are gonna take a sequence of above
+statements in our program, and
+
+4
+00:00:16,760 --> 00:00:18,450
+place them in a separate module.
+
+5
+00:00:20,280 --> 00:00:23,510
+Then in our normal ABAP program, we just
+call this module.
+
+6
+00:00:25,220 --> 00:00:31,010
+Let's get straight down to the coding, and
+have a look at how we can modularize
+
+7
+00:00:31,010 --> 00:00:33,400
+some of the code, we've used in previous
+examples.
+
+8
+00:00:37,160 --> 00:00:39,718
+Here we have one of the previous examples,
+and
+
+9
+00:00:39,718 --> 00:00:42,678
+I've modified it just a tiny bit, just to
+tidy it up.
+
+10
+00:00:42,678 --> 00:00:47,057
+[BLANK_AUDIO]
+
+11
+00:00:47,057 --> 00:00:50,120
+And if we go through it, you'll get the
+you'll get the main gist.
+
+12
+00:00:50,120 --> 00:00:56,458
+And then we can start modularizing it.
+
+13
+00:00:56,458 --> 00:01:01,580
+So first of all at the top, of our table
+
+14
+00:01:01,580 --> 00:01:07,674
+statement we declare some types and some
+data
+
+15
+00:01:07,674 --> 00:01:11,795
+[BLANK_AUDIO]
+
+16
+00:01:11,795 --> 00:01:16,053
+And then we have our ABAP logic to
+actually do something,
+
+17
+00:01:16,053 --> 00:01:20,933
+which is an array fetch, an individual
+loop, clear statement,
+
+18
+00:01:20,933 --> 00:01:24,760
+another loop where we modify an entry in
+the table.
+
+19
+00:01:26,250 --> 00:01:28,980
+Do an insert and then a couple of read
+statements.
+
+20
+00:01:30,570 --> 00:01:35,260
+First of all, we are going to look at
+using what is called Include Programs.
+
+21
+00:01:36,320 --> 00:01:41,570
+Now Include Programs, are made available
+globally within an SAP system,
+
+22
+00:01:43,310 --> 00:01:46,710
+and their sole purpose is just for
+modularizing code.
+
+23
+00:01:48,000 --> 00:01:51,850
+They are very simple to define, and accept
+no parameters.
+
+24
+00:01:53,450 --> 00:01:58,530
+So first of all, just under the report
+statements at the very top of our program,
+
+25
+00:02:01,170 --> 00:02:05,160
+let's fill in the statement to declare an
+Include.
+
+26
+00:02:06,710 --> 00:02:11,920
+All we need to do is type, Include, and
+then we just define the name.
+
+27
+00:02:12,940 --> 00:02:15,958
+So for this example,
+
+28
+00:02:15,958 --> 00:02:21,661
+let's do Z_Employee_Definitions,
+
+29
+00:02:21,661 --> 00:02:25,525
+with a full stop at the end.
+
+30
+00:02:25,525 --> 00:02:29,832
+[BLANK_AUDIO]
+
+31
+00:02:29,832 --> 00:02:31,527
+Looks pretty simple, doesn't it?
+
+32
+00:02:31,527 --> 00:02:34,413
+So what we're telling the program here,
+
+33
+00:02:34,413 --> 00:02:38,460
+is to include our Include Program that
+we've just named.
+
+34
+00:02:39,660 --> 00:02:41,330
+Into our main program.
+
+35
+00:02:41,330 --> 00:02:46,730
+And you probably worked out, that we
+haven't actually created this include yet.
+
+36
+00:02:46,730 --> 00:02:49,140
+So, let's go ahead and do it.
+
+37
+00:02:50,790 --> 00:02:53,110
+You have two ways of creating an Include
+File.
+
+38
+00:02:54,140 --> 00:02:59,130
+The first one, I open up a new session and
+bring up SE38 again.
+
+39
+00:03:00,620 --> 00:03:05,130
+You can key in your include name, but I'm
+not going to do it here,
+
+40
+00:03:05,130 --> 00:03:06,510
+I'll just Z example.
+
+41
+00:03:06,510 --> 00:03:11,548
+But instead of saying Source Code, and you
+create your program,
+
+42
+00:03:11,548 --> 00:03:15,128
+you're going to create Program Attributes.
+
+43
+00:03:15,128 --> 00:03:18,520
+[BLANK_AUDIO]
+
+44
+00:03:18,520 --> 00:03:20,422
+So here we just give it a title.
+
+45
+00:03:20,422 --> 00:03:26,371
+When we come down to type, instead of
+choosing executable program,
+
+46
+00:03:26,371 --> 00:03:29,460
+we will choose, Include Program.
+
+47
+00:03:31,660 --> 00:03:35,061
+And then fill out the rest as we normally
+would.
+
+48
+00:03:35,061 --> 00:03:43,060
+[BLANK_AUDIO]
+
+49
+00:03:43,060 --> 00:03:47,262
+Now the second method, is something I'm
+sure you're familiar with already.
+
+50
+00:03:47,262 --> 00:03:48,510
+Oops, I'm jumping the gun.
+
+51
+00:03:48,510 --> 00:03:52,370
+[LAUGH] And that's by using Forward
+Navigation.
+
+52
+00:03:52,370 --> 00:03:56,330
+If you remember, we used Forward
+Navigation a lot when we created
+
+53
+00:03:56,330 --> 00:03:59,240
+Fields in our database table, and
+
+54
+00:03:59,240 --> 00:04:03,530
+we've used it within the ABAP Editor to go
+check out field definitions and so on.
+
+55
+00:04:05,200 --> 00:04:10,640
+But we can do the same thing, to create
+additional files within the ABAP Editor.
+
+56
+00:04:11,810 --> 00:04:15,460
+So all you need to do, is once you type
+the include, just give it a double click,
+
+57
+00:04:15,460 --> 00:04:20,330
+and we get the pop up box saying Your
+Include Does Not Exist.
+
+58
+00:04:20,330 --> 00:04:21,270
+Do you want to create it?
+
+59
+00:04:21,270 --> 00:04:22,240
+And we say Yes.
+
+60
+00:04:25,070 --> 00:04:27,260
+Assign it to the Local Development Class.
+
+61
+00:04:28,410 --> 00:04:29,970
+And that's it, we've created it, and
+
+62
+00:04:29,970 --> 00:04:32,720
+it gives us a blank program where we can
+put our code.
+
+63
+00:04:33,760 --> 00:04:36,930
+I'm sure you'll agree Forward Navigation
+is a lot more efficient.
+
+64
+00:04:38,500 --> 00:04:41,270
+Now from here, just to go back and, and
+
+65
+00:04:41,270 --> 00:04:44,980
+show you just that it's the same as
+creating it through the SE-38,
+
+66
+00:04:44,980 --> 00:04:49,510
+we use the Go To menu, and have a look at
+the program attributes.
+
+67
+00:04:49,510 --> 00:04:51,840
+We choose Yes to save.
+
+68
+00:04:51,840 --> 00:04:55,590
+You can see it's exactly the same screen.
+
+69
+00:04:55,590 --> 00:04:59,920
+It's chose the Include Program, it's a
+test,
+
+70
+00:04:59,920 --> 00:05:02,190
+it's assigned to basis, and there's our
+development class.
+
+71
+00:05:05,580 --> 00:05:09,230
+Now remember, this Include File, or
+Program,
+
+72
+00:05:09,230 --> 00:05:14,600
+is a separate file on the SAP system, and
+can be included in any other program.
+
+73
+00:05:15,910 --> 00:05:18,380
+So you have to treat it as a separate
+program.
+
+74
+00:05:18,380 --> 00:05:21,500
+And you'll see that it's got it's own
+check, it needs activating, and so on.
+
+75
+00:05:22,730 --> 00:05:25,080
+So, let's activate this right now.
+
+76
+00:05:25,080 --> 00:05:26,860
+Even though it's got nothing in, it should
+activate.
+
+77
+00:05:28,620 --> 00:05:31,940
+And we get the pop-up box, asking us what
+do we want to activate.
+
+78
+00:05:33,420 --> 00:05:38,090
+It shows a report program, and it's
+highlighted our employee
+
+79
+00:05:38,090 --> 00:05:41,220
+definition include already, so we just
+give it a green tick.
+
+80
+00:05:43,730 --> 00:05:44,260
+And now it's Active.
+
+81
+00:05:45,590 --> 00:05:46,500
+Now, if we step back.
+
+82
+00:05:49,010 --> 00:05:52,950
+Whenever we activate this program, our
+main one.
+
+83
+00:05:52,950 --> 00:05:56,660
+It will automatically check to make sure
+our include
+
+84
+00:05:56,660 --> 00:05:58,160
+program has already been activated.
+
+85
+00:05:59,550 --> 00:06:01,890
+And if it has, this one should activate
+just fine.
+
+86
+00:06:06,390 --> 00:06:11,180
+So Include Programs, are really easy to
+create and they help us
+
+87
+00:06:11,180 --> 00:06:15,680
+in our development by taking away some of
+the noise from our main program.
+
+88
+00:06:15,680 --> 00:06:20,520
+And provide us with the ability to reuse
+our code, throughout an SAP system.
+
+89
+00:06:22,520 --> 00:06:23,310
+So this is great.
+
+90
+00:06:23,310 --> 00:06:24,290
+We create that Include,
+
+91
+00:06:24,290 --> 00:06:29,090
+but you're probably thinking well, we've
+put no code in it, and you're quite right.
+
+92
+00:06:29,090 --> 00:06:33,175
+So what we're gonna do, I'm gonna take
+some of this code that we have here.
+
+93
+00:06:33,175 --> 00:06:37,690
+Oops, wrong key.
+
+94
+00:06:40,200 --> 00:06:41,385
+I'm gonna take this.
+
+95
+00:06:41,385 --> 00:06:43,530
+[BLANK_AUDIO]
+
+96
+00:06:43,530 --> 00:06:44,645
+I'll comment it out.
+
+97
+00:06:44,645 --> 00:06:46,305
+Go to our Include.
+
+98
+00:06:46,305 --> 00:06:50,508
+[BLANK_AUDIO]
+
+99
+00:06:50,508 --> 00:06:52,609
+We'll choose Yes, to save our changes.
+
+100
+00:06:52,609 --> 00:06:55,715
+Click Change.
+
+101
+00:06:57,035 --> 00:07:02,485
+Now all we need to do, is paste our code
+into our Include.
+
+102
+00:07:02,485 --> 00:07:03,095
+Now click Save.
+
+103
+00:07:03,095 --> 00:07:06,715
+Now, on purpose, I'm not going to activate
+it here.
+
+104
+00:07:07,715 --> 00:07:08,325
+We'll, step back.
+
+105
+00:07:10,355 --> 00:07:13,065
+Now, I'll just show you to actually use
+this code now.
+
+106
+00:07:13,065 --> 00:07:15,841
+We need to activate our main program.
+
+107
+00:07:15,841 --> 00:07:21,342
+[BLANK_AUDIO]
+
+108
+00:07:21,342 --> 00:07:26,233
+And when we do it, we receive this message
+saying we have
+
+109
+00:07:26,233 --> 00:07:30,098
+Syntax Errors, so we need to look at
+those.
+
+110
+00:07:30,098 --> 00:07:36,030
+And it's telling us the LINE01_TYP is
+unknown.
+
+111
+00:07:36,030 --> 00:07:39,820
+And this is because our Include has not
+been activated.
+
+112
+00:07:39,820 --> 00:07:43,820
+The system doesn't have an active version
+of that code,
+
+113
+00:07:43,820 --> 00:07:45,290
+that our main program can reference.
+
+114
+00:07:46,510 --> 00:07:49,400
+So to activate your program, you can
+either go to your Include and
+
+115
+00:07:49,400 --> 00:07:51,000
+activate it or.
+
+116
+00:07:52,280 --> 00:07:56,780
+When activating your main program select
+your Include as well.
+
+117
+00:08:00,230 --> 00:08:04,020
+And that way its assured that everything
+will be active, and
+
+118
+00:08:04,020 --> 00:08:07,670
+all the data objects in this example get
+referenced appropriately.
+
+119
+00:08:10,470 --> 00:08:14,950
+Now also, if we step back to this Include,
+and
+
+120
+00:08:14,950 --> 00:08:18,240
+we'll make a change, we'll, we'll add an
+error in here.
+
+121
+00:08:18,240 --> 00:08:22,390
+Let's just Add letter M for example.
+
+122
+00:08:25,390 --> 00:08:27,900
+We'll step back.
+
+123
+00:08:27,900 --> 00:08:30,110
+Now our main program is active at the
+moment, and
+
+124
+00:08:30,110 --> 00:08:33,840
+that's only because it's using the active
+version of our Include.
+
+125
+00:08:33,840 --> 00:08:38,640
+If we were to do a code check again,
+you'll see that we got
+
+126
+00:08:38,640 --> 00:08:43,020
+this error message cropping open, telling
+us our Include Program contains an error.
+
+127
+00:08:43,020 --> 00:08:48,740
+Now this seems fairly obvious, but what I
+want to point out here.
+
+128
+00:08:48,740 --> 00:08:53,680
+Is when we do syntax checks in our main
+program, it will also carry out that
+
+129
+00:08:53,680 --> 00:08:59,850
+syntax check, on the inactive version of
+your include, so they work in tandem.
+
+130
+00:08:59,850 --> 00:09:02,460
+So let's go back in.
+
+131
+00:09:02,460 --> 00:09:04,400
+We'll change this, get rid of this error.
+
+132
+00:09:09,360 --> 00:09:10,230
+And then, everything's back.
+
+133
+00:09:12,540 --> 00:09:16,940
+So that's it, that's a very small example
+of an Include Program, but
+
+134
+00:09:16,940 --> 00:09:22,480
+it shows you we've only put four or five
+lines of text in the Include.
+
+135
+00:09:22,480 --> 00:09:27,520
+You could put 200, 300 lines of code into
+that Include File which in effect helps
+
+136
+00:09:27,520 --> 00:09:32,950
+you encapsulate certain elements of your
+program, pop them away in a separate file.
+
+137
+00:09:32,950 --> 00:09:35,700
+So, you don't have to worry about them,
+and
+
+138
+00:09:35,700 --> 00:09:40,930
+you'll see this type of thing being used
+quite often for both code
+
+139
+00:09:40,930 --> 00:09:46,340
+you know logic, and for data declaration
+parts of a program.
+
+140
+00:09:46,340 --> 00:09:47,560
+Quite often people will create and
+
+141
+00:09:47,560 --> 00:09:51,870
+Include, put all the data and type
+statements in the Include.
+
+142
+00:09:51,870 --> 00:09:54,340
+And then just type the logic for the code
+in the main program.
+
+143
+00:09:57,140 --> 00:09:57,960
+And that way,
+
+144
+00:09:57,960 --> 00:10:02,220
+all the data declaration pieces can be
+used in other programs as well.
+

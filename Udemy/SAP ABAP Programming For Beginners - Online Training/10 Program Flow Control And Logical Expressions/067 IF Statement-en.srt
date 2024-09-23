@@ -1,0 +1,586 @@
+1
+00:00:01,580 --> 00:00:04,370
+First of all,
+let's create a brand new program,
+
+2
+00:00:04,370 --> 00:00:07,030
+where we can test out some
+of the logic we will build.
+
+3
+00:00:08,390 --> 00:00:12,920
+So I'm going to take a copy
+of the Z_OPENSQL_1 program
+
+4
+00:00:12,920 --> 00:00:14,340
+that we used in the previous module.
+
+5
+00:00:17,120 --> 00:00:19,540
+With the program name in the text box,
+
+6
+00:00:19,540 --> 00:00:24,250
+just click the Copy button, and
+we'll give our program a brand new name.
+
+7
+00:00:25,740 --> 00:00:28,866
+Let's call this Logic_1.
+
+8
+00:00:28,866 --> 00:00:33,684
+Z_LOGIC_1.
+
+9
+00:00:33,684 --> 00:00:39,167
+And we'll just choose Copy > Local object,
+
+10
+00:00:39,167 --> 00:00:43,798
+and our program has been duplicated.
+
+11
+00:00:43,798 --> 00:00:51,086
+So let's go into Change mode, and
+we'll tidy the program up a little bit.
+
+12
+00:01:05,711 --> 00:01:08,480
+And what we will do,
+is just keep this first section.
+
+13
+00:01:08,480 --> 00:01:10,990
+And I'll make some space.
+
+14
+00:01:12,960 --> 00:01:15,390
+So when we talk about control structures,
+
+15
+00:01:15,390 --> 00:01:19,420
+we are talking about lots of code
+that allow us to make a decision,
+
+16
+00:01:19,420 --> 00:01:24,395
+and based on that decision, we can
+have a number of different outcomes.
+
+17
+00:01:24,395 --> 00:01:28,290
+Let's take a look at the if statement
+to explain the basic logic of
+
+18
+00:01:28,290 --> 00:01:29,240
+control structures.
+
+19
+00:01:30,240 --> 00:01:35,170
+Now, the if statement is probably
+the most common control structure
+
+20
+00:01:35,170 --> 00:01:39,920
+that is found in just about every
+program and language there is.
+
+21
+00:01:39,920 --> 00:01:45,640
+The syntax of the if statement,
+does vary from language to language, but
+
+22
+00:01:45,640 --> 00:01:47,150
+each use is pretty much universal.
+
+23
+00:01:49,380 --> 00:01:52,720
+So if we have a look at the piece of
+code that we created in the last module.
+
+24
+00:01:52,720 --> 00:01:55,060
+We have this if statement.
+
+25
+00:01:56,390 --> 00:01:59,740
+If a logical expression do something.
+
+26
+00:02:01,370 --> 00:02:04,830
+And then we have an addition saying else,
+do something else.
+
+27
+00:02:04,830 --> 00:02:08,660
+And then the end of the if statement.
+
+28
+00:02:08,660 --> 00:02:14,080
+So if we were to just talk about
+it in pseudo-code we just say,
+
+29
+00:02:14,080 --> 00:02:17,220
+if a logical expression.
+
+30
+00:02:17,220 --> 00:02:25,129
+[SOUND] We will then do something.
+
+31
+00:02:25,129 --> 00:02:30,970
+And then we will end our if statement.
+
+32
+00:02:30,970 --> 00:02:34,230
+So you can see if starts the expression,
+and
+
+33
+00:02:34,230 --> 00:02:37,810
+the end if is the end of the expression.
+
+34
+00:02:37,810 --> 00:02:41,220
+So this allows us to see the control
+expression has a start with the if
+
+35
+00:02:43,130 --> 00:02:48,030
+statement here, and
+it terminates with our end if statement.
+
+36
+00:02:49,550 --> 00:02:51,450
+Both of our statements belong together.
+
+37
+00:02:52,980 --> 00:02:57,260
+And every control structure we create
+will always have a start and an end.
+
+38
+00:02:58,460 --> 00:03:05,555
+Now when we break our program into smaller
+tasks we will break these tasks up.
+
+39
+00:03:05,555 --> 00:03:10,140
+That will allow us to branch off, in
+the middle and do some other smaller task.
+
+40
+00:03:11,590 --> 00:03:14,310
+Which in turn could have
+its own if statements,
+
+41
+00:03:14,310 --> 00:03:17,380
+its own control structures
+to do even smaller tasks.
+
+42
+00:03:18,870 --> 00:03:23,340
+When we have defined our control
+structure, what we put between the start
+
+43
+00:03:23,340 --> 00:03:29,020
+and the end, determines what tasks
+are going to be performed as subtasks.
+
+44
+00:03:29,020 --> 00:03:33,810
+We branch off and do something else or
+we repeat a whole
+
+45
+00:03:33,810 --> 00:03:38,600
+bunch of tasks in-between our control
+structure in what we call loops.
+
+46
+00:03:41,050 --> 00:03:43,860
+Things are gonna get a lot
+more interesting from now on.
+
+47
+00:03:43,860 --> 00:03:48,420
+We will be using control structures
+like the if statement to determine
+
+48
+00:03:48,420 --> 00:03:52,206
+the flow of our program,
+to execute different sub tasks or
+
+49
+00:03:52,206 --> 00:03:55,798
+branches of our programs,
+and to perform loops.
+
+50
+00:03:55,798 --> 00:04:02,902
+So to begin with, I'm going to
+comment out all these code for
+
+51
+00:04:02,902 --> 00:04:07,916
+now, and I'm gonna write some code here,
+
+52
+00:04:07,916 --> 00:04:14,720
+and see if you can determine
+what's going to happen.
+
+53
+00:04:14,720 --> 00:04:17,820
+And to do this let's make
+use of the pattern tool.
+
+54
+00:04:20,190 --> 00:04:24,190
+So I'm gonna click the Pattern button,
+Ctrl+F6,
+
+55
+00:04:24,190 --> 00:04:28,540
+which brings up the insert
+statement dialogue box.
+
+56
+00:04:28,540 --> 00:04:32,820
+Now what I'm gonna do is go down to the
+bottom where it says other pattern, and
+
+57
+00:04:32,820 --> 00:04:33,500
+just put it in IF.
+
+58
+00:04:40,110 --> 00:04:41,670
+Now what this has done.
+
+59
+00:04:41,670 --> 00:04:46,706
+It's brought back the structure of an if
+statement that we can follow as a guide so
+
+60
+00:04:46,706 --> 00:04:51,740
+that, for those that are new to ABAP, you
+will get the syntax right and you won't
+
+61
+00:04:51,740 --> 00:04:56,506
+have to worry too much about the actual
+placement of the fore stops and so on.
+
+62
+00:05:01,628 --> 00:05:04,030
+So we have our if statement.
+
+63
+00:05:04,030 --> 00:05:04,690
+Now I'm going to do this.
+
+64
+00:05:04,690 --> 00:05:11,560
+I'm going to create a data statement
+that's gonna hold an employee surname.
+
+65
+00:05:11,560 --> 00:05:16,484
+So I'm just going to create a field call
+
+66
+00:05:16,484 --> 00:05:20,670
+surname [SOUND] a type character.
+
+67
+00:05:20,670 --> 00:05:24,920
+I'll give it a length of 15.
+
+68
+00:05:24,920 --> 00:05:28,825
+And pretty it up.
+
+69
+00:05:28,825 --> 00:05:33,670
+[SOUND] We're gonna set
+our surname to a value.
+
+70
+00:05:33,670 --> 00:05:40,461
+[SOUND] And
+then we'll use the if statement.
+
+71
+00:06:11,420 --> 00:06:14,000
+So there you can see,
+I've written some logic.
+
+72
+00:06:14,000 --> 00:06:16,460
+Now can you work out what that's gonna do?
+
+73
+00:06:16,460 --> 00:06:17,170
+It's pretty easy.
+
+74
+00:06:17,170 --> 00:06:19,961
+Let's execute the program,
+and see what it says?
+
+75
+00:06:19,961 --> 00:06:27,214
+Opps.
+
+76
+00:06:27,214 --> 00:06:28,128
+Silly me.
+
+77
+00:06:28,128 --> 00:06:29,378
+Using the wrong quotes.
+
+78
+00:06:42,586 --> 00:06:43,420
+And again.
+
+79
+00:06:48,670 --> 00:06:49,795
+I would like to apologize.
+
+80
+00:06:55,966 --> 00:06:58,890
+There you go, you've won a car.
+
+81
+00:06:58,890 --> 00:07:03,519
+So yeah, this is a simple if statement,
+just saying if the surname is equal to
+
+82
+00:07:03,519 --> 00:07:08,220
+Smith, and of course it is, because
+we've set the surname to Smith already,
+
+83
+00:07:08,220 --> 00:07:10,450
+it performs a branch of our program.
+
+84
+00:07:10,450 --> 00:07:16,016
+So let's extend this program to
+
+85
+00:07:16,016 --> 00:07:21,788
+include the else if statements,
+
+86
+00:07:21,788 --> 00:07:26,137
+and it's quite simple.
+
+87
+00:07:26,137 --> 00:07:30,298
+[SOUND] Let's say now, if SMITH.
+
+88
+00:07:34,295 --> 00:07:35,505
+Equals BROWN.
+
+89
+00:07:45,253 --> 00:07:46,586
+This time you've won a boat.
+
+90
+00:07:55,545 --> 00:07:59,043
+Now as you can imagine,
+our surname equals SMITH, so
+
+91
+00:07:59,043 --> 00:08:01,390
+you're gonna win a car every time.
+
+92
+00:08:01,390 --> 00:08:03,115
+But let's change it to, to BROWN.
+
+93
+00:08:03,115 --> 00:08:07,008
+[SOUND] And now you can see
+
+94
+00:08:07,008 --> 00:08:12,464
+the outcome is do you want a boat?
+
+95
+00:08:12,464 --> 00:08:15,759
+The first if statement was not true,
+
+96
+00:08:15,759 --> 00:08:20,765
+therefore this branch of
+the program was not executed.
+
+97
+00:08:22,450 --> 00:08:26,660
+So we went down to the next branch in
+the statement which is the else if.
+
+98
+00:08:26,660 --> 00:08:30,950
+Else if surname is BROWN, which it is,
+
+99
+00:08:30,950 --> 00:08:36,672
+then it will write this
+branch of the if statements.
+
+100
+00:08:36,672 --> 00:08:38,924
+And we can keep on with the else if.
+
+101
+00:08:43,545 --> 00:08:46,836
+We can, you know,
+repeat it any number of time.
+
+102
+00:08:52,795 --> 00:08:57,870
+The only problem is I
+may run out of prizes.
+
+103
+00:08:57,870 --> 00:09:00,120
+So this one is a PLANE.
+
+104
+00:09:00,120 --> 00:09:04,360
+How fortunate for being a Mr. Jones.
+
+105
+00:09:05,775 --> 00:09:09,170
+Oh, didn't notice,
+I had the extra full stop right there.
+
+106
+00:09:09,170 --> 00:09:12,840
+And lastly,
+let's change this one to ANDREWS.
+
+107
+00:09:17,810 --> 00:09:20,537
+And what does Mr. Andrews win?
+
+108
+00:09:20,537 --> 00:09:23,174
+He's very fortunate.
+
+109
+00:09:23,174 --> 00:09:24,046
+He wins a house.
+
+110
+00:09:28,504 --> 00:09:32,533
+So as you can see, we can keep
+going on with this structure, and
+
+111
+00:09:32,533 --> 00:09:34,290
+depending on what is true?
+
+112
+00:09:36,040 --> 00:09:40,061
+Different branches of this
+logic block will be executed.
+
+113
+00:09:40,061 --> 00:09:43,510
+JONES, you've won a plane.
+
+114
+00:09:43,510 --> 00:09:44,780
+ANDREWS, you've won a house.
+
+115
+00:09:47,530 --> 00:09:48,045
+And the last part.
+
+116
+00:09:52,170 --> 00:09:53,888
+Is the else statement.
+
+117
+00:09:53,888 --> 00:10:02,376
+And the else comes in when it's
+the last piece of your if block.
+
+118
+00:10:02,376 --> 00:10:08,873
+So we could say, if you're name isn't
+any of these, what are you gonna win?
+
+119
+00:10:19,500 --> 00:10:24,944
+Unlucky, you go home empty handed.
+
+120
+00:10:24,944 --> 00:10:29,127
+So by introducing these different
+else if statements, and
+
+121
+00:10:29,127 --> 00:10:33,811
+the else statements, there is always
+going to be an outcome that is
+
+122
+00:10:33,811 --> 00:10:37,088
+performed depending on
+the value of surname.
+
+123
+00:10:37,088 --> 00:10:39,700
+We have taken care of
+every single possibility.
+
+124
+00:10:40,710 --> 00:10:42,090
+If it's Smith, we're gonna do this.
+
+125
+00:10:42,090 --> 00:10:44,460
+If it's Brown, we're gonna win a boat.
+
+126
+00:10:44,460 --> 00:10:46,620
+If it's Jones, a plane.
+
+127
+00:10:46,620 --> 00:10:48,160
+Andrews, a house.
+
+128
+00:10:48,160 --> 00:10:51,020
+Anything else,
+we're gonna do this block of code.
+
+129
+00:10:52,370 --> 00:10:58,354
+So the if statement is very powerful,
+and it is the key logic statement
+
+130
+00:10:58,354 --> 00:11:02,840
+used in just about every program going,
+to determine the flow of your program.
+

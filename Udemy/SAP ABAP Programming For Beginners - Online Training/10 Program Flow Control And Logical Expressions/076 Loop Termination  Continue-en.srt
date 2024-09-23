@@ -1,0 +1,300 @@
+1
+00:00:02,460 --> 00:00:06,420
+Up to now, we have gone through our loop
+statements and let
+
+2
+00:00:06,420 --> 00:00:11,200
+the condition inside the loop statement,
+determine when the loop will finish.
+
+3
+00:00:12,250 --> 00:00:17,515
+ABAP contains Terminate Statements that
+allow you to terminate a loop prematurely.
+
+4
+00:00:17,515 --> 00:00:20,665
+And there are two categories of
+termination statements,
+
+5
+00:00:21,675 --> 00:00:25,585
+those that apply to the loop, and those
+that apply to
+
+6
+00:00:25,585 --> 00:00:30,462
+the entire processing processing block in
+which the loop occurs.
+
+7
+00:00:30,462 --> 00:00:34,262
+So, first of all, let's have a look at how
+we terminate the processing of a loop.
+
+8
+00:00:34,262 --> 00:00:39,012
+And the first statement we're gonna
+discuss, is the Continue Statement.
+
+9
+00:00:40,726 --> 00:00:44,446
+Now, this allows us to terminate a loop
+pass unconditionally.
+
+10
+00:00:45,566 --> 00:00:47,476
+And you'll see, when we take a look at the
+syntax,
+
+11
+00:00:47,476 --> 00:00:51,806
+that there are no conditions added to the
+statement itself.
+
+12
+00:00:53,568 --> 00:00:54,648
+When I first started ABAP,
+
+13
+00:00:54,648 --> 00:00:58,678
+I thought the continue statement seemed a
+little bit odd.
+
+14
+00:00:58,678 --> 00:01:01,938
+Why would you want to use the word
+continue, to terminate a loop?
+
+15
+00:01:03,418 --> 00:01:06,718
+It just seemed a bit backwards to me, but
+maybe that's just me.
+
+16
+00:01:06,718 --> 00:01:10,458
+The continue statement actually means,
+
+17
+00:01:10,458 --> 00:01:13,968
+do not process any more statements in this
+loop.
+
+18
+00:01:13,968 --> 00:01:18,100
+Just immediately end the processing, of
+all the statements in the loop,
+
+19
+00:01:18,100 --> 00:01:21,530
+right here I jump to the start of the loop
+again.
+
+20
+00:01:22,930 --> 00:01:26,050
+So, if we include the continue statement,
+
+21
+00:01:26,050 --> 00:01:29,660
+inside our loop the remaining statements
+will not be executed.
+
+22
+00:01:31,150 --> 00:01:33,840
+As soon as the Continue Statement is hit,
+
+23
+00:01:33,840 --> 00:01:38,840
+processing jumps right to the top of the
+loop again and starts another loop run,
+
+24
+00:01:38,840 --> 00:01:44,630
+as long as the conditions set by the start
+of your loop statement are still met.
+
+25
+00:01:44,630 --> 00:01:48,140
+So, let's have a look at the structure of
+the Continue Statement, and
+
+26
+00:01:48,140 --> 00:01:51,560
+go through a quick example, so you can see
+exactly what I'm talking about.
+
+27
+00:01:53,590 --> 00:01:55,990
+I will use the DO loop, for this example.
+
+28
+00:01:55,990 --> 00:02:00,673
+So let's get rid of this WHILE, and
+
+29
+00:02:00,673 --> 00:02:03,959
+bring back our DO loops.
+
+30
+00:02:03,959 --> 00:02:08,003
+[BLANK_AUDIO]
+
+31
+00:02:08,003 --> 00:02:11,084
+And we don't need an inner DO loop for
+this example.
+
+32
+00:02:11,084 --> 00:02:15,668
+[BLANK_AUDIO]
+
+33
+00:02:15,668 --> 00:02:19,001
+Let's get rid of B.
+
+34
+00:02:19,001 --> 00:02:25,180
+Okay, and what we're gonna do is introduce
+an IF statement.
+
+35
+00:02:25,180 --> 00:02:31,810
+So let's say IF sy-index, which should be
+the same as
+
+36
+00:02:31,810 --> 00:02:37,780
+the variable a that we are setting as a,
+as a separate counter ourselves.
+
+37
+00:02:37,780 --> 00:02:40,800
+So we're saying if sy-index equals 2.
+
+38
+00:02:40,800 --> 00:02:42,190
+And we will say, continue.
+
+39
+00:02:44,880 --> 00:02:45,700
+And that's all there is to it.
+
+40
+00:02:47,070 --> 00:02:49,340
+Just that one word, continue.
+
+41
+00:02:49,340 --> 00:02:51,300
+Then we will end our if statements.
+
+42
+00:02:57,350 --> 00:03:00,360
+So, what this is gonna do is start this
+loop?
+
+43
+00:03:00,360 --> 00:03:03,310
+It thinks it's going to execute it 15
+times,
+
+44
+00:03:03,310 --> 00:03:08,610
+then as soon as we're in this second loop
+we will hit the Continue Statement.
+
+45
+00:03:08,610 --> 00:03:11,760
+And processing should jump straight back
+to the top of the loop.
+
+46
+00:03:13,360 --> 00:03:16,310
+Which means we are not gonna write out,
+
+47
+00:03:16,310 --> 00:03:21,930
+this outer loop cycles text with a value
+of a on the second loop pass.
+
+48
+00:03:24,520 --> 00:03:25,370
+So, it should run through.
+
+49
+00:03:25,370 --> 00:03:29,170
+And we'll put the debugger on.
+
+50
+00:03:32,010 --> 00:03:32,510
+Here we go.
+
+51
+00:03:33,650 --> 00:03:34,500
+So we'll step through.
+
+52
+00:03:35,580 --> 00:03:39,384
+Let's have a look at the value of a, and
+the value of xy-index.
+
+53
+00:03:41,780 --> 00:03:45,500
+So, if sy index is 2, which it's not, it's
+going to output the text to the screen.
+
+54
+00:03:45,500 --> 00:03:48,478
+And we'll have a quick look.
+
+55
+00:03:48,478 --> 00:03:54,170
+There you Go, there's the output.
+
+56
+00:03:57,510 --> 00:04:00,460
+So, we'll step through again to the second
+time.
+
+57
+00:04:02,018 --> 00:04:07,090
+Now sy index has been set to 2, so the if
+statement should be true this time.
+
+58
+00:04:08,130 --> 00:04:09,770
+So we get to the Continue Statement, and
+
+59
+00:04:10,980 --> 00:04:15,290
+you can see execution jumps straight to
+the top of the loop again.
+
+60
+00:04:16,560 --> 00:04:22,640
+And I'll continue processing and we're on
+the third iteration.
+
+61
+00:04:22,640 --> 00:04:24,490
+So as soon as we hit the Continue
+Statement,
+
+62
+00:04:24,490 --> 00:04:26,992
+the rest of the code was not executed.
+
+63
+00:04:26,992 --> 00:04:30,880
+Processing jumps straight out the loop,
+back to the top.
+
+64
+00:04:32,550 --> 00:04:35,130
+So now, I will just zoom along to the end.
+
+65
+00:04:36,590 --> 00:04:41,395
+There's our output and we can see we are
+of one, 3, so we have that missing 2.
+

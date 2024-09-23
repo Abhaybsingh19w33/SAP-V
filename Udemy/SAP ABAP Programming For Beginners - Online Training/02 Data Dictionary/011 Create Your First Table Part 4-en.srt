@@ -1,0 +1,414 @@
+1
+00:00:01,730 --> 00:00:05,240
+The last final field that we are going to
+create is date of birth.
+
+2
+00:00:06,270 --> 00:00:10,500
+So I am going to key in DOB for the field.
+
+3
+00:00:10,500 --> 00:00:13,170
+I will create data element z, DOB.
+
+4
+00:00:14,260 --> 00:00:16,020
+Use forward navigation to create it.
+
+5
+00:00:17,620 --> 00:00:21,265
+Save in the table along the way, and
+choosing Yes to create data elements.
+
+6
+00:00:21,265 --> 00:00:26,042
+[SOUND] And the date of
+
+7
+00:00:26,042 --> 00:00:31,382
+birth data element for
+
+8
+00:00:31,382 --> 00:00:36,159
+the short text, for
+
+9
+00:00:36,159 --> 00:00:41,780
+the domain once again,
+
+10
+00:00:41,780 --> 00:00:44,885
+Enter z DOB.
+
+11
+00:00:44,885 --> 00:00:47,490
+And use forward navigation to create the
+domain.
+
+12
+00:00:50,080 --> 00:00:52,500
+Choose Yes to save the data element.
+
+13
+00:00:52,500 --> 00:00:54,970
+Assign it to the local object.
+
+14
+00:00:54,970 --> 00:00:56,310
+Choose Yes to create the domain.
+
+15
+00:00:58,130 --> 00:00:59,130
+Enter some short text.
+
+16
+00:01:00,950 --> 00:01:02,575
+I will enter Date of birth
+
+17
+00:01:02,575 --> 00:01:06,616
+[BLANK_AUDIO]
+
+18
+00:01:06,616 --> 00:01:10,900
+Now for the data type, date of birth is a
+date field.
+
+19
+00:01:10,900 --> 00:01:14,980
+So we want to choose the appropriate day
+field from the drop down box.
+
+20
+00:01:14,980 --> 00:01:18,950
+So press the F4 key to bring up the drop
+down box and
+
+21
+00:01:18,950 --> 00:01:21,675
+choose the entry that says DATS.
+
+22
+00:01:24,710 --> 00:01:28,640
+Now press the Enter key, and you can see
+an information box has popped up,
+
+23
+00:01:28,640 --> 00:01:34,650
+just to tell us the attributes of the DATS
+field have been assigned to this domain.
+
+24
+00:01:36,370 --> 00:01:40,550
+So just click the Continue box, and it's
+filled in the number of characters for
+
+25
+00:01:40,550 --> 00:01:42,780
+us, and the output length.
+
+26
+00:01:42,780 --> 00:01:46,570
+Now the output length is different to the
+number of characters because it will
+
+27
+00:01:46,570 --> 00:01:52,530
+actually insert the back slash to separate
+the days, month and years of this field.
+
+28
+00:01:54,080 --> 00:01:55,150
+So activate the object.
+
+29
+00:01:57,810 --> 00:02:00,460
+Assign it to the local object development
+class.
+
+30
+00:02:02,170 --> 00:02:06,071
+Ensure your domain is selected, in the
+inactive objects window and
+
+31
+00:02:06,071 --> 00:02:08,080
+choose Continue, and
+
+32
+00:02:08,080 --> 00:02:12,220
+check the status bar to ensure everything
+is activated and saved successfully.
+
+33
+00:02:13,480 --> 00:02:15,080
+Press the F3 key to step back.
+
+34
+00:02:15,080 --> 00:02:21,210
+And on your data elements field, go to
+Field label.
+
+35
+00:02:23,350 --> 00:02:27,150
+And, we will enter Date of Birth in every
+field.
+
+36
+00:02:28,600 --> 00:02:33,780
+But, the whole text, Date of Birth, does
+not fit in this short description so,
+
+37
+00:02:33,780 --> 00:02:35,570
+I'm just gonna key in DOB.
+
+38
+00:02:36,700 --> 00:02:41,260
+Press Enter to automatically fill in the
+field label length and
+
+39
+00:02:41,260 --> 00:02:42,970
+activate your data event.
+
+40
+00:02:49,000 --> 00:02:51,810
+Once the object has been activated and
+saved successfully, press
+
+41
+00:02:53,260 --> 00:02:58,130
+the F3 key to step back, and
+
+42
+00:02:58,130 --> 00:03:03,170
+there we can see all our fields have been
+entered into our table.
+
+43
+00:03:03,170 --> 00:03:07,135
+All the short text and individual data
+element and
+
+44
+00:03:07,135 --> 00:03:10,560
+domain properties have come through onto
+our screen.
+
+45
+00:03:10,560 --> 00:03:14,800
+So that indicates everything is working
+just fine for us.
+
+46
+00:03:14,800 --> 00:03:17,730
+Now the next thing we want to do is just
+click the Save button.
+
+47
+00:03:17,730 --> 00:03:20,257
+So we can just save our progress up to
+now.
+
+48
+00:03:20,257 --> 00:03:23,716
+[BLANK_AUDIO]
+
+49
+00:03:23,716 --> 00:03:27,620
+Then we're going to move on to maintain
+the technical settings for our table.
+
+50
+00:03:31,050 --> 00:03:34,720
+Now, SAP needs to know a little bit more
+information about the table that
+
+51
+00:03:34,720 --> 00:03:39,220
+we are creating, before it can create the
+back end database tables, itself.
+
+52
+00:03:41,150 --> 00:03:46,040
+So you can either, now, click on the
+Technical Setting button, on the tool bar,
+
+53
+00:03:47,590 --> 00:03:53,088
+I'll go to the Goto menu, and choose the
+Technical Settings option,
+
+54
+00:03:53,088 --> 00:03:59,761
+which is Control+Shift+F9.
+
+55
+00:04:01,220 --> 00:04:05,600
+We now need to tell our system what
+development class we want to use.
+
+56
+00:04:06,800 --> 00:04:08,987
+So if you click the drop-down button,
+
+57
+00:04:08,987 --> 00:04:11,760
+you'll see that we have five options to
+choose from.
+
+58
+00:04:13,040 --> 00:04:14,560
+And if you just read the descriptions,
+
+59
+00:04:15,710 --> 00:04:17,700
+you'll get a flavor of what this is all
+about.
+
+60
+00:04:18,830 --> 00:04:23,064
+We want to choose the first entry, which
+is A-P-P-L-zero.
+
+61
+00:04:24,770 --> 00:04:29,908
+Which identifies this table as holding
+master data in a transparent table.
+
+62
+00:04:29,908 --> 00:04:35,890
+Double-click that entry and
+
+63
+00:04:35,890 --> 00:04:41,402
+then for the Size category field, click
+the drop-down again.
+
+64
+00:04:42,680 --> 00:04:46,760
+And here we are just estimating to the
+system itself
+
+65
+00:04:46,760 --> 00:04:50,490
+how many records we are going to be
+holding in this table and
+
+66
+00:04:50,490 --> 00:04:54,630
+it will use these values to make an
+educated guess of
+
+67
+00:04:54,630 --> 00:04:58,160
+how it should actually create the tables
+in the underlying database.
+
+68
+00:04:59,650 --> 00:05:02,898
+We're not gonna be holding a lot of data
+in our table, so
+
+69
+00:05:02,898 --> 00:05:06,301
+just choose the first option which is size
+category zero.
+
+70
+00:05:06,301 --> 00:05:11,770
+[BLANK_AUDIO]
+
+71
+00:05:11,770 --> 00:05:15,910
+Once selected, now we'll move down to the
+Buffering options.
+
+72
+00:05:15,910 --> 00:05:19,570
+And, we want to ensure that Buffering not
+allowed is selected.
+
+73
+00:05:20,950 --> 00:05:26,590
+And what this mean is basically, do not
+load the table contents into memory for
+
+74
+00:05:26,590 --> 00:05:32,460
+reading, and this prevents the table from
+being read in advance of
+
+75
+00:05:32,460 --> 00:05:35,170
+us selecting the records in our programs.
+
+76
+00:05:36,450 --> 00:05:40,860
+So you may be thinking it would be more
+advantageous to hold the data in memory
+
+77
+00:05:40,860 --> 00:05:42,820
+for speed efficiency.
+
+78
+00:05:42,820 --> 00:05:47,530
+And you'd be quite correct, but now in
+that example we don't actually need that.
+
+79
+00:05:47,530 --> 00:05:51,450
+If speed was an issue for the development
+that you were working on
+
+80
+00:05:51,450 --> 00:05:54,980
+you would most definitely want to be using
+Buffering switched on,
+
+81
+00:05:54,980 --> 00:05:59,120
+which would ensure the data is read into
+memory.
+
+82
+00:05:59,120 --> 00:06:02,840
+So if you have large tables that are being
+read very often, but
+
+83
+00:06:02,840 --> 00:06:06,525
+only being updated infrequently, choose
+this option.
+
+84
+00:06:06,525 --> 00:06:09,570
+That's all we need to fill out on the
+screen.
+
+85
+00:06:10,630 --> 00:06:15,140
+So you can click the Save button, and then
+press the back key.
+
+86
+00:06:18,930 --> 00:06:24,950
+Now if all goes well we can activate our
+table and move onto to entry and records.
+
+87
+00:06:26,360 --> 00:06:30,140
+So click the little match stick icon to
+activate your table.
+
+88
+00:06:32,160 --> 00:06:37,700
+And check the status bar at the bottom to
+ensure everything has worked successfully.
+
+89
+00:06:37,700 --> 00:06:38,970
+In this case, it has.
+

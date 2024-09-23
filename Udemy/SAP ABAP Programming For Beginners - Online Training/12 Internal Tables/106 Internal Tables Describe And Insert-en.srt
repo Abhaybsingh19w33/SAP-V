@@ -1,0 +1,547 @@
+1
+00:00:01,206 --> 00:00:06,635
+Let's continue on with this example where
+we have modified the table.
+
+2
+00:00:06,635 --> 00:00:12,637
+And, I want to introduce a new statement
+called describe table.
+
+3
+00:00:12,637 --> 00:00:16,423
+A describe statement can be used to find
+out information about the content
+
+4
+00:00:16,423 --> 00:00:17,590
+of an internal table.
+
+5
+00:00:18,800 --> 00:00:22,784
+This includes the number of records the
+table holds,
+
+6
+00:00:22,784 --> 00:00:26,855
+the reserve memory space used, and the
+type of table,
+
+7
+00:00:26,855 --> 00:00:31,298
+if it's a standard table, sorted table, or
+a hash table.
+
+8
+00:00:31,298 --> 00:00:36,051
+But in the years I've been using ABAP,
+I've only ever seen this statement
+
+9
+00:00:36,051 --> 00:00:39,982
+used to find out how many records exist in
+the internal table.
+
+10
+00:00:39,982 --> 00:00:42,722
+So let's concentrate on that one.
+
+11
+00:00:42,722 --> 00:00:46,007
+Now the way we do this is very simple.
+
+12
+00:00:46,007 --> 00:00:51,654
+We just type describe table, which is the
+actual statement,
+
+13
+00:00:51,654 --> 00:00:57,639
+followed by our internal table, which in
+this case is itab01.
+
+14
+00:00:57,639 --> 00:01:00,450
+Then we want to know the number of
+records.
+
+15
+00:01:00,450 --> 00:01:02,910
+So what we do is use the addition of
+lines.
+
+16
+00:01:05,735 --> 00:01:10,779
+Then we have to tell the system how we
+want to store this value,
+
+17
+00:01:10,779 --> 00:01:14,670
+so let's use a new variable called
+line_cnt.
+
+18
+00:01:14,670 --> 00:01:19,046
+[BLANK_AUDIO]
+
+19
+00:01:19,046 --> 00:01:21,531
+And up here I'll make sure we have a data
+statement.
+
+20
+00:01:21,531 --> 00:01:24,189
+[BLANK_AUDIO]
+
+21
+00:01:24,189 --> 00:01:26,209
+Called line_cnt with a type i.
+
+22
+00:01:26,209 --> 00:01:29,577
+[BLANK_AUDIO]
+
+23
+00:01:29,577 --> 00:01:32,578
+So, this statement will return an integer
+value
+
+24
+00:01:32,578 --> 00:01:36,895
+that represents the number of lines
+contained in our internal table,
+
+25
+00:01:36,895 --> 00:01:40,350
+and the value will be stored in the
+variable we defined.
+
+26
+00:01:41,790 --> 00:01:43,820
+So, why would you want to know this?
+
+27
+00:01:43,820 --> 00:01:46,890
+Well, we have covered the append statement
+in a previous module.
+
+28
+00:01:48,150 --> 00:01:51,300
+So you should know that the append
+statement only adds lines
+
+29
+00:01:51,300 --> 00:01:52,030
+to the end of a table.
+
+30
+00:01:52,030 --> 00:01:57,590
+Now instead of using append, we could use
+the insert statement.
+
+31
+00:01:58,840 --> 00:02:03,520
+And the insert statement allows us to
+insert records into any position
+
+32
+00:02:03,520 --> 00:02:08,390
+we choose inside an internal table, by
+specifying the table index number.
+
+33
+00:02:10,740 --> 00:02:15,621
+If we wanted to insert a record into an
+internal table,
+
+34
+00:02:15,621 --> 00:02:20,926
+record number ten for example, we will
+specify index ten,
+
+35
+00:02:20,926 --> 00:02:27,633
+which would then insert our new record
+between the ninth and tenth record.
+
+36
+00:02:27,633 --> 00:02:31,139
+And we would do this, simply like this.
+
+37
+00:02:31,139 --> 00:02:40,798
+[BLANK_AUDIO]
+
+38
+00:02:40,798 --> 00:02:47,184
+We declare the INSERT statement, internal
+table, we're going to insert record into.
+
+39
+00:02:47,184 --> 00:02:52,156
+Then we specify the index number of the
+record that we want to insert our
+
+40
+00:02:52,156 --> 00:02:53,430
+new record into.
+
+41
+00:02:54,630 --> 00:02:59,170
+And this is where we can use our line_cnt
+which holds,
+
+42
+00:02:59,170 --> 00:03:02,910
+in this case, the total number of records
+in our table.
+
+43
+00:03:04,260 --> 00:03:07,750
+Therefore, the result of these two
+statements that describe an insert,
+
+44
+00:03:07,750 --> 00:03:09,200
+in this case,
+
+45
+00:03:09,200 --> 00:03:14,220
+the system will insert a record before the
+last record in the internal table.
+
+46
+00:03:17,150 --> 00:03:22,649
+So like I said, if there's ten records,
+line_cnt will hold a value of ten.
+
+47
+00:03:22,649 --> 00:03:28,268
+The new record is inserted between the
+ninth and tenth record, and
+
+48
+00:03:28,268 --> 00:03:35,210
+that's why our new record will be inserted
+one record before the end of the table.
+
+49
+00:03:35,210 --> 00:03:45,210
+[BLANK_AUDIO]
+
+50
+00:03:51,219 --> 00:03:53,300
+Okay, now I've got those [LAUGH] bugs out
+of the way.
+
+51
+00:03:55,400 --> 00:03:58,480
+I'm just going to edit this a little bit,
+so this program makes a bit more sense.
+
+52
+00:03:59,740 --> 00:04:04,735
+What I'm going to do is move this loop to
+finish here,
+
+53
+00:04:04,735 --> 00:04:08,842
+and once we've gone through every record,
+
+54
+00:04:08,842 --> 00:04:13,074
+we'll then come on to these two
+statements.
+
+55
+00:04:13,074 --> 00:04:17,648
+[BLANK_AUDIO]
+
+56
+00:04:17,648 --> 00:04:19,060
+So I'm gonna set a break point.
+
+57
+00:04:19,060 --> 00:04:23,321
+[BLANK_AUDIO]
+
+58
+00:04:23,321 --> 00:04:27,779
+And we'll debug it and see how all this
+works.
+
+59
+00:04:27,779 --> 00:04:30,101
+So we've looped through itab.
+
+60
+00:04:30,101 --> 00:04:33,758
+I'll double-click it and you can see we
+have five records still.
+
+61
+00:04:33,758 --> 00:04:39,202
+[BLANK_AUDIO]
+
+62
+00:04:39,202 --> 00:04:43,080
+And if we have a look at the value of
+line_cnt right now, it's 0.
+
+63
+00:04:43,080 --> 00:04:45,100
+So we'll execute this row of code.
+
+64
+00:04:46,720 --> 00:04:49,597
+Now it's telling us we have 5 records.
+
+65
+00:04:49,597 --> 00:04:55,657
+Then we come to the INSERT statement, and
+if I flick back to itab01,
+
+66
+00:04:55,657 --> 00:05:00,708
+we'll just scroll down, so we can see what
+happens here.
+
+67
+00:05:00,708 --> 00:05:07,540
+Now remember, our header record has this
+value in it, 1, lots of 0s, and 6.
+
+68
+00:05:08,830 --> 00:05:11,240
+And this is a standard table, so we are
+allowed duplicates.
+
+69
+00:05:13,850 --> 00:05:17,432
+So when the INSERT statement gets
+executed,
+
+70
+00:05:17,432 --> 00:05:21,494
+hopefully it's going to insert a line
+right here.
+
+71
+00:05:21,494 --> 00:05:25,352
+Now it's gonna be difficult to see because
+[LAUGH] the record's
+
+72
+00:05:25,352 --> 00:05:27,472
+exactly the same as the fifth one.
+
+73
+00:05:27,472 --> 00:05:34,786
+So what I'm gonna do, is change this
+header record.
+
+74
+00:05:34,786 --> 00:05:39,569
+I'm going to change the value of some of
+the fields just a little bit, so
+
+75
+00:05:39,569 --> 00:05:42,530
+that you can see the record being
+inserted.
+
+76
+00:05:42,530 --> 00:05:44,445
+So, I'll change employee number.
+
+77
+00:05:44,445 --> 00:05:48,985
+[BLANK_AUDIO]
+
+78
+00:05:48,985 --> 00:05:52,862
+Oops, to seven.
+
+79
+00:05:52,862 --> 00:05:55,405
+Oops, I pressed the wrong one, by the
+looks of things.
+
+80
+00:05:55,405 --> 00:05:59,247
+[BLANK_AUDIO]
+
+81
+00:05:59,247 --> 00:06:00,003
+There we go.
+
+82
+00:06:00,003 --> 00:06:03,206
+[BLANK_AUDIO]
+
+83
+00:06:03,206 --> 00:06:04,623
+And let's change surname.
+
+84
+00:06:04,623 --> 00:06:09,905
+[BLANK_AUDIO]
+
+85
+00:06:09,905 --> 00:06:14,525
+To Stevens.
+
+86
+00:06:14,525 --> 00:06:15,187
+Okay.
+
+87
+00:06:15,187 --> 00:06:18,890
+Back to the fields.
+
+88
+00:06:18,890 --> 00:06:21,270
+Have a look at the table.
+
+89
+00:06:21,270 --> 00:06:22,745
+Go to the top.
+
+90
+00:06:22,745 --> 00:06:26,535
+Now we can see our header record has the
+1,
+
+91
+00:06:26,535 --> 00:06:31,501
+lots of 0s and 7, and the surname is equal
+to Stevens.
+
+92
+00:06:31,501 --> 00:06:37,861
+So now we will insert this header record
+into the table at position five,
+
+93
+00:06:37,861 --> 00:06:43,818
+which if you remember, is the total number
+of records in our table.
+
+94
+00:06:43,818 --> 00:06:44,979
+So, we'll execute it.
+
+95
+00:06:44,979 --> 00:06:47,767
+[BLANK_AUDIO]
+
+96
+00:06:47,767 --> 00:06:48,612
+Silly me.
+
+97
+00:06:48,612 --> 00:06:50,202
+I didn't have anything after
+
+98
+00:06:50,202 --> 00:06:56,716
+[BLANK_AUDIO]
+
+99
+00:06:56,716 --> 00:06:57,795
+Let's run it again.
+
+100
+00:06:57,795 --> 00:06:58,921
+Do apologize for that.
+
+101
+00:06:58,921 --> 00:07:01,894
+[BLANK_AUDIO]
+
+102
+00:07:01,894 --> 00:07:06,375
+So once again, there's line_cnt.
+
+103
+00:07:06,375 --> 00:07:09,033
+Go one line of code down.
+
+104
+00:07:09,033 --> 00:07:11,355
+It now contains five records.
+
+105
+00:07:11,355 --> 00:07:13,678
+We'll have a look at itab01.
+
+106
+00:07:13,678 --> 00:07:21,479
+We'll go in and amend the header record
+again, choose this one.
+
+107
+00:07:21,479 --> 00:07:26,951
+So, if I just come down here and
+
+108
+00:07:26,951 --> 00:07:31,581
+say itab01-surname,
+
+109
+00:07:31,581 --> 00:07:35,793
+itab01-employee.
+
+110
+00:07:35,793 --> 00:07:37,512
+I'll change that to BLOGS.
+
+111
+00:07:37,512 --> 00:07:40,890
+[COUGH] And this one I'll change to 7.
+
+112
+00:07:40,890 --> 00:07:45,579
+[BLANK_AUDIO]
+
+113
+00:07:45,579 --> 00:07:47,914
+Oops.
+
+114
+00:07:47,914 --> 00:07:52,372
+7, there.
+
+115
+00:07:52,372 --> 00:07:54,725
+So if we have a look at the internal
+table,
+
+116
+00:07:54,725 --> 00:07:58,373
+there's our header record with the new
+data we've just added.
+
+117
+00:07:58,373 --> 00:08:03,652
+Scroll down, and then when it executes the
+INSERT statement,
+
+118
+00:08:03,652 --> 00:08:07,836
+we should have another record inserted
+here, and
+
+119
+00:08:07,836 --> 00:08:11,839
+this record should be moved down one
+position.
+
+120
+00:08:11,839 --> 00:08:14,102
+There we go.
+
+121
+00:08:14,102 --> 00:08:15,540
+That's the INSERT statement.
+

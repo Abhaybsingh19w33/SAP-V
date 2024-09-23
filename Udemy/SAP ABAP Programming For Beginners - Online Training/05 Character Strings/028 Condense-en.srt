@@ -1,0 +1,221 @@
+1
+00:00:00,008 --> 00:00:03,541
+[BLANK_AUDIO]
+
+2
+00:00:03,541 --> 00:00:08,840
+The next statement we'll take a look at,
+is the condense statement.
+
+3
+00:00:11,490 --> 00:00:12,811
+So let me bring these up here.
+
+4
+00:00:12,811 --> 00:00:17,711
+[BLANK_AUDIO]
+
+5
+00:00:17,711 --> 00:00:22,384
+Our other programs quite often have to
+deal with long text fields
+
+6
+00:00:22,384 --> 00:00:24,730
+that contain unwanted spaces.
+
+7
+00:00:25,960 --> 00:00:29,060
+So this is where the condense statement
+can be used to
+
+8
+00:00:29,060 --> 00:00:30,380
+remove these blank characters.
+
+9
+00:00:31,630 --> 00:00:35,540
+The definition of the condense statement
+is very simple.
+
+10
+00:00:35,540 --> 00:00:39,350
+So first if we start off with typing out
+the condense statement,
+
+11
+00:00:39,350 --> 00:00:40,320
+we can then have a look.
+
+12
+00:00:42,830 --> 00:00:45,310
+I'll just search help and see the basic
+form.
+
+13
+00:00:46,700 --> 00:00:48,880
+So here you can see condense and
+
+14
+00:00:48,880 --> 00:00:52,860
+the field name, and there's just one
+addition we can add, which is the no gaps.
+
+15
+00:00:54,340 --> 00:00:57,750
+So I'll key in a line of ABAP code and
+we'll go through it and
+
+16
+00:00:57,750 --> 00:00:59,140
+test the program out and see the output.
+
+17
+00:01:01,450 --> 00:01:03,950
+Okay.
+So I've added some coding here.
+
+18
+00:01:03,950 --> 00:01:08,570
+I just pointed out I put the top in the
+data statement.
+
+19
+00:01:08,570 --> 00:01:11,610
+I've extended the number of fields I've
+defined by
+
+20
+00:01:11,610 --> 00:01:14,470
+creating a new field called space name.
+
+21
+00:01:14,470 --> 00:01:15,670
+It is 20 characters long.
+
+22
+00:01:17,620 --> 00:01:21,830
+And you can see I've given it a value of
+Mr. Joe Smith.
+
+23
+00:01:21,830 --> 00:01:26,680
+And you'll notice I've put many spaces
+between the three individual words.
+
+24
+00:01:27,830 --> 00:01:32,100
+Then coming down I've added a comment just
+showing the definition of the content
+
+25
+00:01:32,100 --> 00:01:35,860
+statements with the optional no gaps,
+which we'll come to in a second.
+
+26
+00:01:36,930 --> 00:01:38,073
+And then the basic output.
+
+27
+00:01:38,073 --> 00:01:42,033
+[BLANK_AUDIO]
+
+28
+00:01:42,033 --> 00:01:46,687
+Now add in, just a bit of code to
+
+29
+00:01:46,687 --> 00:01:51,888
+write it out to our report window.
+
+30
+00:01:51,888 --> 00:01:53,670
+And we're done.
+
+31
+00:01:53,670 --> 00:01:54,800
+So it's very very simple.
+
+32
+00:01:54,800 --> 00:01:58,800
+The condense statement will take out the
+blank spaces
+
+33
+00:01:59,870 --> 00:02:04,410
+between our three words but not fully what
+it will do.
+
+34
+00:02:04,410 --> 00:02:08,550
+It will leave one space between each word.
+
+35
+00:02:08,550 --> 00:02:12,180
+So we should end up with Mr. space Joe
+space Smith.
+
+36
+00:02:14,390 --> 00:02:15,740
+Let's save the reports.
+
+37
+00:02:17,270 --> 00:02:18,080
+And test it out.
+
+38
+00:02:19,600 --> 00:02:23,170
+You can see Mr. Joe Smith with one space.
+
+39
+00:02:24,790 --> 00:02:25,306
+Now the addition,
+
+40
+00:02:25,306 --> 00:02:28,788
+[BLANK_AUDIO]
+
+41
+00:02:28,788 --> 00:02:33,363
+Is no gaps and no doubt you can work out
+exactly what this is going to do.
+
+42
+00:02:33,363 --> 00:02:39,099
+[BLANK_AUDIO]
+
+43
+00:02:39,099 --> 00:02:40,098
+Let's make it look nice.
+
+44
+00:02:40,098 --> 00:02:43,640
+[BLANK_AUDIO]
+
+45
+00:02:43,640 --> 00:02:49,044
+So this one will do exactly the same, but
+where we were left with one space between
+
+46
+00:02:49,044 --> 00:02:54,465
+each word it should then bring everything
+together so there are no spaces at all.
+
+47
+00:02:54,465 --> 00:02:56,903
+[BLANK_AUDIO]
+
+48
+00:02:56,903 --> 00:02:58,727
+And as you can see.
+
+49
+00:02:58,727 --> 00:03:01,260
+A very simple statements.
+
+50
+00:03:01,260 --> 00:03:01,930
+Nice and easy to code.
+

@@ -1,0 +1,870 @@
+1
+00:00:01,160 --> 00:00:07,520
+In this lesson, we're going to concentrate
+on creating fields in our program.
+
+2
+00:00:07,520 --> 00:00:10,530
+There are two types of fields that we're
+going to be looking at.
+
+3
+00:00:10,530 --> 00:00:14,540
+The first type is variables, and the
+second one is constants.
+
+4
+00:00:16,200 --> 00:00:18,440
+Before we get into the nitty gritty,
+
+5
+00:00:18,440 --> 00:00:20,679
+we first need to generate a brand new
+program.
+
+6
+00:00:21,970 --> 00:00:22,820
+To do this,
+
+7
+00:00:22,820 --> 00:00:27,140
+you can follow along with the steps that
+we outlined in previous modules.
+
+8
+00:00:27,140 --> 00:00:32,930
+Or, you can use the copy function in your
+ABAP Editor.
+
+9
+00:00:32,930 --> 00:00:35,260
+Personally, I like to generate a new
+program myself, but
+
+10
+00:00:35,260 --> 00:00:40,980
+if you want to reuse a lot of the existing
+code, choose the copy function and
+
+11
+00:00:40,980 --> 00:00:45,770
+that's what I'll do right now, just to
+take you through it step by step.
+
+12
+00:00:45,770 --> 00:00:50,078
+So first of all, enter your original
+program in the text box, and
+
+13
+00:00:50,078 --> 00:00:54,040
+click Ctrl+F5 or press the copy button.
+
+14
+00:00:57,180 --> 00:01:01,700
+For the window that's asking us to enter a
+new name for our program and
+
+15
+00:01:01,700 --> 00:01:06,890
+we'll just put z employee list 02, then
+press the copy button.
+
+16
+00:01:07,970 --> 00:01:14,430
+Then were given a screen that asks if we
+want to copy any additional objects and
+
+17
+00:01:14,430 --> 00:01:19,750
+you can see we have documentation that in
+user interface screens and includes.
+
+18
+00:01:20,900 --> 00:01:25,320
+We haven't created any of these objects in
+the previous program, so we just need to
+
+19
+00:01:25,320 --> 00:01:31,170
+leave those blank and just click the copy
+button.
+
+20
+00:01:31,170 --> 00:01:34,775
+Assign your new program to the local
+object development class.
+
+21
+00:01:34,775 --> 00:01:39,490
+[UNKNOWN] And there you can see the status
+
+22
+00:01:39,490 --> 00:01:42,120
+bar at the bottom tells you the copy has
+been successful.
+
+23
+00:01:44,910 --> 00:01:49,860
+So now it's automatically put the new
+program name in the program text box.
+
+24
+00:01:49,860 --> 00:01:51,080
+So, just click the change button.
+
+25
+00:01:52,975 --> 00:01:58,150
+And one thing to know, the copy function
+works successfully but
+
+26
+00:01:58,150 --> 00:02:03,460
+you'll notice, it copied across references
+to our old report name.
+
+27
+00:02:03,460 --> 00:02:08,050
+So here we have a comment, so if you do
+use the copy function,
+
+28
+00:02:08,050 --> 00:02:12,710
+just remember to update your comment and
+your actual report name itself.
+
+29
+00:02:12,710 --> 00:02:14,000
+There we go.
+Now for this example,
+
+30
+00:02:14,000 --> 00:02:20,680
+I'm just going to take away this line size
+statement just so we don't come across
+
+31
+00:02:21,770 --> 00:02:27,350
+any line restrictions while we're testing
+our program.
+
+32
+00:02:27,350 --> 00:02:30,360
+Now also, because we have many, many
+select statements and write statements in
+
+33
+00:02:31,880 --> 00:02:40,060
+this program let's go through how we can
+just use the fast comment facility.
+
+34
+00:02:40,060 --> 00:02:47,592
+So a lot of the time I will actually
+delete a lot of code out of the program.
+
+35
+00:02:47,592 --> 00:02:51,825
+But just for demonstration purposes I'll
+show you how
+
+36
+00:02:51,825 --> 00:02:56,609
+to comment code out really fast, so
+normally you come in, and
+
+37
+00:02:56,609 --> 00:03:02,865
+you put an asterisk at the start of each
+line, there's a quick way of doing this,
+
+38
+00:03:02,865 --> 00:03:07,465
+if you highlight the lines of code that
+you want to comment,
+
+39
+00:03:07,465 --> 00:03:12,249
+then you can hold down the control key and
+the less than sign and
+
+40
+00:03:12,249 --> 00:03:18,623
+it will automatically select the asterisk
+in the first column of the ABAP Editor.
+
+41
+00:03:20,090 --> 00:03:27,952
+Comment a line, if you can't remember your
+key presses, another way to do this.
+
+42
+00:03:27,952 --> 00:03:31,783
+[BLANK_AUDIO]
+
+43
+00:03:31,783 --> 00:03:34,080
+Is through the utilities menu.
+
+44
+00:03:34,080 --> 00:03:36,902
+[BLANK_AUDIO]
+
+45
+00:03:36,902 --> 00:03:39,515
+And, let's see if I can find it.
+
+46
+00:03:39,515 --> 00:03:40,374
+Here we go.
+
+47
+00:03:40,374 --> 00:03:46,380
+Under the block/buffer, choose insert
+comment.
+
+48
+00:03:49,315 --> 00:03:51,890
+That's exactly the same thing.
+
+49
+00:03:51,890 --> 00:03:56,765
+But all the other stuff, I'm just going
+
+50
+00:03:56,765 --> 00:04:02,810
+to delete it.
+
+51
+00:04:02,810 --> 00:04:04,390
+In fact, I'm going to delete a lot of
+things.
+
+52
+00:04:08,520 --> 00:04:12,210
+Okay I'll save the program and then we'll
+get going with fields.
+
+53
+00:04:13,800 --> 00:04:18,010
+So i'm sure everybody has a good idea of
+what a field is but just so
+
+54
+00:04:18,010 --> 00:04:23,020
+that we can cover it a field is a
+temporary area of memory
+
+55
+00:04:23,020 --> 00:04:27,199
+that we can assign a name to, and
+reference within our programs.
+
+56
+00:04:28,390 --> 00:04:32,640
+We use fields within our program to hold
+calculation results.
+
+57
+00:04:32,640 --> 00:04:35,230
+They're used by the program to help
+control the logic flow.
+
+58
+00:04:35,230 --> 00:04:38,130
+And because they are temporary areas of
+storage, and that storage
+
+59
+00:04:40,030 --> 00:04:44,370
+is normally held in ram, they can be
+accessed super fast.
+
+60
+00:04:45,640 --> 00:04:47,110
+Which helps speed up our program
+execution.
+
+61
+00:04:47,110 --> 00:04:51,739
+There are many other uses for fields
+within the program whilst creating your
+
+62
+00:04:51,739 --> 00:04:55,800
+own programs and reading other programs
+created by other people.
+
+63
+00:04:55,800 --> 00:05:02,720
+So let's have a look at variables and how
+we declare variables in our program.
+
+64
+00:05:04,670 --> 00:05:10,400
+Now variable is a field who's values
+change during the program execution.
+
+65
+00:05:10,400 --> 00:05:13,800
+Hence the term itself, variable.
+
+66
+00:05:13,800 --> 00:05:18,180
+And there are a few rules for variables
+that you got to follow.
+
+67
+00:05:18,180 --> 00:05:22,240
+They must start with a letter, they can
+have a maximum size of thirty characters.
+
+68
+00:05:23,340 --> 00:05:28,610
+You cannot include the plus, comma, colon,
+and parentheses in the name.
+
+69
+00:05:28,610 --> 00:05:30,840
+And you cannot use a reserved word.
+
+70
+00:05:32,210 --> 00:05:34,690
+Now when you are creating variables try
+and
+
+71
+00:05:34,690 --> 00:05:37,640
+keep the name of the variable meaningful.
+
+72
+00:05:37,640 --> 00:05:42,250
+There's nothing worse than working with a
+program where your variables are named a1,
+
+73
+00:05:42,250 --> 00:05:44,070
+a2, a3, and so on.
+
+74
+00:05:44,070 --> 00:05:49,220
+Try and give them good names, such as our
+employee table.
+
+75
+00:05:49,220 --> 00:05:52,720
+It's got surname, forename, and date of
+birth.
+
+76
+00:05:52,720 --> 00:05:55,810
+You know exactly what these fields are
+for.
+
+77
+00:05:57,120 --> 00:05:58,830
+Now we declare variables.
+
+78
+00:05:58,830 --> 00:06:00,100
+By using the data statements.
+
+79
+00:06:00,100 --> 00:06:07,801
+So lets go ahead and use the data
+statements within our program.
+
+80
+00:06:07,801 --> 00:06:12,970
+We'll go below the comments section,
+
+81
+00:06:12,970 --> 00:06:17,520
+in the first type of field we'll declare
+will be an integer field.
+
+82
+00:06:17,520 --> 00:06:23,850
+So we'll type in data, and a space, and
+then we'll give our field a name,
+
+83
+00:06:23,850 --> 00:06:28,840
+gonna call this integer 01,
+
+84
+00:06:28,840 --> 00:06:35,020
+and we specify a data type by using the
+type word.
+
+85
+00:06:36,700 --> 00:06:41,764
+And integers are declared by using the
+TYPE i.
+
+86
+00:06:41,764 --> 00:06:44,090
+And we terminate our statement with a full
+stop.
+
+87
+00:06:47,710 --> 00:06:48,979
+Let's declare it another one.
+
+88
+00:06:48,979 --> 00:06:50,897
+[BLANK_AUDIO]
+
+89
+00:06:50,897 --> 00:06:57,305
+And this time we'll use the packed decimal
+[SOUND] so
+
+90
+00:06:57,305 --> 00:07:02,074
+I call the field packed decimal01,
+
+91
+00:07:02,074 --> 00:07:05,812
+TYPE p, for packed decimal.
+
+92
+00:07:05,812 --> 00:07:10,647
+And then you end the statement with a full
+stop again.
+
+93
+00:07:10,647 --> 00:07:16,000
+Now, packed_decimal is there to help store
+numbers with decimal places, and so on.
+
+94
+00:07:17,260 --> 00:07:18,510
+So, what we can do is,
+
+95
+00:07:18,510 --> 00:07:22,000
+actually, define how many decimal places
+we want our variable to hold.
+
+96
+00:07:22,000 --> 00:07:27,010
+So, when we've got TYPE p, we can then put
+space.
+
+97
+00:07:29,080 --> 00:07:33,330
+I'm putting the word decimals and
+
+98
+00:07:33,330 --> 00:07:37,921
+then number of decimal places we want to
+store I'll put 2.
+
+99
+00:07:40,110 --> 00:07:46,630
+Use pretty printer and it coverts
+everything how I like it and
+
+100
+00:07:46,630 --> 00:07:52,860
+we'll save the program now we have used
+what are called elementary data types
+
+101
+00:07:52,860 --> 00:07:56,890
+to define these two variables, and these
+types of variables have a fixed length in
+
+102
+00:07:56,890 --> 00:08:01,970
+ABAP, so we actually don't need to declare
+how long the variables need to be.
+
+103
+00:08:01,970 --> 00:08:06,350
+Now a little later on we'll have a look at
+all the elementary data types and
+
+104
+00:08:06,350 --> 00:08:08,650
+the space that they take up in memory.
+
+105
+00:08:11,510 --> 00:08:14,220
+One piece of information to know about the
+packed_decimal is that it can
+
+106
+00:08:15,570 --> 00:08:17,440
+store up to fourteen decimal places.
+
+107
+00:08:17,440 --> 00:08:21,630
+So in business related scenarios that's
+more than ample.
+
+108
+00:08:24,760 --> 00:08:26,870
+So as well as declaring variables this
+way,
+
+109
+00:08:26,870 --> 00:08:28,780
+we have another option of declaring
+variables.
+
+110
+00:08:28,780 --> 00:08:33,520
+Using what we call the like addition to
+the data statements.
+
+111
+00:08:34,950 --> 00:08:36,520
+Let me show you how this looks.
+
+112
+00:08:37,840 --> 00:08:45,313
+So we can declare a brand new variable
+we'll call it pipe decimal 02 and
+
+113
+00:08:45,313 --> 00:08:50,704
+instead of using the word type this time
+we're going
+
+114
+00:08:50,704 --> 00:08:56,582
+to use the word like and we're going to
+say like the packed
+
+115
+00:08:56,582 --> 00:09:01,752
+decimal01 field that we have already
+defined.
+
+116
+00:09:01,752 --> 00:09:07,348
+[BLANK_AUDIO]
+
+117
+00:09:07,348 --> 00:09:12,319
+Now what this effectively does is makes
+sure that the new variable called
+
+118
+00:09:12,319 --> 00:09:13,876
+packed decimal02.
+
+119
+00:09:13,876 --> 00:09:21,784
+Takes on exactly the same properties That
+we defined for packed decimal 01.
+
+120
+00:09:21,784 --> 00:09:24,350
+Now, you may think, well, you know?
+
+121
+00:09:24,350 --> 00:09:25,980
+What's, what's so good about this?
+
+122
+00:09:27,310 --> 00:09:28,800
+Well, let me show you.
+
+123
+00:09:28,800 --> 00:09:37,730
+In the program, let's say you have a need
+to create a whole number of variables.
+
+124
+00:09:37,730 --> 00:09:41,820
+All of the same data type.
+
+125
+00:09:41,820 --> 00:09:47,130
+Here we are practice [UNKNOWN] three and
+practice [UNKNOWN] four.
+
+126
+00:09:47,130 --> 00:09:49,390
+By making them like, packed decimal 01,
+
+127
+00:09:49,390 --> 00:09:53,970
+we could potentially save ourselves a
+whole bunch of time later on.
+
+128
+00:09:53,970 --> 00:09:59,460
+Because let's say our pack decimal 01
+field Instead of
+
+129
+00:09:59,460 --> 00:10:05,360
+saying decimal places needs to be two
+let's say we need to increase it to three.
+
+130
+00:10:05,360 --> 00:10:11,040
+Just by updating that one variable that
+automatically updates all the other
+
+131
+00:10:11,040 --> 00:10:16,390
+variables that have been defined using the
+like statement
+
+132
+00:10:16,390 --> 00:10:21,662
+referring to our original variable.
+
+133
+00:10:21,662 --> 00:10:25,960
+And another good thing about the [UNKNOWN]
+statement
+
+134
+00:10:25,960 --> 00:10:29,710
+is we don't have to just refer to
+variables in our program.
+
+135
+00:10:29,710 --> 00:10:32,210
+We can refer to variables or
+
+136
+00:10:32,210 --> 00:10:36,492
+fields in this case that exist in tables
+within the sub system.
+
+137
+00:10:38,510 --> 00:10:42,670
+So, if your remember back when we defined
+the zed employees table,
+
+138
+00:10:42,670 --> 00:10:45,970
+we had a field of, I think it was surname.
+
+139
+00:10:45,970 --> 00:10:50,390
+We can declare a new variable within our
+program.
+
+140
+00:10:50,390 --> 00:10:54,440
+Lets call it, new surname.
+
+141
+00:10:54,440 --> 00:11:00,579
+And we can say, it's going to be like
+table name zed employees.
+
+142
+00:11:02,720 --> 00:11:04,910
+dash, then the actual field name.
+
+143
+00:11:09,210 --> 00:11:09,840
+Which I think was surname.
+
+144
+00:11:13,660 --> 00:11:18,750
+Now from my many years experience using
+ABAP, this saved me a whole bunch of time.
+
+145
+00:11:18,750 --> 00:11:24,560
+Because quite often, you have to include
+numerous tables within your ABAP programs.
+
+146
+00:11:24,560 --> 00:11:29,130
+And you can never remember what the actual
+dates or times are, of every field.
+
+147
+00:11:29,130 --> 00:11:31,600
+So just by using the like statement,
+
+148
+00:11:31,600 --> 00:11:34,520
+I'm referring to the actual field within
+the table.
+
+149
+00:11:34,520 --> 00:11:38,130
+You can declare your brand new variables
+in your program
+
+150
+00:11:38,130 --> 00:11:40,300
+without having to use your brain or
+
+151
+00:11:40,300 --> 00:11:44,350
+go searching throughout the SAP system to
+find what the exact data type is.
+
+152
+00:11:44,350 --> 00:11:51,310
+So, just to make sure everything's okay
+we'll, we'll just do a check.
+
+153
+00:11:53,670 --> 00:11:56,470
+Everything's good.
+
+154
+00:11:56,470 --> 00:12:02,450
+Now, I'll just tidy things up a little bit
+so we can carry on.
+
+155
+00:12:02,450 --> 00:12:03,714
+So get rid of that one.
+
+156
+00:12:03,714 --> 00:12:10,577
+[BLANK_AUDIO]
+
+157
+00:12:10,577 --> 00:12:11,296
+And those.
+
+158
+00:12:11,296 --> 00:12:18,657
+[BLANK_AUDIO]
+
+159
+00:12:18,657 --> 00:12:21,001
+Also what I like to do.
+
+160
+00:12:21,001 --> 00:12:24,870
+I always like to line up my data type
+declarations.
+
+161
+00:12:26,620 --> 00:12:28,230
+So, it's a little easier to read.
+
+162
+00:12:29,800 --> 00:12:32,560
+So, now, let's have a look at one other
+addition
+
+163
+00:12:32,560 --> 00:12:35,110
+that we can add to our data's name.
+
+164
+00:12:35,110 --> 00:12:38,230
+And, that is how we declare initial values
+for
+
+165
+00:12:38,230 --> 00:12:40,360
+the variables that we define in our
+program.
+
+166
+00:12:40,360 --> 00:12:43,700
+And it's really easy.
+
+167
+00:12:43,700 --> 00:12:46,790
+So in this example, we have the integer
+01.
+
+168
+00:12:46,790 --> 00:12:48,970
+All we need to do is add the word value.
+
+169
+00:12:48,970 --> 00:12:53,780
+And because it's an integer it's just
+
+170
+00:12:53,780 --> 00:12:57,774
+going to accept numeric values so we can
+say 22.
+
+171
+00:12:59,010 --> 00:13:02,920
+And automatically assigns a value of 22 to
+interger01 when the program starts.
+
+172
+00:13:02,920 --> 00:13:07,860
+Now for packed decimal fields, it
+
+173
+00:13:09,800 --> 00:13:13,470
+is very similar but there's one slight
+difference.
+
+174
+00:13:16,230 --> 00:13:21,660
+Which I pin the value and then we have to
+put the actual value
+
+175
+00:13:25,340 --> 00:13:29,240
+within single quotes, and this is because,
+as I mentioned previously,
+
+176
+00:13:29,240 --> 00:13:35,850
+an ABAP statement is terminated at the use
+of a period.
+
+177
+00:13:35,850 --> 00:13:37,710
+And for a packed decimal field that has
+decimal numbers.
+
+178
+00:13:37,710 --> 00:13:42,710
+We used a period to define the decimal
+place within the number.
+
+179
+00:13:42,710 --> 00:13:44,320
+Usually, this would terminate our
+statement.
+
+180
+00:13:45,340 --> 00:13:48,490
+But, by putting a number within quotes,
+it's telling ABAP and the SAP system,
+
+181
+00:13:48,490 --> 00:13:49,220
+you know?
+
+182
+00:13:49,220 --> 00:13:51,130
+We're not terminating the statements.
+
+183
+00:13:52,510 --> 00:13:56,589
+We're just declaring a decimal number.
+
+184
+00:13:57,770 --> 00:14:02,910
+And one more addition just for
+completeness is you're not just
+
+185
+00:14:02,910 --> 00:14:07,180
+restricted to positive numbers if you want
+to declare a negative number,
+
+186
+00:14:08,730 --> 00:14:12,140
+just put the appropriate sign for the
+value of the field.
+

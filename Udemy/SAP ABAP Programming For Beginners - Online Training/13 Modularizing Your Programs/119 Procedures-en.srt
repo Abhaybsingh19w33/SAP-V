@@ -1,0 +1,192 @@
+1
+00:00:01,980 --> 00:00:03,460
+Now, let's focus on procedures.
+
+2
+00:00:04,750 --> 00:00:08,560
+Now, for those new to ABAP,
+there are a couple of techniques for
+
+3
+00:00:08,560 --> 00:00:12,270
+modularizing code that you
+should really concentrate on.
+
+4
+00:00:13,510 --> 00:00:14,865
+And that's what we're gonna cover here.
+
+5
+00:00:16,685 --> 00:00:19,965
+When we want to split our
+programs into separate modules,
+
+6
+00:00:19,965 --> 00:00:23,155
+we can use what are called procedures.
+
+7
+00:00:23,155 --> 00:00:28,925
+And, procedures are processing blocks
+that we call from our main ABAP program.
+
+8
+00:00:30,980 --> 00:00:33,590
+And, procedures come in
+the form of subroutines or
+
+9
+00:00:33,590 --> 00:00:36,150
+subprograms and function modules.
+
+10
+00:00:38,310 --> 00:00:43,873
+We use subroutines mainly for
+local marginalization of our code.
+
+11
+00:00:43,873 --> 00:00:50,242
+And what I mean is, a small modular
+unit of code that is self-contained,
+
+12
+00:00:50,242 --> 00:00:55,296
+that is called from the program
+in which they are defined.
+
+13
+00:00:55,296 --> 00:01:00,090
+So, it's just like grouping together,
+let's say 20 lines of code.
+
+14
+00:01:00,090 --> 00:01:04,914
+Wrapping it up into a subprogram and
+just moving it to the end of your program.
+
+15
+00:01:04,914 --> 00:01:06,434
+You know, right down at the bottom.
+
+16
+00:01:06,434 --> 00:01:10,830
+Still in the same file, but just moved
+away in its own little container.
+
+17
+00:01:12,575 --> 00:01:17,348
+So, we can use these subroutines to
+write functions that we use many
+
+18
+00:01:17,348 --> 00:01:19,370
+times within our programs.
+
+19
+00:01:19,370 --> 00:01:24,803
+And at the same time,
+any ABAP program can include subroutines.
+
+20
+00:01:26,086 --> 00:01:29,480
+Now, function modules,
+they work a bit different.
+
+21
+00:01:29,480 --> 00:01:34,569
+They allow us to create modular
+blocks of code that are held separate
+
+22
+00:01:34,569 --> 00:01:39,673
+to our ABAP program, and
+they can be called from any other program.
+
+23
+00:01:39,673 --> 00:01:43,219
+So, subroutines are local
+to our own program.
+
+24
+00:01:43,219 --> 00:01:47,800
+Function modules are global, and
+can be called from any program.
+
+25
+00:01:47,800 --> 00:01:54,157
+You will see both sets of modularization
+techniques used throughout an SAP system,
+
+26
+00:01:54,157 --> 00:02:00,195
+but by far the most used,
+in my eyes at least, are function modules.
+
+27
+00:02:00,195 --> 00:02:03,985
+And an SAP system is packed
+with function modules.
+
+28
+00:02:05,035 --> 00:02:10,798
+They encapsulate all the processing
+logic used within the business system.
+
+29
+00:02:10,798 --> 00:02:15,624
+And SAP have made sure that
+it can be reused both by
+
+30
+00:02:15,624 --> 00:02:20,701
+their own development teams and
+by SAP customers.
+
+31
+00:02:20,701 --> 00:02:24,198
+Now, when we took a look
+at include programs,
+
+32
+00:02:24,198 --> 00:02:28,960
+I mentioned an include program
+cannot accept any parameters.
+
+33
+00:02:30,340 --> 00:02:35,129
+Procedures are different,
+because they have an interface for
+
+34
+00:02:35,129 --> 00:02:40,475
+transferring data from our calling
+program to the procedure itself.
+
+35
+00:02:40,475 --> 00:02:44,342
+So, because we can pass
+data into a procedure,
+
+36
+00:02:44,342 --> 00:02:49,661
+it also means we can define data
+definitions within the procedure
+
+37
+00:02:49,661 --> 00:02:53,834
+itself that are only
+available to that procedure.
+
+38
+00:02:53,834 --> 00:02:54,971
+So, enough talking.
+
+39
+00:02:54,971 --> 00:02:57,705
+Let's have a look at how
+we create subroutines and
+
+40
+00:02:57,705 --> 00:02:59,209
+see some of this in action.
+

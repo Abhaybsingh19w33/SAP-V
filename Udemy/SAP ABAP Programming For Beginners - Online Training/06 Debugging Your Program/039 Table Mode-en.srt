@@ -1,0 +1,223 @@
+1
+00:00:01,170 --> 00:00:05,170
+Let's now take a closer look, at the table
+mode.
+
+2
+00:00:07,100 --> 00:00:11,500
+Just click the Table button, and you'll
+see the screen changes.
+
+3
+00:00:11,500 --> 00:00:15,820
+We still have a code section, but then the
+lower section,
+
+4
+00:00:16,850 --> 00:00:22,400
+has now changed to show an entry for an
+Internal Table and then a single row.
+
+5
+00:00:23,460 --> 00:00:27,540
+We haven't covered Internal Tables yet in
+this ABAP course, but for
+
+6
+00:00:27,540 --> 00:00:31,560
+now you just need to be aware that, an
+Internal Table is just a table or
+
+7
+00:00:31,560 --> 00:00:34,570
+records that are stored in memory while
+the program is running.
+
+8
+00:00:36,050 --> 00:00:39,910
+The table mode option, allows us to
+interrogate the records and
+
+9
+00:00:39,910 --> 00:00:43,130
+fields of each record of an Internal
+Table.
+
+10
+00:00:45,470 --> 00:00:48,860
+As we did with the fields mode section,
+you can either double
+
+11
+00:00:48,860 --> 00:00:53,480
+click on an Internal Table that has been
+defined in your ABAP code, or you
+
+12
+00:00:53,480 --> 00:00:57,699
+can enter the Internal Table Name directly
+into the internal table input field.
+
+13
+00:00:59,330 --> 00:01:04,140
+So for example, I can double click on this
+Z Employees Table,
+
+14
+00:01:06,910 --> 00:01:10,550
+and we can see the screen changes to show
+a Table Name, and
+
+15
+00:01:11,810 --> 00:01:16,500
+below it the individual fields together
+with their contents.
+
+16
+00:01:17,580 --> 00:01:20,560
+So as you can see it's very similar to the
+fields mode.
+
+17
+00:01:20,560 --> 00:01:23,860
+And that you'll see the Field Name and the
+Field Contents.
+
+18
+00:01:23,860 --> 00:01:27,690
+Table mode allows us to see a whole
+Internal Table.
+
+19
+00:01:29,010 --> 00:01:33,310
+Now in this example, things do look a
+little different to normal,
+
+20
+00:01:33,310 --> 00:01:37,070
+because I'm actually dealing with a table
+structure right now.
+
+21
+00:01:37,070 --> 00:01:40,110
+We haven't declared an actual Internal
+Table itself.
+
+22
+00:01:41,360 --> 00:01:47,660
+And the program is just using table
+structure, which results in a table list
+
+23
+00:01:47,660 --> 00:01:52,780
+like this, showing the individual fields
+listed one to six with their content.
+
+24
+00:01:54,520 --> 00:01:59,412
+When viewing Internal Tables, you will see
+a slightly different layout.
+
+25
+00:01:59,412 --> 00:02:04,453
+Where you'll see, a number of records for
+each internal table, with the content,
+
+26
+00:02:04,453 --> 00:02:08,713
+and then you can double click on those
+Records to then show this layout,
+
+27
+00:02:08,713 --> 00:02:11,844
+which shows the individual fields for each
+record.
+
+28
+00:02:11,844 --> 00:02:14,549
+[BLANK_AUDIO]
+
+29
+00:02:14,549 --> 00:02:18,213
+As we move along in this course, we will
+be debugging our programs, and
+
+30
+00:02:18,213 --> 00:02:22,200
+looking at proper internal tables, and
+you'll see the screen layout then.
+
+31
+00:02:24,180 --> 00:02:28,070
+As we did with the Field List section, you
+can now navigate up and
+
+32
+00:02:28,070 --> 00:02:29,240
+down the Field List.
+
+33
+00:02:29,240 --> 00:02:34,230
+And interrogate the contents of the table
+and the individual fields, and
+
+34
+00:02:34,230 --> 00:02:37,300
+you can continue debugging your program in
+table mode,
+
+35
+00:02:37,300 --> 00:02:41,290
+and see how your program code changes the
+table contents.
+
+36
+00:02:43,380 --> 00:02:48,080
+Now, I don't often do that myself, because
+as you'll notice,
+
+37
+00:02:48,080 --> 00:02:52,650
+the screen that's your code section, has
+become very small.
+
+38
+00:02:52,650 --> 00:02:58,190
+You only get what one, two, three, three
+lines of code that are visible.
+
+39
+00:02:58,190 --> 00:03:01,180
+So as you step-by-step go through your
+code,
+
+40
+00:03:04,560 --> 00:03:07,690
+you can see, you don't actually get to see
+much about code.
+
+41
+00:03:07,690 --> 00:03:11,920
+Only the couple of lines surrounding the
+statement, that it's currently executing.
+
+42
+00:03:13,650 --> 00:03:16,760
+So more often than not, I'll have a look
+at the Table, I'll have a look at
+
+43
+00:03:16,760 --> 00:03:21,250
+the Contents, find out the information I
+want and then switch back to fields mode.
+
+44
+00:03:21,250 --> 00:03:23,500
+[SOUND]
+And
+
+45
+00:03:23,500 --> 00:03:27,770
+you can switch between these different
+modes of the debugger, any time you like.
+

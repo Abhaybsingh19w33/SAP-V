@@ -1,0 +1,161 @@
+1
+00:00:00,319 --> 00:00:02,276
+[BLANK_AUDIO]
+
+2
+00:00:02,276 --> 00:00:07,500
+We have a whole set of ABAP operators that
+we can use with our logics things.
+
+3
+00:00:08,620 --> 00:00:11,920
+So, as we have seen with the if statement
+we've been using the equals.
+
+4
+00:00:14,820 --> 00:00:19,380
+We also can use the not equal to, which is
+the less than and
+
+5
+00:00:19,380 --> 00:00:20,350
+greater than sign together.
+
+6
+00:00:20,350 --> 00:00:26,132
+The less than, the greater than, less than
+and equal to and the greater than and
+
+7
+00:00:26,132 --> 00:00:32,371
+equal to now, ABAP, because of its roots,
+also has some other way to writing these.
+
+8
+00:00:32,371 --> 00:00:36,214
+[BLANK_AUDIO]
+
+9
+00:00:36,214 --> 00:00:41,937
+And these are the EQ for equals and E for
+not equals.
+
+10
+00:00:41,937 --> 00:00:43,377
+And you can work the rest out.
+
+11
+00:00:43,377 --> 00:00:49,290
+Less than, greater than, less than or
+equal to and greater than or equal to.
+
+12
+00:00:49,290 --> 00:00:52,280
+More and more you, you tend not to see
+these being used too much and
+
+13
+00:00:52,280 --> 00:00:54,700
+I suggest you don't use them because
+
+14
+00:00:54,700 --> 00:01:00,490
+everyone's now familiar with the standard
+way of writing these operators.
+
+15
+00:01:00,490 --> 00:01:04,720
+And like I mentioned in the previous video
+we're not just limited to these,
+
+16
+00:01:04,720 --> 00:01:08,890
+we can link logical expressions together
+using the or
+
+17
+00:01:08,890 --> 00:01:13,690
+operator the and operator and the not
+operator.
+
+18
+00:01:15,180 --> 00:01:17,590
+We will come onto these in the examples
+that follow.
+
+19
+00:01:20,200 --> 00:01:25,190
+So we can link our logical expressions
+together, just like this.
+
+20
+00:01:25,190 --> 00:01:28,230
+Let's copy the if statement for surname.
+
+21
+00:01:28,230 --> 00:01:34,800
+And instead of a full stop here,
+
+22
+00:01:34,800 --> 00:01:41,070
+we can then use one of the linking
+operators, in our case, AND
+
+23
+00:01:41,070 --> 00:01:46,530
+we'll say forename equals John.
+
+24
+00:01:50,800 --> 00:01:54,640
+So there you can see, we've used the AND
+operator to link
+
+25
+00:01:54,640 --> 00:01:59,550
+two logical expressions together in this
+one IF statement.
+
+26
+00:02:01,368 --> 00:02:02,685
+[SOUND]
+
+27
+00:02:02,685 --> 00:02:06,562
+[BLANK_AUDIO]
+
+28
+00:02:06,562 --> 00:02:13,377
+[SOUND] So the rest of the code to make up
+the statement would be like this.
+
+29
+00:02:13,377 --> 00:02:14,782
+Very simple one.
+
+30
+00:02:14,782 --> 00:02:19,710
+The right statement represents our
+statement locker code that we would want
+
+31
+00:02:19,710 --> 00:02:24,340
+to execute, and then we close the if
+statement with the end if command.
+
+32
+00:02:26,330 --> 00:02:26,830
+So that's using and.
+
+33
+00:02:28,030 --> 00:02:33,666
+We can also say if Smith, sorry, if
+surname equals Smith or
+
+34
+00:02:33,666 --> 00:02:37,740
+full name equals John, execute the code.
+
+35
+00:02:37,740 --> 00:02:41,289
+[BLANK_AUDIO]
+

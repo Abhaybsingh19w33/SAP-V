@@ -1,0 +1,264 @@
+1
+00:00:01,950 --> 00:00:04,460
+So, now we have entered data into our
+table,
+
+2
+00:00:04,460 --> 00:00:07,845
+we'll do the last few steps in this module
+and view the data.
+
+3
+00:00:07,845 --> 00:00:11,665
+[BLANK_AUDIO]
+
+4
+00:00:11,665 --> 00:00:13,163
+So, let's press the back key.
+
+5
+00:00:13,163 --> 00:00:16,865
+[BLANK_AUDIO]
+
+6
+00:00:16,865 --> 00:00:21,170
+We're back to the database table creation
+screen.
+
+7
+00:00:21,170 --> 00:00:23,280
+And to view our data it's very simple.
+
+8
+00:00:23,280 --> 00:00:28,163
+We'll go back to the Utilities menu,
+
+9
+00:00:28,163 --> 00:00:33,670
+to the Table contents and choose Display.
+
+10
+00:00:33,670 --> 00:00:39,050
+Now whenever we view a table through SE 11
+or SE 16,
+
+11
+00:00:39,050 --> 00:00:42,340
+SAP automatically generates a selection
+screen for us.
+
+12
+00:00:43,370 --> 00:00:47,480
+So if we don't want to view all the
+records initially,
+
+13
+00:00:47,480 --> 00:00:49,870
+we can enter some filter values so
+
+14
+00:00:49,870 --> 00:00:54,310
+that the system will only show us the
+records that we want to focus on.
+
+15
+00:00:55,560 --> 00:00:58,310
+Now in our case, we only entered five
+records.
+
+16
+00:00:58,310 --> 00:01:00,250
+So there's no need to do that.
+
+17
+00:01:00,250 --> 00:01:02,230
+But what you can do, if we did,
+
+18
+00:01:02,230 --> 00:01:06,820
+is let's say we want to focus on one
+specific employee number,
+
+19
+00:01:06,820 --> 00:01:11,830
+you can key it directly into here, or key
+arrange the start and the end.
+
+20
+00:01:13,860 --> 00:01:15,670
+All we want to do is view all the records.
+
+21
+00:01:17,710 --> 00:01:24,590
+So just click the Execute button or press
+F8.
+
+22
+00:01:24,590 --> 00:01:27,300
+And there you can see all five records
+that we entered.
+
+23
+00:01:28,350 --> 00:01:30,820
+If we had many more fields on the table,
+
+24
+00:01:30,820 --> 00:01:33,710
+the screen would scroll to the right hand
+side.
+
+25
+00:01:34,920 --> 00:01:38,470
+Which means you wouldn't be able to see
+all the fields on the screen at the same
+
+26
+00:01:38,470 --> 00:01:42,470
+time, but one thing you can do is either
+double click on the field
+
+27
+00:01:44,980 --> 00:01:47,900
+and the screen will change to just focus
+on that one record.
+
+28
+00:01:49,880 --> 00:01:54,190
+Alternatively, if you click the little
+check marks
+
+29
+00:01:55,290 --> 00:02:00,460
+here we'll select three records.
+
+30
+00:02:00,460 --> 00:02:06,670
+You can then press the Choose button,
+which is F2, and
+
+31
+00:02:06,670 --> 00:02:10,460
+the system will then allow you to cycle
+through the three records that you chose.
+
+32
+00:02:10,460 --> 00:02:15,230
+So you see now, we've got this little Next
+Entry button that's appeared.
+
+33
+00:02:16,680 --> 00:02:21,240
+So if I click it, we go in to the second
+record and
+
+34
+00:02:21,240 --> 00:02:23,260
+we can see a back and a forward.
+
+35
+00:02:24,350 --> 00:02:27,500
+We click it again, hopefully it will show
+the fourth record we entered.
+
+36
+00:02:29,060 --> 00:02:30,020
+And there we go, the fourth one.
+
+37
+00:02:31,570 --> 00:02:35,000
+Press back and back again to go to the
+start.
+
+38
+00:02:35,000 --> 00:02:39,890
+And to go back to the default view, the
+grid where it shows all our records
+
+39
+00:02:39,890 --> 00:02:44,050
+just press the back key and we're back to
+where we started.
+
+40
+00:02:45,270 --> 00:02:48,300
+Have a play around with the screen because
+you'll notice that,
+
+41
+00:02:48,300 --> 00:02:53,700
+all the buttons that appear on the toolbar
+that will allow you to filter and
+
+42
+00:02:53,700 --> 00:02:55,700
+sort the records however you wish.
+
+43
+00:02:57,980 --> 00:03:01,250
+So as an example, if we wanted to sort
+this
+
+44
+00:03:01,250 --> 00:03:05,600
+data in let's say alphabetical on
+forename.
+
+45
+00:03:07,250 --> 00:03:13,000
+Just click on the Forename field and then
+click the Sort ascending button.
+
+46
+00:03:13,000 --> 00:03:18,320
+Now you can see it's reordered records for
+us.
+
+47
+00:03:20,850 --> 00:03:25,740
+There are lots of things you can do with
+this table view, and you'll find that
+
+48
+00:03:25,740 --> 00:03:31,110
+over time, it becomes a real useful tool,
+when you want to check on the data
+
+49
+00:03:31,110 --> 00:03:35,650
+within an SAP system, without going to the
+actual transaction screens themselves.
+
+50
+00:03:37,800 --> 00:03:39,740
+So that's it for this module.
+
+51
+00:03:39,740 --> 00:03:43,800
+You've created a table from scratch,
+you've added fields.
+
+52
+00:03:43,800 --> 00:03:48,050
+And with the fields you've added data
+elements and data domains.
+
+53
+00:03:48,050 --> 00:03:52,020
+You've defined specific field labels for
+each field.
+
+54
+00:03:52,020 --> 00:03:56,970
+You've ensured you've generated a key for
+your table and configured the necessary
+
+55
+00:03:56,970 --> 00:04:00,940
+technical elements to ensure it can be
+saved in the back end data base.
+
+56
+00:04:02,180 --> 00:04:06,190
+After that, you entered some data and now
+you're viewing the results.
+

@@ -1,0 +1,262 @@
+1
+00:00:02,520 --> 00:00:05,820
+Subroutines were initially designed for
+modularizing and
+
+2
+00:00:05,820 --> 00:00:08,340
+structuring your programs.
+
+3
+00:00:08,340 --> 00:00:13,549
+But they can be extended so that they can
+be called externally from other programs.
+
+4
+00:00:15,630 --> 00:00:20,830
+If you're goal is to make a function
+available throughout your SAP system,
+
+5
+00:00:20,830 --> 00:00:25,860
+you should really use function modules,
+which we will come onto very soon.
+
+6
+00:00:25,860 --> 00:00:30,790
+But let's take a look at how we can create
+external subroutines and how it all works.
+
+7
+00:00:32,420 --> 00:00:37,720
+So just like with any local subrooting
+when the system completes executing
+
+8
+00:00:37,720 --> 00:00:42,310
+an external subrooting, control is passed
+back to your calling program.
+
+9
+00:00:42,310 --> 00:00:48,630
+There are two ways in which you can call a
+subrooting of and external program.
+
+10
+00:00:48,630 --> 00:00:54,625
+And I'll say right now try to always use
+the first form, I am going to show you.
+
+11
+00:00:54,625 --> 00:00:58,210
+There is a very big reason for this.
+
+12
+00:00:58,210 --> 00:01:01,476
+And that's when you come on to learning
+about ABAP objects if that's
+
+13
+00:01:01,476 --> 00:01:05,870
+what you choose to do, you have to use
+this first form.
+
+14
+00:01:07,240 --> 00:01:12,790
+Also in this first form, we can actually
+use variables to identify the program that
+
+15
+00:01:12,790 --> 00:01:18,450
+contains our subroutine, instead of hard
+coding the full name throughout our code.
+
+16
+00:01:20,600 --> 00:01:22,540
+So let's look at an example.
+
+17
+00:01:22,540 --> 00:01:25,630
+I'll create some blank space here so I can
+start coding.
+
+18
+00:01:26,960 --> 00:01:30,810
+Let's say we want to call a subroutine
+called sub one.
+
+19
+00:01:32,420 --> 00:01:36,040
+Of a program called zedemployee_hire.
+
+20
+00:01:36,040 --> 00:01:38,390
+You would write the code as follows.
+
+21
+00:01:38,390 --> 00:01:41,280
+You start with a perform statement.
+
+22
+00:01:42,350 --> 00:01:44,720
+And we would specify our subroutine name.
+
+23
+00:01:44,720 --> 00:01:50,550
+So in this case it's sub-underscore one.
+
+24
+00:01:50,550 --> 00:01:56,820
+And then we would specify in program and
+
+25
+00:01:56,820 --> 00:02:00,620
+then the program name.
+
+26
+00:02:00,620 --> 00:02:04,740
+Said employee_hire.
+
+27
+00:02:04,740 --> 00:02:09,631
+And then as before in some of the other
+perform statements we can
+
+28
+00:02:09,631 --> 00:02:14,352
+pass [SOUND] certain variables by using
+the, using edition.
+
+29
+00:02:14,352 --> 00:02:20,991
+[BLANK_AUDIO]
+
+30
+00:02:20,991 --> 00:02:22,290
+And finish with a full stop.
+
+31
+00:02:24,180 --> 00:02:28,648
+So that would mean we would have to have
+program called zed employee_hire,
+
+32
+00:02:28,648 --> 00:02:33,830
+already existing with the subrouting
+already in it, and
+
+33
+00:02:33,830 --> 00:02:35,630
+we're just passing across these fields.
+
+34
+00:02:36,910 --> 00:02:39,610
+And the difference between the standard
+perform
+
+35
+00:02:39,610 --> 00:02:44,670
+is that we are specifically specifying the
+program where the subroutine exists.
+
+36
+00:02:46,630 --> 00:02:49,410
+Now I said there were two methods of
+calling a subroutine in
+
+37
+00:02:49,410 --> 00:02:50,410
+an external program.
+
+38
+00:02:52,010 --> 00:02:55,030
+And the other way of doing it is by using
+brackets.
+
+39
+00:02:55,030 --> 00:02:59,700
+And you will see in this example it's very
+similar.
+
+40
+00:02:59,700 --> 00:03:05,470
+But you will not be able to use this form
+in the context of ABAP objects.
+
+41
+00:03:05,470 --> 00:03:06,680
+But anyway, it goes like this.
+
+42
+00:03:06,680 --> 00:03:13,199
+[SOUND] So you'd have to perform
+subroutine 1 and
+
+43
+00:03:13,199 --> 00:03:17,969
+then we specify the table, sorry,
+
+44
+00:03:17,969 --> 00:03:25,292
+we specify the program by placing it
+inside brackets.
+
+45
+00:03:25,292 --> 00:03:29,767
+And we can pass tables just as we've done
+before.
+
+46
+00:03:29,767 --> 00:03:36,675
+[NOISE] And continue with the using
+addition for the individual fields.
+
+47
+00:03:36,675 --> 00:03:40,581
+So, there are two methods of calling
+external subroutines, but
+
+48
+00:03:40,581 --> 00:03:42,790
+I please advise you don't use this.
+
+49
+00:03:43,940 --> 00:03:46,330
+I'm just showing you it for completeness
+and so
+
+50
+00:03:46,330 --> 00:03:51,410
+that you will understand some ABAP code
+that you might see in SAP systems.
+
+51
+00:03:51,410 --> 00:03:54,900
+I've got to say, I don't see this being
+used an awful lot at all.
+
+52
+00:03:55,950 --> 00:04:01,210
+Nearly all the forms of subrouting that
+you will see are all contained
+
+53
+00:04:01,210 --> 00:04:04,750
+within the main body of programs
+themselves.
+
+54
+00:04:05,990 --> 00:04:10,050
+Very rarely do you see subroutines being
+called from other programs.
+
+55
+00:04:12,410 --> 00:04:16,110
+And, like I say, the best thing to do when
+you need to do this is
+
+56
+00:04:16,110 --> 00:04:19,440
+to create function modules, which we are
+going to come onto next.
+

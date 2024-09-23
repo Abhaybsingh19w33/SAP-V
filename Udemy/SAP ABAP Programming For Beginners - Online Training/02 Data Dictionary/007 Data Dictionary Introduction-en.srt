@@ -1,0 +1,107 @@
+1
+00:00:00,820 --> 00:00:05,280
+In this module, we're going to focus
+specifically on the data dictionary.
+
+2
+00:00:07,090 --> 00:00:12,810
+Now the data dictionary is the main tool
+that we use to look at, understand,
+
+3
+00:00:12,810 --> 00:00:18,770
+and enhance the database and database
+tables that are used by our SAP system.
+
+4
+00:00:20,060 --> 00:00:24,090
+We can view standard tables that are
+delivered by SAP using this tool.
+
+5
+00:00:25,290 --> 00:00:27,460
+We can create our own tables and
+
+6
+00:00:27,460 --> 00:00:32,600
+we can even enhance the existing tables
+delivered by SAP with new fields.
+
+7
+00:00:33,850 --> 00:00:37,620
+There are many other features involved in
+the data dictionary, but
+
+8
+00:00:37,620 --> 00:00:41,790
+we are going to stick with the basic ones
+in this module, so
+
+9
+00:00:41,790 --> 00:00:46,900
+we can then build on our knowledge later
+on when we are creating our ABAP programs.
+
+10
+00:00:48,520 --> 00:00:53,110
+So the first thing we're going to do is
+create a database table.
+
+11
+00:00:53,110 --> 00:00:58,750
+And this will involve creating fields,
+data elements, and domains.
+
+12
+00:00:58,750 --> 00:01:01,690
+You'll get to learn what each one of these
+is and
+
+13
+00:01:01,690 --> 00:01:05,910
+why they are necessary when building your
+tables.
+
+14
+00:01:05,910 --> 00:01:07,570
+Once we are building the table,
+
+15
+00:01:07,570 --> 00:01:12,280
+you'll become familiar with the tools to
+check your table for errors.
+
+16
+00:01:12,280 --> 00:01:16,460
+Once your tables are error free, we can
+then activate our tables so
+
+17
+00:01:16,460 --> 00:01:19,210
+that they can be used within the system.
+
+18
+00:01:19,210 --> 00:01:23,340
+We will then have a look at maintaining
+the technical settings of the table
+
+19
+00:01:23,340 --> 00:01:27,790
+that we create that will allow us to enter
+data into our table.
+
+20
+00:01:29,510 --> 00:01:33,890
+And lastly, we will take a look at the
+data that we have entered using some of
+
+21
+00:01:33,890 --> 00:01:39,049
+the standard SAP transactions that are
+available to us in the SAP system.
+
+22
+00:01:40,530 --> 00:01:42,770
+Let's move on and start creating our first
+table.
+

@@ -1,0 +1,625 @@
+1
+00:00:02,830 --> 00:00:06,430
+Let's now take a look at deleting fields
+from your table.
+
+2
+00:00:08,100 --> 00:00:09,430
+It doesn't happen very often,
+
+3
+00:00:09,430 --> 00:00:13,330
+but there may be instances where you need
+to remove a field from a table.
+
+4
+00:00:13,330 --> 00:00:15,730
+And when you do this,
+
+5
+00:00:15,730 --> 00:00:20,960
+you must take special care, because you
+run the risk of losing data.
+
+6
+00:00:20,960 --> 00:00:23,960
+So first of all, we've been looking at Key
+Field.
+
+7
+00:00:23,960 --> 00:00:25,700
+So, if we start with those, and
+
+8
+00:00:25,700 --> 00:00:29,320
+you'll probably know that if we remove a
+Key Field from our
+
+9
+00:00:29,320 --> 00:00:34,050
+table that contains data, it is more than
+likely you'll end up losing records.
+
+10
+00:00:35,500 --> 00:00:39,350
+Because, the fields that make up your
+table key, make each record unique.
+
+11
+00:00:40,960 --> 00:00:45,070
+Taking away a field from the key, can
+result in non-unique records.
+
+12
+00:00:46,960 --> 00:00:50,170
+So, once the table is adjusted, some
+records will be deleted.
+
+13
+00:00:51,980 --> 00:00:56,540
+SAP systems are very, very large systems,
+and
+
+14
+00:00:56,540 --> 00:00:59,525
+tables are used all over the system for
+various needs.
+
+15
+00:01:00,565 --> 00:01:04,665
+We've already seen how we can use the
+Currency Check Table,
+
+16
+00:01:04,665 --> 00:01:09,415
+to bring up a list of values that we use
+to enter data into our Employees Table.
+
+17
+00:01:10,875 --> 00:01:15,240
+Well, if that table was removed, then our
+drop down would no longer work.
+
+18
+00:01:15,240 --> 00:01:18,740
+And it will highly likely inactivate our
+table,
+
+19
+00:01:18,740 --> 00:01:22,410
+because our table uses components of that
+currency table.
+
+20
+00:01:24,470 --> 00:01:26,470
+So, whenever you're working with a table,
+and
+
+21
+00:01:26,470 --> 00:01:31,830
+you're thinking of deleting fields, keep
+in mind, ask yourself some questions.
+
+22
+00:01:31,830 --> 00:01:37,260
+I this table being used as a check table,
+for some other tables in this system?
+
+23
+00:01:37,260 --> 00:01:39,820
+And if so, how's it going to affect those
+tables?
+
+24
+00:01:41,160 --> 00:01:42,200
+Now, if you do try and
+
+25
+00:01:42,200 --> 00:01:47,260
+delete fields from your table that are
+being used elsewhere in the system,
+
+26
+00:01:47,260 --> 00:01:52,060
+your SAP system itself should stop you
+from actually making the deletion.
+
+27
+00:01:52,060 --> 00:01:53,440
+Or at least give you a warning.
+
+28
+00:01:54,820 --> 00:01:58,010
+But, don't rely on that, always check
+yourself.
+
+29
+00:01:59,740 --> 00:02:04,870
+And one final thing to remember is that if
+you delete fields from your table,
+
+30
+00:02:04,870 --> 00:02:09,718
+you need to remember to convert your table
+using the SE-14 transaction.
+
+31
+00:02:09,718 --> 00:02:17,880
+The Table Utilities so that the data is
+adjusted and the table is made active.
+
+32
+00:02:17,880 --> 00:02:21,080
+So, let's go through an example of how we
+delete fields, and
+
+33
+00:02:21,080 --> 00:02:22,971
+we will use the Z Employees2 Table.
+
+34
+00:02:24,340 --> 00:02:31,396
+So, I will go into Change mode, and first
+of all I'll just create a field,
+
+35
+00:02:31,396 --> 00:02:35,444
+I will insert a field before this Include.
+
+36
+00:02:35,444 --> 00:02:38,658
+[BLANK_AUDIO]
+
+37
+00:02:38,658 --> 00:02:43,220
+And let's call it zawesome.
+
+38
+00:02:43,220 --> 00:02:46,460
+Don't worry, we're gonna delete this one.
+
+39
+00:02:46,460 --> 00:02:50,090
+And let's just use a data element, that
+we've already set up.
+
+40
+00:02:51,220 --> 00:02:55,769
+Let's use that title and press Enter.
+
+41
+00:02:55,769 --> 00:03:00,150
+And you can see it brings across the the
+Title attributes.
+
+42
+00:03:00,150 --> 00:03:01,622
+We'll Activate the table.
+
+43
+00:03:01,622 --> 00:03:04,873
+[BLANK_AUDIO]
+
+44
+00:03:04,873 --> 00:03:07,148
+And then we'll go and enter some data.
+
+45
+00:03:07,148 --> 00:03:17,148
+[BLANK_AUDIO]
+
+46
+00:03:18,874 --> 00:03:21,950
+So, let's start in the the 10 number
+range.
+
+47
+00:03:23,270 --> 00:03:30,059
+And I'm just going to key in any old
+gibberish here.
+
+48
+00:03:30,059 --> 00:03:40,059
+[BLANK_AUDIO]
+
+49
+00:03:56,691 --> 00:03:58,549
+And click Save.
+
+50
+00:03:58,549 --> 00:04:00,453
+[BLANK_AUDIO]
+
+51
+00:04:00,453 --> 00:04:03,470
+So I'll come back out.
+
+52
+00:04:03,470 --> 00:04:05,470
+And we'll just have a view of the table,
+
+53
+00:04:05,470 --> 00:04:07,770
+to make sure the record has been added
+successfully.
+
+54
+00:04:07,770 --> 00:04:13,530
+And there it is, and we can see the data
+we entered into the record.
+
+55
+00:04:15,810 --> 00:04:17,070
+That looks fine.
+
+56
+00:04:19,370 --> 00:04:23,170
+So now to delete this, we'll click on the
+Field,
+
+57
+00:04:23,170 --> 00:04:28,670
+click the Delete button, and then we will
+Activate the table.
+
+58
+00:04:31,930 --> 00:04:34,720
+So, as you can see the system is
+displaying an error,
+
+59
+00:04:34,720 --> 00:04:35,620
+which we'll take a look at.
+
+60
+00:04:39,990 --> 00:04:43,822
+Is telling us the table was not activated,
+
+61
+00:04:43,822 --> 00:04:47,662
+because we deleted the z_awesome field.
+
+62
+00:04:47,662 --> 00:04:54,269
+So, as I said before, we have to go to
+transaction SE-14 and
+
+63
+00:04:54,269 --> 00:05:01,268
+adjust the table and this will have the
+result of losing some data.
+
+64
+00:05:01,268 --> 00:05:04,724
+So utilities, database utilities.
+
+65
+00:05:04,724 --> 00:05:07,753
+[BLANK_AUDIO]
+
+66
+00:05:07,753 --> 00:05:14,254
+Going to process it in the foreground, and
+we will activate and adjust the database.
+
+67
+00:05:14,254 --> 00:05:19,966
+[BLANK_AUDIO]
+
+68
+00:05:19,966 --> 00:05:26,421
+That's done successfully, so back to the
+table where we'll view our data.
+
+69
+00:05:26,421 --> 00:05:29,184
+There's our record.
+
+70
+00:05:29,184 --> 00:05:32,821
+And as we can see, our field has been
+removed, and
+
+71
+00:05:32,821 --> 00:05:35,685
+we have lost that data from that field.
+
+72
+00:05:35,685 --> 00:05:42,140
+[BLANK_AUDIO]
+
+73
+00:05:42,140 --> 00:05:45,800
+Now, let's see what happens when we delete
+a Key Field?
+
+74
+00:05:45,800 --> 00:05:50,820
+And to do this, I'm going to duplicate
+this table.
+
+75
+00:05:53,380 --> 00:05:58,885
+Just so that we don't affect the current
+one, and don't lose all the records.
+
+76
+00:05:58,885 --> 00:06:00,370
+[BLANK_AUDIO]
+
+77
+00:06:00,370 --> 00:06:02,070
+So, we'll create a New Table.
+
+78
+00:06:02,070 --> 00:06:04,880
+Give this a fix of three.
+
+79
+00:06:04,880 --> 00:06:09,860
+It's new so
+
+80
+00:06:09,860 --> 00:06:15,070
+we need to activate it, and the table
+should be empty, which it is.
+
+81
+00:06:18,560 --> 00:06:22,694
+You can also press this number of entries,
+and
+
+82
+00:06:22,694 --> 00:06:28,420
+it'll bring up a dialogue box telling you
+there's no records.
+
+83
+00:06:28,420 --> 00:06:30,378
+So, let's go and enter some records.
+
+84
+00:06:30,378 --> 00:06:36,078
+[BLANK_AUDIO]
+Oh, actually,
+
+85
+00:06:36,078 --> 00:06:44,120
+I'm jumping the gun.
+
+86
+00:06:44,120 --> 00:06:51,490
+Let's go add another field to the Table
+Key.
+
+87
+00:06:51,490 --> 00:06:53,826
+So, what we will do, is make Surname a key
+field.
+
+88
+00:06:53,826 --> 00:07:02,130
+Come into Change mode.
+
+89
+00:07:02,130 --> 00:07:03,480
+Make it a key field, activate.
+
+90
+00:07:03,480 --> 00:07:06,860
+And, remember, we've got no records in the
+table now, so
+
+91
+00:07:06,860 --> 00:07:09,810
+it's activated successfully, no problem.
+
+92
+00:07:09,810 --> 00:07:11,886
+And now we will go in and enter some
+records.
+
+93
+00:07:11,886 --> 00:07:21,886
+[BLANK_AUDIO]
+
+94
+00:07:23,031 --> 00:07:27,040
+Click Save.
+And now, just to do this nice and quick,
+
+95
+00:07:27,040 --> 00:07:33,339
+I'm just gonna overwrite, keeping the same
+sort of data here.
+
+96
+00:07:35,400 --> 00:07:37,020
+We will keep the Surname Smith.
+
+97
+00:07:39,380 --> 00:07:40,700
+Tell you what, let's do it this way.
+
+98
+00:07:41,890 --> 00:07:44,000
+We will keep Employee Number 1.
+
+99
+00:07:44,000 --> 00:07:46,800
+But because Surname is part of the key,
+
+100
+00:07:46,800 --> 00:07:52,260
+all we need to do is make this unique, for
+us to have a unique record in the table.
+
+101
+00:07:52,260 --> 00:07:56,070
+So, we will create Smith 2 and leave
+everything else as it is.
+
+102
+00:08:07,060 --> 00:08:11,200
+New Employee Number 2 suffix.
+
+103
+00:08:11,200 --> 00:08:13,230
+The Surname as Andrews.
+
+104
+00:08:13,230 --> 00:08:18,380
+Save on as this.
+
+105
+00:08:18,380 --> 00:08:20,465
+Same thing, leave it as 2.
+
+106
+00:08:22,870 --> 00:08:25,275
+And we'll do Andrews 2.
+
+107
+00:08:26,850 --> 00:08:28,970
+Entirely different with a dash.
+
+108
+00:08:28,970 --> 00:08:29,510
+And click Save.
+
+109
+00:08:29,510 --> 00:08:30,300
+So, I'll come back out.
+
+110
+00:08:30,300 --> 00:08:31,910
+Then we'll view the data.
+
+111
+00:08:31,910 --> 00:08:36,675
+So, we have four records, Smith, Smith-2,
+Andrews, Andrews-2.
+
+112
+00:08:36,675 --> 00:08:43,895
+And we can see our Smiths have the same
+employee number, and so do the Andrews.
+
+113
+00:08:45,205 --> 00:08:49,275
+So now, what we will do is remove the
+Surname field,
+
+114
+00:08:51,125 --> 00:08:54,065
+and we will see what effect that has on
+our data?
+
+115
+00:08:55,840 --> 00:09:01,390
+Because by removing the Surname field, the
+only unique key we have is the Clients and
+
+116
+00:09:01,390 --> 00:09:07,544
+Employee Number, and that would leave us
+with duplicate records,
+
+117
+00:09:07,544 --> 00:09:11,779
+which is not allowed.
+
+118
+00:09:11,779 --> 00:09:17,010
+So back to the table, let's delete the
+field.
+
+119
+00:09:17,010 --> 00:09:19,975
+I will activate it, and we should be
+showing some errors.
+
+120
+00:09:19,975 --> 00:09:23,760
+[BLANK_AUDIO]
+
+121
+00:09:23,760 --> 00:09:28,126
+And we can see the system is just telling
+us, the table is not active,
+
+122
+00:09:28,126 --> 00:09:30,930
+because we have removed the Surname field.
+
+123
+00:09:30,930 --> 00:09:37,301
+So we will go to the Utilities,
+
+124
+00:09:37,301 --> 00:09:42,692
+and choose to Activate and
+
+125
+00:09:42,692 --> 00:09:47,355
+Adjust the Database.
+
+126
+00:09:47,355 --> 00:09:48,957
+That's been done successfully.
+
+127
+00:09:48,957 --> 00:09:53,415
+So, now what do you think the effect is on
+the table?
+
+128
+00:09:53,415 --> 00:09:56,550
+Let's have a look.
+
+129
+00:09:56,550 --> 00:09:57,571
+So there you go.
+
+130
+00:09:57,571 --> 00:09:58,779
+You can see.
+
+131
+00:09:58,779 --> 00:10:03,614
+The system has actually removed two of the
+records, because we would have been
+
+132
+00:10:03,614 --> 00:10:07,286
+left with duplicate records, according to
+the table key.
+
+133
+00:10:07,286 --> 00:10:11,810
+And the system has kept the first record
+that it encountered.
+
+134
+00:10:12,880 --> 00:10:14,998
+The second record has been deleted.
+
+135
+00:10:14,998 --> 00:10:19,781
+[BLANK_AUDIO]
+
+136
+00:10:19,781 --> 00:10:25,285
+So just to summarize, be very, very
+careful when deleting fields both, because
+
+137
+00:10:25,285 --> 00:10:31,350
+you can lose data and your table and
+fields could be used as reference fields.
+
+138
+00:10:31,350 --> 00:10:35,240
+And check tables for other database tables
+in your SAP system.
+

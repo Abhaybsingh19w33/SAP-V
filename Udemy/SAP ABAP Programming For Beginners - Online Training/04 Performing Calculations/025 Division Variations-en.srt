@@ -1,0 +1,502 @@
+1
+00:00:02,550 --> 00:00:07,340
+Now I want to step back just a little bit
+and discuss the division operator.
+
+2
+00:00:08,990 --> 00:00:11,336
+Earlier we saw the format of a simple
+division calculation.
+
+3
+00:00:11,336 --> 00:00:15,390
+Now I'm sure you remember back to your old
+school days,
+
+4
+00:00:15,390 --> 00:00:20,738
+that when you started to learn how to
+divide one number by another number,
+
+5
+00:00:20,738 --> 00:00:24,461
+you were first taught about the remainder
+values.
+
+6
+00:00:24,461 --> 00:00:29,295
+In our ABAP, we have three different ways
+we can divide numbers together.
+
+7
+00:00:29,295 --> 00:00:35,596
+And this allows us to concentrate on the
+remainder of the actual integer division,
+
+8
+00:00:35,596 --> 00:00:39,836
+and the standard division result with
+decimal places.
+
+9
+00:00:39,836 --> 00:00:42,732
+So let's just go through these three so
+
+10
+00:00:42,732 --> 00:00:48,628
+that you become familiar with them when
+you need to use them in your own program.
+
+11
+00:00:48,628 --> 00:00:49,379
+So back in the code.
+
+12
+00:00:49,379 --> 00:00:55,253
+[BLANK_AUDIO]
+
+13
+00:00:55,253 --> 00:01:00,086
+Let's add another little separator.
+
+14
+00:01:00,086 --> 00:01:02,920
+And we'll generate some division
+calculations.
+
+15
+00:01:02,920 --> 00:01:12,920
+[BLANK_AUDIO]
+
+16
+00:01:46,253 --> 00:01:49,086
+Haven't used result 2 before, I don't
+think, no.
+
+17
+00:01:49,086 --> 00:01:59,086
+[BLANK_AUDIO]
+
+18
+00:02:08,586 --> 00:02:10,586
+So here's the first calculation.
+
+19
+00:02:10,586 --> 00:02:15,920
+[BLANK_AUDIO]
+
+20
+00:02:15,920 --> 00:02:21,951
+I'll just generate
+
+21
+00:02:21,951 --> 00:02:26,211
+the outputs.
+
+22
+00:02:26,211 --> 00:02:26,790
+Okay.
+
+23
+00:02:26,790 --> 00:02:29,520
+I'll tell you what I'll do as well.
+
+24
+00:02:29,520 --> 00:02:32,430
+Let's just line these up so they will be
+easier to read.
+
+25
+00:02:32,430 --> 00:02:36,462
+Oops [NOISE].
+
+26
+00:02:36,462 --> 00:02:42,045
+So we define three variables, num1, num2,
+and result2.
+
+27
+00:02:42,045 --> 00:02:45,921
+Num1 has two decimal places with a value
+of 5.45.
+
+28
+00:02:45,921 --> 00:02:50,561
+Num2 has two decimal places with a value
+of 1.48.
+
+29
+00:02:50,561 --> 00:02:54,900
+And result2, which will be the product of
+our calculation,
+
+30
+00:02:54,900 --> 00:03:00,836
+just does two decimal places with no value
+defined, and I made a little error there.
+
+31
+00:03:00,836 --> 00:03:03,920
+There we go.
+
+32
+00:03:03,920 --> 00:03:07,128
+So our result will be num 1 divided by num
+2.
+
+33
+00:03:07,128 --> 00:03:11,962
+[BLANK_AUDIO]
+
+34
+00:03:11,962 --> 00:03:15,210
+Hm, I've got an error somewhere, let's
+have a quick look.
+
+35
+00:03:18,710 --> 00:03:19,920
+VALUE expected, not VALUES.
+
+36
+00:03:19,920 --> 00:03:21,420
+Oops.
+
+37
+00:03:21,420 --> 00:03:25,503
+Looks like I went all plural on it.
+
+38
+00:03:25,503 --> 00:03:26,003
+Here we go.
+
+39
+00:03:28,710 --> 00:03:32,030
+It's useful how the syntax checker
+
+40
+00:03:32,030 --> 00:03:35,400
+does actually identify what the errors are
+sometimes.
+
+41
+00:03:35,400 --> 00:03:39,906
+You can see it's looking for
+
+42
+00:03:39,906 --> 00:03:44,045
+VALUE instead of VALUES.
+
+43
+00:03:44,045 --> 00:03:47,378
+Oh, looks like I've already used NUM1 in
+the program.
+
+44
+00:03:47,378 --> 00:03:52,461
+[BLANK_AUDIO]
+
+45
+00:03:52,461 --> 00:03:54,795
+Have I used num1?
+
+46
+00:03:54,795 --> 00:03:56,086
+Oh, there it is.
+
+47
+00:03:56,086 --> 00:04:00,420
+Look, used it up there.
+
+48
+00:04:00,420 --> 00:04:03,878
+Let's change it, we'll use numa and numb.
+
+49
+00:04:03,878 --> 00:04:13,170
+[BLANK_AUDIO]
+
+50
+00:04:13,170 --> 00:04:14,711
+Okay, everything looks good.
+
+51
+00:04:14,711 --> 00:04:18,279
+I'll activate the program, and
+
+52
+00:04:18,279 --> 00:04:23,003
+when we execute it, can see a value of
+zero.
+
+53
+00:04:23,003 --> 00:04:24,295
+Oh, silly me.
+
+54
+00:04:24,295 --> 00:04:24,921
+Look at that.
+
+55
+00:04:24,921 --> 00:04:27,045
+I'm outputting the wrong result.
+
+56
+00:04:27,045 --> 00:04:29,545
+Result two, that's what we want.
+
+57
+00:04:29,545 --> 00:04:34,711
+[SOUND] There we go.
+
+58
+00:04:34,711 --> 00:04:38,378
+So the result is 3.68.
+
+59
+00:04:38,378 --> 00:04:40,336
+So that's the standard division.
+
+60
+00:04:40,336 --> 00:04:42,629
+Nothing too spectacular there.
+
+61
+00:04:42,629 --> 00:04:52,629
+[BLANK_AUDIO]
+
+62
+00:04:53,920 --> 00:05:00,435
+[NOISE] Now we'll have a look
+
+63
+00:05:00,435 --> 00:05:06,670
+at the integer division.
+
+64
+00:05:06,670 --> 00:05:16,670
+[BLANK_AUDIO]
+
+65
+00:05:26,836 --> 00:05:30,345
+So we'll use the same values, and
+
+66
+00:05:30,345 --> 00:05:35,795
+obviously I've renamed the actual variable
+names.
+
+67
+00:05:35,795 --> 00:05:40,850
+Now for the integer division, instead of
+
+68
+00:05:40,850 --> 00:05:47,503
+using the normal divide symbol, we
+actually use DIV.
+
+69
+00:05:47,503 --> 00:05:49,820
+So what's integer division?
+
+70
+00:05:49,820 --> 00:05:55,190
+Well as a reminder, what it will do, it
+will divide one number by the other, but
+
+71
+00:05:55,190 --> 00:05:58,910
+the result we'll get is just going to be
+the integer value.
+
+72
+00:05:58,910 --> 00:06:02,280
+So this means we will not get the decimal
+places.
+
+73
+00:06:02,280 --> 00:06:09,000
+Let's activate our program, and of course
+I've got syntax errors.
+
+74
+00:06:14,380 --> 00:06:15,510
+Oh, silly me.
+
+75
+00:06:15,510 --> 00:06:16,790
+Copy and pasted all wrong.
+
+76
+00:06:18,280 --> 00:06:18,988
+There we go.
+
+77
+00:06:18,988 --> 00:06:23,878
+[SOUND] Now we'll execute the program.
+
+78
+00:06:23,878 --> 00:06:27,462
+[SOUND] I've done it again, haven't I?
+
+79
+00:06:27,462 --> 00:06:29,755
+Now outputting the wrong result.
+
+80
+00:06:29,755 --> 00:06:32,142
+[LAUGH] Here we go.
+
+81
+00:06:32,142 --> 00:06:33,966
+Oops.
+
+82
+00:06:33,966 --> 00:06:40,711
+[NOISE].
+
+83
+00:06:40,711 --> 00:06:45,503
+Now when we execute, we can see we're
+getting a result of 3.
+
+84
+00:06:45,503 --> 00:06:49,128
+We're just getting the integer,
+
+85
+00:06:49,128 --> 00:06:53,628
+the full number, not the decimal places.
+
+86
+00:06:53,628 --> 00:06:55,431
+So now, as you can probably guess,
+
+87
+00:06:55,431 --> 00:06:58,090
+the last example we want to look at is the
+remainder.
+
+88
+00:06:58,090 --> 00:07:08,090
+[NOISE]
+
+89
+00:07:09,128 --> 00:07:12,961
+[BLANK_AUDIO]
+
+90
+00:07:12,961 --> 00:07:17,893
+Now i'm gonna make sure I get no
+
+91
+00:07:17,893 --> 00:07:22,073
+syntax errors this time.
+
+92
+00:07:22,073 --> 00:07:25,920
+[BLANK_AUDIO]
+
+93
+00:07:25,920 --> 00:07:30,336
+[NOISE]
+Okay.
+
+94
+00:07:30,336 --> 00:07:35,350
+Now with the remainder division type, we
+want to use MOD.
+
+95
+00:07:36,990 --> 00:07:41,890
+So the result we get here is going to be
+the large
+
+96
+00:07:41,890 --> 00:07:46,670
+number divided by the small, but we will
+only be shown the remainder
+
+97
+00:07:46,670 --> 00:07:51,410
+value of what can not be divided directly
+into num E.
+
+98
+00:07:52,740 --> 00:07:53,730
+I'm sure you know what I mean.
+
+99
+00:07:55,060 --> 00:07:57,980
+I might make it sound more complicated
+than it is [LAUGH].
+
+100
+00:07:57,980 --> 00:08:00,120
+Let's execute the program and see.
+
+101
+00:08:00,120 --> 00:08:01,760
+Oh, one thing.
+
+102
+00:08:01,760 --> 00:08:02,460
+Look at that.
+
+103
+00:08:02,460 --> 00:08:03,550
+I nearly have that syntax error.
+
+104
+00:08:04,620 --> 00:08:05,461
+Just change that.
+
+105
+00:08:05,461 --> 00:08:09,150
+[SOUND] And we'll try our program.
+
+106
+00:08:09,150 --> 00:08:10,920
+Here we go.
+
+107
+00:08:10,920 --> 00:08:15,605
+So now we've got a remainder of 1.01,
+
+108
+00:08:15,605 --> 00:08:22,254
+which hopefully, by my calculations,
+should be correct.
+
+109
+00:08:22,254 --> 00:08:27,652
+I should bring in the calculator,
+
+110
+00:08:27,652 --> 00:08:34,920
+5.45 divided by 3.48 3.6824.
+
+111
+00:08:34,920 --> 00:08:42,170
+That means 3 times 1.48 gives us a value
+of 4.4.
+
+112
+00:08:42,170 --> 00:08:47,106
+So if we take 4.4 from the 5.45,
+
+113
+00:08:47,106 --> 00:08:50,253
+that gives us 1.01.
+
+114
+00:08:50,253 --> 00:08:53,753
+[BLANK_AUDIO]
+
+115
+00:08:53,753 --> 00:08:56,211
+Which is the result we've got there.
+
+116
+00:08:56,211 --> 00:08:57,699
+[BLANK_AUDIO]
+

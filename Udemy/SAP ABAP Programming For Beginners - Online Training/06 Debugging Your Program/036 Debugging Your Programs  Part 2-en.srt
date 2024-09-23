@@ -1,0 +1,290 @@
+1
+00:00:02,250 --> 00:00:05,460
+Now let's take a look at the top end of
+the screen.
+
+2
+00:00:06,880 --> 00:00:09,980
+You'll see here we have some buttons on
+the top.
+
+3
+00:00:09,980 --> 00:00:17,301
+Fields, tables, breakpoints, watchpoints,
+calls, overview and settings.
+
+4
+00:00:17,301 --> 00:00:22,350
+Now these buttons allow us to enter
+different modes of the ABAP debugger.
+
+5
+00:00:22,350 --> 00:00:24,858
+And at the moment we are in fields mode.
+
+6
+00:00:24,858 --> 00:00:28,730
+And this is the default mode when you
+start the ABAP Debugger.
+
+7
+00:00:30,550 --> 00:00:33,480
+To change the different modes, just click
+on the button.
+
+8
+00:00:33,480 --> 00:00:38,910
+So for example, tables, great points,
+watch points and so on.
+
+9
+00:00:40,980 --> 00:00:41,890
+So we'll stay with field,
+
+10
+00:00:41,890 --> 00:00:46,500
+and just start to explain the buttons that
+you see just above those mode buttons.
+
+11
+00:00:49,540 --> 00:00:53,165
+The first one we have is single step.
+
+12
+00:00:53,165 --> 00:00:56,230
+Nuts, I short clicked key of F5.
+
+13
+00:00:56,230 --> 00:01:01,430
+What this allows us to do is go through
+our program line by line to in essence,
+
+14
+00:01:01,430 --> 00:01:02,610
+a single step at a time.
+
+15
+00:01:03,910 --> 00:01:06,180
+With the press F5 key or press the button.
+
+16
+00:01:08,090 --> 00:01:14,009
+And you'll see that we are executing the
+program line by line.
+
+17
+00:01:14,009 --> 00:01:18,661
+Now, the next button we have is the
+execute button with the [UNKNOWN]
+
+18
+00:01:18,661 --> 00:01:23,398
+key of F6, and the execute button allows
+us to execute Independent
+
+19
+00:01:23,398 --> 00:01:27,370
+sections of code that our program may
+call.
+
+20
+00:01:27,370 --> 00:01:31,140
+So for example function module or forms.
+
+21
+00:01:31,140 --> 00:01:35,890
+This option is very handy because if our
+program uses existing
+
+22
+00:01:35,890 --> 00:01:41,540
+sections of code already created in a SAP
+system and we know them to be correct.
+
+23
+00:01:41,540 --> 00:01:44,100
+And there's no need for us to actually
+debug them.
+
+24
+00:01:44,100 --> 00:01:48,510
+We would just want to execute them and
+then carry on debugging our program
+
+25
+00:01:48,510 --> 00:01:51,540
+to find out what the specific issue is in
+our code.
+
+26
+00:01:51,540 --> 00:01:55,590
+And moving on, we have the return
+function.
+
+27
+00:01:55,590 --> 00:01:59,450
+That's where the short cookie of F7.
+
+28
+00:01:59,450 --> 00:02:04,160
+Now the return function is somewhat of a
+lifesaving function
+
+29
+00:02:04,160 --> 00:02:07,301
+if you forget to use the F6 execute
+function.
+
+30
+00:02:09,320 --> 00:02:11,400
+So for example, if we.
+
+31
+00:02:11,400 --> 00:02:14,860
+Step by step go through the lines of our
+program, and
+
+32
+00:02:14,860 --> 00:02:19,420
+we'll use the F5 key to step into a
+working function module
+
+33
+00:02:19,420 --> 00:02:23,870
+that may contain hundreds, if not
+thousands of lines of code.
+
+34
+00:02:23,870 --> 00:02:27,390
+But because we know this function module
+already exists,
+
+35
+00:02:27,390 --> 00:02:30,310
+It's probably the case that we don't want
+to debug it.
+
+36
+00:02:30,310 --> 00:02:34,450
+So we don't want to be sat there pressing
+the F5 key going step by step
+
+37
+00:02:34,450 --> 00:02:39,480
+until we finish that section of code and
+get returned to our program.
+
+38
+00:02:39,480 --> 00:02:42,860
+So by pressing the F7 key, the return
+function,
+
+39
+00:02:42,860 --> 00:02:48,560
+it allows you to execute all the remaining
+code within that specific function.
+
+40
+00:02:48,560 --> 00:02:51,940
+And then you will be returned to the line
+of code
+
+41
+00:02:51,940 --> 00:02:54,820
+within your program that calls that
+function.
+
+42
+00:02:54,820 --> 00:02:58,710
+And once again you can continue then going
+on debugging your own program.
+
+43
+00:03:00,100 --> 00:03:04,990
+So remember the return function, it saves
+you awful lot of time when you make that
+
+44
+00:03:04,990 --> 00:03:08,530
+mistake in stepping into a function module
+that already works.
+
+45
+00:03:09,940 --> 00:03:12,970
+The next option we come across is the
+continue option.
+
+46
+00:03:14,180 --> 00:03:15,620
+And this has a short cookie of a F8.
+
+47
+00:03:15,620 --> 00:03:20,400
+Now the continue option allows you to
+
+48
+00:03:20,400 --> 00:03:25,510
+basically continue your program without
+going step by step, line by line.
+
+49
+00:03:27,120 --> 00:03:31,690
+If I was to press this button now which I
+will, you'll see the programs
+
+50
+00:03:31,690 --> 00:03:36,445
+zooms along and it executes the whole
+program and shows us the final results.
+
+51
+00:03:36,445 --> 00:03:40,520
+Let me step back and get into the debugger
+again.
+
+52
+00:03:42,530 --> 00:03:44,050
+Now I ask one of the function,
+
+53
+00:03:44,050 --> 00:03:47,680
+which is, as well as zooming through the
+whole program,
+
+54
+00:03:47,680 --> 00:03:52,660
+you can also get it to just zoom to the
+line of code where you place your cursor.
+
+55
+00:03:53,970 --> 00:03:57,260
+So, for example I'll place the cursor here
+in this select statement.
+
+56
+00:03:58,540 --> 00:03:59,640
+And if I press the F8 key.
+
+57
+00:04:02,410 --> 00:04:06,660
+You'll see the execution, a zoom down to
+where the cursor was, and
+
+58
+00:04:06,660 --> 00:04:09,050
+then pauses there for us to then choose
+what to do.
+
+59
+00:04:10,440 --> 00:04:15,566
+So we can go step by step or press the
+zoom continue function again,
+
+60
+00:04:15,566 --> 00:04:17,955
+and it completes the program.
+
+61
+00:04:17,955 --> 00:04:23,009
+[BLANK_AUDIO]
+

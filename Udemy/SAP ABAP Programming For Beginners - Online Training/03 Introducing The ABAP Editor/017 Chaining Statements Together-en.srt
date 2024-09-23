@@ -1,0 +1,142 @@
+1
+00:00:01,340 --> 00:00:04,960
+And I want to introduce something called
+Chaining Statements Together.
+
+2
+00:00:04,960 --> 00:00:07,930
+You will have noticed in our program,
+
+3
+00:00:07,930 --> 00:00:11,110
+that we are using the right statement
+quite a lot.
+
+4
+00:00:11,110 --> 00:00:16,180
+Now to save us time, we can chain our
+right statements together.
+
+5
+00:00:16,180 --> 00:00:20,438
+And this saves us from having to duplicate
+the right statement on every
+
+6
+00:00:20,438 --> 00:00:21,671
+line that we write.
+
+7
+00:00:21,671 --> 00:00:26,921
+So to do this,
+
+8
+00:00:26,921 --> 00:00:32,609
+I'll copy a new
+
+9
+00:00:32,609 --> 00:00:39,178
+section of code.
+
+10
+00:00:39,178 --> 00:00:40,295
+Change some clients,
+
+11
+00:00:40,295 --> 00:00:47,753
+[BLANK_AUDIO]
+
+12
+00:00:47,753 --> 00:00:52,100
+And what we do with the WRITE statement is
+add a colon after it.
+
+13
+00:00:53,500 --> 00:00:58,730
+This tells the SAP system that our WRITE
+statement is going to write
+
+14
+00:00:58,730 --> 00:01:03,740
+out multiple fields or text literals as we
+define.
+
+15
+00:01:05,300 --> 00:01:09,940
+So, here we have WRITE, new line and the
+surname.
+
+16
+00:01:11,430 --> 00:01:14,195
+We're then gonna change the full stop to a
+comma.
+
+17
+00:01:14,195 --> 00:01:21,795
+[NOISE] Get rid of the second WRITE
+statement.
+
+18
+00:01:21,795 --> 00:01:23,352
+Do the same with the third.
+
+19
+00:01:23,352 --> 00:01:28,140
+[NOISE] Edit the code and then when we
+have our last
+
+20
+00:01:28,140 --> 00:01:32,807
+item we want to output with a WRITE
+statement,
+
+21
+00:01:32,807 --> 00:01:36,170
+that's where we put the period.
+
+22
+00:01:36,170 --> 00:01:38,330
+So what this is basically doing is,
+
+23
+00:01:38,330 --> 00:01:43,050
+the colon says to the system we're going
+to output many items.
+
+24
+00:01:43,050 --> 00:01:48,690
+We separate the items by a comma and we
+use the period to terminate the statement.
+
+25
+00:01:50,300 --> 00:01:52,050
+Very simple, and it can be used for
+
+26
+00:01:52,050 --> 00:01:54,290
+many other statements such as the move
+statement.
+
+27
+00:01:55,580 --> 00:01:56,378
+So we can execute the code
+
+28
+00:01:56,378 --> 00:02:06,504
+[BLANK_AUDIO]
+
+29
+00:02:06,504 --> 00:02:11,980
+And we should see we got exactly the same
+output as the one above.
+
+30
+00:02:13,750 --> 00:02:18,000
+The only difference is we've chained our
+write statements together,
+
+31
+00:02:18,000 --> 00:02:21,280
+saving our precious fingers from too many
+key presses.
+

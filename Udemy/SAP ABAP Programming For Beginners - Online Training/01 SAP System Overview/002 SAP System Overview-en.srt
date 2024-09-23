@@ -1,0 +1,52 @@
+1
+00:00:01,450 --> 00:00:01,990
+Hello.
+
+2
+00:00:01,990 --> 00:00:06,110
+Welcome to Module 1, the SAP System
+Overview.
+
+3
+00:00:06,110 --> 00:00:07,340
+In this module,
+
+4
+00:00:07,340 --> 00:00:12,640
+we're gonna cover the high level
+architecture of a standard SAP system.
+
+5
+00:00:12,640 --> 00:00:18,140
+That's gonna include the technical
+architecture and platforming dependence.
+
+6
+00:00:18,140 --> 00:00:21,140
+And why that is so cool.
+
+7
+00:00:21,140 --> 00:00:24,710
+We'll go over the environment that our
+programs will run on.
+
+8
+00:00:24,710 --> 00:00:30,090
+This will include the work processes and
+the basic structure of an ABAP program.
+
+9
+00:00:31,370 --> 00:00:36,000
+Then we'll go onto looking at and running
+SAP system.
+
+10
+00:00:36,000 --> 00:00:38,700
+We'll discuss the business model overview
+and
+
+11
+00:00:38,700 --> 00:00:40,970
+then we'll get going with the ABAP
+Workbench.
+

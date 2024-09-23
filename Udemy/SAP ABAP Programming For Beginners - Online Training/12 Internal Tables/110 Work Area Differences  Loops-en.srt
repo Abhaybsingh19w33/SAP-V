@@ -1,0 +1,164 @@
+1
+00:00:01,780 --> 00:00:06,356
+So now we have gone through how to fill,
+modify data,
+
+2
+00:00:06,356 --> 00:00:11,863
+delete data from our internal
+tables that have a header record.
+
+3
+00:00:11,863 --> 00:00:17,001
+Let's now swap over and look internal
+tables that don't have a header record,
+
+4
+00:00:17,001 --> 00:00:19,684
+the ones we want to use going forward, and
+
+5
+00:00:19,684 --> 00:00:23,150
+they're the ones where we
+specify our own work area.
+
+6
+00:00:25,550 --> 00:00:28,290
+Now we're not gonna go
+through every example again.
+
+7
+00:00:28,290 --> 00:00:30,800
+But what we will do,
+is go though the differences.
+
+8
+00:00:33,000 --> 00:00:35,230
+So first up,
+let's have a look at reading data.
+
+9
+00:00:36,620 --> 00:00:38,421
+When we have a loop statement,
+
+10
+00:00:38,421 --> 00:00:41,971
+that loops through our internal
+table that uses a work area.
+
+11
+00:00:41,971 --> 00:00:45,470
+The loop reads each record
+from our internal table,
+
+12
+00:00:45,470 --> 00:00:48,580
+into the work area instead
+of the header line.
+
+13
+00:00:48,580 --> 00:00:53,270
+Now because we have the ability
+to specify the work area
+
+14
+00:00:53,270 --> 00:00:58,370
+completely separate to our internal table,
+we must specify
+
+15
+00:00:58,370 --> 00:01:03,300
+that work area we want to use within
+our loop to read the data into.
+
+16
+00:01:05,220 --> 00:01:06,920
+So let me clean up this code and
+
+17
+00:01:06,920 --> 00:01:11,160
+have a look at some examples of using
+the work area with loops and so on.
+
+18
+00:01:15,070 --> 00:01:18,790
+I have loaded up the code that we have
+used in a previous example when looking at
+
+19
+00:01:18,790 --> 00:01:20,790
+work areas.
+
+20
+00:01:20,790 --> 00:01:24,443
+And we already specified how to
+use a work area in an example but
+
+21
+00:01:24,443 --> 00:01:27,330
+we did not go into great detail.
+
+22
+00:01:27,330 --> 00:01:28,090
+So let's do that now.
+
+23
+00:01:29,890 --> 00:01:33,709
+So here is where we add an array fetch.
+
+24
+00:01:33,709 --> 00:01:36,520
+We're not too bothered
+about that right now.
+
+25
+00:01:36,520 --> 00:01:37,970
+Let's remove it.
+
+26
+00:01:37,970 --> 00:01:38,510
+I'll tell you what,
+
+27
+00:01:38,510 --> 00:01:42,330
+no we'll keep it in because [LAUGH]
+that fills out our internal table.
+
+28
+00:01:44,620 --> 00:01:47,271
+Let's concentrate on this
+piece of code right here.
+
+29
+00:01:50,510 --> 00:01:55,667
+So as you can see, the standard
+loop statement, we're looping our
+
+30
+00:01:55,667 --> 00:02:00,642
+internal table but we're going to
+instead of using the hex line,
+
+31
+00:02:00,642 --> 00:02:05,910
+we're gonna read our records into
+how our own predefined work area.
+
+32
+00:02:07,920 --> 00:02:11,700
+And then when we want to work with any
+data that belongs to the work area,
+
+33
+00:02:13,140 --> 00:02:15,340
+we reference the work area directly.
+
+34
+00:02:16,520 --> 00:02:22,010
+So our write statement says WRITE
+the surname field from our work area,
+
+35
+00:02:22,010 --> 00:02:23,400
+not the internal table
+

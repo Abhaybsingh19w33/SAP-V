@@ -1,0 +1,325 @@
+1
+00:00:02,160 --> 00:00:06,640
+So we have learned how to create and fill
+a standard internal table.
+
+2
+00:00:08,040 --> 00:00:11,220
+Let's have a look at how we would use that
+data line by line.
+
+3
+00:00:13,670 --> 00:00:18,630
+Now, our internal tables are just tables
+that are held in memory, and
+
+4
+00:00:18,630 --> 00:00:21,900
+similar in many respects as tables that
+were held in a database.
+
+5
+00:00:23,590 --> 00:00:28,058
+So, let's take a look at how we can read
+through the records of an internal table
+
+6
+00:00:28,058 --> 00:00:29,540
+line by line using a loop.
+
+7
+00:00:31,570 --> 00:00:34,240
+The way we access the records of an
+internal table,
+
+8
+00:00:34,240 --> 00:00:38,600
+is different to how we access records of a
+standard about dictionary table.
+
+9
+00:00:39,840 --> 00:00:44,640
+Instead of using the select statement, we
+will use the Loop and End Loop statements.
+
+10
+00:00:46,790 --> 00:00:51,240
+The loop and end loop statements are very
+similar to the Select and
+
+11
+00:00:51,240 --> 00:00:56,490
+End Select statements in that we start our
+record selection with a loop.
+
+12
+00:00:57,508 --> 00:01:01,110
+Include any ABAP code we want inside the
+loop
+
+13
+00:01:01,110 --> 00:01:03,630
+to process the records that we have
+selected.
+
+14
+00:01:03,630 --> 00:01:06,780
+And then we end our loop with the End Loop
+statement.
+
+15
+00:01:08,490 --> 00:01:11,030
+So, let's take a look at how this works
+
+16
+00:01:11,030 --> 00:01:13,180
+with an internal table that has a header
+line.
+
+17
+00:01:13,180 --> 00:01:15,870
+Now, I'll change the screen
+
+18
+00:01:15,870 --> 00:01:19,030
+to bring up the header line examples we've
+used in previous videos.
+
+19
+00:01:21,940 --> 00:01:28,220
+Okay, we have our original example where
+we were using the Select statements,
+
+20
+00:01:28,220 --> 00:01:32,740
+using the Append statements to add the
+records to the internal table.
+
+21
+00:01:32,740 --> 00:01:35,910
+And then we do have a Write statement just
+to help with debugging.
+
+22
+00:01:35,910 --> 00:01:36,990
+But I'm gonna remove that.
+
+23
+00:01:36,990 --> 00:01:40,860
+So let's have a look at how we would write
+this Loop statement.
+
+24
+00:01:40,860 --> 00:01:46,760
+And it's very simple, we will start with a
+loop.
+
+25
+00:01:48,960 --> 00:01:56,230
+We say we're looping at our internal
+table, which is itab01.
+
+26
+00:01:56,230 --> 00:02:02,200
+We then add code inside our loop, to do
+whatever we want.
+
+27
+00:02:02,200 --> 00:02:06,630
+Maybe updating records in another table,
+or writing out to the screen, and
+
+28
+00:02:06,630 --> 00:02:09,410
+so on, or maybe just performing
+calculations.
+
+29
+00:02:10,450 --> 00:02:13,290
+And then once that's done, we have the End
+Loop.
+
+30
+00:02:13,290 --> 00:02:18,826
+So when we access records of an internal
+table using a header line,
+
+31
+00:02:18,826 --> 00:02:23,410
+each record gets transferred one record at
+a time from
+
+32
+00:02:23,410 --> 00:02:26,200
+the body of the internal table into the
+header line,
+
+33
+00:02:26,200 --> 00:02:29,920
+so that we can then work with the header
+line to do what we want.
+
+34
+00:02:30,930 --> 00:02:33,910
+As you can see, it's very simple and easy
+to understand.
+
+35
+00:02:35,440 --> 00:02:36,860
+So now we have our loop.
+
+36
+00:02:36,860 --> 00:02:37,810
+Let's fill some code in.
+
+37
+00:02:37,810 --> 00:02:41,545
+Just here.
+
+38
+00:02:41,545 --> 00:02:45,086
+So that we do something with the data.
+
+39
+00:02:45,086 --> 00:02:47,753
+So we're just gonna write it out to the
+screen.
+
+40
+00:02:47,753 --> 00:02:57,753
+[BLANK_AUDIO]
+
+41
+00:03:01,379 --> 00:03:02,711
+And it's as simple as that.
+
+42
+00:03:02,711 --> 00:03:04,921
+Let's pretty it up.
+
+43
+00:03:04,921 --> 00:03:08,486
+So as you can it is very similar to how we
+have
+
+44
+00:03:08,486 --> 00:03:12,462
+used the Select statements a little higher
+up.
+
+45
+00:03:12,462 --> 00:03:16,253
+We select our records.
+
+46
+00:03:16,253 --> 00:03:20,253
+We process the data.
+
+47
+00:03:20,253 --> 00:03:24,336
+And then we finished the Select.
+
+48
+00:03:24,336 --> 00:03:30,177
+Let's have a quick look in a debug session
+to see how the header line gets filled and
+
+49
+00:03:30,177 --> 00:03:31,795
+used within our loop.
+
+50
+00:03:31,795 --> 00:03:38,336
+So, we'll activate the code, stick the
+break points on, and execute.
+
+51
+00:03:38,336 --> 00:03:40,630
+So the Select statement has already been
+processed.
+
+52
+00:03:40,630 --> 00:03:45,590
+As you can see, we have,
+
+53
+00:03:45,590 --> 00:03:50,420
+let's see, five records, and
+
+54
+00:03:50,420 --> 00:03:57,000
+you can see the header line has still got
+the fifth record already populated.
+
+55
+00:03:59,140 --> 00:04:03,780
+But when we process our Loop statement, we
+start to loop through with the table
+
+56
+00:04:03,780 --> 00:04:07,010
+one record at a time, starting at the
+first record, and
+
+57
+00:04:07,010 --> 00:04:11,977
+what will happen is this record will get
+copied to the header line.
+
+58
+00:04:13,260 --> 00:04:17,252
+And then we access the header line with
+our Write statement,
+
+59
+00:04:17,252 --> 00:04:20,545
+to write the individual fields out to the
+screen.
+
+60
+00:04:20,545 --> 00:04:22,086
+Let's go one line at a time.
+
+61
+00:04:22,086 --> 00:04:26,461
+[BLANK_AUDIO]
+
+62
+00:04:26,461 --> 00:04:29,680
+So as you can see, the first record is
+being copied to the header line.
+
+63
+00:04:31,120 --> 00:04:34,420
+And when we have statements to work with
+this type of table,
+
+64
+00:04:36,360 --> 00:04:38,262
+they will always access the header record.
+
+65
+00:04:38,262 --> 00:04:46,003
+Have a look at the screen, Amy Jones.
+
+66
+00:04:46,003 --> 00:04:51,712
+[BLANK_AUDIO]
+
+67
+00:04:51,712 --> 00:04:55,170
+And so on, I'll zoom through, there's the
+output.
+
+68
+00:04:55,170 --> 00:04:56,003
+[BLANK_AUDIO]
+
+69
+00:04:56,003 --> 00:04:57,753
+Real simple stuff.
+
+70
+00:04:57,753 --> 00:05:03,509
+[BLANK_AUDIO]
+

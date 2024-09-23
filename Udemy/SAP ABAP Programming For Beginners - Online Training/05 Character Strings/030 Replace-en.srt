@@ -1,0 +1,182 @@
+1
+00:00:01,550 --> 00:00:04,170
+Now, let's take a look at replacing
+character strings.
+
+2
+00:00:06,050 --> 00:00:10,730
+I'll go ahead and add some code, and go
+through the explanation of how it works.
+
+3
+00:00:13,010 --> 00:00:17,770
+So, the first thing we need to look at is
+the new data statement I've declared.
+
+4
+00:00:17,770 --> 00:00:23,574
+And this is surname2, and it's going to be
+a length of 40 characters.
+
+5
+00:00:23,574 --> 00:00:28,240
+And note, I haven't used the type
+declaration here
+
+6
+00:00:28,240 --> 00:00:32,489
+because the system will use the default
+type c.
+
+7
+00:00:32,489 --> 00:00:36,750
+[BLANK_AUDIO]
+
+8
+00:00:36,750 --> 00:00:39,234
+Now, down to the logic itself.
+
+9
+00:00:39,234 --> 00:00:44,029
+The first thing I'm doing is moving a
+value into the surname2 field.
+
+10
+00:00:44,029 --> 00:00:49,114
+And this is Mr comma Joe Smith.
+
+11
+00:00:49,114 --> 00:00:53,650
+Then, we're using the replace statement,
+and
+
+12
+00:00:53,650 --> 00:01:00,631
+we're doing a replace the comma with a
+full stop into our surname2 field.
+
+13
+00:01:00,631 --> 00:01:03,069
+And we'll write out the results.
+
+14
+00:01:03,069 --> 00:01:05,980
+First of all, let's pretty the code up.
+
+15
+00:01:07,620 --> 00:01:08,650
+And then test it out.
+
+16
+00:01:10,650 --> 00:01:17,865
+And there you can see, the output is Mr
+full stop Joe Smith.
+
+17
+00:01:17,865 --> 00:01:22,443
+Now, one thing to note here is, with the
+replace statement,
+
+18
+00:01:22,443 --> 00:01:26,680
+it will only replace the first occurrence
+in the string.
+
+19
+00:01:26,680 --> 00:01:33,290
+And what I mean is, if our string had Mr
+comma Joe comma Smith,
+
+20
+00:01:33,290 --> 00:01:37,628
+only the first comma would be replaced.
+
+21
+00:01:37,628 --> 00:01:40,786
+[BLANK_AUDIO]
+
+22
+00:01:40,786 --> 00:01:42,480
+To show you that, let's test it out.
+
+23
+00:01:43,930 --> 00:01:45,690
+And there, you can see.
+
+24
+00:01:45,690 --> 00:01:49,100
+Only the first occurrence in the string
+has been replaced.
+
+25
+00:01:51,710 --> 00:01:54,100
+So, how do you replace all the
+occurrences?
+
+26
+00:01:55,150 --> 00:01:58,940
+Well, that's where we could use something
+we will come on to a little bit later on,
+
+27
+00:01:58,940 --> 00:02:01,460
+when we have a look at loops.
+
+28
+00:02:01,460 --> 00:02:07,460
+You could use a while loop so that our
+replace statement can be executed multiple
+
+29
+00:02:07,460 --> 00:02:12,000
+times, dependent on a specific piece of
+logic that we add to our loop statement.
+
+30
+00:02:13,170 --> 00:02:15,213
+I'll show you very quickly here,
+
+31
+00:02:15,213 --> 00:02:17,546
+[BLANK_AUDIO]
+
+32
+00:02:17,546 --> 00:02:22,306
+But we won't go into too much detail on
+it,
+
+33
+00:02:22,306 --> 00:02:26,149
+because we will cover it later on.
+
+34
+00:02:26,149 --> 00:02:29,632
+Oh, sorry, done it in the wrong place.
+
+35
+00:02:29,632 --> 00:02:30,804
+There we go.
+
+36
+00:02:30,804 --> 00:02:34,484
+[BLANK_AUDIO]
+
+37
+00:02:34,484 --> 00:02:38,571
+Let's pretty it up.
+
+38
+00:02:38,571 --> 00:02:42,637
+So, in this case, when we execute the
+program,
+
+39
+00:02:42,637 --> 00:02:48,699
+we can see the comma has been replaced in
+both positions within our text.
+
+40
+00:02:48,699 --> 00:02:53,080
+And that's because the replace statement
+was actually executed two times.
+

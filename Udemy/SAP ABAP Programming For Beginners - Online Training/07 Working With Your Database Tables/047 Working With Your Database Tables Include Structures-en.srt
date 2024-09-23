@@ -1,0 +1,439 @@
+1
+00:00:02,480 --> 00:00:05,380
+The next thing we want to look at are
+include structures.
+
+2
+00:00:07,210 --> 00:00:10,530
+Now include structures are very similar to
+append structures, but
+
+3
+00:00:10,530 --> 00:00:15,430
+the main difference is that include
+structures are reuseable objects.
+
+4
+00:00:15,430 --> 00:00:17,640
+And can be linked to many other tables,
+
+5
+00:00:17,640 --> 00:00:21,130
+ABAP programs, dialogue programs, and
+structures.
+
+6
+00:00:22,430 --> 00:00:26,500
+There are a few things you need to keep in
+mind though with include structures.
+
+7
+00:00:26,500 --> 00:00:30,740
+And that is include structures must be
+flat structures,
+
+8
+00:00:30,740 --> 00:00:33,880
+meaning they cannot contain any additional
+structures within them.
+
+9
+00:00:35,650 --> 00:00:38,260
+And the fields within an include structure
+
+10
+00:00:38,260 --> 00:00:40,950
+can have a maximum length of 16
+characters.
+
+11
+00:00:42,780 --> 00:00:44,110
+Let's dive straight in and
+
+12
+00:00:44,110 --> 00:00:48,330
+see how we create include structures that
+get attached to our employee table.
+
+13
+00:00:49,880 --> 00:00:53,740
+So whereas we had an append structure
+button that we used for
+
+14
+00:00:53,740 --> 00:00:55,970
+append structures, we don't have an
+include structure button.
+
+15
+00:00:57,430 --> 00:01:01,240
+So the first thing we need to do is make
+sure we are in change mode.
+
+16
+00:01:01,240 --> 00:01:02,710
+Oh, one little thing.
+
+17
+00:01:02,710 --> 00:01:06,000
+I don't know if you noticed but because
+we're in display mode here,
+
+18
+00:01:07,580 --> 00:01:11,910
+when we appended our append structure from
+the previous video,
+
+19
+00:01:13,420 --> 00:01:15,900
+all we saw was this one append line.
+
+20
+00:01:15,900 --> 00:01:18,490
+We didn't see the actual field within the
+append structure.
+
+21
+00:01:18,490 --> 00:01:23,680
+This is some quirk within SAP that when
+you're in display mode,
+
+22
+00:01:23,680 --> 00:01:29,040
+you can see the field, but when you switch
+back to change mode, it disappears.
+
+23
+00:01:29,040 --> 00:01:30,860
+Don't ask me the logic, I don't know why.
+
+24
+00:01:32,380 --> 00:01:35,870
+So anyway, what we want to do is create
+our include.
+
+25
+00:01:37,020 --> 00:01:40,180
+And before we do it, just a quick note
+that it's
+
+26
+00:01:40,180 --> 00:01:43,670
+important where you place your cursor when
+we do this.
+
+27
+00:01:43,670 --> 00:01:47,590
+Because wherever your place your cursor on
+your table,
+
+28
+00:01:47,590 --> 00:01:50,370
+the include will be inserted one row
+above.
+
+29
+00:01:51,570 --> 00:01:54,670
+So if we add our cursor here on surname.
+
+30
+00:01:54,670 --> 00:01:59,535
+The include, would be between surname and
+the employee field.
+
+31
+00:01:59,535 --> 00:02:03,503
+[SOUND] So why is that important?
+
+32
+00:02:03,503 --> 00:02:08,169
+Well if you wanted your include structure
+to be part of the table key,
+
+33
+00:02:08,169 --> 00:02:12,540
+you have to make sure it appears at the
+top of the table.
+
+34
+00:02:12,540 --> 00:02:15,800
+Because all table fields used as a table
+key
+
+35
+00:02:17,080 --> 00:02:21,090
+need to be grouped together at the top of
+your table.
+
+36
+00:02:21,090 --> 00:02:25,610
+But in our case, let's just insert it
+above our append structure.
+
+37
+00:02:25,610 --> 00:02:29,440
+So I'm gonna place my cursor on the append
+structure row,
+
+38
+00:02:29,440 --> 00:02:34,770
+then go to the edit menu, and then include
+insert.
+
+39
+00:02:36,990 --> 00:02:42,350
+And remembering to use our customer name
+space, we use Zed, and
+
+40
+00:02:42,350 --> 00:02:49,435
+we'll call this Z-E-M-P L for good luck.
+
+41
+00:02:49,435 --> 00:02:54,325
+Click the green continue tick and then we
+get a warning message
+
+42
+00:02:54,325 --> 00:02:57,675
+just saying it's not active, well we know
+that because we're just creating it.
+
+43
+00:02:59,905 --> 00:03:00,885
+And the green tick again.
+
+44
+00:03:02,025 --> 00:03:07,514
+And then we can see your include structure
+has been inserted between the append and
+
+45
+00:03:07,514 --> 00:03:09,411
+the e-currency field.
+
+46
+00:03:10,990 --> 00:03:13,526
+So now let's go out to field to our
+enclosed structure.
+
+47
+00:03:13,526 --> 00:03:18,080
+Let's just double-click it, use forward
+navigation,
+
+48
+00:03:18,080 --> 00:03:20,220
+and we'll choose yes to save our table.
+
+49
+00:03:22,010 --> 00:03:23,250
+Yes to create the structure.
+
+50
+00:03:24,790 --> 00:03:29,180
+And then we have a screen very similar to
+the append structure.
+
+51
+00:03:29,180 --> 00:03:31,830
+So just like before, let's key in a short
+text,
+
+52
+00:03:40,520 --> 00:03:42,700
+and then we'll create individual fields.
+
+53
+00:03:42,700 --> 00:03:45,210
+Let's just create one field, and let's
+call this location.
+
+54
+00:03:50,620 --> 00:03:53,402
+[SOUND] Oh.
+I forgot, remember customer names based
+
+55
+00:03:53,402 --> 00:03:57,860
+on, we'll use ZZ to indicate it's not part
+of our original table.
+
+56
+00:04:00,340 --> 00:04:03,970
+And we'll use ZLOCAT for the component.
+
+57
+00:04:03,970 --> 00:04:07,462
+And we'll use the forward navigation to
+create the data element.
+
+58
+00:04:07,462 --> 00:04:17,462
+[BLANK_AUDIO]
+
+59
+00:04:19,046 --> 00:04:24,253
+And again we'll keep it very simple and
+use a ten character field.
+
+60
+00:04:24,253 --> 00:04:34,253
+[BLANK_AUDIO]
+
+61
+00:04:37,503 --> 00:04:40,700
+So there we have our field added to the
+include.
+
+62
+00:04:40,700 --> 00:04:47,030
+Let's activate the include, then step back
+to our table.
+
+63
+00:04:48,690 --> 00:04:53,720
+And there we can see our include is set
+there just above the append structure.
+
+64
+00:04:54,730 --> 00:04:57,140
+Our table is inactive, so once again,
+
+65
+00:04:57,140 --> 00:05:01,750
+activate our table and now we're good to
+go.
+
+66
+00:05:01,750 --> 00:05:04,920
+We can use it however we wish.
+
+67
+00:05:04,920 --> 00:05:08,860
+So let's just view the table, view the
+contents,
+
+68
+00:05:08,860 --> 00:05:11,550
+and hopefully we'll see the additional
+field.
+
+69
+00:05:11,550 --> 00:05:15,660
+Here we go, inserted before the field in
+our append structure.
+
+70
+00:05:17,190 --> 00:05:21,860
+And as you can see, it looks just like any
+other field, and can be treated as so.
+
+71
+00:05:24,870 --> 00:05:28,620
+So what we'll do, let's edit a few records
+just so we've got some data in there.
+
+72
+00:05:36,060 --> 00:05:37,680
+Department IT, of course.
+
+73
+00:05:44,670 --> 00:05:45,360
+Save the record.
+Another one.
+
+74
+00:05:48,020 --> 00:05:49,385
+Hurries its time HR department.
+
+75
+00:05:49,385 --> 00:05:53,430
+Oh, I did say I was gonna use codes,
+didn't I?
+
+76
+00:05:53,430 --> 00:05:56,130
+Nevermind lets stick with this [LAUGH] as
+long as
+
+77
+00:05:56,130 --> 00:05:59,032
+we keep it below ten characters we'll be
+fine.
+
+78
+00:05:59,032 --> 00:06:06,545
+So we scroll along we, there we can see
+the data has been added to each record.
+
+79
+00:06:06,545 --> 00:06:09,545
+[BLANK_AUDIO]
+
+80
+00:06:09,545 --> 00:06:12,503
+And if I flip back and just go to display
+mode,
+
+81
+00:06:12,503 --> 00:06:16,003
+[BLANK_AUDIO]
+
+82
+00:06:16,003 --> 00:06:19,711
+[SOUND] Sorry come back out and then go
+into display.
+
+83
+00:06:19,711 --> 00:06:24,617
+There we can see the fields in a different
+color, location which is
+
+84
+00:06:24,617 --> 00:06:29,620
+part of the include, and department part
+of the append structure.
+
+85
+00:06:31,340 --> 00:06:33,890
+And as I've just done that, I've just
+remembered one thing.
+
+86
+00:06:33,890 --> 00:06:39,840
+I've told you that there's this anomaly
+with the fields for
+
+87
+00:06:39,840 --> 00:06:41,340
+the include and the append.
+
+88
+00:06:41,340 --> 00:06:42,850
+Not displaying in change view.
+
+89
+00:06:42,850 --> 00:06:49,800
+I seem to remember if you click on the row
+with your include,
+
+90
+00:06:51,250 --> 00:06:56,980
+and then come up to the expand include
+button, there we go, it shows it.
+
+91
+00:06:58,890 --> 00:07:01,660
+Shows you how long it is since I've
+[LAUGH] I've used a, and
+
+92
+00:07:01,660 --> 00:07:04,640
+the same with the append structure.
+
+93
+00:07:07,040 --> 00:07:10,800
+Still, its a little strange why they don't
+expand them by default, but there we go
+

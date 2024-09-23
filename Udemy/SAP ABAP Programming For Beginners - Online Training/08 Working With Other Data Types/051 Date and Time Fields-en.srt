@@ -1,0 +1,412 @@
+1
+00:00:01,720 --> 00:00:03,930
+It's now time to get going
+with some more addup.
+
+2
+00:00:03,930 --> 00:00:09,940
+And we're going to focus on working with
+other data types that we haven't yet
+
+3
+00:00:09,940 --> 00:00:12,140
+come across.
+
+4
+00:00:12,140 --> 00:00:16,900
+So far, we've looked at using pneumatic
+fields for performing calculations.
+
+5
+00:00:16,900 --> 00:00:19,530
+And we have taken a look
+at character strings and
+
+6
+00:00:19,530 --> 00:00:22,150
+the different type of
+character manipulation
+
+7
+00:00:22,150 --> 00:00:25,980
+that we can do with the various in built
+character string up, up statements.
+
+8
+00:00:27,560 --> 00:00:30,400
+But now, let's move on and
+take a look at date and time fields.
+
+9
+00:00:30,400 --> 00:00:34,860
+So before we start, let's go into the up,
+
+10
+00:00:34,860 --> 00:00:38,020
+up editor and get ourselves
+a brand new program to start with.
+
+11
+00:00:40,140 --> 00:00:43,054
+So we will execute from section SE38.
+
+12
+00:00:48,162 --> 00:00:52,100
+That's the previous program that we
+used in looking at character strings.
+
+13
+00:00:52,100 --> 00:00:56,280
+So let's copy this.
+
+14
+00:00:58,025 --> 00:01:04,066
+[NOISE] And we'll call this
+
+15
+00:01:04,066 --> 00:01:09,289
+zed other data types.
+
+16
+00:01:20,643 --> 00:01:28,290
+Now it's been copied,
+we'll click the change button.
+
+17
+00:01:28,290 --> 00:01:29,100
+I just updated the comments
+
+18
+00:01:42,531 --> 00:01:44,575
+And let's get rid of.
+
+19
+00:01:49,055 --> 00:01:50,495
+Lots of this code.
+
+20
+00:01:56,834 --> 00:02:00,521
+Date and time fields are not
+defined as numeric data types but
+
+21
+00:02:00,521 --> 00:02:03,350
+are instead defined as
+character data types.
+
+22
+00:02:06,210 --> 00:02:10,320
+They're really just character strings
+that can be used in calculations.
+
+23
+00:02:11,470 --> 00:02:16,090
+And this is made possible by the inbuilt
+automatic data type conversions that
+
+24
+00:02:17,090 --> 00:02:22,490
+we've already discussed in a previous
+module and just like any other data type
+
+25
+00:02:22,490 --> 00:02:25,810
+we use the data statement to
+declare these date and time fields.
+
+26
+00:02:27,350 --> 00:02:29,900
+So, if we focus first on the date field.
+
+27
+00:02:29,900 --> 00:02:35,460
+We will use a data type of D, which is
+always defined as eight characters,
+
+28
+00:02:35,460 --> 00:02:37,790
+with the first four characters
+representing the year,
+
+29
+00:02:37,790 --> 00:02:41,240
+the next two the month,
+and the next two the day.
+
+30
+00:02:41,240 --> 00:02:45,384
+So we would write it,
+
+31
+00:02:45,384 --> 00:02:51,839
+we give it a name, my date type d.
+
+32
+00:02:58,132 --> 00:03:01,730
+That's it, pretty simple.
+
+33
+00:03:01,730 --> 00:03:05,309
+One thing to note,
+when we don't define an initial value,
+
+34
+00:03:05,309 --> 00:03:08,614
+the system automatically
+assigns zeros to the field.
+
+35
+00:03:15,324 --> 00:03:19,546
+When you do want to an initial
+value just like any other field
+
+36
+00:03:19,546 --> 00:03:21,582
+we used the value addition.
+
+37
+00:03:27,178 --> 00:03:32,959
+So, 2012 [SOUND] 0, 1, 0, 1.
+
+38
+00:03:32,959 --> 00:03:38,084
+[SOUND] And don't forget,
+like any other field,
+
+39
+00:03:38,084 --> 00:03:43,597
+we are not just limited to
+using the time statement.
+
+40
+00:03:43,597 --> 00:03:46,797
+If we already know a field
+defined as a day type and
+
+41
+00:03:46,797 --> 00:03:48,990
+we want to reference that field.
+
+42
+00:03:48,990 --> 00:03:51,053
+We can use the line statement.
+
+43
+00:03:58,471 --> 00:03:59,860
+So what's this one, SY datum?
+
+44
+00:03:59,860 --> 00:04:05,430
+Well, this is a system variable that
+always holds the value of the system's
+
+45
+00:04:05,430 --> 00:04:11,277
+date, so the my date two field, we're
+defining it the same as DSY datum field.
+
+46
+00:04:17,512 --> 00:04:19,729
+Now let's move on to time fields.
+
+47
+00:04:24,931 --> 00:04:28,749
+As you know I don't like excessive typing.
+
+48
+00:04:35,379 --> 00:04:37,962
+So time fields are very
+similar to date Eight fields.
+
+49
+00:04:39,542 --> 00:04:43,672
+But instead of being eight characters
+long, they are six characters.
+
+50
+00:04:43,672 --> 00:04:50,334
+And they have the format of hour hour,
+minute minute, second second.
+
+51
+00:04:50,334 --> 00:04:54,917
+And just as with the date field,
+the initial value is always zeroes.
+
+52
+00:04:54,917 --> 00:05:02,550
+[SOUND] To define the time type,
+
+53
+00:05:02,550 --> 00:05:07,839
+instead of D we use T.
+
+54
+00:05:07,839 --> 00:05:12,862
+So we can say 11 hours, ten minutes,
+
+55
+00:05:12,862 --> 00:05:16,370
+five seconds is the value.
+
+56
+00:05:18,210 --> 00:05:19,430
+And the same.
+
+57
+00:05:19,430 --> 00:05:22,322
+When we want to reference
+an existing field,
+
+58
+00:05:27,825 --> 00:05:34,709
+We will use the system time field,
+which is S, Y, dash, U, Z, E, I, T.
+
+59
+00:05:47,040 --> 00:05:52,004
+So let's now output some of these,
+date and time type fields to the screen so
+
+60
+00:05:52,004 --> 00:05:53,843
+we can see the output format.
+
+61
+00:05:58,185 --> 00:05:59,543
+So we just make a comment.
+
+62
+00:06:10,187 --> 00:06:12,050
+And then we'll use the write statements.
+
+63
+00:06:12,050 --> 00:06:15,387
+Chain command.
+
+64
+00:06:19,520 --> 00:06:24,694
+So we now put the first date, and
+
+65
+00:06:24,694 --> 00:06:30,442
+on a brand new line, day number 2,
+
+66
+00:06:30,442 --> 00:06:35,999
+and my time on a brand new line, and
+
+67
+00:06:35,999 --> 00:06:41,557
+my time2, And then we'll finish
+
+68
+00:06:41,557 --> 00:06:46,950
+it with an underline statement.
+
+69
+00:06:46,950 --> 00:06:49,506
+[NOISE]
+
+70
+00:06:49,506 --> 00:06:55,130
+There we go.
+
+71
+00:06:55,130 --> 00:06:56,288
+Run a quick check.
+
+72
+00:06:56,288 --> 00:07:00,872
+Oops, a little problem.
+
+73
+00:07:00,872 --> 00:07:05,820
+Let's go fix that.
+
+74
+00:07:07,775 --> 00:07:11,238
+And the u line is a command all it's own.
+
+75
+00:07:11,238 --> 00:07:15,170
+There we go
+
+76
+00:07:20,350 --> 00:07:25,520
+That's better,
+we'll activate and then test.
+
+77
+00:07:25,520 --> 00:07:28,060
+So the output is showing us four fields,
+
+78
+00:07:28,060 --> 00:07:31,200
+the first one contained the value
+of the date that we keyed in and
+
+79
+00:07:31,200 --> 00:07:37,024
+the date declaration part, and
+we can see it's the 1st of January, 2012.
+
+80
+00:07:38,170 --> 00:07:41,392
+But remember how we keyed it in,
+in a reverse order.
+
+81
+00:07:41,392 --> 00:07:46,743
+We did 2012, 01, 01, but the write
+statement applies its own formatting,
+
+82
+00:07:46,743 --> 00:07:49,938
+and as we discussed in one
+of the previous modules,
+
+83
+00:07:49,938 --> 00:07:54,050
+you can format the output as you
+like with the write statement.
+
+84
+00:07:54,050 --> 00:07:57,300
+A second field is a date field as well.
+
+85
+00:07:58,310 --> 00:08:02,150
+But we didn't define any
+value to that date field so
+
+86
+00:08:02,150 --> 00:08:05,210
+this system has output
+the initial value and
+
+87
+00:08:05,210 --> 00:08:10,600
+it's used the automatic formatting by
+inserting periods between the day, month,
+
+88
+00:08:10,600 --> 00:08:15,990
+and year, and it's using the formatting
+that associated with out user log on.
+
+89
+00:08:15,990 --> 00:08:22,640
+The third and fourth, very similar again,
+we can see they are both time fields.
+
+90
+00:08:22,640 --> 00:08:24,930
+The first one has a value and
+the second one doesn't.
+
+91
+00:08:27,320 --> 00:08:32,370
+So, now let's move on and see how we can
+use a date and time field in calculations.
+

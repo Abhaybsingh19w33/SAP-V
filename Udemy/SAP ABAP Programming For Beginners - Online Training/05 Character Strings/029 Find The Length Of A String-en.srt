@@ -1,0 +1,124 @@
+1
+00:00:01,050 --> 00:00:02,510
+Now moving on.
+
+2
+00:00:02,510 --> 00:00:05,140
+Let's have a look, at finding the length
+of a string.
+
+3
+00:00:05,140 --> 00:00:09,630
+Now to do this, we actually use a function
+instead of a statement.
+
+4
+00:00:09,630 --> 00:00:13,530
+And this is a very simple function, called
+string length.
+
+5
+00:00:13,530 --> 00:00:17,830
+So, I will add some code, and then we'll
+go through the statement,
+
+6
+00:00:17,830 --> 00:00:19,320
+and output the results.
+
+7
+00:00:20,680 --> 00:00:24,750
+So the first thing to do, is to declare
+the new data field.
+
+8
+00:00:26,890 --> 00:00:32,660
+We'll call it LEN for length, and the data
+type of I just to hold the integer
+
+9
+00:00:32,660 --> 00:00:37,120
+value that will represent the length of
+the string you're trying to interrogate.
+
+10
+00:00:40,050 --> 00:00:45,890
+Then down to the code, we can have the
+following three lines,
+
+11
+00:00:49,010 --> 00:00:54,570
+and you'll see it looks very simple, we
+have the field we have just defined and
+
+12
+00:00:54,570 --> 00:00:57,490
+that will contain the length of the
+surname field.
+
+13
+00:00:58,850 --> 00:01:04,220
+And it is this string function, the string
+length function,
+
+14
+00:01:04,220 --> 00:01:07,600
+strlen, that will look at the surname
+field,
+
+15
+00:01:07,600 --> 00:01:11,060
+move the length of the string into the LEN
+field we've declared.
+
+16
+00:01:11,060 --> 00:01:16,540
+If we take a quick peek at the surname
+field.
+
+17
+00:01:16,540 --> 00:01:19,300
+You can see it currently holds the word
+Smith.
+
+18
+00:01:20,620 --> 00:01:22,030
+Which is five characters in length.
+
+19
+00:01:24,250 --> 00:01:28,960
+So when we execute this report the LEN
+field will contain the number five.
+
+20
+00:01:30,955 --> 00:01:35,575
+And that will be output at the end of this
+write statement.
+
+21
+00:01:35,575 --> 00:01:42,295
+So I've included some text and then the
+LEN field at the end.
+
+22
+00:01:42,295 --> 00:01:45,265
+So let's check the report for syntax
+errors.
+
+23
+00:01:46,525 --> 00:01:47,035
+Everything's good.
+
+24
+00:01:47,035 --> 00:01:49,035
+And we'll execute the report.
+
+25
+00:01:50,940 --> 00:01:53,150
+And then we have the length of the surname
+field is five.
+
+26
+00:01:53,150 --> 00:01:56,170
+Very simple.
+

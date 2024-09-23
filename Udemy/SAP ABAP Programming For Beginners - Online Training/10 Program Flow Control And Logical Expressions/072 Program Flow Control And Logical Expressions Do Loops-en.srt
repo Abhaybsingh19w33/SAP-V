@@ -1,0 +1,363 @@
+1
+00:00:01,940 --> 00:00:04,000
+Let's now take a look, at the Do loop.
+
+2
+00:00:04,000 --> 00:00:07,320
+A Do loop is very simple.
+
+3
+00:00:09,430 --> 00:00:11,679
+We start with defining the Do loop.
+
+4
+00:00:11,679 --> 00:00:15,014
+[BLANK_AUDIO]
+
+5
+00:00:15,014 --> 00:00:22,205
+We then execute a statement block, and
+then we end the Do loop.
+
+6
+00:00:22,205 --> 00:00:26,910
+So, in our case, we would change our
+statement block, to our write statement.
+
+7
+00:00:26,910 --> 00:00:29,641
+[BLANK_AUDIO]
+
+8
+00:00:29,641 --> 00:00:32,815
+Instead of z employees,
+
+9
+00:00:32,815 --> 00:00:37,810
+we would just output the word, hello.
+
+10
+00:00:37,810 --> 00:00:40,170
+Let's do the Pretty Printer.
+
+11
+00:00:42,320 --> 00:00:43,150
+Oops.
+
+12
+00:00:43,150 --> 00:00:44,610
+Look at that, making silly mistakes.
+
+13
+00:00:46,260 --> 00:00:49,460
+Here we go.
+And, as you can see, it's very simple.
+
+14
+00:00:49,460 --> 00:00:51,000
+But one thing you might notice,
+
+15
+00:00:51,000 --> 00:00:55,500
+is that there's nothing telling this loop
+statement, when to stop.
+
+16
+00:00:56,530 --> 00:00:58,520
+Let's see what happens when we execute
+this code.
+
+17
+00:00:58,520 --> 00:01:04,464
+[SOUND] As long as I put the proper
+
+18
+00:01:04,464 --> 00:01:08,358
+full stop in place.
+
+19
+00:01:08,358 --> 00:01:13,896
+[SOUND] So, now we're executing the
+program,
+
+20
+00:01:13,896 --> 00:01:17,020
+but see how we're stuck?
+
+21
+00:01:17,020 --> 00:01:21,049
+This is because, this Do loop, is
+processing thousands and
+
+22
+00:01:21,049 --> 00:01:26,190
+thousands of times per second, and
+outputting the word hello to the screen.
+
+23
+00:01:27,190 --> 00:01:28,910
+So, we're stuck in a loop.
+
+24
+00:01:28,910 --> 00:01:30,040
+And that's not good for anyone.
+
+25
+00:01:30,040 --> 00:01:36,673
+[SOUND] So, we need to come back out, and
+amend our code.
+
+26
+00:01:36,673 --> 00:01:43,524
+[SOUND] So, what do you think we need to
+do here?
+
+27
+00:01:43,524 --> 00:01:48,889
+Well, we need to add some mechanism to
+this Do loop, to tell it when to
+
+28
+00:01:48,889 --> 00:01:55,009
+stop processing the block of code,
+in-between the Do and End Do statements.
+
+29
+00:01:55,009 --> 00:02:00,225
+And that's where we introduce the times
+addition.
+
+30
+00:02:00,225 --> 00:02:03,553
+And the times addition will go straight
+after your do.
+
+31
+00:02:03,553 --> 00:02:09,171
+So, we would say 15 times, for example.
+
+32
+00:02:09,171 --> 00:02:13,234
+[SOUND] Now when we test it,
+
+33
+00:02:13,234 --> 00:02:17,851
+you can see the word, hello,
+
+34
+00:02:17,851 --> 00:02:22,110
+is written out 15 times.
+
+35
+00:02:22,110 --> 00:02:26,421
+Tell you what, let's stick it on a new
+line, so it's easier to see.
+
+36
+00:02:26,421 --> 00:02:32,814
+[SOUND] There we go.
+
+37
+00:02:32,814 --> 00:02:37,026
+So, the Do statement is useful for
+repeating a number of tasks,
+
+38
+00:02:37,026 --> 00:02:41,628
+a specific number of times, but you must
+remember to always include,
+
+39
+00:02:41,628 --> 00:02:44,670
+a number and the times addition,
+otherwise,
+
+40
+00:02:44,670 --> 00:02:49,370
+you could end up in an endless loop, just
+as we did in the first example.
+
+41
+00:02:50,820 --> 00:02:53,060
+So, now, I want to rewrite this Do
+statement.
+
+42
+00:02:54,650 --> 00:02:59,648
+Let's, instead of writing out let's have
+some processing.
+
+43
+00:02:59,648 --> 00:03:01,896
+Let's have a equals 0.
+
+44
+00:03:01,896 --> 00:03:03,020
+Oops.
+
+45
+00:03:03,020 --> 00:03:03,960
+Wrong line.
+
+46
+00:03:03,960 --> 00:03:07,598
+Do apologize.
+Let's define.
+
+47
+00:03:07,598 --> 00:03:16,854
+[BLANK_AUDIO].
+
+48
+00:03:16,854 --> 00:03:20,542
+Okay, so, we define a, as an integer.
+
+49
+00:03:20,542 --> 00:03:22,360
+We set its value to zero.
+
+50
+00:03:23,780 --> 00:03:27,820
+And then what we will do inside the loop,
+is a calculation.
+
+51
+00:03:27,820 --> 00:03:35,330
+A equals a plus 1, so, this is just going
+to be a very simple counter.
+
+52
+00:03:36,940 --> 00:03:42,710
+What I want this to demonstrate, is the Do
+loop actually uses an internal counter,
+
+53
+00:03:42,710 --> 00:03:46,280
+to control how many times the loop is
+executed.
+
+54
+00:03:46,280 --> 00:03:50,390
+You can check the SY index system
+variable,
+
+55
+00:03:50,390 --> 00:03:53,680
+to see how many times your loop has been
+processed.
+
+56
+00:03:53,680 --> 00:03:54,280
+So, let's do that.
+
+57
+00:03:56,240 --> 00:04:00,867
+First of all, let's make sure we write out
+our own counter, and
+
+58
+00:04:00,867 --> 00:04:04,735
+then we can compare it, against the system
+counter.
+
+59
+00:04:04,735 --> 00:04:12,523
+[SOUND] Everything looks good.
+
+60
+00:04:12,523 --> 00:04:17,521
+I'll stick a break point on the Do, and
+then let's execute.
+
+61
+00:04:17,521 --> 00:04:19,193
+[BLANK_AUDIO]
+
+62
+00:04:19,193 --> 00:04:21,340
+Okay, so now we're into the code.
+
+63
+00:04:21,340 --> 00:04:23,050
+Let's step through it.
+
+64
+00:04:23,050 --> 00:04:25,600
+I'm going to use the F5, single step.
+
+65
+00:04:27,130 --> 00:04:32,102
+I'm going to double-click on a, so we can
+monitor that variable value.
+
+66
+00:04:32,102 --> 00:04:38,703
+And what you need to have a look at as
+well, when we execute the, the first one.
+
+67
+00:04:38,703 --> 00:04:45,341
+[SOUND] Is, SY index, and as you can see,
+
+68
+00:04:45,341 --> 00:04:50,429
+that has a value of one as well.
+
+69
+00:04:50,429 --> 00:04:52,229
+This is a system variable.
+
+70
+00:04:52,229 --> 00:04:57,065
+You don't have to declare it, you just
+need to be aware of it,
+
+71
+00:04:57,065 --> 00:04:59,212
+to execute the loop again.
+
+72
+00:04:59,212 --> 00:05:04,913
+As you can see, as soon as we step into
+the loop, the SY index,
+
+73
+00:05:04,913 --> 00:05:11,838
+increases by one, to indicate we are in
+the second iteration of this loop.
+
+74
+00:05:11,838 --> 00:05:17,750
+Then our own counter gets executed, and
+we'd write it out to the screen.
+
+75
+00:05:17,750 --> 00:05:19,814
+[SOUND] And so on.
+
+76
+00:05:19,814 --> 00:05:23,605
+And it will keep executing until it gets
+to 15.
+
+77
+00:05:23,605 --> 00:05:28,154
+[SOUND] Now I'll just zoom along.
+
+78
+00:05:28,154 --> 00:05:31,905
+And there's our output.
+
+79
+00:05:31,905 --> 00:05:37,505
+And once again, I should have stuck it on
+it's own line.
+
+80
+00:05:37,505 --> 00:05:43,425
+[SOUND] And there we go,
+
+81
+00:05:43,425 --> 00:05:46,234
+all 15.
+

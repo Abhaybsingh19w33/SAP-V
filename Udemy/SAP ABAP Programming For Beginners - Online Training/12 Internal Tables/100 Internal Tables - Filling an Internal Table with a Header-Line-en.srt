@@ -1,0 +1,671 @@
+1
+00:00:01,870 --> 00:00:06,430
+When we read and write data to an internal
+table that has a header line
+
+2
+00:00:06,430 --> 00:00:10,730
+we always move unread data from the header
+line itself.
+
+3
+00:00:10,730 --> 00:00:15,190
+So what I mean hear is when we read a
+record from an internal table,
+
+4
+00:00:15,190 --> 00:00:18,960
+the record is moved to the header line of
+the internal table, and
+
+5
+00:00:18,960 --> 00:00:20,240
+we access the header line.
+
+6
+00:00:21,890 --> 00:00:25,280
+When we want to write a record to an
+internal table,
+
+7
+00:00:25,280 --> 00:00:29,610
+we move the contents to the header line of
+the internal table, and
+
+8
+00:00:29,610 --> 00:00:32,930
+then the header line gets appended to the
+table itself.
+
+9
+00:00:34,570 --> 00:00:37,020
+Let's get straight on to the up up code
+and
+
+10
+00:00:37,020 --> 00:00:39,399
+see how we can populate our internal
+table.
+
+11
+00:00:40,680 --> 00:00:46,730
+So, at the moment, the code we have from
+our previous video is not quite suitable
+
+12
+00:00:46,730 --> 00:00:52,280
+for this example so I'm going to probably
+pause the video a little bit here,
+
+13
+00:00:52,280 --> 00:00:55,940
+declare a brand new internal table, and
+then we'll have a look at the code.
+
+14
+00:01:00,215 --> 00:01:02,910
+Okay, so I've created some new code.
+
+15
+00:01:04,470 --> 00:01:06,020
+And you'll see it's fairly basic.
+
+16
+00:01:06,020 --> 00:01:11,360
+I've included a table statement to declare
+the table we're going to be accessing.
+
+17
+00:01:13,260 --> 00:01:15,790
+And then created a brand new internal
+table
+
+18
+00:01:15,790 --> 00:01:19,568
+with almost the same structure as our
+zemployee's table.
+
+19
+00:01:20,700 --> 00:01:24,800
+So we have employee, surname, forename,
+title, date of birth.
+
+20
+00:01:24,800 --> 00:01:29,170
+But I then added an extra field called LOS
+which stands for
+
+21
+00:01:29,170 --> 00:01:34,420
+length of service which will have a
+default value of three.
+
+22
+00:01:34,420 --> 00:01:35,640
+Something like three years.
+
+23
+00:01:36,720 --> 00:01:39,690
+So now let's take a look at how we fill
+this internal table.
+
+24
+00:01:40,850 --> 00:01:44,030
+And to do this we will use a select
+statement.
+
+25
+00:01:44,030 --> 00:01:45,590
+So we start with select.
+
+26
+00:01:54,458 --> 00:01:58,721
+And then, you, you can write all on one
+line here, but I'm just gonna break it up
+
+27
+00:01:58,721 --> 00:02:02,503
+so it's little easier to see the
+components of the select statements.
+
+28
+00:02:02,503 --> 00:02:11,927
+[BLANK]
+
+29
+00:02:11,927 --> 00:02:18,211
+Okay.
+
+30
+00:02:18,211 --> 00:02:20,170
+So let's break this down.
+
+31
+00:02:20,170 --> 00:02:22,083
+We have our select statements, and
+
+32
+00:02:22,083 --> 00:02:24,902
+the asterisk means we're gonna select all
+fields.
+
+33
+00:02:26,170 --> 00:02:28,590
+And then we say from, and then our table
+name.
+
+34
+00:02:29,740 --> 00:02:38,320
+And we're gonna say into, corresponding
+fields of, table height number one.
+
+35
+00:02:38,320 --> 00:02:45,480
+So this means select all the fields from
+zemployees and
+
+36
+00:02:45,480 --> 00:02:53,760
+move them into the corresponding fields
+that match by name of our internal table.
+
+37
+00:02:56,500 --> 00:02:59,350
+Now, this is what's called an array fetch.
+
+38
+00:02:59,350 --> 00:03:02,890
+So, it picks up the records and puts them
+in our table all at once.
+
+39
+00:03:04,320 --> 00:03:07,410
+So, before you've seen how we use the
+select statement as a loop,
+
+40
+00:03:07,410 --> 00:03:10,020
+where it'll do one record at a time.
+
+41
+00:03:10,020 --> 00:03:13,630
+Well this way of using it, cuz it's all at
+once, that's an array fetch.
+
+42
+00:03:13,630 --> 00:03:16,930
+You'll notice there's no end select
+statements.
+
+43
+00:03:16,930 --> 00:03:20,970
+So as you can see, it's super easy to move
+all the records
+
+44
+00:03:20,970 --> 00:03:23,980
+from our database table into our internal
+table.
+
+45
+00:03:25,270 --> 00:03:30,340
+Now, our internal table does have an extra
+field, length of service.
+
+46
+00:03:31,450 --> 00:03:36,140
+So what will happen here is that every
+record will be filled
+
+47
+00:03:36,140 --> 00:03:37,140
+with a value of three.
+
+48
+00:03:37,140 --> 00:03:42,220
+We'll add
+
+49
+00:03:42,220 --> 00:03:46,030
+one more line of code, just to help with
+debugging.
+
+50
+00:03:46,030 --> 00:03:50,723
+We're not really bothered about seeing the
+output, but it will just let us
+
+51
+00:03:50,723 --> 00:03:55,586
+pause the code and interrogate the
+internal table in the debugging session.
+
+52
+00:03:55,586 --> 00:04:04,128
+[BLANK_AUDIO]
+
+53
+00:04:04,128 --> 00:04:08,596
+Okay, oops, I pressed the wrong button,
+[LAUGH] I apologize,
+
+54
+00:04:08,596 --> 00:04:14,180
+then we check everything's good to
+interpret, sticking to our break point.
+
+55
+00:04:15,421 --> 00:04:20,253
+[BLANK_AUDIO]
+
+56
+00:04:20,253 --> 00:04:27,420
+[INAUDIBLE] Break point and now I can
+click this.
+
+57
+00:04:27,420 --> 00:04:31,770
+So we're at the line of code, where we're
+going to fill out our internal table.
+
+58
+00:04:31,770 --> 00:04:35,299
+So what we'll do is have a look at the
+internal table first.
+
+59
+00:04:38,530 --> 00:04:45,150
+And we can see this hat symbol represents
+a header line, and then
+
+60
+00:04:45,150 --> 00:04:50,130
+down here you would see all the records as
+they get filled into the internal table.
+
+61
+00:04:50,130 --> 00:04:53,340
+But as we have yet to process this line
+there's nothing there.
+
+62
+00:04:54,750 --> 00:05:00,078
+So I'll just step through the code one
+line at a time, and
+
+63
+00:05:00,078 --> 00:05:05,086
+all we should need to do is execute just
+this one line.
+
+64
+00:05:05,086 --> 00:05:10,661
+And as you can see, let me just come back
+up, when we executed that, the system
+
+65
+00:05:10,661 --> 00:05:15,836
+did an array fetch and populated all the
+records into our internal tape.
+
+66
+00:05:15,836 --> 00:05:24,545
+[BLANK_AUDIO]
+
+67
+00:05:24,545 --> 00:05:27,120
+Let's change things around a little bit.
+
+68
+00:05:27,120 --> 00:05:29,930
+Now I want to introduce the append
+statement.
+
+69
+00:05:29,930 --> 00:05:34,050
+Just to give you an idea to another way of
+filling an internal table.
+
+70
+00:05:34,050 --> 00:05:38,461
+[BLANK_AUDIO]
+
+71
+00:05:38,461 --> 00:05:43,420
+Take the break point off, let's change
+around these select statements.
+
+72
+00:05:43,420 --> 00:05:44,711
+[BLANK_AUDIO]
+
+73
+00:05:44,711 --> 00:05:48,461
+What we will do is create a select.
+
+74
+00:05:48,461 --> 00:05:58,461
+[BLANK_AUDIO]
+
+75
+00:06:09,878 --> 00:06:12,367
+We've also, because I don't like typing
+much,
+
+76
+00:06:12,367 --> 00:06:15,100
+I'm just gonna bring in my favorite text
+editor.
+
+77
+00:06:16,770 --> 00:06:17,336
+Oops.
+
+78
+00:06:17,336 --> 00:06:21,795
+[BLANK_AUDIO]
+
+79
+00:06:21,795 --> 00:06:25,003
+I'm gonna say move.
+
+80
+00:06:25,003 --> 00:06:33,378
+Z employees- field name.
+
+81
+00:06:33,378 --> 00:06:35,253
+Sure.
+
+82
+00:06:35,253 --> 00:06:36,753
+Write over one.
+
+83
+00:06:36,753 --> 00:06:46,753
+[BLANK_AUDIO]
+
+84
+00:06:58,711 --> 00:07:00,420
+Okay, saving my fingers.
+
+85
+00:07:00,420 --> 00:07:03,003
+[BLANK_AUDIO]
+
+86
+00:07:03,003 --> 00:07:05,296
+Oops, that's not where I wanted it.
+
+87
+00:07:05,296 --> 00:07:15,296
+[BLANK_AUDIO]
+
+88
+00:07:25,378 --> 00:07:28,693
+Well, of course, we don't have that field
+in the table, so
+
+89
+00:07:28,693 --> 00:07:30,253
+I'll just remove that one.
+
+90
+00:07:30,253 --> 00:07:35,503
+[BLANK_AUDIO]
+
+91
+00:07:35,503 --> 00:07:37,003
+Okay.
+
+92
+00:07:37,003 --> 00:07:39,700
+So what we're doing here is a little bit
+different.
+
+93
+00:07:41,350 --> 00:07:44,230
+Where instead of doing an array fetch,
+
+94
+00:07:44,230 --> 00:07:49,160
+collecting the data one record at a time,
+then select loop.
+
+95
+00:07:49,160 --> 00:07:54,240
+So the first record will be selected and
+then we have individual move statements to
+
+96
+00:07:54,240 --> 00:08:02,680
+move our data field by field to the
+corresponding data in our internal table.
+
+97
+00:08:02,680 --> 00:08:04,050
+So let's activate it.
+
+98
+00:08:06,045 --> 00:08:11,100
+I'll stick a break point in and then we
+can debug the code and
+
+99
+00:08:11,100 --> 00:08:13,290
+see how it works line by line.
+
+100
+00:08:17,920 --> 00:08:19,360
+Okay.
+So I'm going to step through.
+
+101
+00:08:21,900 --> 00:08:28,580
+Let's bring up just I table one, and we'll
+look at the complete table.
+
+102
+00:08:31,210 --> 00:08:33,378
+So it's executed the select statement.
+
+103
+00:08:33,378 --> 00:08:36,753
+[BLANK_AUDIO]
+
+104
+00:08:36,753 --> 00:08:39,980
+And that's just held in SAP's memory at
+the moment.
+
+105
+00:08:39,980 --> 00:08:42,560
+And now we're going to execute the
+individual moves.
+
+106
+00:08:44,970 --> 00:08:50,490
+And as you can see, the first move moved
+the value of
+
+107
+00:08:50,490 --> 00:08:54,700
+the employee field to the header record of
+our internal table.
+
+108
+00:08:56,500 --> 00:08:58,020
+And so on with the other fields.
+
+109
+00:08:59,120 --> 00:09:06,270
+Now, one important thing is, I mentioned
+before when using header records.
+
+110
+00:09:06,270 --> 00:09:09,070
+The system only works with header records
+and
+
+111
+00:09:09,070 --> 00:09:13,900
+what I mean is it's filling the header
+record, but there's no code to then say
+
+112
+00:09:15,040 --> 00:09:21,150
+append the completed record to the table
+and you'll see this as we step through.
+
+113
+00:09:21,150 --> 00:09:23,110
+We come to the end of the select.
+
+114
+00:09:23,110 --> 00:09:29,340
+Start the loop again, and now all it's
+gonna do is overwrite the header record.
+
+115
+00:09:29,340 --> 00:09:32,850
+Now this is a real common mistake made by
+programmers, and
+
+116
+00:09:32,850 --> 00:09:36,380
+I still make it today if I'm ever using a
+header record.
+
+117
+00:09:36,380 --> 00:09:40,100
+I'll just sometimes forget to append the
+records to the table
+
+118
+00:09:40,100 --> 00:09:41,900
+because everything looks right.
+
+119
+00:09:41,900 --> 00:09:45,790
+Is just you've got this extra line of code
+that you need to add to say,
+
+120
+00:09:45,790 --> 00:09:49,300
+move the header record to the table and
+then do the loop again.
+
+121
+00:09:51,120 --> 00:09:56,550
+So assume through the code, come back and
+
+122
+00:09:56,550 --> 00:09:58,949
+then see what we need to do to complete
+this.
+
+123
+00:10:00,970 --> 00:10:02,970
+Take off the break point.
+
+124
+00:10:02,970 --> 00:10:04,670
+And it's really simple.
+
+125
+00:10:04,670 --> 00:10:09,700
+All we need to do to get the header
+records appended to the table
+
+126
+00:10:09,700 --> 00:10:11,440
+is add our append statement.
+
+127
+00:10:12,900 --> 00:10:19,020
+So just below the Moves, I will do append
+I table one.
+
+128
+00:10:21,300 --> 00:10:24,800
+This will tell the system to take the
+values from the header record and
+
+129
+00:10:24,800 --> 00:10:27,130
+add them into the body of the internal
+table.
+
+130
+00:10:28,780 --> 00:10:32,086
+Let's have another quick debug so you can
+see it working.
+
+131
+00:10:32,086 --> 00:10:41,421
+[BLANK_AUDIO]
+
+132
+00:10:41,421 --> 00:10:43,640
+Let's step through again, one line at a
+time.
+
+133
+00:10:45,390 --> 00:10:48,070
+Let's look at I tab first.
+
+134
+00:10:48,070 --> 00:10:55,252
+Now we get to the append statement and
+
+135
+00:10:55,252 --> 00:11:01,275
+you can see the record was added
+
+136
+00:11:01,275 --> 00:11:07,010
+to the body of the table.
+
+137
+00:11:07,010 --> 00:11:11,370
+And note here, the header record still
+contains the values.
+
+138
+00:11:11,370 --> 00:11:12,760
+That's something to be aware of.
+
+139
+00:11:14,090 --> 00:11:17,330
+Ideally, you want to clear out the header
+record
+
+140
+00:11:17,330 --> 00:11:21,180
+as soon as you've added your record to the
+body of the table.
+
+141
+00:11:23,765 --> 00:11:29,072
+And also,m if we go back and look at
+individual
+
+142
+00:11:29,072 --> 00:11:34,243
+fields of the table, and we'll take a
+look,
+
+143
+00:11:34,243 --> 00:11:38,734
+oops, at the length of service field,
+
+144
+00:11:38,734 --> 00:11:45,285
+you can see the default value of three has
+been appended.
+
+145
+00:11:45,285 --> 00:11:52,190
+So it can zoom through the program and get
+back to the code.
+

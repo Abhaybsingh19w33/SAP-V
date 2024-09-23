@@ -1,0 +1,364 @@
+1
+00:00:03,040 --> 00:00:05,490
+Let us now consider locking concepts.
+
+2
+00:00:05,490 --> 00:00:09,930
+And when we talk about locking,
+
+3
+00:00:09,930 --> 00:00:12,690
+I'm referring to locking data in database
+tables.
+
+4
+00:00:13,720 --> 00:00:18,180
+And there are two basic types of locking
+data that we need to bear in mind.
+
+5
+00:00:18,180 --> 00:00:23,690
+First of all is database locks which lock
+data in a physical database.
+
+6
+00:00:23,690 --> 00:00:27,200
+So what I mean is when we update a record.
+
+7
+00:00:27,200 --> 00:00:30,755
+A lock gets set on a record.
+
+8
+00:00:30,755 --> 00:00:33,915
+We can update it and then the lock is
+released.
+
+9
+00:00:33,915 --> 00:00:39,585
+The lock is there to ensure that once we
+set it, only we can update the data and
+
+10
+00:00:39,585 --> 00:00:43,777
+once we release the lock, that data can
+then be accessed by for the people.
+
+11
+00:00:44,965 --> 00:00:49,215
+Now these locks are not sufficient in an
+SAP system.
+
+12
+00:00:49,215 --> 00:00:51,930
+And they are generally only used.
+
+13
+00:00:51,930 --> 00:00:57,040
+When our record is being modified in a
+single step dialogue process.
+
+14
+00:00:58,390 --> 00:01:01,740
+Now, what I mean by a single step dialogue
+is that if
+
+15
+00:01:01,740 --> 00:01:07,410
+we have a screen that contains all the
+data that we need to work with.
+
+16
+00:01:07,410 --> 00:01:10,460
+And we click a button to update the data.
+
+17
+00:01:10,460 --> 00:01:15,010
+And because everything is held on one
+screen it can be updated in the database
+
+18
+00:01:15,010 --> 00:01:15,870
+in a single step.
+
+19
+00:01:17,000 --> 00:01:21,920
+Therefore the database can set a lock,
+update the data in the table and
+
+20
+00:01:21,920 --> 00:01:24,400
+release the lock all very very quickly.
+
+21
+00:01:26,530 --> 00:01:28,040
+As you will with SAP systems,
+
+22
+00:01:28,040 --> 00:01:33,490
+you will realize that database locks are
+not sufficient.
+
+23
+00:01:33,490 --> 00:01:39,720
+And this is because transactions in an SAP
+system often occur over multiple steps.
+
+24
+00:01:40,880 --> 00:01:43,680
+So let's say if we add an employee record
+to the system,
+
+25
+00:01:43,680 --> 00:01:46,910
+we may have to fill in ten screens of
+data.
+
+26
+00:01:46,910 --> 00:01:50,700
+The first step may be the name and
+address,
+
+27
+00:01:50,700 --> 00:01:56,020
+the second step would be the position that
+they would fill in the system, and so on.
+
+28
+00:01:56,020 --> 00:01:58,490
+And the user when they enter this data.
+
+29
+00:01:58,490 --> 00:02:03,450
+Only want the record to be added to the
+database at the very
+
+30
+00:02:03,450 --> 00:02:07,680
+end of the transaction when all the data
+in all the screens has been input.
+
+31
+00:02:08,810 --> 00:02:10,410
+So think about this.
+
+32
+00:02:10,410 --> 00:02:14,104
+If we tried to save the data that was
+entered in the first screen into
+
+33
+00:02:14,104 --> 00:02:17,310
+the database, then moved onto the second
+screen and
+
+34
+00:02:17,310 --> 00:02:22,260
+saved that, what happens if the user quit
+halfway through?
+
+35
+00:02:22,260 --> 00:02:24,100
+Entering all these ten screens of data.
+
+36
+00:02:24,100 --> 00:02:28,920
+We would have an invalid record in the
+database.
+
+37
+00:02:28,920 --> 00:02:32,560
+We may have updated a few tables, but we
+really require,
+
+38
+00:02:32,560 --> 00:02:37,620
+yeah, maybe five other tables filled in
+with data, for us to have a valid record.
+
+39
+00:02:39,380 --> 00:02:43,805
+So this is what I mean by using database
+slots with multi-step
+
+40
+00:02:43,805 --> 00:02:46,710
+dialogue processes is not sufficient.
+
+41
+00:02:47,830 --> 00:02:52,590
+So SAP of introduced it's own locking
+concept that
+
+42
+00:02:52,590 --> 00:02:57,130
+is completely independent of the database
+system.
+
+43
+00:02:57,130 --> 00:03:02,680
+SAP have created lock objects that enabled
+the system to lock data records
+
+44
+00:03:02,680 --> 00:03:09,300
+in multiple database tables for the entire
+duration of the SAP transaction.
+
+45
+00:03:10,910 --> 00:03:16,810
+Provided that they are linked, in the ABAP
+dictionary by a foreign key relationships.
+
+46
+00:03:16,810 --> 00:03:18,090
+That we have already looked at.
+
+47
+00:03:20,360 --> 00:03:25,280
+As we're not covering dialog programming
+in this course, we won't go into detail
+
+48
+00:03:25,280 --> 00:03:29,780
+explaining the step by step procedures to
+follow for creating database locks.
+
+49
+00:03:29,780 --> 00:03:33,780
+But we will continue with a brief overview
+of the topic before moving on.
+
+50
+00:03:35,790 --> 00:03:37,110
+So as I previously mentioned,
+
+51
+00:03:38,110 --> 00:03:42,110
+SAP lock objects form the basis of the
+lock concept.
+
+52
+00:03:43,370 --> 00:03:46,010
+And they are completely independent of
+database locks.
+
+53
+00:03:47,230 --> 00:03:51,120
+Now a lock object allows you to lock a
+record for
+
+54
+00:03:51,120 --> 00:03:53,810
+multiple tables at the same time.
+
+55
+00:03:53,810 --> 00:03:56,980
+Fo the entire duration of an SAP
+transaction.
+
+56
+00:03:58,440 --> 00:04:02,060
+And for this to work, the tables involved
+in the transaction
+
+57
+00:04:02,060 --> 00:04:04,740
+must be linked together using foreign
+keys.
+
+58
+00:04:05,950 --> 00:04:06,730
+If you remember.
+
+59
+00:04:06,730 --> 00:04:09,290
+We introduced foreign keys in an earlier
+module.
+
+60
+00:04:10,990 --> 00:04:13,430
+Now we used the ABAP dictionary to create
+lock objects.
+
+61
+00:04:15,070 --> 00:04:19,780
+And they contain the tables and key fields
+that make up a shared lock.
+
+62
+00:04:21,090 --> 00:04:25,720
+When we create the lock object, the system
+automatically creates
+
+63
+00:04:25,720 --> 00:04:29,990
+two function modules which we will come to
+in a later module.
+
+64
+00:04:31,390 --> 00:04:35,880
+These function modules are just simply
+modularized ABAP programs,
+
+65
+00:04:35,880 --> 00:04:38,760
+that can be culled from other programs.
+
+66
+00:04:38,760 --> 00:04:43,300
+Now the first function module has the
+action of setting a lock,
+
+67
+00:04:43,300 --> 00:04:47,050
+and the second one releases the lock.
+
+68
+00:04:48,270 --> 00:04:53,230
+And it is the programmer's responsibility
+to insure that these function modules
+
+69
+00:04:53,230 --> 00:04:56,330
+are called at the correct place within
+their programs.
+
+70
+00:04:57,640 --> 00:05:02,990
+When the lock is set a lock record is
+created in the central lock table for
+
+71
+00:05:02,990 --> 00:05:04,080
+the entire SAP system.
+
+72
+00:05:05,770 --> 00:05:12,030
+Now all programs must adhere to using the
+SAP lock concept to ensure their programs
+
+73
+00:05:13,600 --> 00:05:18,570
+set, delete and query the lock table that
+stores the lock records.
+
+74
+00:05:18,570 --> 00:05:19,530
+For the relevant entries.
+
+75
+00:05:21,190 --> 00:05:24,840
+We're not going to go into lock objects
+anymore than this.
+
+76
+00:05:24,840 --> 00:05:29,140
+And for the rest of the course we will
+just assume that the programs you create
+
+77
+00:05:29,140 --> 00:05:36,930
+and the tables you access are going to be
+exclusively used just by yourself.
+

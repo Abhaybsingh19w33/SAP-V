@@ -1,0 +1,367 @@
+1
+00:00:02,050 --> 00:00:07,420
+We will now take a look at how we can
+format our selection screens.
+
+2
+00:00:07,420 --> 00:00:12,475
+And this will help us make our selection
+screens look a lot more attractive and
+
+3
+00:00:12,475 --> 00:00:14,045
+intuitive to the user.
+
+4
+00:00:14,045 --> 00:00:18,564
+You already know how to make parameters
+and select options appear on the screen,
+
+5
+00:00:18,564 --> 00:00:21,760
+but you haven't included any specific
+layout options.
+
+6
+00:00:23,600 --> 00:00:25,420
+Yes, you have seen the objects on the
+screen,
+
+7
+00:00:25,420 --> 00:00:29,580
+but the system has determined where it
+places them all itself.
+
+8
+00:00:30,780 --> 00:00:34,210
+And this type of layout more often than
+not is not sufficient.
+
+9
+00:00:35,420 --> 00:00:36,050
+For example,
+
+10
+00:00:36,050 --> 00:00:41,070
+when you group a group of radio buttons
+together, you should group these and
+
+11
+00:00:41,070 --> 00:00:45,980
+separate them from other input fields so
+the user can identify them as a group.
+
+12
+00:00:47,530 --> 00:00:48,830
+So how do we do this?
+
+13
+00:00:48,830 --> 00:00:51,050
+Well, pretty simple.
+
+14
+00:00:51,050 --> 00:00:54,250
+We start to look at using the selection
+screen statement.
+
+15
+00:00:55,620 --> 00:00:58,700
+Now, this statement has its own formatting
+options
+
+16
+00:00:58,700 --> 00:01:01,840
+that you can use to define the layout for
+your selection screens.
+
+17
+00:01:02,990 --> 00:01:07,860
+It allows you to define the layout of
+parameters and selection criteria and
+
+18
+00:01:07,860 --> 00:01:10,470
+display comments and underlines on the
+selection screen.
+
+19
+00:01:11,720 --> 00:01:15,810
+Now, the selection screen statement needs
+to have additions
+
+20
+00:01:15,810 --> 00:01:20,700
+with it that specify the specific type of
+layout option you are defining.
+
+21
+00:01:21,770 --> 00:01:25,878
+So let's take a look.
+
+22
+00:01:25,878 --> 00:01:32,920
+That's our code, and we will go through
+some examples to show how it all works.
+
+23
+00:01:32,920 --> 00:01:39,336
+[BLANK_AUDIO]
+
+24
+00:01:39,336 --> 00:01:44,092
+So the first thing we're going to do is
+locate the place in our program
+
+25
+00:01:44,092 --> 00:01:47,295
+where we start to specify the screen
+layouts.
+
+26
+00:01:47,295 --> 00:01:50,800
+And this is here, where we have the
+parameter statements.
+
+27
+00:01:50,800 --> 00:01:54,720
+Now, the selection screen statement is a
+very simple syntax.
+
+28
+00:01:56,610 --> 00:02:00,740
+It is just SELECTION-SCREEN.
+
+29
+00:02:00,740 --> 00:02:02,740
+Can't be much easier than that.
+
+30
+00:02:02,740 --> 00:02:05,753
+But then we have additions.
+
+31
+00:02:05,753 --> 00:02:08,600
+So the first thing we're going to look at
+is blank lines.
+
+32
+00:02:10,150 --> 00:02:14,480
+So if we want to insert a blank line
+between parameters and things like that,
+
+33
+00:02:14,480 --> 00:02:19,353
+we would use, the SKIP addition.
+
+34
+00:02:19,353 --> 00:02:26,520
+And what we do is actually specify the
+number of lines we want to skip,
+
+35
+00:02:26,520 --> 00:02:32,711
+and that's represented here, in these
+square brackets.
+
+36
+00:02:32,711 --> 00:02:38,960
+Now, the simplest form is actually to
+leave the number of lines out,
+
+37
+00:02:38,960 --> 00:02:45,128
+and just by using SKIP, that will mean we
+just want to skip one line.
+
+38
+00:02:45,128 --> 00:02:50,182
+Now, before I run the program, I'm gonna
+move this selection screen line,
+
+39
+00:02:50,182 --> 00:02:54,302
+because this would place a blank line at
+the top of our report and
+
+40
+00:02:54,302 --> 00:02:56,350
+it'll be a little hard to see.
+
+41
+00:02:57,530 --> 00:03:03,042
+So I'm gonna move this and I'm just gonna
+place it right here,
+
+42
+00:03:03,042 --> 00:03:08,670
+which means I'm breaking the chain
+statement for parameters.
+
+43
+00:03:08,670 --> 00:03:14,379
+[BLANK_AUDIO]
+
+44
+00:03:14,379 --> 00:03:20,003
+There we go.
+
+45
+00:03:20,003 --> 00:03:24,195
+So I'll save, do a check, and
+
+46
+00:03:24,195 --> 00:03:27,753
+then execute the report.
+
+47
+00:03:27,753 --> 00:03:31,922
+So you can see here, we have the employee
+number parameter,
+
+48
+00:03:31,922 --> 00:03:35,460
+then we have a blank line where we skipped
+one line.
+
+49
+00:03:36,940 --> 00:03:39,380
+And then we get the check box and radio
+buttons.
+
+50
+00:03:40,440 --> 00:03:43,920
+So it's pretty simple.
+
+51
+00:03:43,920 --> 00:03:48,210
+You just place it where you want it to
+appear between the individual fields that
+
+52
+00:03:48,210 --> 00:03:50,160
+you're outputting on the screen.
+
+53
+00:03:53,430 --> 00:03:57,378
+Now, if we wanted to skip two lines, we
+have the number 2.
+
+54
+00:03:57,378 --> 00:04:03,295
+[BLANK_AUDIO]
+
+55
+00:04:03,295 --> 00:04:09,336
+And as you can see in the test, we now
+have two lines.
+
+56
+00:04:09,336 --> 00:04:13,984
+Now the next addition I want to show you
+is how we add a vertical
+
+57
+00:04:13,984 --> 00:04:15,545
+line to the screen.
+
+58
+00:04:15,545 --> 00:04:19,643
+So I'm just gonna copy the selection
+
+59
+00:04:19,643 --> 00:04:24,540
+screen statement and just add another one.
+
+60
+00:04:25,550 --> 00:04:29,570
+But this time, instead of SKIP 2, I'm
+going to add ULINE.
+
+61
+00:04:34,160 --> 00:04:39,860
+Do a save, and as you can guess, ULINE
+means underline.
+
+62
+00:04:39,860 --> 00:04:45,800
+Check activate and execute, and there you
+can see we have added a horizontal line.
+
+63
+00:04:49,160 --> 00:04:50,212
+Very simple stuff.
+
+64
+00:04:50,212 --> 00:04:54,170
+[BLANK_AUDIO]
+
+65
+00:04:54,170 --> 00:04:57,111
+There are some additions we can add to the
+underline, and
+
+66
+00:04:57,111 --> 00:04:59,020
+these are quite easy to understand.
+
+67
+00:05:00,240 --> 00:05:03,220
+We have a position and a length addition.
+
+68
+00:05:03,220 --> 00:05:06,370
+So on the example we've got, I will show
+you first of all,
+
+69
+00:05:11,290 --> 00:05:17,520
+we can either slash, which actually gives
+us a brand new line, then we can add
+
+70
+00:05:17,520 --> 00:05:22,630
+the position, let's say position 1, which
+is the first character on the screen, and
+
+71
+00:05:22,630 --> 00:05:26,860
+then we can give it a length, let's say
+just eight characters long.
+
+72
+00:05:30,560 --> 00:05:31,240
+We'll give it a check.
+
+73
+00:05:34,392 --> 00:05:37,379
+And then activate, and then give it a
+test.
+
+74
+00:05:37,379 --> 00:05:40,030
+And there you can see, just eight
+characters long.
+
+75
+00:05:42,860 --> 00:05:45,500
+If we wanted to move it into the middle of
+the screen,
+
+76
+00:05:45,500 --> 00:05:49,230
+all we would do is change the initial
+position.
+
+77
+00:05:49,230 --> 00:05:53,753
+So let's say we want to move it 40
+characters along.
+
+78
+00:05:53,753 --> 00:05:56,090
+Let's activate and test.
+
+79
+00:05:56,090 --> 00:05:57,950
+And there you can see.
+

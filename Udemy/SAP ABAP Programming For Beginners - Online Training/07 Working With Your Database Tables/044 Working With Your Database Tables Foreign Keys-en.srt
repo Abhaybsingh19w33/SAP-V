@@ -1,0 +1,402 @@
+1
+00:00:00,910 --> 00:00:02,230
+So again, go to Utilities.
+
+2
+00:00:05,220 --> 00:00:06,360
+You create entries.
+
+3
+00:00:09,660 --> 00:00:11,110
+Let's add a new record.
+
+4
+00:00:14,210 --> 00:00:21,751
+Put in the surname, and the forename.
+
+5
+00:00:21,751 --> 00:00:31,806
+[BLANK_AUDIO]
+
+6
+00:00:31,806 --> 00:00:37,065
+And some initials, gender female, we'll
+have a salary of one, two,
+
+7
+00:00:37,065 --> 00:00:42,589
+three, four, five, and then we enter the
+currency key now at the moment,
+
+8
+00:00:42,589 --> 00:00:47,150
+you'll see there's no drop-down or
+anything like that, so
+
+9
+00:00:47,150 --> 00:00:52,268
+you don't really know what we need to put
+in this currency key field.
+
+10
+00:00:52,268 --> 00:00:57,632
+For now, I will put GBP, because I know
+that's gonna be a proper entry.
+
+11
+00:00:57,632 --> 00:01:00,215
+But what we'll do is save the record,
+
+12
+00:01:00,215 --> 00:01:05,221
+then we'll go back to the design of our
+table and we'll build in some error
+
+13
+00:01:05,221 --> 00:01:11,170
+checking to ensure that we do enter
+correct currency values in this field.
+
+14
+00:01:11,170 --> 00:01:16,288
+And also what'd be useful is on the
+gender, let's do an example where
+
+15
+00:01:16,288 --> 00:01:22,472
+we can introduce a drop-down box so we can
+only choose two values, male and female.
+
+16
+00:01:22,472 --> 00:01:28,200
+Why don't you save, and step back, and
+we'll do just that.
+
+17
+00:01:30,260 --> 00:01:33,030
+So to enable us to build in error
+checking,
+
+18
+00:01:33,030 --> 00:01:35,130
+we need to what are called foreign keys.
+
+19
+00:01:36,600 --> 00:01:41,940
+And we'll use foreign keys to ensure the
+use can only enter valid values.
+
+20
+00:01:41,940 --> 00:01:45,480
+So what we'll do is use some forward
+navigation,
+
+21
+00:01:45,480 --> 00:01:50,210
+and we'll take a look at the value table
+used for our currency field.
+
+22
+00:01:54,070 --> 00:01:54,770
+So we'll double click.
+
+23
+00:01:59,760 --> 00:02:06,040
+And under the Data Types tab, we can see
+this data element
+
+24
+00:02:06,040 --> 00:02:11,260
+refers to a standard SAP delivered domain,
+WAERS.
+
+25
+00:02:13,460 --> 00:02:14,750
+Let's take a look at this domain.
+
+26
+00:02:14,750 --> 00:02:18,070
+So we use forward navigation again.
+
+27
+00:02:18,070 --> 00:02:19,860
+We can see use of time currency key.
+
+28
+00:02:21,380 --> 00:02:23,350
+Number of characters five.
+
+29
+00:02:23,350 --> 00:02:27,330
+And we go to the value range town and
+
+30
+00:02:27,330 --> 00:02:30,730
+look down at the bottom, we can see we
+have a value table.
+
+31
+00:02:30,730 --> 00:02:36,520
+We have covered the value range tab before
+when we created our table, but
+
+32
+00:02:37,640 --> 00:02:42,560
+as a reminder, we can use a value table to
+determine the entries
+
+33
+00:02:42,560 --> 00:02:47,100
+we can make in the field within our table
+that is based on this domain.
+
+34
+00:02:48,840 --> 00:02:51,350
+So let's use some forward navigation to
+look at this table.
+
+35
+00:02:54,070 --> 00:02:55,850
+Here we can see what the table is made up
+of.
+
+36
+00:02:55,850 --> 00:02:58,660
+We've got six fields.
+
+37
+00:02:58,660 --> 00:03:05,310
+We've got the standard client, currency
+key, our currency code.
+
+38
+00:03:05,310 --> 00:03:10,110
+And then some other fields let's take a
+browse at the actual data.
+
+39
+00:03:10,110 --> 00:03:16,554
+And if we scroll down, here we go.
+
+40
+00:03:16,554 --> 00:03:18,309
+So this record right here.
+
+41
+00:03:18,309 --> 00:03:24,427
+[BLANK_AUDIO]
+
+42
+00:03:24,427 --> 00:03:27,830
+That's the value I entered into our table,
+GBP.
+
+43
+00:03:28,970 --> 00:03:34,076
+So I know it's going to be valid, but we
+can make use of this check table or this
+
+44
+00:03:34,076 --> 00:03:39,600
+value range table, to ensure we allow the
+user to only pick values from this table.
+
+45
+00:03:39,600 --> 00:03:41,445
+So let's step back.
+
+46
+00:03:41,445 --> 00:03:50,082
+[BLANK_AUDIO]
+
+47
+00:03:50,082 --> 00:03:51,139
+And we'll step back again.
+
+48
+00:03:51,139 --> 00:03:57,303
+[BLANK_AUDIO]
+
+49
+00:03:57,303 --> 00:04:00,850
+And now we're back to our table.
+
+50
+00:04:00,850 --> 00:04:06,860
+So, what we need to do is go back to our
+fields tab, highlight
+
+51
+00:04:06,860 --> 00:04:12,652
+our currency field, and then we're gonna
+define a foreign key.
+
+52
+00:04:12,652 --> 00:04:16,038
+[SOUND] So we'll click the foreign key
+button.
+
+53
+00:04:16,038 --> 00:04:19,812
+[SOUND] And we'll get asked if we want to
+create it.
+
+54
+00:04:19,812 --> 00:04:20,996
+We'll choose yes.
+
+55
+00:04:20,996 --> 00:04:26,626
+[SOUND] Now we're being displayed this
+create foreign key screen.
+
+56
+00:04:26,626 --> 00:04:33,941
+So what we'll do is key in some short text
+and
+
+57
+00:04:33,941 --> 00:04:39,290
+we get the option of two fields.
+
+58
+00:04:39,290 --> 00:04:46,560
+Now, these two fields are the two key
+fields from the TCURC currency table.
+
+59
+00:04:47,670 --> 00:04:52,571
+And from our table we do have the option
+of ensuring that this
+
+60
+00:04:52,571 --> 00:04:57,571
+foreign key matches both fields so that
+when we allow the user
+
+61
+00:04:57,571 --> 00:05:02,669
+to select an entry records that returned
+will only be valid for
+
+62
+00:05:02,669 --> 00:05:05,536
+the client that we are working in.
+
+63
+00:05:05,536 --> 00:05:10,673
+But in our case we won't choose this
+client field to be part of the key,
+
+64
+00:05:10,673 --> 00:05:14,084
+we'll just choose our W-A-E-R-S field.
+
+65
+00:05:15,880 --> 00:05:20,715
+So all we're gonna do is click this
+generic option and
+
+66
+00:05:20,715 --> 00:05:24,260
+we can wipe out these just for clarity so
+
+67
+00:05:24,260 --> 00:05:29,322
+then this foreign key will just use our
+currency field.
+
+68
+00:05:29,322 --> 00:05:31,864
+Much indeed W-A-E-R-S field.
+
+69
+00:05:31,864 --> 00:05:34,610
+In the [UNKNOWN] table.
+
+70
+00:05:34,610 --> 00:05:39,930
+All we need to do is click on copy and now
+our foreign key has been created.
+
+71
+00:05:39,930 --> 00:05:43,035
+So let's activate our table.
+
+72
+00:05:43,035 --> 00:05:48,293
+[SOUND] And let's go and have a look at
+
+73
+00:05:48,293 --> 00:05:55,315
+the data you can see our last record in
+row four.
+
+74
+00:05:55,315 --> 00:05:59,290
+I'm gonna place my cursor on the currency
+key field.
+
+75
+00:05:59,290 --> 00:06:03,545
+I can press the F4 key and now we're
+displayed with
+
+76
+00:06:03,545 --> 00:06:06,765
+with the drop-down box of all valid
+entries that can go in there.
+
+77
+00:06:07,975 --> 00:06:11,785
+Now we have just chosen to display the
+data in our table.
+
+78
+00:06:12,935 --> 00:06:14,855
+Therefore, we've got no entry box here.
+
+79
+00:06:14,855 --> 00:06:21,915
+It's only display only, but the drop-down
+still works to show us the valid values.
+
+80
+00:06:21,915 --> 00:06:25,135
+If we went back to create a record or
+change a record,
+
+81
+00:06:25,135 --> 00:06:30,960
+let's choose change now when we go to
+
+82
+00:06:30,960 --> 00:06:35,260
+the currency key field we can see that we
+have the drop-down button that's appeared.
+
+83
+00:06:37,190 --> 00:06:37,860
+We can click it.
+
+84
+00:06:39,490 --> 00:06:41,170
+And choose an appropriate currency.
+
+85
+00:06:45,160 --> 00:06:49,020
+So let's go down and choose, $US.
+
+86
+00:06:49,020 --> 00:06:53,030
+And we can see it brings the value back,
+and we can click save.
+
+87
+00:06:54,830 --> 00:06:56,870
+So our currency key has been saved in $US.
+
+88
+00:06:56,870 --> 00:06:58,980
+Let's go back.
+

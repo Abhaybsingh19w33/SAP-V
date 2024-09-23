@@ -1,0 +1,436 @@
+1
+00:00:03,060 --> 00:00:08,510
+As with many other programming languages,
+ABAP gives you the functionality to
+
+2
+00:00:08,510 --> 00:00:12,280
+interrogate and manipulate the data held
+within character strings.
+
+3
+00:00:13,740 --> 00:00:17,980
+And here we're going to go through some of
+the popular statements that ABAP provides
+
+4
+00:00:17,980 --> 00:00:19,150
+to carrying out these functions.
+
+5
+00:00:22,240 --> 00:00:23,500
+So here's what we're going to look at.
+
+6
+00:00:23,500 --> 00:00:29,130
+We're going to look at concatenating
+strings together,
+
+7
+00:00:29,130 --> 00:00:33,270
+condensing finding the length of a
+specific string,
+
+8
+00:00:33,270 --> 00:00:37,770
+replacing characters within a string,
+searching for specific characters,
+
+9
+00:00:39,140 --> 00:00:43,470
+using the shift statement to move the
+contents of the field left and
+
+10
+00:00:43,470 --> 00:00:47,090
+right, splitting character strings and
+
+11
+00:00:47,090 --> 00:00:51,130
+using the sub field functions to access
+specific characters within a string.
+
+12
+00:00:52,290 --> 00:00:55,400
+So let's first of all take a look at
+concatenating strings together.
+
+13
+00:00:56,910 --> 00:00:58,980
+And the first thing I'm going to do.
+
+14
+00:00:58,980 --> 00:01:01,892
+Just so our program doesn't fail,
+
+15
+00:01:01,892 --> 00:01:06,272
+is just turn this group of statements into
+comments.
+
+16
+00:01:06,272 --> 00:01:11,878
+[BLANK_AUDIO]
+
+17
+00:01:11,878 --> 00:01:15,572
+Let's tidy the code up a little bit as
+well.
+
+18
+00:01:15,572 --> 00:01:17,418
+We don't need these things up here.
+
+19
+00:01:17,418 --> 00:01:22,177
+[BLANK_AUDIO]
+
+20
+00:01:22,177 --> 00:01:26,871
+The concatenate statement allows us to
+join two character strings
+
+21
+00:01:26,871 --> 00:01:29,230
+together to form a third string.
+
+22
+00:01:30,640 --> 00:01:35,420
+And, it's fairly easy to understand and we
+start off by using the word, concatenate.
+
+23
+00:01:35,420 --> 00:01:40,964
+And then it goes in the form of field 1,
+
+24
+00:01:40,964 --> 00:01:46,844
+field 2 and we can carry on with field 3,
+
+25
+00:01:46,844 --> 00:01:51,560
+field 4, field 5, et cetera.
+
+26
+00:01:52,800 --> 00:01:57,390
+And then we choose a destination, that we
+want the output string to go to.
+
+27
+00:01:57,390 --> 00:02:00,200
+So then we can have destination one.
+
+28
+00:02:00,200 --> 00:02:07,050
+We can also add in an additional term
+called Separating bar, to allow
+
+29
+00:02:07,050 --> 00:02:12,900
+us to insert a specific value in-between
+each field into our destination field.
+
+30
+00:02:14,840 --> 00:02:17,307
+So it would be.
+
+31
+00:02:17,307 --> 00:02:23,030
+[BLANK_AUDIO]
+
+32
+00:02:23,030 --> 00:02:25,608
+Would help if I could spell, there we go.
+
+33
+00:02:28,400 --> 00:02:32,680
+And then we would have a, a separated
+field.
+
+34
+00:02:32,680 --> 00:02:35,600
+Now some things to note, cuz if the
+destination field
+
+35
+00:02:35,600 --> 00:02:39,280
+is shorter than the overall length of the
+input fields,
+
+36
+00:02:39,280 --> 00:02:44,160
+the character string will be truncated to
+the length of the destination field.
+
+37
+00:02:44,160 --> 00:02:47,810
+So make sure when using the concatenate
+statements,
+
+38
+00:02:47,810 --> 00:02:50,270
+you are using string data types.
+
+39
+00:02:50,270 --> 00:02:54,620
+Which as we have already discussed can
+hold more than 65,000 characters.
+
+40
+00:02:57,060 --> 00:02:59,940
+So let's have a look at a specific example
+
+41
+00:02:59,940 --> 00:03:02,120
+of some ABAP code using the concatenate
+statements.
+
+42
+00:03:04,210 --> 00:03:05,600
+So you can see I added some code and
+
+43
+00:03:05,600 --> 00:03:10,660
+I've commented out the definition that
+we've created just a moment ago,
+
+44
+00:03:10,660 --> 00:03:16,110
+and we'll go through the code line by line
+so you know exactly what's going on.
+
+45
+00:03:17,210 --> 00:03:19,900
+So the first statement we've got, is the
+data statement.
+
+46
+00:03:19,900 --> 00:03:24,950
+And because we've declared in five fields
+all together,
+
+47
+00:03:24,950 --> 00:03:27,230
+I'm chaining the data statement together,
+so
+
+48
+00:03:27,230 --> 00:03:30,630
+we don't have to keep writing the word
+data out multiple times.
+
+49
+00:03:32,410 --> 00:03:36,977
+So the first field is title, we're
+declaring a length of 15 characters.
+
+50
+00:03:36,977 --> 00:03:39,112
+[BLANK_AUDIO]
+
+51
+00:03:39,112 --> 00:03:43,730
+It is of data type C, the value of Mr. And
+we have surname.
+
+52
+00:03:43,730 --> 00:03:45,630
+40 characters long.
+
+53
+00:03:45,630 --> 00:03:48,870
+And the surname will be Smith.
+
+54
+00:03:48,870 --> 00:03:49,800
+And we have forename.
+
+55
+00:03:49,800 --> 00:03:50,930
+40 characters again.
+
+56
+00:03:52,180 --> 00:03:53,140
+First name of Joe.
+
+57
+00:03:54,240 --> 00:03:57,140
+And then we declare a separator field
+here.
+
+58
+00:03:57,140 --> 00:04:02,770
+I've just called the SEP and you'll notice
+I haven't declared the length and
+
+59
+00:04:02,770 --> 00:04:04,670
+I haven't declared a value or the type.
+
+60
+00:04:05,740 --> 00:04:09,700
+So this will take on the actually default
+that the system uses,
+
+61
+00:04:09,700 --> 00:04:12,750
+which is a character string with a length
+of one character.
+
+62
+00:04:14,870 --> 00:04:18,100
+And the last field is destination and
+
+63
+00:04:18,100 --> 00:04:21,740
+I've just declared it 200 characters long
+on data type C.
+
+64
+00:04:25,610 --> 00:04:29,380
+Now we get onto the code, and the first
+thing I'm going to do, just so
+
+65
+00:04:29,380 --> 00:04:31,050
+you get into the habit of this yourselves,
+
+66
+00:04:32,260 --> 00:04:36,390
+is bring up the ABAP help for the
+concatenate statement.
+
+67
+00:04:36,390 --> 00:04:43,070
+So here we can see actual syntax used.
+
+68
+00:04:43,070 --> 00:04:47,846
+And as we declared earlier, in the
+definition just up here.
+
+69
+00:04:47,846 --> 00:04:49,773
+[BLANK_AUDIO]
+
+70
+00:04:49,773 --> 00:04:56,060
+Video concatenate F1 to whatever number of
+fields you want to concatenate into G.
+
+71
+00:04:56,060 --> 00:04:58,820
+And you can see, the separated by
+
+72
+00:04:58,820 --> 00:05:02,810
+is an additional option that we can use
+with this this statement if we want to.
+
+73
+00:05:02,810 --> 00:05:05,090
+So I'll close it down.
+
+74
+00:05:07,680 --> 00:05:12,719
+So the first line of code we've got we're
+gonna cut an [INAUDIBLE] title,
+
+75
+00:05:12,719 --> 00:05:16,880
+surname and fore-name into the field
+destination.
+
+76
+00:05:16,880 --> 00:05:19,360
+And, we're going to write out the results
+
+77
+00:05:19,360 --> 00:05:22,190
+of destination with an underline
+underneath.
+
+78
+00:05:22,190 --> 00:05:27,080
+So, I'll do a check and we'll test the
+program out.
+
+79
+00:05:30,610 --> 00:05:34,060
+And, now, we can see, MrSmithJoe with the
+underline.
+
+80
+00:05:35,280 --> 00:05:36,830
+So you notice a couple of things here.
+
+81
+00:05:38,110 --> 00:05:43,050
+All the characters have been concatenated
+together so we got no space and
+
+82
+00:05:43,050 --> 00:05:45,110
+it's left a line, the result.
+
+83
+00:05:45,110 --> 00:05:48,810
+And that's because we defined the result
+as a character field.
+
+84
+00:05:48,810 --> 00:05:53,790
+If we used a data type of n, a number
+everything would have been right lined.
+
+85
+00:05:55,390 --> 00:05:56,020
+So we'll step back.
+
+86
+00:05:58,950 --> 00:06:03,070
+Now to tidy this up, we can use the
+separated by addition.
+
+87
+00:06:03,070 --> 00:06:08,130
+So in this case, we'll add in a blank
+space
+
+88
+00:06:08,130 --> 00:06:11,680
+between each field when it gets populated
+into destination.
+
+89
+00:06:13,940 --> 00:06:16,028
+So, I have an example of that below.
+
+90
+00:06:16,028 --> 00:06:24,103
+[BLANK_AUDIO]
+
+91
+00:06:24,103 --> 00:06:27,793
+There we go, so you can see the same
+statement but
+
+92
+00:06:27,793 --> 00:06:31,940
+we've got the additional separated by SEP
+at the end.
+
+93
+00:06:31,940 --> 00:06:37,779
+And we'll write out destination again and
+underline it.
+
+94
+00:06:37,779 --> 00:06:40,055
+Do a check, and a test.
+
+95
+00:06:40,055 --> 00:06:48,077
+Now we can see it's inserted the blank
+separator between our three fields.
+

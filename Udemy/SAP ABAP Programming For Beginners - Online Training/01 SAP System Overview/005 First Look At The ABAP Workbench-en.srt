@@ -1,0 +1,687 @@
+1
+00:00:00,830 --> 00:00:05,130
+It's now time to take our first look at an
+SAP ABAP program.
+
+2
+00:00:06,150 --> 00:00:11,570
+We're going to fire up the SAP system and
+open up the ABAP Workbench.
+
+3
+00:00:11,570 --> 00:00:17,600
+Now just before we do this, let's quickly
+discuss the structure of an ABAP program.
+
+4
+00:00:18,810 --> 00:00:21,780
+As with many other programming languages,
+
+5
+00:00:21,780 --> 00:00:25,280
+ABAP programs are normally structured into
+two parts.
+
+6
+00:00:26,410 --> 00:00:32,485
+The first part of the program, is what we
+consider to be the Declaration Section.
+
+7
+00:00:32,485 --> 00:00:37,945
+This is where we define the data types,
+structures, tables, work
+
+8
+00:00:37,945 --> 00:00:43,915
+area variables and the individual fields
+that we want to use inside our programs.
+
+9
+00:00:45,725 --> 00:00:49,180
+This is also where we would declare global
+variables.
+
+10
+00:00:49,180 --> 00:00:53,610
+That will be available throughout the
+individual subsections of our program.
+
+11
+00:00:55,070 --> 00:01:00,370
+When we create a ABAP program, we not only
+declare global variables,
+
+12
+00:01:00,370 --> 00:01:03,220
+but we have the option to declare
+variables
+
+13
+00:01:03,220 --> 00:01:07,909
+that are only valid inside specific
+sections within our programs.
+
+14
+00:01:08,960 --> 00:01:14,920
+These sections are commonly referred to as
+Internal Processing Blocks.
+
+15
+00:01:14,920 --> 00:01:18,670
+The Declaration part of our program is
+where we will define
+
+16
+00:01:18,670 --> 00:01:22,890
+the parameters used for our selection
+screens for our reports.
+
+17
+00:01:24,350 --> 00:01:25,830
+Once we have declared tables,
+
+18
+00:01:25,830 --> 00:01:31,160
+global variables, and data types in the
+Declaration Section of our program
+
+19
+00:01:31,160 --> 00:01:35,360
+We then come on to the second part of an
+ABAP Program itself.
+
+20
+00:01:35,360 --> 00:01:39,160
+And this is where we will write all the
+logic for our program.
+
+21
+00:01:40,410 --> 00:01:43,710
+This part of an ABAP program is often
+split up
+
+22
+00:01:43,710 --> 00:01:46,780
+into what we call Processing Blocks.
+
+23
+00:01:46,780 --> 00:01:50,820
+The Processing Blocks that we define
+within our programs,
+
+24
+00:01:50,820 --> 00:01:55,870
+can be called from Dimpro Processor that
+we discussed in previous videos,
+
+25
+00:01:55,870 --> 00:02:00,750
+depending on the specific rules we create
+within our programs.
+
+26
+00:02:02,240 --> 00:02:06,300
+These Processing Blocks are nearly always
+just small sections of
+
+27
+00:02:06,300 --> 00:02:09,890
+programming logic that allow us to
+encapsulate our code.
+
+28
+00:02:11,950 --> 00:02:16,520
+Let's log onto our SAP system and take a
+look at the ABAP Workbench.
+
+29
+00:02:21,670 --> 00:02:24,840
+We're finally having a look at the SAP
+system itself.
+
+30
+00:02:26,720 --> 00:02:32,590
+When you open this up GUI, you may have a
+different menu on the left hand side but
+
+31
+00:02:32,590 --> 00:02:37,110
+I've set it just so that I've got the
+minimal sort of menu options
+
+32
+00:02:37,110 --> 00:02:41,425
+that we want to have a look at during this
+ABAP training course.
+
+33
+00:02:41,425 --> 00:02:46,795
+So the first thing we're gonna do,
+
+34
+00:02:46,795 --> 00:02:52,350
+is have a look at the ABAP Workbench.
+
+35
+00:02:53,370 --> 00:02:56,030
+Now to get to the Workbench,
+
+36
+00:02:56,030 --> 00:02:59,480
+we can just use the menu system on the
+left hand side here.
+
+37
+00:02:59,480 --> 00:03:03,380
+If we open up the sub menu, and
+
+38
+00:03:03,380 --> 00:03:07,175
+choose tools, then you'll see the AppUp
+Workbench.
+
+39
+00:03:08,290 --> 00:03:12,640
+Open that up, and then you'll see four
+different options within.
+
+40
+00:03:14,270 --> 00:03:17,390
+Now the first thing we want to look at is
+just
+
+41
+00:03:17,390 --> 00:03:21,870
+a very quick overview of how we run a
+transaction in SAP.
+
+42
+00:03:21,870 --> 00:03:24,660
+Now hopefully you are all familiar with
+this.
+
+43
+00:03:24,660 --> 00:03:26,360
+But I'll just show you the two ways.
+
+44
+00:03:27,440 --> 00:03:33,390
+First of all, you can open up the menu and
+when you have an item
+
+45
+00:03:33,390 --> 00:03:37,120
+that was not look like a forwarder, that's
+an actual transaction you can run.
+
+46
+00:03:38,170 --> 00:03:41,120
+So in this case, let's run the object
+navigator.
+
+47
+00:03:41,120 --> 00:03:46,990
+I'll just double click, then we'll see
+down here at
+
+48
+00:03:46,990 --> 00:03:51,290
+the bottom of the screen it said starting
+the transaction, and then it opens it up.
+
+49
+00:03:53,080 --> 00:03:59,240
+To come out of the transaction just press
+the back button and
+
+50
+00:03:59,240 --> 00:04:01,140
+the other way of running a transaction
+
+51
+00:04:02,210 --> 00:04:07,260
+is coming up here to the transaction input
+area and
+
+52
+00:04:07,260 --> 00:04:12,850
+you can key in the technical name of the
+transaction itself if you know what it is.
+
+53
+00:04:14,540 --> 00:04:19,120
+Now a little trick so that you become
+familiar with all the different SAP
+
+54
+00:04:19,120 --> 00:04:24,040
+transactions and to make it so that you
+don't have to go through the menus
+
+55
+00:04:24,040 --> 00:04:29,000
+all the time is to have a look, or
+navigate to the extras menu.
+
+56
+00:04:30,750 --> 00:04:31,660
+Go to Settings.
+
+57
+00:04:32,970 --> 00:04:36,660
+And the dialogue box that comes up has
+four options.
+
+58
+00:04:36,660 --> 00:04:39,570
+Choose the bottom one that says Display
+technical names.
+
+59
+00:04:42,400 --> 00:04:44,760
+Click the little continue icon with the
+green tick.
+
+60
+00:04:46,890 --> 00:04:49,640
+And now, it's refreshed the menu, and
+
+61
+00:04:49,640 --> 00:04:55,680
+when you navigate inside, we'll go back to
+the overview menu again.
+
+62
+00:04:55,680 --> 00:05:00,360
+You can now see the actual transaction
+codes that as you start working with
+
+63
+00:05:00,360 --> 00:05:05,110
+the SAP system, you'll become familiar
+with them and you'll be able to enter them
+
+64
+00:05:05,110 --> 00:05:10,030
+directly into the input box.
+
+65
+00:05:10,030 --> 00:05:11,230
+So, let's close this overview menu.
+
+66
+00:05:12,410 --> 00:05:16,230
+And then we will, step-by-step, go through
+the different options and
+
+67
+00:05:16,230 --> 00:05:21,332
+I'll highlight the four to five major
+pieces of the ABAP Wordbench,
+
+68
+00:05:21,332 --> 00:05:25,710
+that you will become familiar with and you
+will use as an ABAP developer.
+
+69
+00:05:27,230 --> 00:05:32,010
+One thing that most of our programs will
+have in common, is that they will read or
+
+70
+00:05:32,010 --> 00:05:37,220
+write data to and from the database tables
+within our SAP system.
+
+71
+00:05:38,760 --> 00:05:44,520
+The ABAP Workbench has a transaction to
+allow us to create database tables and
+
+72
+00:05:44,520 --> 00:05:49,460
+also view the fields that make up the
+tables themselves and
+
+73
+00:05:49,460 --> 00:05:50,800
+browse the data inside.
+
+74
+00:05:51,960 --> 00:05:54,000
+This is called the ABAP dictionary.
+
+75
+00:05:55,090 --> 00:05:59,390
+And you can find the ABAP dictionary by
+going through the ABAP workbench menu,
+
+76
+00:05:59,390 --> 00:06:03,510
+then go down to Development, and
+
+77
+00:06:03,510 --> 00:06:07,640
+there you'll see it, ABAP dictionary and
+its transaction code SE11.
+
+78
+00:06:07,640 --> 00:06:12,980
+The next and probably the most used
+
+79
+00:06:12,980 --> 00:06:17,020
+part of the ABAP Workbench is the ABAP
+editor.
+
+80
+00:06:17,020 --> 00:06:20,760
+And this is where we will spend a lot of
+our time in this course.
+
+81
+00:06:20,760 --> 00:06:28,300
+The ABAP editor is where we create all the
+code, it's where we build all the logic.
+
+82
+00:06:30,040 --> 00:06:32,130
+And by using forward navigation
+
+83
+00:06:33,310 --> 00:06:36,680
+which is a function within an S-A-P system
+that we will touch on later.
+
+84
+00:06:37,840 --> 00:06:41,340
+You can actually define function modules,
+
+85
+00:06:41,340 --> 00:06:45,710
+jump forward to the ABAP dictionary, and
+also create screens.
+
+86
+00:06:47,390 --> 00:06:51,230
+The ABAP editor can be found under the
+development menu again.
+
+87
+00:06:52,480 --> 00:06:56,880
+And it's transaction code SE38, the next
+
+88
+00:06:56,880 --> 00:07:00,690
+most important part of the Workbench is
+the Function Build.
+
+89
+00:07:01,990 --> 00:07:06,756
+The Function Build is very similar to the
+ABAP editor but
+
+90
+00:07:06,756 --> 00:07:13,110
+it's main function is to actually define
+specific task,
+
+91
+00:07:13,110 --> 00:07:16,020
+that can be called from any other program.
+
+92
+00:07:16,020 --> 00:07:19,140
+You create interfaces in the Function
+Builder,
+
+93
+00:07:19,140 --> 00:07:23,630
+where you define the different data
+elements and the different
+
+94
+00:07:23,630 --> 00:07:28,580
+types of tables that can be passed to and
+from the actual function that you build.
+
+95
+00:07:30,660 --> 00:07:34,300
+We will touch on the Function Builder a
+later on
+
+96
+00:07:34,300 --> 00:07:37,560
+when we encapsulate our programs into
+function modules.
+
+97
+00:07:39,120 --> 00:07:42,740
+The Function Builder can be called from
+transaction code SE37.
+
+98
+00:07:42,740 --> 00:07:46,370
+And, it can normally be
+
+99
+00:07:46,370 --> 00:07:50,750
+found just under the upper ABAP editor
+option on the SAP menu tree.
+
+100
+00:07:52,740 --> 00:07:57,930
+Now the next item we want to look at is
+called the Menu Painter.
+
+101
+00:07:57,930 --> 00:08:02,490
+And if you have a look at the user
+interface folder, open that up and
+
+102
+00:08:02,490 --> 00:08:04,698
+you'll see transaction code SE41.
+
+103
+00:08:04,698 --> 00:08:10,400
+The Menu Painter is a tool that can be
+used to generate,
+
+104
+00:08:11,930 --> 00:08:15,818
+if we look up here we can see menu
+options, and we can see buttons.
+
+105
+00:08:15,818 --> 00:08:19,310
+so menu bars.
+
+106
+00:08:19,310 --> 00:08:24,790
+We can create buttons, icons, menu bars,
+transaction
+
+107
+00:08:24,790 --> 00:08:30,250
+input fields and all these can trigger
+events within our program.
+
+108
+00:08:31,490 --> 00:08:36,410
+You can define whether the event is
+triggered by a mouse click, or
+
+109
+00:08:36,410 --> 00:08:39,900
+by simply pressing a shortcut key on your
+keyboard.
+
+110
+00:08:41,390 --> 00:08:44,860
+An example would be here on this menu bar.
+
+111
+00:08:44,860 --> 00:08:48,070
+We can see the log off button and we can
+see,
+
+112
+00:08:48,070 --> 00:08:52,700
+this can be triggered by using the shift
+and F3 key together.
+
+113
+00:08:54,520 --> 00:08:58,310
+So the Menu Painter is for building menu
+items,
+
+114
+00:08:58,310 --> 00:09:03,000
+menu bars, then the next item on our list
+is the Screen Painter.
+
+115
+00:09:03,000 --> 00:09:05,620
+And that's transaction code, SE51.
+
+116
+00:09:05,620 --> 00:09:10,210
+Now the Screen Painter as you might guess,
+
+117
+00:09:10,210 --> 00:09:14,290
+allows you to define the user input
+screen.
+
+118
+00:09:15,380 --> 00:09:20,210
+So you can define text boxes, dropdown
+menus, list boxes,
+
+119
+00:09:20,210 --> 00:09:24,460
+and input fields, timed areas of the
+screen and so on.
+
+120
+00:09:25,710 --> 00:09:28,770
+It lets you define the whole interface
+that the user will use.
+
+121
+00:09:28,770 --> 00:09:31,920
+And behind all the different fields,
+
+122
+00:09:31,920 --> 00:09:36,840
+buttons, dropdowns that you put on your
+screen, you then
+
+123
+00:09:36,840 --> 00:09:41,320
+define the individual functions that get
+called when the user interacts with it.
+
+124
+00:09:43,360 --> 00:09:45,290
+Now we've saved the best to the last.
+
+125
+00:09:45,290 --> 00:09:50,740
+The last item that we're going to look at
+is called the Object Navigator.
+
+126
+00:09:50,740 --> 00:09:55,190
+The Object Navigator is a fantastic tool.
+
+127
+00:09:56,700 --> 00:10:00,270
+It brings all the other tools together
+under one roof.
+
+128
+00:10:00,270 --> 00:10:05,380
+And gives you a very efficient environment
+for you to develop your programs.
+
+129
+00:10:06,520 --> 00:10:11,340
+When you're building large programs that
+have many function modules, many screens,
+
+130
+00:10:11,340 --> 00:10:15,570
+the object navigator is the ideal tool to
+use.
+
+131
+00:10:15,570 --> 00:10:18,450
+So that you can navigate all around your
+development.
+
+132
+00:10:20,010 --> 00:10:25,740
+You can find the Object Navigator, under
+the overview menu
+
+133
+00:10:25,740 --> 00:10:29,220
+under the ABAP Workbench and it's
+transaction code SE80.
+
+134
+00:10:32,410 --> 00:10:36,930
+So that more or less covers the main
+features of the ABAP Workbench
+
+135
+00:10:36,930 --> 00:10:40,980
+that we will interact with in this ABAP
+course.
+
+136
+00:10:40,980 --> 00:10:44,745
+You will see in the SAP menu tree there
+are many,
+
+137
+00:10:44,745 --> 00:10:50,492
+many other transactions that can be used
+to help develop your programs,
+
+138
+00:10:50,492 --> 00:10:55,483
+but the ones we have just covered I would
+say cover 90 to 95%
+
+139
+00:10:55,483 --> 00:10:58,991
+of the development tools that you will
+use.
+
+140
+00:10:58,991 --> 00:11:03,112
+[BLANK_AUDIO]
+
+141
+00:11:03,112 --> 00:11:05,730
+That brings us to the end of module one.
+
+142
+00:11:05,730 --> 00:11:11,580
+I hope you have found this introduction to
+the SAP development environment useful.
+
+143
+00:11:11,580 --> 00:11:13,320
+And in the next module, module two,
+
+144
+00:11:13,320 --> 00:11:17,100
+we're going to start off by looking at the
+ABAP dictionary.
+

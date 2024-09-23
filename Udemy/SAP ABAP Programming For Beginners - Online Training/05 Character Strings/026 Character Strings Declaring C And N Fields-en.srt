@@ -1,0 +1,379 @@
+1
+00:00:01,230 --> 00:00:04,250
+We're now going to move on, and discuss
+Character Strings.
+
+2
+00:00:05,680 --> 00:00:06,990
+When we're creating our programs,
+
+3
+00:00:06,990 --> 00:00:12,020
+we nearly always have to use fields
+defined as Character Strings.
+
+4
+00:00:12,020 --> 00:00:18,840
+In SAP there are two elementary data types
+used for Character Strings.
+
+5
+00:00:18,840 --> 00:00:21,190
+These are data type C, and data type N.
+
+6
+00:00:23,330 --> 00:00:26,300
+We'll first have a look at data type C.
+
+7
+00:00:26,300 --> 00:00:27,815
+To do this as we go along,
+
+8
+00:00:27,815 --> 00:00:32,020
+I'll create a brand new program called
+Zed_Character_Strings.
+
+9
+00:00:32,020 --> 00:00:42,020
+[BLANK_AUDIO]
+
+10
+00:01:09,282 --> 00:01:14,184
+The data type C, used to hold alphanumeric
+characters, and it has a minimum length of
+
+11
+00:01:14,184 --> 00:01:18,084
+one character, and a maximum length of 65,
+535 characters.
+
+12
+00:01:18,084 --> 00:01:23,046
+So first of all we'll define
+
+13
+00:01:23,046 --> 00:01:26,980
+a field of data type C.
+
+14
+00:01:26,980 --> 00:01:31,601
+[BLANK_AUDIO]
+
+15
+00:01:31,601 --> 00:01:36,579
+And when we define this data type, once we
+key in the field
+
+16
+00:01:36,579 --> 00:01:41,470
+name we then, without any spaces, use open
+brackets.
+
+17
+00:01:44,140 --> 00:01:47,330
+Put in the length of the field, so this
+will be ten characters.
+
+18
+00:01:50,180 --> 00:01:53,110
+And then we declare the actual type, which
+is type C.
+
+19
+00:01:55,620 --> 00:02:00,470
+Now this is the long form, of declaring a
+field of type C.
+
+20
+00:02:00,470 --> 00:02:04,710
+And what I mean by that is, because this
+field is a generic data type,
+
+21
+00:02:04,710 --> 00:02:08,810
+the system has some default values that it
+can use,
+
+22
+00:02:08,810 --> 00:02:13,170
+to save us from typing out the full length
+of the declaration.
+
+23
+00:02:14,790 --> 00:02:17,480
+So for example, if we declared a new
+field.
+
+24
+00:02:19,340 --> 00:02:26,470
+Let's call this mychar2, and I want this
+field just to be one character,
+
+25
+00:02:26,470 --> 00:02:30,940
+well the default value of the size of the
+field is actually one character.
+
+26
+00:02:31,940 --> 00:02:35,950
+So, I could get away without declaring the
+size in brackets.
+
+27
+00:02:37,120 --> 00:02:42,350
+And because the character field is the
+default type, used
+
+28
+00:02:42,350 --> 00:02:47,340
+by the system to declare the field I can
+even get away without declaring the type.
+
+29
+00:02:49,090 --> 00:02:55,200
+So, I can end this declaration of this
+variable just by keying in the field name.
+
+30
+00:02:56,780 --> 00:02:58,642
+So this has the same effect.
+
+31
+00:02:58,642 --> 00:03:04,622
+[BLANK_AUDIO]
+
+32
+00:03:04,622 --> 00:03:06,820
+As declaring the field just like this.
+
+33
+00:03:08,760 --> 00:03:09,550
+So, let's remove this.
+
+34
+00:03:15,580 --> 00:03:20,580
+And if you recall, we created a table
+called Z Employees, and
+
+35
+00:03:20,580 --> 00:03:24,160
+in that table we declared various fields
+of type character.
+
+36
+00:03:25,960 --> 00:03:30,717
+One of these fields was add surname,
+
+37
+00:03:30,717 --> 00:03:35,474
+so if I create a table statement, and
+
+38
+00:03:35,474 --> 00:03:40,537
+key in our Z Employees Table, I just use
+
+39
+00:03:40,537 --> 00:03:45,755
+forward navigation Now we can see is that
+
+40
+00:03:45,755 --> 00:03:51,300
+surname is type char with a length of 40.
+
+41
+00:03:51,300 --> 00:03:57,070
+Well, we can replicate that declaration
+within our ABAP program.
+
+42
+00:03:58,460 --> 00:04:02,520
+So I'll step back, and here instead of
+myChar2 I
+
+43
+00:04:07,730 --> 00:04:14,130
+can create a field called Z Employees with
+a length of 40, and a type C.
+
+44
+00:04:14,130 --> 00:04:21,222
+Oops and that has exactly the same effect.
+
+45
+00:04:21,222 --> 00:04:25,484
+[BLANK_AUDIO]
+
+46
+00:04:25,484 --> 00:04:30,298
+And if you remember also back to one of
+the previous videos,
+
+47
+00:04:30,298 --> 00:04:32,520
+a short form of doing this.
+
+48
+00:04:32,520 --> 00:04:43,281
+[BLANK_AUDIO]
+
+49
+00:04:43,281 --> 00:04:45,280
+Is just to use the like statements.
+
+50
+00:04:46,960 --> 00:04:53,050
+So this will declare Z Employees like
+actual field we declared in the table.
+
+51
+00:04:57,720 --> 00:05:00,675
+Let's do this too, so it checks correctly.
+
+52
+00:05:00,675 --> 00:05:05,678
+[BLANK_AUDIO]
+
+53
+00:05:05,678 --> 00:05:09,592
+I've already, do apologize.
+
+54
+00:05:09,592 --> 00:05:17,798
+[BLANK_AUDIO]
+
+55
+00:05:17,798 --> 00:05:20,740
+So now, you know, how to declare a field
+of type C.
+
+56
+00:05:22,050 --> 00:05:28,300
+Let's look at the other generic Character
+String data type, and that is data type N.
+
+57
+00:05:28,300 --> 00:05:33,030
+So thinking back again to when we declared
+our table,
+
+58
+00:05:33,030 --> 00:05:37,380
+we created a field called Z Employees,
+which was the employee number.
+
+59
+00:05:38,530 --> 00:05:41,230
+So if we go to the table and have a look
+at this.
+
+60
+00:05:44,950 --> 00:05:49,350
+Actually it's just called employee, but
+you can see we declared the field of type
+
+61
+00:05:49,350 --> 00:05:54,200
+NUMC with a length of 8.
+
+62
+00:05:54,200 --> 00:05:55,750
+Now NUMC, or the number data type,
+
+63
+00:05:57,240 --> 00:06:02,950
+is a special data type in that it is
+treated just like a character type.
+
+64
+00:06:02,950 --> 00:06:08,120
+But, there is an inbuilt rule to only
+allow numeric characters.
+
+65
+00:06:08,120 --> 00:06:11,990
+And when data is moved into this field, it
+is right aligned,
+
+66
+00:06:11,990 --> 00:06:14,330
+just like a normal numeric type field.
+
+67
+00:06:15,620 --> 00:06:21,220
+This data type is ideal, when we only want
+to use numbers within the field.
+
+68
+00:06:21,220 --> 00:06:24,810
+And we have no intention of carrying out
+any type of calculation.
+
+69
+00:06:26,340 --> 00:06:31,363
+So let's go back to the program, and see
+how we would declare this field in ABAP.
+
+70
+00:06:31,363 --> 00:06:41,023
+[BLANK_AUDIO]
+
+71
+00:06:41,023 --> 00:06:43,428
+So as usual, it starts off with data.
+
+72
+00:06:43,428 --> 00:06:47,348
+[BLANK_AUDIO]
+
+73
+00:06:47,348 --> 00:06:53,510
+And we'll call the field Z Number 1, with
+a data type of N.
+
+74
+00:06:56,520 --> 00:07:01,580
+And just like previously, in this example
+up here, we could use the like statement,
+
+75
+00:07:02,970 --> 00:07:06,350
+and refer back to the actual field in our
+table, and
+
+76
+00:07:06,350 --> 00:07:07,680
+it would end up with the same effect.
+
+77
+00:07:09,520 --> 00:07:11,530
+Now one additional point,
+
+78
+00:07:11,530 --> 00:07:16,590
+is this field does differ a little bit
+from the data type C.
+
+79
+00:07:16,590 --> 00:07:21,250
+In that the initial default value of this
+field is 0 instead of space.
+
+80
+00:07:21,250 --> 00:07:22,820
+And that's it.
+
+81
+00:07:22,820 --> 00:07:25,800
+There's not much more to declare in these
+types of fields.
+
+82
+00:07:25,800 --> 00:07:28,704
+So, let's move on and see what we can
+actually do with them.
+
+83
+00:07:28,704 --> 00:07:30,749
+[BLANK_AUDIO]
+

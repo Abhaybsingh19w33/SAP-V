@@ -1,0 +1,381 @@
+1
+00:00:00,780 --> 00:00:05,000
+What I'm going to do now is just go
+through another example.
+
+2
+00:00:05,000 --> 00:00:07,110
+It's the same stuff, what you've seen,
+
+3
+00:00:07,110 --> 00:00:10,340
+but just different ways of populating
+internal tables.
+
+4
+00:00:11,430 --> 00:00:15,260
+So we'll go back to using an array fetch,
+
+5
+00:00:15,260 --> 00:00:19,340
+which means we can use the select
+statement but without doing a loop.
+
+6
+00:00:19,340 --> 00:00:23,620
+But lots of data are transferred all
+together instead of one record at a time.
+
+7
+00:00:24,780 --> 00:00:28,540
+And at the same time, we're gonna create a
+new internal table as well.
+
+8
+00:00:28,540 --> 00:00:31,510
+But show you how you can create a new
+internal table
+
+9
+00:00:31,510 --> 00:00:34,388
+using other statements [UNKNOWN].
+
+10
+00:00:34,388 --> 00:00:37,891
+So what I'll do,
+
+11
+00:00:37,891 --> 00:00:43,274
+I'll create an an itab2.
+
+12
+00:00:43,274 --> 00:00:53,771
+[BLANK_AUDIO]
+
+13
+00:00:53,771 --> 00:00:57,324
+We'll keep the occur zero, but this time,
+
+14
+00:00:57,324 --> 00:01:01,456
+instead of specifying all the individual
+fields,
+
+15
+00:01:01,456 --> 00:01:05,890
+I'm gonna remove those and use an include
+statement.
+
+16
+00:01:09,690 --> 00:01:17,448
+So I'm going to say include structure of
+itab01.
+
+17
+00:01:17,448 --> 00:01:21,992
+[BLANK_AUDIO]
+
+18
+00:01:21,992 --> 00:01:24,040
+Yep, just one little error.
+
+19
+00:01:24,040 --> 00:01:24,745
+Sorry.
+
+20
+00:01:24,745 --> 00:01:30,540
+[BLANK_AUDIO]
+
+21
+00:01:30,540 --> 00:01:36,690
+Ooh, two little errors, and also I need
+another
+
+22
+00:01:36,690 --> 00:01:42,100
+data statement because I used a full stop.
+
+23
+00:01:46,550 --> 00:01:47,050
+Okay.
+
+24
+00:01:48,420 --> 00:01:52,850
+So notice here I am declaring the content
+of our new internal table
+
+25
+00:01:52,850 --> 00:01:55,120
+using the include structure statement.
+
+26
+00:01:57,050 --> 00:02:00,452
+This just simply copies the structure we
+declared for
+
+27
+00:02:00,452 --> 00:02:05,074
+itab01 one, and includes it in itab02.
+
+28
+00:02:06,490 --> 00:02:11,345
+We could also use the structure of a table
+that we declared in the data dictionary.
+
+29
+00:02:11,345 --> 00:02:13,070
+For example, let's do another one.
+
+30
+00:02:13,070 --> 00:02:16,752
+[BLANK_AUDIO]
+
+31
+00:02:16,752 --> 00:02:18,711
+Let's do itab03.
+
+32
+00:02:18,711 --> 00:02:24,447
+[BLANK_AUDIO]
+
+33
+00:02:24,447 --> 00:02:29,563
+And instead of the internal table, this
+time, I'm gonna say,
+
+34
+00:02:29,563 --> 00:02:35,266
+bring in the structure of said zed
+employees, if I spell it correctly.
+
+35
+00:02:35,266 --> 00:02:42,246
+[BLANK_AUDIO]
+
+36
+00:02:42,246 --> 00:02:48,728
+Using this method to declare fields of an
+internal table can save additional coding,
+
+37
+00:02:48,728 --> 00:02:54,042
+and can be enhanced further by including
+multiple table structures,
+
+38
+00:02:54,042 --> 00:02:57,032
+all within one single Internal table.
+
+39
+00:02:57,032 --> 00:03:01,170
+Let's have a look how we do that.
+
+40
+00:03:01,170 --> 00:03:06,855
+Let's do another one,
+
+41
+00:03:06,855 --> 00:03:10,130
+itab04.
+
+42
+00:03:10,130 --> 00:03:13,820
+So here we have the INCLUDE STRUCTURE of
+zed employees.
+
+43
+00:03:16,790 --> 00:03:21,490
+I can then take, well, add another
+
+44
+00:03:21,490 --> 00:03:26,930
+INCLUDE STRUCTURE of itab01.
+
+45
+00:03:28,080 --> 00:03:32,690
+So you can see you can use this include
+structure statements to add
+
+46
+00:03:32,690 --> 00:03:38,150
+various structures you have already
+defined or
+
+47
+00:03:38,150 --> 00:03:43,099
+have already been defined in the system to
+build up your own internal table.
+
+48
+00:03:45,210 --> 00:03:49,050
+Now this, I guess, isn't a great example
+because we actually have
+
+49
+00:03:49,050 --> 00:03:52,230
+employee defined in both of our
+structures.
+
+50
+00:03:52,230 --> 00:03:57,920
+So, you know, make sure your field names
+are unique, but you get the idea.
+
+51
+00:03:57,920 --> 00:04:00,740
+You can just continue adding more
+structures.
+
+52
+00:04:00,740 --> 00:04:04,840
+Or, if you wish, include some more data
+statements,
+
+53
+00:04:07,370 --> 00:04:10,180
+such as employee count of type integer.
+
+54
+00:04:13,200 --> 00:04:18,660
+Using these techniques you can build any
+internal table you want,
+
+55
+00:04:18,660 --> 00:04:20,690
+and at the same time reuse your own code.
+
+56
+00:04:22,200 --> 00:04:23,820
+Now let's keep things simple for now.
+
+57
+00:04:24,940 --> 00:04:29,310
+So we'll remove some of these internal
+tables that we created and
+
+58
+00:04:29,310 --> 00:04:30,710
+stick to our original one.
+
+59
+00:04:38,320 --> 00:04:39,220
+Now, I'll tell you what we'll do.
+
+60
+00:04:39,220 --> 00:04:43,190
+We'll go back to the array fetch and
+
+61
+00:04:43,190 --> 00:04:48,220
+that's the depopulating tables by taking
+away this move corresponding.
+
+62
+00:04:48,220 --> 00:04:50,838
+Well, I'll tell you what, I'll give up
+typing
+
+63
+00:04:50,838 --> 00:05:00,838
+[BLANK_AUDIO]
+
+64
+00:05:10,076 --> 00:05:14,440
+Here we go.
+
+65
+00:05:14,440 --> 00:05:20,410
+And notice I'm deleting the append and the
+unselect.
+
+66
+00:05:20,410 --> 00:05:27,600
+It would help if we could spell fields
+correctly.
+
+67
+00:05:34,800 --> 00:05:38,450
+So what I wanna do is just, I want to run
+through this again,
+
+68
+00:05:38,450 --> 00:05:42,380
+because this is quite an efficient method
+of filling your internal tables.
+
+69
+00:05:42,380 --> 00:05:44,980
+You see, using an array fetch,
+
+70
+00:05:44,980 --> 00:05:50,150
+we are not populating our table line by
+line and we are taking away
+
+71
+00:05:50,150 --> 00:05:54,400
+the loop generated by the select statement
+and the end select statement.
+
+72
+00:05:55,640 --> 00:06:00,590
+Instead, this select statement selects all
+the fields from our data dictionary table,
+
+73
+00:06:00,590 --> 00:06:03,400
+and moves only the fields that correspond
+
+74
+00:06:03,400 --> 00:06:06,640
+from that table to the fields in the new
+internal table.
+
+75
+00:06:07,940 --> 00:06:11,720
+This type of select statement is much much
+faster than using a loop.
+
+76
+00:06:12,780 --> 00:06:16,550
+And also, now take note that we did not
+make use of any header record here.
+
+77
+00:06:16,550 --> 00:06:19,370
+There was no need to use it,
+
+78
+00:06:19,370 --> 00:06:24,020
+because we used a block by block array
+fetch method to fill our table.
+
+79
+00:06:25,580 --> 00:06:30,500
+I'll also mention that you can identify
+the individual fields you want to move
+
+80
+00:06:30,500 --> 00:06:35,940
+from your source table instead of using
+the asterisk that represents every field.
+
+81
+00:06:35,940 --> 00:06:37,140
+So for example,
+
+82
+00:06:37,140 --> 00:06:41,460
+where we have the asterisk, we could then
+write out the field names.
+
+83
+00:06:41,460 --> 00:06:46,831
+Surname, forename, date of birth, et
+cetera.
+
+84
+00:06:46,831 --> 00:06:54,424
+[SOUND]
+

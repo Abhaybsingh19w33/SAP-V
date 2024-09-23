@@ -1,0 +1,306 @@
+1
+00:00:00,950 --> 00:00:04,580
+We are now gonna move straight on, and
+start looking at some of the ABAP
+
+2
+00:00:04,580 --> 00:00:07,620
+code that we will use to generate our
+selection screens.
+
+3
+00:00:09,090 --> 00:00:13,829
+So I'll start by creating a brand new
+program, I'll call this Z_SCREEN_1.
+
+4
+00:00:13,829 --> 00:00:23,829
+[BLANK_AUDIO]
+
+5
+00:00:43,000 --> 00:00:44,980
+Okay, we have our blank reports.
+
+6
+00:00:48,440 --> 00:00:52,140
+And the first thing we're gonna do is have
+a look at the initialization event.
+
+7
+00:00:52,140 --> 00:00:56,720
+If you remember, the initialization event
+
+8
+00:00:56,720 --> 00:01:00,225
+is the first thing that gets triggered in
+our program, the first event block.
+
+9
+00:01:01,945 --> 00:01:07,095
+So, if we recall, we have a employee table
+that we set up in the system.
+
+10
+00:01:08,585 --> 00:01:12,745
+And let's say, for our program, we would
+like to know
+
+11
+00:01:12,745 --> 00:01:16,965
+the last employee number that was used to
+create an employee record.
+
+12
+00:01:18,105 --> 00:01:23,610
+Now, the initialization event is the ideal
+place for this type of code.
+
+13
+00:01:23,610 --> 00:01:26,880
+So we can find out what the last employee
+number was, and
+
+14
+00:01:26,880 --> 00:01:30,280
+display to the user on the selection
+screen, so
+
+15
+00:01:30,280 --> 00:01:35,350
+that they know not to select any values
+greater than that last employee number.
+
+16
+00:01:36,480 --> 00:01:40,190
+So let's start off, we'll just Save, and
+check everything.
+
+17
+00:01:40,190 --> 00:01:44,503
+Let's start off, and then declare the
+table statement,
+
+18
+00:01:44,503 --> 00:01:50,060
+because what we're going to do is read
+records from our z employees table.
+
+19
+00:01:50,060 --> 00:01:56,274
+So we'll declare the tables that we're
+going to use, z employees.
+
+20
+00:01:56,274 --> 00:02:00,419
+[BLANK_AUDIO]
+
+21
+00:02:00,419 --> 00:02:03,480
+And let's declare a data statement.
+
+22
+00:02:03,480 --> 00:02:07,417
+So we can hold the value of the last
+employee number that has been used in
+
+23
+00:02:07,417 --> 00:02:08,098
+the table.
+
+24
+00:02:08,098 --> 00:02:16,144
+[BLANK_AUDIO]
+
+25
+00:02:16,144 --> 00:02:19,210
+So wa_employees has like a work area.
+
+26
+00:02:20,610 --> 00:02:23,390
+We'll use the like statement to reference
+our table, and
+
+27
+00:02:23,390 --> 00:02:27,840
+the field is going to be the employee
+field.
+
+28
+00:02:34,320 --> 00:02:37,540
+Now, this is where we create our
+initialization section.
+
+29
+00:02:37,540 --> 00:02:41,650
+So what we need to do is type in
+
+30
+00:02:41,650 --> 00:02:45,900
+initialization, and then we start writing
+our code.
+
+31
+00:02:45,900 --> 00:02:50,293
+So, to get the last employee number, we'll
+use a select statement,
+
+32
+00:02:50,293 --> 00:02:54,909
+let's just use a generic one, we'll select
+all the fields even though,
+
+33
+00:02:54,909 --> 00:02:57,828
+all we need is the employee number field.
+
+34
+00:02:57,828 --> 00:03:05,548
+[BLANK_AUDIO]
+
+35
+00:03:05,548 --> 00:03:09,068
+And because this is going to be a select
+loop,
+
+36
+00:03:09,068 --> 00:03:13,608
+what we're going to do is populate our
+work area field to be
+
+37
+00:03:13,608 --> 00:03:18,720
+wa_employee with a value of the employee
+number from the table.
+
+38
+00:03:18,720 --> 00:03:23,865
+So we will say wa_employee
+
+39
+00:03:23,865 --> 00:03:31,030
+equals z_employees dash employee.
+
+40
+00:03:31,030 --> 00:03:35,990
+Then we will end our select statement, and
+that's about it.
+
+41
+00:03:35,990 --> 00:03:41,648
+Let's just pretty it up or check.
+
+42
+00:03:41,648 --> 00:03:47,740
+Hm, that's a refreshing change, no, no
+typos.
+
+43
+00:03:47,740 --> 00:03:52,200
+So what this is gonna do, when our program
+is run, the run-time environment
+
+44
+00:03:53,220 --> 00:03:58,040
+will realize we have an initialization
+event block, and
+
+45
+00:03:58,040 --> 00:04:01,050
+execute the code in this event block.
+
+46
+00:04:01,050 --> 00:04:06,729
+And that's gonna be select every record
+from the z employees table, and populate,
+
+47
+00:04:06,729 --> 00:04:11,910
+our work area field to be y employee with
+the employee number field.
+
+48
+00:04:11,910 --> 00:04:15,470
+And that's all there is to it.
+
+49
+00:04:15,470 --> 00:04:19,191
+Lets just test this piece out, that's what
+we'll do,
+
+50
+00:04:19,191 --> 00:04:24,822
+is just a simple write statement, and we
+will write out wa_employee to the screen.
+
+51
+00:04:24,822 --> 00:04:27,788
+[BLANK_AUDIO]
+
+52
+00:04:27,788 --> 00:04:31,535
+Now, just comment out the initialization,
+so it's a standard program.
+
+53
+00:04:31,535 --> 00:04:37,155
+[SOUND] So I'll press F8 to execute, and
+
+54
+00:04:37,155 --> 00:04:45,100
+there you can see the last number being
+used in our table.
+
+55
+00:04:45,100 --> 00:04:50,646
+So as a reminder, the select statement is
+a loop, okay.
+
+56
+00:04:50,646 --> 00:04:53,120
+It's not picking up all the records, and
+putting it in a table.
+
+57
+00:04:54,280 --> 00:04:56,600
+It's going to process the records one at a
+time.
+
+58
+00:04:56,600 --> 00:05:02,050
+So what'll it do, it'll read the first
+record, populate this work area field,
+
+59
+00:05:03,860 --> 00:05:07,470
+come to the end of the select statement,
+and then start again.
+
+60
+00:05:07,470 --> 00:05:12,320
+And it'll continue that loop until the
+last record in the table has been read.
+
+61
+00:05:12,320 --> 00:05:17,170
+And then it will write our wa employee
+work at your variable to the screen.
+
+62
+00:05:19,340 --> 00:05:22,235
+So now, we have the last employee number
+stored in a variable,
+
+63
+00:05:22,235 --> 00:05:28,180
+let's get rid of this write statement, and
+put back in the initialization.
+
+64
+00:05:31,070 --> 00:05:34,914
+We can move on, and take a look at the at
+selection screen event.
+
+65
+00:05:34,914 --> 00:05:35,414
+[BLANK_AUDIO]
+

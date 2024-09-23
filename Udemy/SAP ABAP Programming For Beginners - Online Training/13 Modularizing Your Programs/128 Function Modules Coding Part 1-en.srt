@@ -1,0 +1,546 @@
+1
+00:00:02,310 --> 00:00:06,670
+Now we have identified the function module
+we want to use in our program, and
+
+2
+00:00:06,670 --> 00:00:07,980
+tested it successfully.
+
+3
+00:00:09,110 --> 00:00:13,040
+Let's look at how we can call it from our
+program by using ABAP.
+
+4
+00:00:13,040 --> 00:00:16,900
+So let me step out the function module
+builder.
+
+5
+00:00:18,050 --> 00:00:19,160
+I'll go back to SE38.
+
+6
+00:00:20,650 --> 00:00:21,720
+Create a brand new program.
+
+7
+00:00:21,720 --> 00:00:28,380
+And we'll call
+
+8
+00:00:28,380 --> 00:00:34,535
+this Z Mod 2.
+
+9
+00:00:34,535 --> 00:00:38,551
+[SOUND]
+
+10
+00:00:38,551 --> 00:00:48,551
+[BLANK_AUDIO]
+
+11
+00:00:49,591 --> 00:00:50,577
+And then we can start coding.
+
+12
+00:00:50,577 --> 00:00:55,825
+Now the first thing I want to do is set up
+a parameter on the selection screen.
+
+13
+00:00:55,825 --> 00:00:57,680
+So I can enter a value.
+
+14
+00:01:01,290 --> 00:01:06,836
+So I'm going to define a parameter.
+
+15
+00:01:06,836 --> 00:01:14,910
+[SOUND] Let's call it my [UNKNOWN].
+
+16
+00:01:14,910 --> 00:01:17,664
+We'll make it an integer and
+
+17
+00:01:17,664 --> 00:01:22,612
+what we will do is make the screen look
+half decent.
+
+18
+00:01:22,612 --> 00:01:28,841
+[SOUND] So let's do selection
+
+19
+00:01:28,841 --> 00:01:33,775
+screen begin of line.
+
+20
+00:01:33,775 --> 00:01:43,460
+[BLANK_AUDIO]
+
+21
+00:01:43,460 --> 00:01:44,569
+Let's have a comment in there.
+
+22
+00:01:44,569 --> 00:01:50,080
+Start it at the first position for 15
+characters.
+
+23
+00:01:53,200 --> 00:01:55,811
+We'll use a text element.
+
+24
+00:01:55,811 --> 00:02:00,895
+[BLANK_AUDIO]
+
+25
+00:02:00,895 --> 00:02:05,986
+And we have our parameter and then we'll
+add in the end of line.
+
+26
+00:02:05,986 --> 00:02:06,486
+[BLANK_AUDIO]
+
+27
+00:02:06,486 --> 00:02:17,222
+[BLANK_AUDIO]
+
+28
+00:02:17,222 --> 00:02:17,825
+Let's see how we look.
+
+29
+00:02:17,825 --> 00:02:23,043
+[BLANK_AUDIO]
+
+30
+00:02:23,043 --> 00:02:25,893
+Looking good so all we need to do now is
+define the text.
+
+31
+00:02:25,893 --> 00:02:29,198
+[BLANK_AUDIO]
+
+32
+00:02:29,198 --> 00:02:30,644
+Choose yes to create it.
+
+33
+00:02:30,644 --> 00:02:34,515
+And we'll key in enter a value.
+
+34
+00:02:34,515 --> 00:02:38,102
+[BLANK_AUDIO]
+
+35
+00:02:38,102 --> 00:02:38,822
+Let's activate that.
+
+36
+00:02:38,822 --> 00:02:45,828
+[SOUND] Back to our program and then we'll
+activate that as well.
+
+37
+00:02:45,828 --> 00:02:50,449
+[BLANK_AUDIO]
+
+38
+00:02:50,449 --> 00:02:54,873
+And then a quick test just to make sure it
+looks okay on the screen and
+
+39
+00:02:54,873 --> 00:02:58,837
+it does as our text element and we can
+enter a value in there.
+
+40
+00:02:58,837 --> 00:03:01,501
+[SOUND] So back to our code.
+
+41
+00:03:01,501 --> 00:03:04,903
+So now we can enter a value into the
+screen.
+
+42
+00:03:04,903 --> 00:03:08,190
+What we want to do is pass that value to
+our function module.
+
+43
+00:03:08,190 --> 00:03:11,970
+But of course we can't do that until we
+
+44
+00:03:11,970 --> 00:03:16,990
+define the code that allows us to call the
+function module.
+
+45
+00:03:16,990 --> 00:03:20,630
+So instead of just typing in the code
+straight to the editor, let's use
+
+46
+00:03:20,630 --> 00:03:25,785
+the pattern tool which is control F6 or
+you can click pattern.
+
+47
+00:03:25,785 --> 00:03:26,537
+[SOUND] So
+
+48
+00:03:26,537 --> 00:03:32,562
+as you can see the call function option is
+the first one the in list.
+
+49
+00:03:32,562 --> 00:03:36,567
+So all we need to do is enter spell
+amount.
+
+50
+00:03:36,567 --> 00:03:42,694
+Which is our function module name and
+click the continue button [SOUND] and
+
+51
+00:03:42,694 --> 00:03:47,917
+as if by magic it'll for us to save us a
+whole bunch of typing and
+
+52
+00:03:47,917 --> 00:03:51,850
+you'll see a lot of the code is commented
+out.
+
+53
+00:03:51,850 --> 00:03:55,356
+What I'm gonna do, I'm just gonna save it
+and show you why.
+
+54
+00:03:55,356 --> 00:03:59,040
+I'm gonna double-click on the function
+module itself,
+
+55
+00:03:59,040 --> 00:04:02,580
+to use forward navigation to go to the
+function module.
+
+56
+00:04:06,190 --> 00:04:10,880
+And if you remember, on the importing tab,
+all the fields were set as optional.
+
+57
+00:04:12,060 --> 00:04:13,580
+So I'll step back.
+
+58
+00:04:13,580 --> 00:04:17,630
+So when we use the pattern tool, any
+optional fields,
+
+59
+00:04:17,630 --> 00:04:20,300
+it will automatically comment them out,
+and
+
+60
+00:04:20,300 --> 00:04:23,470
+we just need to un-comment them to say
+we're going to use them.
+
+61
+00:04:25,220 --> 00:04:26,250
+So in our case,
+
+62
+00:04:26,250 --> 00:04:31,390
+we're going to be exporting the amount
+from our program to the function module.
+
+63
+00:04:34,410 --> 00:04:36,210
+And then inside the function module,
+
+64
+00:04:36,210 --> 00:04:41,885
+it will import that mount into its own
+variable.
+
+65
+00:04:41,885 --> 00:04:43,685
+[SOUND]
+
+66
+00:04:43,685 --> 00:04:46,327
+[BLANK_AUDIO]
+
+67
+00:04:46,327 --> 00:04:48,831
+So you see, when we call a function
+module,
+
+68
+00:04:48,831 --> 00:04:53,249
+the actual adapt statement itself is made
+of, of the word Call and Function.
+
+69
+00:04:53,249 --> 00:04:54,918
+[BLANK_AUDIO]
+
+70
+00:04:54,918 --> 00:04:58,389
+And then we place the function itself
+inside single quotes.
+
+71
+00:04:58,389 --> 00:05:01,826
+Include all the parameters, and then,
+
+72
+00:05:01,826 --> 00:05:05,980
+we have a full stop to terminate this
+statement.
+
+73
+00:05:07,060 --> 00:05:09,770
+Now note the position of this period.
+
+74
+00:05:09,770 --> 00:05:12,590
+It appears on the line all by itself.
+
+75
+00:05:12,590 --> 00:05:17,590
+And it's there because the system
+automatically commented out all
+
+76
+00:05:17,590 --> 00:05:22,250
+these optional variables for us, so the
+system's not
+
+77
+00:05:22,250 --> 00:05:26,510
+going to know what we actually want to
+fill in and what we don't fill in.
+
+78
+00:05:26,510 --> 00:05:31,940
+If the system put the period up here and
+we uncommented
+
+79
+00:05:31,940 --> 00:05:36,010
+some of these variables then we would more
+than likely get a syntax error.
+
+80
+00:05:39,030 --> 00:05:42,600
+Because the period would terminate the
+statement up here at the end of the first
+
+81
+00:05:42,600 --> 00:05:48,160
+line and then we would have exporting list
+of variables,
+
+82
+00:05:48,160 --> 00:05:51,050
+importing and so on.
+
+83
+00:05:51,050 --> 00:05:51,859
+For example if I do this
+
+84
+00:05:51,859 --> 00:05:55,687
+[BLANK_AUDIO]
+
+85
+00:05:55,687 --> 00:05:56,511
+We get some errors.
+
+86
+00:05:56,511 --> 00:06:01,295
+The system is not expecting the export
+statement.
+
+87
+00:06:01,295 --> 00:06:06,014
+And that's all down to the placement of
+the period.
+
+88
+00:06:06,014 --> 00:06:11,621
+I could bring it up to here.
+
+89
+00:06:11,621 --> 00:06:14,489
+But I'll just leave it there for now.
+
+90
+00:06:14,489 --> 00:06:16,847
+Oops.
+
+91
+00:06:16,847 --> 00:06:26,328
+[SOUND]
+[BLANK_AUDIO]
+
+92
+00:06:26,328 --> 00:06:30,160
+And next, you'll notice the system
+included an if statement for us.
+
+93
+00:06:30,160 --> 00:06:34,377
+Now the if statement is there so that we
+always follow best practice and
+
+94
+00:06:34,377 --> 00:06:38,320
+check to make sure the function module was
+called successfully.
+
+95
+00:06:39,480 --> 00:06:43,750
+Now you'll see that it says if [UNKNOWN]
+not equals zero.
+
+96
+00:06:45,330 --> 00:06:48,806
+And that's indicating that if it's not
+zero, there's a problem.
+
+97
+00:06:48,806 --> 00:06:55,040
+And if [UNKNOWN] that specific system
+variable that we have used previously
+
+98
+00:06:56,210 --> 00:07:01,958
+will get filled with the values from the
+exception.
+
+99
+00:07:01,958 --> 00:07:03,931
+So if [UNKNOWN] had a value of one.
+
+100
+00:07:03,931 --> 00:07:07,455
+[BLANK_AUDIO]
+
+101
+00:07:07,455 --> 00:07:10,067
+We'll know the actual error message was
+not found.
+
+102
+00:07:10,067 --> 00:07:13,148
+If it's two, we know the number that we
+sent into
+
+103
+00:07:13,148 --> 00:07:16,679
+the function module was too large, and if
+it's three,
+
+104
+00:07:16,679 --> 00:07:21,216
+it's some other error message the function
+module didn't cater for.
+
+105
+00:07:21,216 --> 00:07:27,328
+So always check to see if [UNKNOWN] is
+equal to anything other than zero,
+
+106
+00:07:27,328 --> 00:07:30,760
+every time you call a function module.
+
+107
+00:07:32,350 --> 00:07:33,138
+So let's have some code.
+
+108
+00:07:33,138 --> 00:07:37,995
+So if [UNKNOWN] is not equal to zero, we
+don't want to try and
+
+109
+00:07:37,995 --> 00:07:42,471
+output the text that the function module
+sends to us.
+
+110
+00:07:42,471 --> 00:07:45,112
+So why don't we do something like this?
+
+111
+00:07:45,112 --> 00:07:49,213
+[SOUND] Let's say,
+
+112
+00:07:49,213 --> 00:07:53,571
+result equals [SOUND]
+
+113
+00:07:53,571 --> 00:07:59,211
+the function [SOUND] module
+
+114
+00:07:59,211 --> 00:08:05,115
+[SOUND] returned a value of-
+
+115
+00:08:05,115 --> 00:08:09,315
+[BLANK_AUDIO]
+
+116
+00:08:09,315 --> 00:08:13,228
+And then we can include [UNKNOWN].
+
+117
+00:08:13,228 --> 00:08:14,450
+Oops, what am I doing?
+
+118
+00:08:14,450 --> 00:08:15,100
+I do apologize.
+
+119
+00:08:15,100 --> 00:08:18,433
+I thought I was doing a write statement.
+
+120
+00:08:18,433 --> 00:08:21,706
+[LAUGH] Let's do that.
+
+121
+00:08:21,706 --> 00:08:24,927
+Let's do, right.
+
+122
+00:08:24,927 --> 00:08:33,853
+[BLANK_AUDIO]
+

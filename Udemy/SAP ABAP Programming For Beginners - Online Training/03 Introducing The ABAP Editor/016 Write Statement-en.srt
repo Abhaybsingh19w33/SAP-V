@@ -1,0 +1,1299 @@
+1
+00:00:02,080 --> 00:00:04,180
+Now you've got your first program under
+your belt.
+
+2
+00:00:05,830 --> 00:00:10,770
+Let's expand on the program a little bit
+and add in a few more ABAP statements.
+
+3
+00:00:13,340 --> 00:00:14,280
+So let's step back.
+
+4
+00:00:15,880 --> 00:00:17,450
+Back to our coding screen.
+
+5
+00:00:17,450 --> 00:00:22,330
+And what we're gonna do now Is access some
+of the data
+
+6
+00:00:22,330 --> 00:00:27,630
+records that we created when we built our
+first table in the ABAP dictionary.
+
+7
+00:00:28,760 --> 00:00:29,680
+To do this,
+
+8
+00:00:29,680 --> 00:00:34,480
+the first thing we have to do is include
+the table statement into our program.
+
+9
+00:00:34,480 --> 00:00:39,010
+And we'll place the table statement just
+below the report statement.
+
+10
+00:00:40,340 --> 00:00:42,561
+So I'll create a few blank lines.
+
+11
+00:00:42,561 --> 00:00:45,800
+[BLANK_AUDIO]
+
+12
+00:00:45,800 --> 00:00:47,250
+And I'll key in tables.
+
+13
+00:00:48,350 --> 00:00:53,600
+Now following tables, we key in the actual
+table name that we created.
+
+14
+00:00:53,600 --> 00:00:58,491
+Now if memory serves me right,
+
+15
+00:00:58,491 --> 00:01:05,300
+I think it was z_ employee_list_01.
+
+16
+00:01:05,300 --> 00:01:09,645
+And then remember, we need a period at the
+end of the statements.
+
+17
+00:01:11,590 --> 00:01:14,330
+Now, one little thing.
+
+18
+00:01:14,330 --> 00:01:17,329
+Remember, I mentioned about pretty
+printer?
+
+19
+00:01:17,329 --> 00:01:20,160
+I like my programs to look a certain way.
+
+20
+00:01:20,160 --> 00:01:24,070
+And I'm always formatting them as I'm
+going along.
+
+21
+00:01:24,070 --> 00:01:29,215
+So, what I'm gonna do here is just click
+Pretty Printer,
+
+22
+00:01:29,215 --> 00:01:34,360
+and we can see, what has happened is the
+table statement,
+
+23
+00:01:34,360 --> 00:01:39,929
+the write statement, they've been
+converted to uppercase.
+
+24
+00:01:39,929 --> 00:01:46,987
+And then the actual table, and program
+name, they will convert it to lowercase.
+
+25
+00:01:46,987 --> 00:01:50,539
+This is just my own personal preference,
+and
+
+26
+00:01:50,539 --> 00:01:54,931
+if you want to play around with how the
+programs looks for
+
+27
+00:01:54,931 --> 00:02:00,165
+yourself, you'll be able to do that
+through the Utilities menu,
+
+28
+00:02:00,165 --> 00:02:05,306
+go to Settings and then from the ABAP
+Editor go to Pretty Printer,
+
+29
+00:02:05,306 --> 00:02:09,000
+and these are the settings that I have.
+
+30
+00:02:09,000 --> 00:02:13,790
+So automatically indent, convert
+upper/lowercase,
+
+31
+00:02:13,790 --> 00:02:17,788
+and I want to convert my keywords to
+uppercase.
+
+32
+00:02:17,788 --> 00:02:24,383
+[BLANK_AUDIO]
+
+33
+00:02:24,383 --> 00:02:28,469
+So let's quickly review what the table
+statement does.
+
+34
+00:02:28,469 --> 00:02:30,561
+When the program is executed,
+
+35
+00:02:30,561 --> 00:02:36,192
+this table statement will create a table
+structure in memory based on the structure
+
+36
+00:02:36,192 --> 00:02:41,110
+that we defined in the ABAP dictionary of
+our zemployee list 01 table.
+
+37
+00:02:42,570 --> 00:02:45,560
+The table structure will contain all the
+fields that we created.
+
+38
+00:02:45,560 --> 00:02:50,830
+And this will allow us to read records
+from the table, and
+
+39
+00:02:50,830 --> 00:02:56,080
+store them in this temporary structure for
+our program to use.
+
+40
+00:02:56,080 --> 00:02:59,633
+So, to get these records into our table
+structure,
+
+41
+00:02:59,633 --> 00:03:02,556
+we're going to use the select statement.
+
+42
+00:03:02,556 --> 00:03:05,994
+[BLANK_AUDIO]
+
+43
+00:03:05,994 --> 00:03:11,922
+So we'll key in select
+
+44
+00:03:11,922 --> 00:03:16,300
+asterisk from.
+
+45
+00:03:16,300 --> 00:03:23,139
+Now you'll see that I do get lazy, so I
+like to do copy and paste quite a lot.
+
+46
+00:03:25,620 --> 00:03:28,730
+And that's how a simple select statement.
+
+47
+00:03:28,730 --> 00:03:35,890
+And what we're saying is, select
+everything and the asterisk,
+
+48
+00:03:35,890 --> 00:03:40,320
+from our table.
+
+49
+00:03:40,320 --> 00:03:43,280
+Because the select statement is a loop,
+
+50
+00:03:43,280 --> 00:03:47,129
+we need to tell our program where the end
+of the loop is.
+
+51
+00:03:49,330 --> 00:03:53,490
+We do that by keying in end select.
+
+52
+00:03:56,310 --> 00:04:00,060
+So our loop starts with a select and ends
+with end select.
+
+53
+00:04:02,700 --> 00:04:05,240
+So if this statement is now going to read
+
+54
+00:04:05,240 --> 00:04:09,740
+every row of the table into our table
+structure we need to do something with it.
+
+55
+00:04:11,030 --> 00:04:12,610
+So what we're going to do here
+
+56
+00:04:13,740 --> 00:04:16,730
+is just use the write command that we have
+used before.
+
+57
+00:04:18,470 --> 00:04:24,030
+So I'll just cut that and paste it in, but
+instead of saying write,
+
+58
+00:04:24,030 --> 00:04:28,249
+hello SAP world, we are going to say
+
+59
+00:04:33,100 --> 00:04:36,140
+write a whole row at once to the output
+window.
+
+60
+00:04:37,150 --> 00:04:39,980
+I'll click Pretty Printer, just to tidy up
+the code.
+
+61
+00:04:42,060 --> 00:04:45,940
+Now we have our select loop, we're going
+to write out every row of our table and
+
+62
+00:04:45,940 --> 00:04:48,629
+display it to us in the output window.
+
+63
+00:04:50,380 --> 00:04:51,630
+So let's check our code.
+
+64
+00:04:51,630 --> 00:04:57,202
+[SOUND] We can see we have our first
+syntax error,
+
+65
+00:04:57,202 --> 00:05:03,345
+and if you notice, the cursor is changed
+position.
+
+66
+00:05:03,345 --> 00:05:07,406
+And it's gone to the table statement at
+the start of the actual table
+
+67
+00:05:07,406 --> 00:05:08,699
+that we identified.
+
+68
+00:05:09,770 --> 00:05:13,970
+And it's telling us the dictionary,
+structure or table is either not active or
+
+69
+00:05:13,970 --> 00:05:14,930
+does not exist.
+
+70
+00:05:14,930 --> 00:05:20,260
+So it's likely I've just got this name
+wrong.
+
+71
+00:05:20,260 --> 00:05:22,160
+So all we need to do,
+
+72
+00:05:30,970 --> 00:05:33,170
+I'll open up another session.
+
+73
+00:05:33,170 --> 00:05:34,495
+Go to SE 11.
+
+74
+00:05:34,495 --> 00:05:42,495
+[BLANK_AUDIO]
+
+75
+00:05:42,495 --> 00:05:46,280
+And we can see we actually called our
+table Z employees.
+
+76
+00:05:47,830 --> 00:05:52,488
+So I'm just going to copy this name to the
+clipboard,
+
+77
+00:05:52,488 --> 00:05:56,745
+close that window, get rid of the syntax
+error.
+
+78
+00:05:56,745 --> 00:05:59,845
+[BLANK_AUDIO]
+
+79
+00:05:59,845 --> 00:06:02,150
+And paste the proper table name right
+there.
+
+80
+00:06:04,130 --> 00:06:06,820
+Pretty Pinter again, just to format it.
+
+81
+00:06:06,820 --> 00:06:09,850
+Now, because we changed the table name up
+here,
+
+82
+00:06:09,850 --> 00:06:15,920
+we also need to replace any of the
+occurrence that we have.
+
+83
+00:06:15,920 --> 00:06:17,115
+So it needs to be there.
+
+84
+00:06:17,115 --> 00:06:19,970
+[BLANK_AUDIO]
+
+85
+00:06:19,970 --> 00:06:21,990
+And there.
+
+86
+00:06:21,990 --> 00:06:23,410
+Pretty Printer again.
+
+87
+00:06:23,410 --> 00:06:28,580
+Good, we'll save our program, check the
+code.
+
+88
+00:06:30,580 --> 00:06:31,680
+Now everything is fine.
+
+89
+00:06:31,680 --> 00:06:36,235
+The tables are recognized, and we can test
+our program.
+
+90
+00:06:36,235 --> 00:06:42,377
+So click the Test button or just press the
+F8 key.
+
+91
+00:06:42,377 --> 00:06:50,156
+And as if by magic, our output window
+shows every row of our table.
+
+92
+00:06:50,156 --> 00:06:54,267
+If you remember, we add the employee
+number as the first field and
+
+93
+00:06:54,267 --> 00:06:58,701
+the surname and the forename, the tiny
+tool, and then date of birth.
+
+94
+00:06:58,701 --> 00:07:03,168
+So if we keep the output window in mind
+when we go back to our code and
+
+95
+00:07:03,168 --> 00:07:08,768
+just have a look at the SELECT statement
+again, we can see that a loop happened.
+
+96
+00:07:08,768 --> 00:07:13,890
+And every row of data was written to the
+output window.
+
+97
+00:07:16,070 --> 00:07:19,690
+Now let's dig a little deeper, and have a
+look at the output window again.
+
+98
+00:07:22,460 --> 00:07:27,336
+We can see here that the system
+automatically
+
+99
+00:07:27,336 --> 00:07:31,707
+put each line from the table on a new row.
+
+100
+00:07:31,707 --> 00:07:36,432
+The write statement that we had in our
+program didn't know that
+
+101
+00:07:36,432 --> 00:07:39,742
+each new row had to be output on the new
+line.
+
+102
+00:07:39,742 --> 00:07:44,446
+But this was forced because of some
+default settings held
+
+103
+00:07:44,446 --> 00:07:49,545
+within our system about our own individual
+screen settings.
+
+104
+00:07:49,545 --> 00:07:52,564
+Now if we try to print this report,
+
+105
+00:07:52,564 --> 00:07:57,043
+it could well be that there are too many
+columns, or
+
+106
+00:07:57,043 --> 00:08:02,586
+too many characters to actually fit On a
+standard piece of A4.
+
+107
+00:08:02,586 --> 00:08:07,354
+This will be determined by the width of
+the paper specified in the printer
+
+108
+00:08:07,354 --> 00:08:08,170
+settings.
+
+109
+00:08:08,170 --> 00:08:14,380
+So don't count on your output being in the
+right format for the reports you create.
+
+110
+00:08:14,380 --> 00:08:18,360
+What I suggest is you use an addition to
+the report
+
+111
+00:08:18,360 --> 00:08:22,739
+statements where you specify the width of
+each line.
+
+112
+00:08:22,739 --> 00:08:25,983
+Which, if we go back to our program.
+
+113
+00:08:25,983 --> 00:08:30,844
+[BLANK_AUDIO]
+
+114
+00:08:30,844 --> 00:08:34,281
+If you click on the report statements and
+press the F1 key.
+
+115
+00:08:34,281 --> 00:08:36,441
+[BLANK_AUDIO]
+
+116
+00:08:36,441 --> 00:08:40,841
+You'll see the line size column addition
+that we can up.
+
+117
+00:08:40,841 --> 00:08:44,997
+[BLANK_AUDIO]
+
+118
+00:08:44,997 --> 00:08:49,647
+And you can see right here, it says if the
+line size specification is missing,
+
+119
+00:08:49,647 --> 00:08:53,110
+the line length corresponds to the current
+screen width.
+
+120
+00:08:54,130 --> 00:08:59,690
+You can check the screen width by
+referencing this built-in system field.
+
+121
+00:09:00,830 --> 00:09:05,700
+And he tells us the maximum width of the
+list is 1,023 characters.
+
+122
+00:09:05,700 --> 00:09:10,750
+So what we're gonna do in this example, is
+specify a line size.
+
+123
+00:09:12,470 --> 00:09:14,811
+I'll just use bit of copy and paste.
+
+124
+00:09:14,811 --> 00:09:19,954
+[BLANK_AUDIO]
+
+125
+00:09:19,954 --> 00:09:23,490
+And we'll add the addition to our report
+statement.
+
+126
+00:09:23,490 --> 00:09:29,480
+We need to take out the less than sign.
+
+127
+00:09:29,480 --> 00:09:34,709
+And in this example, let's limit the line
+size just to 40 characters.
+
+128
+00:09:36,895 --> 00:09:39,970
+And see what effect that has on the
+output.
+
+129
+00:09:39,970 --> 00:09:45,366
+So we'll save our code, check it for
+
+130
+00:09:45,366 --> 00:09:52,514
+syntax errors, activate it, and then test
+it.
+
+131
+00:09:52,514 --> 00:09:54,858
+And there you can see.
+
+132
+00:09:54,858 --> 00:10:00,608
+The line has been broken at 40 characters
+in length.
+
+133
+00:10:00,608 --> 00:10:03,316
+Which I guess is right here.
+
+134
+00:10:03,316 --> 00:10:05,941
+It didn't do a line wrap or anything like
+that.
+
+135
+00:10:05,941 --> 00:10:08,484
+It just truncated the whole line.
+
+136
+00:10:08,484 --> 00:10:13,789
+So keep in mind, if you're outputting your
+list to paper, normally for,
+
+137
+00:10:13,789 --> 00:10:19,050
+I think is 132 characters as it specified
+in the Help section.
+
+138
+00:10:19,050 --> 00:10:23,713
+And if you do landscape, it's even bigger.
+
+139
+00:10:23,713 --> 00:10:26,181
+But anything greater will likely be
+truncated automatically.
+
+140
+00:10:26,181 --> 00:10:31,499
+[BLANK_AUDIO]
+
+141
+00:10:31,499 --> 00:10:34,390
+So if we did 132.
+
+142
+00:10:34,390 --> 00:10:40,872
+[SOUND] This time, I'll just activate it
+which automatically does the check.
+
+143
+00:10:40,872 --> 00:10:41,997
+And I'll test.
+
+144
+00:10:41,997 --> 00:10:43,391
+[BLANK_AUDIO]
+
+145
+00:10:43,391 --> 00:10:46,793
+And now we're back to seeing the full
+output.
+
+146
+00:10:46,793 --> 00:10:51,878
+And we can see 132 characters, actually
+goes right up to this level here.
+
+147
+00:10:51,878 --> 00:10:55,838
+[BLANK_AUDIO]
+
+148
+00:10:55,838 --> 00:10:58,910
+Let's now enhance our program a little bit
+more by adding
+
+149
+00:10:58,910 --> 00:11:01,730
+some specific formatting to the write
+statements.
+
+150
+00:11:02,800 --> 00:11:05,977
+So what we're going to do is insert a line
+break.
+
+151
+00:11:05,977 --> 00:11:07,975
+[BLANK_AUDIO]
+
+152
+00:11:07,975 --> 00:11:12,775
+At the start of every row that we output
+within our select statements.
+
+153
+00:11:17,030 --> 00:11:20,114
+So first of all, I'm just gonna copy this
+code.
+
+154
+00:11:20,114 --> 00:11:25,256
+[BLANK_AUDIO]
+
+155
+00:11:25,256 --> 00:11:26,453
+Paste it in again.
+
+156
+00:11:26,453 --> 00:11:31,038
+[BLANK_AUDIO]
+
+157
+00:11:31,038 --> 00:11:34,394
+Let's just separate our table statement
+from our code.
+
+158
+00:11:34,394 --> 00:11:39,131
+[BLANK_AUDIO]
+
+159
+00:11:39,131 --> 00:11:41,410
+And we'll work with this select statement
+right here.
+
+160
+00:11:41,410 --> 00:11:47,620
+So what we need to do, is where we got our
+write statement,
+
+161
+00:11:47,620 --> 00:11:50,270
+include the forward slash.
+
+162
+00:11:50,270 --> 00:11:53,110
+And the forward slash is what will trigger
+a new line for the write command.
+
+163
+00:11:55,320 --> 00:11:56,360
+So let's save the code.
+
+164
+00:11:57,910 --> 00:11:58,670
+And execute it.
+
+165
+00:11:58,670 --> 00:12:06,220
+And you can see the first select loop,
+
+166
+00:12:06,220 --> 00:12:11,290
+output the first five rows, the second
+select loop, output the next five.
+
+167
+00:12:11,290 --> 00:12:13,666
+And look, it's identical.
+
+168
+00:12:13,666 --> 00:12:21,530
+Why do we think it's identical?
+
+169
+00:12:21,530 --> 00:12:25,500
+Well, it's all down to this report
+statement again.
+
+170
+00:12:25,500 --> 00:12:28,860
+Because we specified the line size of 132,
+the system automatically
+
+171
+00:12:30,380 --> 00:12:35,100
+wrapped the first select loop at 132
+characters.
+
+172
+00:12:37,070 --> 00:12:39,220
+So every row that was output, once it got
+to 132,
+
+173
+00:12:39,220 --> 00:12:43,440
+it then caused a brand new line to be
+written.
+
+174
+00:12:45,290 --> 00:12:49,522
+If we increase this, lets say 532,
+
+175
+00:12:49,522 --> 00:12:54,653
+we should see the effect of this write
+statement
+
+176
+00:12:54,653 --> 00:12:58,796
+wrapping along just a couple of rows.
+
+177
+00:12:58,796 --> 00:13:03,157
+[SOUND] So let's test it out.
+
+178
+00:13:03,157 --> 00:13:05,770
+And here we go.
+
+179
+00:13:05,770 --> 00:13:08,800
+The first row finishes here.
+
+180
+00:13:08,800 --> 00:13:14,440
+But then because we said we want the
+output to be 532 characters long,
+
+181
+00:13:14,440 --> 00:13:17,810
+the next row was output immediately after
+the first one.
+
+182
+00:13:19,110 --> 00:13:20,534
+And if we scroll along.
+
+183
+00:13:20,534 --> 00:13:22,797
+[BLANK_AUDIO]
+
+184
+00:13:22,797 --> 00:13:27,000
+We can see it then output the next one as
+well.
+
+185
+00:13:27,000 --> 00:13:31,338
+All the way until it got to 532 characters
+before it then forced
+
+186
+00:13:31,338 --> 00:13:36,100
+another line break.
+
+187
+00:13:36,100 --> 00:13:42,034
+So I think here, it was actually the first
+four records were output on the first row,
+
+188
+00:13:42,034 --> 00:13:45,140
+then the fifth was output on the second
+one.
+
+189
+00:13:45,140 --> 00:13:47,028
+Then came our second select loop.
+
+190
+00:13:47,028 --> 00:13:52,592
+And because we've forced a line break
+before every row was output,
+
+191
+00:13:52,592 --> 00:13:57,483
+they all appear correctly under one
+another in our report.
+
+192
+00:13:57,483 --> 00:13:59,316
+So let's step back.
+
+193
+00:13:59,316 --> 00:14:04,000
+I'll put this back to 132.
+
+194
+00:14:04,000 --> 00:14:09,941
+And what we will do is add another little
+bit of formatting just so
+
+195
+00:14:09,941 --> 00:14:16,222
+that we can see the separation between the
+different select loops.
+
+196
+00:14:16,222 --> 00:14:23,480
+So what I'm going to do here is type,
+uline.
+
+197
+00:14:23,480 --> 00:14:25,420
+And uline simply means underline.
+
+198
+00:14:25,420 --> 00:14:28,516
+I press the F1 key.
+
+199
+00:14:28,516 --> 00:14:33,330
+We'll see an explanation.
+
+200
+00:14:33,330 --> 00:14:35,160
+Writes a continuous underline in a new
+line.
+
+201
+00:14:35,160 --> 00:14:37,980
+So that will help separate the different
+
+202
+00:14:37,980 --> 00:14:41,030
+select statement outputs that we have on
+our screen.
+
+203
+00:14:41,030 --> 00:14:45,660
+It'll be a little easier on the eye.
+
+204
+00:14:48,730 --> 00:14:49,985
+So if we execute this.
+
+205
+00:14:49,985 --> 00:14:52,687
+[SOUND] There we go.
+
+206
+00:14:52,687 --> 00:14:56,474
+We can see this nice underline showing us
+our second select loop.
+
+207
+00:14:56,474 --> 00:15:01,522
+[BLANK_AUDIO]
+
+208
+00:15:01,522 --> 00:15:06,710
+The next thing we'll do, is just change
+
+209
+00:15:06,710 --> 00:15:11,780
+this select statements a little bit.
+
+210
+00:15:11,780 --> 00:15:13,041
+So we'll copy it again.
+
+211
+00:15:13,041 --> 00:15:18,369
+[BLANK_AUDIO]
+
+212
+00:15:18,369 --> 00:15:19,903
+And create new underline.
+
+213
+00:15:19,903 --> 00:15:26,206
+[BLANK_AUDIO]
+
+214
+00:15:26,206 --> 00:15:31,590
+I will remove the slash before the new row
+is output.
+
+215
+00:15:33,832 --> 00:15:39,780
+And adding a write statement with a slash
+on its own.
+
+216
+00:15:39,780 --> 00:15:44,478
+And that will mean a new line will be
+
+217
+00:15:44,478 --> 00:15:49,836
+output at the end of the previous line.
+
+218
+00:15:49,836 --> 00:15:53,920
+[SOUND] So we'll check it under our Pretty
+Printer.
+
+219
+00:15:53,920 --> 00:15:56,295
+I always like it to look nice.
+
+220
+00:15:56,295 --> 00:15:59,102
+And we'll test our code.
+
+221
+00:15:59,102 --> 00:16:07,406
+And we can see a new line is being written
+after a row is being output.
+
+222
+00:16:07,406 --> 00:16:16,543
+[BLANK_AUDIO]
+
+223
+00:16:16,543 --> 00:16:20,409
+Let's go back and just change things up
+just one more time.
+
+224
+00:16:20,409 --> 00:16:28,443
+[BLANK_AUDIO]
+
+225
+00:16:28,443 --> 00:16:34,540
+This time we'll go back to the SELECT
+statement with the /zemployees like so.
+
+226
+00:16:34,540 --> 00:16:39,210
+But, we're going to include one more
+statement, which is skip,
+
+227
+00:16:39,210 --> 00:16:44,110
+and skip means skip a line.
+
+228
+00:16:44,110 --> 00:16:48,216
+And you can have an addition with the skip
+statements to allow
+
+229
+00:16:48,216 --> 00:16:53,140
+you to skip multiple lines, so in this
+case, we'll say skip two lines.
+
+230
+00:16:53,140 --> 00:16:56,960
+[BLANK_AUDIO]
+
+231
+00:16:56,960 --> 00:16:58,610
+Press the F1 key on skip.
+
+232
+00:16:59,770 --> 00:17:01,610
+Just to see the help on it.
+
+233
+00:17:01,610 --> 00:17:03,350
+There you can see skip.
+
+234
+00:17:03,350 --> 00:17:05,890
+Skip however many lines you want.
+
+235
+00:17:05,890 --> 00:17:09,900
+Or you can skip to a specific line number.
+
+236
+00:17:11,378 --> 00:17:17,937
+So let's close
+
+237
+00:17:17,937 --> 00:17:22,486
+the help.
+
+238
+00:17:22,486 --> 00:17:26,045
+Click Pretty Printer.
+
+239
+00:17:27,740 --> 00:17:28,730
+And execute our gold.
+
+240
+00:17:30,230 --> 00:17:31,670
+Here we go.
+
+241
+00:17:31,670 --> 00:17:36,580
+So we're using the same select statements
+that we have here.
+
+242
+00:17:36,580 --> 00:17:37,300
+The second one.
+
+243
+00:17:39,260 --> 00:17:44,210
+Copied it down here, but we included the
+skip two lines
+
+244
+00:17:44,210 --> 00:17:49,240
+right there.
+
+245
+00:17:49,240 --> 00:17:52,068
+Now, let's change things up just a little
+bit more.
+
+246
+00:17:52,068 --> 00:17:57,920
+And this time, instead of outputting the
+whole row of the table,
+
+247
+00:17:57,920 --> 00:18:00,150
+we will output individual fields.
+
+248
+00:18:04,330 --> 00:18:06,240
+So let' s create another SELECT statement.
+
+249
+00:18:08,780 --> 00:18:11,450
+In fact, you know what I'm gonna do right
+now?
+
+250
+00:18:11,450 --> 00:18:14,850
+Because we're duplicating lots of lines,
+and
+
+251
+00:18:14,850 --> 00:18:19,529
+it's starting to look complicated, let's
+add some comments.
+
+252
+00:18:19,529 --> 00:18:29,529
+[BLANK_AUDIO]
+
+253
+00:18:35,946 --> 00:18:37,965
+And this one we're going to work on.
+
+254
+00:18:37,965 --> 00:18:47,961
+[BLANK_AUDIO]
+
+255
+00:18:47,961 --> 00:18:54,320
+Okay, another basic select statement, but
+this time outputting individual fields.
+
+256
+00:18:54,320 --> 00:18:56,380
+So how do we do this?
+
+257
+00:18:57,540 --> 00:19:04,310
+Well, all we need to do is specify the
+individual field.
+
+258
+00:19:05,740 --> 00:19:10,790
+So here we have the table name, and when
+you want to specify an individual field,
+
+259
+00:19:12,440 --> 00:19:15,810
+you use a dash, and then the actual field
+name.
+
+260
+00:19:17,440 --> 00:19:21,754
+So we have surname, forename, title,
+
+261
+00:19:21,754 --> 00:19:26,010
+date of birth, and I think the first field
+was employee number.
+
+262
+00:19:26,010 --> 00:19:28,290
+So let's just choose surname.
+
+263
+00:19:28,290 --> 00:19:38,290
+[BLANK_AUDIO]
+
+264
+00:19:44,799 --> 00:19:48,390
+I think forename,
+
+265
+00:19:48,390 --> 00:19:54,004
+then we'll do date of birth.
+
+266
+00:19:54,004 --> 00:19:57,704
+Now, I'm not sure if I've got these field
+names exactly correct, so
+
+267
+00:19:57,704 --> 00:19:59,902
+I'll just use forward navigation and check
+
+268
+00:19:59,902 --> 00:20:02,745
+[BLANK_AUDIO]
+
+269
+00:20:02,745 --> 00:20:06,180
+Surname, forename, and date of birth.
+
+270
+00:20:06,180 --> 00:20:07,670
+A stroke of luck.
+
+271
+00:20:08,820 --> 00:20:10,320
+So now, we'll do a syntax check.
+
+272
+00:20:12,830 --> 00:20:13,760
+Everything is good.
+
+273
+00:20:15,120 --> 00:20:18,146
+Activate our program, and then test.
+
+274
+00:20:18,146 --> 00:20:24,159
+[BLANK_AUDIO]
+
+275
+00:20:24,159 --> 00:20:28,500
+So as we scroll down, here we go.
+
+276
+00:20:28,500 --> 00:20:34,290
+So our first record is Brown, Stephen,
+with this date of birth, and we
+
+277
+00:20:34,290 --> 00:20:38,670
+can see [UNKNOWN] put it on an individual
+line, Brown, Stephen, date of birth.
+
+278
+00:20:38,670 --> 00:20:44,750
+And the second record, third, fourth, and
+then fifth.
+
+279
+00:20:49,630 --> 00:20:51,810
+So, that's writing individual lines.
+
+280
+00:20:53,800 --> 00:21:00,950
+Now let's tidy this up, because, maybe we
+just want three fields on one line.
+
+281
+00:21:00,950 --> 00:21:07,350
+So we'll take out this line break in front
+of second and third field.
+
+282
+00:21:09,630 --> 00:21:12,210
+X this out.
+
+283
+00:21:12,210 --> 00:21:16,360
+There we go.
+
+284
+00:21:16,360 --> 00:21:21,580
+Just the three fields we want, all on
+their own individual line.
+
+285
+00:21:21,580 --> 00:21:27,740
+One last thing I'll do, I'll just insert
+another underline
+
+286
+00:21:37,120 --> 00:21:40,115
+just to keep it tidy.
+
+287
+00:21:40,115 --> 00:21:41,001
+[SOUND] And there we go.
+
+288
+00:21:41,001 --> 00:21:47,310
+[BLANK_AUDIO]
+

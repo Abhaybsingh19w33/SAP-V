@@ -1,0 +1,325 @@
+1
+00:00:02,890 --> 00:00:06,100
+Let's now focus our attention on the ship
+statement.
+
+2
+00:00:07,260 --> 00:00:09,860
+This statement is quite simple.
+
+3
+00:00:09,860 --> 00:00:14,530
+It allows you to move the contents of a
+character string left or
+
+4
+00:00:14,530 --> 00:00:16,650
+right, character by character.
+
+5
+00:00:18,500 --> 00:00:24,130
+So as an example, let' see how we can move
+the contents of a field to the left,
+
+6
+00:00:24,130 --> 00:00:26,760
+deleting leading zeros.
+
+7
+00:00:26,760 --> 00:00:29,397
+So first of all I'll declare a new
+variable.
+
+8
+00:00:29,397 --> 00:00:36,779
+[BLANK_AUDIO]
+
+9
+00:00:36,779 --> 00:00:39,530
+Let's call this one employee num, for
+employee number.
+
+10
+00:00:39,530 --> 00:00:42,015
+[BLANK_AUDIO]
+
+11
+00:00:42,015 --> 00:00:44,691
+We'll make it 10 characters in length.
+
+12
+00:00:44,691 --> 00:00:49,952
+[BLANK_AUDIO]
+
+13
+00:00:49,952 --> 00:00:57,133
+[SOUND] And the first thing we'll do,
+we'll set the contents of this field to,
+
+14
+00:00:57,133 --> 00:01:01,721
+[BLANK_AUDIO]
+
+15
+00:01:01,721 --> 00:01:05,088
+0000654321.
+
+16
+00:01:05,088 --> 00:01:09,320
+So we'll fill in every character of the
+field.
+
+17
+00:01:09,320 --> 00:01:13,960
+And what we're going to do with the
+example is remove the leading zeros.
+
+18
+00:01:13,960 --> 00:01:16,311
+And shift everything else to the left-hand
+side.
+
+19
+00:01:16,311 --> 00:01:19,620
+[BLANK_AUDIO]
+
+20
+00:01:19,620 --> 00:01:22,702
+So to do this we just type the statement
+shift.
+
+21
+00:01:22,702 --> 00:01:27,690
+[SOUND] And our field name it will define
+we
+
+22
+00:01:27,690 --> 00:01:32,539
+want to shift the contents to the left.
+
+23
+00:01:32,539 --> 00:01:33,794
+[SOUND]
+
+24
+00:01:33,794 --> 00:01:39,857
+[BLANK_AUDIO]
+
+25
+00:01:39,857 --> 00:01:41,698
+Whilst deleting the leading zeroes
+
+26
+00:01:41,698 --> 00:01:44,432
+[BLANK_AUDIO]
+
+27
+00:01:44,432 --> 00:01:50,377
+Now before we run this I'll bring up the
+search help for the shift statements.
+
+28
+00:01:50,377 --> 00:01:54,116
+[BLANK_AUDIO]
+
+29
+00:01:54,116 --> 00:01:59,027
+And you'll see there are various variants
+showing that you can shift to the left,
+
+30
+00:01:59,027 --> 00:02:02,315
+to the right, by a specific number of
+places and so on.
+
+31
+00:02:02,315 --> 00:02:07,801
+Let's go back to our example, tidy up the
+code.
+
+32
+00:02:07,801 --> 00:02:11,268
+[BLANK_AUDIO]
+
+33
+00:02:11,268 --> 00:02:13,090
+Create a statement to write an output.
+
+34
+00:02:13,090 --> 00:02:23,792
+[BLANK_AUDIO]
+
+35
+00:02:23,792 --> 00:02:25,267
+[SOUND] Do a check.
+
+36
+00:02:25,267 --> 00:02:30,943
+[BLANK_AUDIO]
+
+37
+00:02:30,943 --> 00:02:33,068
+Oops.
+My mistake in the data statement there.
+
+38
+00:02:33,068 --> 00:02:36,608
+[SOUND]
+
+39
+00:02:36,608 --> 00:02:40,857
+Okay.
+
+40
+00:02:40,857 --> 00:02:45,317
+[BLANK_AUDIO]
+
+41
+00:02:45,317 --> 00:02:48,487
+So let's now test the code and we'll see
+the output.
+
+42
+00:02:48,487 --> 00:02:54,832
+[BLANK_AUDIO]
+
+43
+00:02:54,832 --> 00:02:58,716
+Here you can see the actual output has
+deleted the leading zeros and
+
+44
+00:02:58,716 --> 00:03:01,225
+moved everything to the left-hand side.
+
+45
+00:03:01,225 --> 00:03:07,456
+By clicking on the field here, you can see
+it is left justified and
+
+46
+00:03:07,456 --> 00:03:11,323
+we do have spaces at the end of the field.
+
+47
+00:03:11,323 --> 00:03:14,528
+I encourage you to try different
+variations of
+
+48
+00:03:14,528 --> 00:03:19,471
+the shift statement because there's a lot
+you can do with a statement.
+
+49
+00:03:19,471 --> 00:03:24,556
+It does become very handy tool when you
+have to deal with strings of data.
+
+50
+00:03:24,556 --> 00:03:29,578
+Just before we move on, I'll just do
+another few examples.
+
+51
+00:03:29,578 --> 00:03:35,181
+[BLANK_AUDIO]
+
+52
+00:03:35,181 --> 00:03:38,501
+This one, I'll show the shift statement in
+its simplest form.
+
+53
+00:03:38,501 --> 00:03:48,501
+[BLANK_AUDIO]
+
+54
+00:03:49,893 --> 00:03:54,535
+Now what we will see here, because we
+haven't specified anything after our
+
+55
+00:03:54,535 --> 00:03:58,975
+variable name it will use the default
+value of moving from right to left.
+
+56
+00:03:58,975 --> 00:04:02,440
+And the default number of spaces is 1.
+
+57
+00:04:02,440 --> 00:04:05,123
+So it will move to the left one character.
+
+58
+00:04:05,123 --> 00:04:12,996
+[BLANK_AUDIO]
+
+59
+00:04:12,996 --> 00:04:18,279
+So on the test, you can see we've only got
+three zeros in the output, and
+
+60
+00:04:18,279 --> 00:04:24,004
+it's moved all the contents to the left,
+and left us with one space at the end.
+
+61
+00:04:24,004 --> 00:04:30,207
+[BLANK_AUDIO]
+
+62
+00:04:30,207 --> 00:04:35,025
+The next example, we will use the addition
+circular.
+
+63
+00:04:35,025 --> 00:04:41,445
+[BLANK_AUDIO]
+
+64
+00:04:41,445 --> 00:04:44,722
+And what this does if we leave it with the
+default values,
+
+65
+00:04:44,722 --> 00:04:47,674
+it'll move everything to the left one
+character.
+
+66
+00:04:47,674 --> 00:04:52,642
+But the character that is pushed out will
+be reinserted
+
+67
+00:04:52,642 --> 00:04:55,455
+at the other end of the string.
+
+68
+00:04:55,455 --> 00:05:03,436
+So we should see 0006543210 in the result.
+
+69
+00:05:03,436 --> 00:05:10,647
+[BLANK_AUDIO]
+
+70
+00:05:10,647 --> 00:05:12,545
+And here you can see exactly that.
+
+71
+00:05:12,545 --> 00:05:17,592
+That the 000, and then the leading 0 that
+is being pushed out,
+
+72
+00:05:17,592 --> 00:05:20,850
+is being inserted in the far right column.
+
+73
+00:05:20,850 --> 00:05:25,309
+[BLANK_AUDIO]
+

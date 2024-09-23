@@ -1,0 +1,347 @@
+1
+00:00:00,410 --> 00:00:03,310
+Now we know how to create variables.
+
+2
+00:00:03,310 --> 00:00:07,800
+We can move on and use these variables in
+calculations within our program.
+
+3
+00:00:07,800 --> 00:00:12,300
+We're going to have a look at some of the
+simple arithmetic covering addition,
+
+4
+00:00:12,300 --> 00:00:15,529
+subtraction, division and multiplication
+within our [UNKNOWN].
+
+5
+00:00:16,950 --> 00:00:19,087
+So first of all, let's have a look at
+addition.
+
+6
+00:00:19,087 --> 00:00:21,189
+[BLANK_AUDIO]
+
+7
+00:00:21,189 --> 00:00:22,940
+It's all very simple stuff.
+
+8
+00:00:24,700 --> 00:00:27,130
+First of all, we'll just tidy this up.
+
+9
+00:00:27,130 --> 00:00:29,201
+Let's get rid of those constants.
+
+10
+00:00:29,201 --> 00:00:31,466
+[BLANK_AUDIO]
+
+11
+00:00:31,466 --> 00:00:35,090
+So let's say our program needs to add two
+numbers together.
+
+12
+00:00:35,090 --> 00:00:40,470
+Each number is stored in its own unique
+variable and we want to store
+
+13
+00:00:40,470 --> 00:00:45,500
+the product of the two numbers in a brand
+new variable that we can call result.
+
+14
+00:00:46,780 --> 00:00:50,203
+So first off, we'll declare a new data
+variable.
+
+15
+00:00:50,203 --> 00:00:54,626
+[BLANK_AUDIO]
+
+16
+00:00:54,626 --> 00:00:57,064
+And we'll actually use the like statement.
+
+17
+00:00:57,064 --> 00:01:03,820
+[BLANK_AUDIO]
+
+18
+00:01:03,820 --> 00:01:07,628
+We'll make it the same as [UNKNOWN]
+decimal 01.
+
+19
+00:01:07,628 --> 00:01:10,600
+[BLANK_AUDIO]
+
+20
+00:01:10,600 --> 00:01:11,865
+[SOUND] Let's line them up.
+
+21
+00:01:11,865 --> 00:01:19,005
+[BLANK_AUDIO]
+
+22
+00:01:19,005 --> 00:01:21,236
+Now as you can probably imagine,
+
+23
+00:01:21,236 --> 00:01:26,030
+it doesn't take much in the way of the
+code to add two numbers together.
+
+24
+00:01:26,030 --> 00:01:28,900
+All we need to do is write result,
+
+25
+00:01:28,900 --> 00:01:33,317
+which is a variable we declared here
+[SOUND] equals.
+
+26
+00:01:33,317 --> 00:01:36,254
+[BLANK_AUDIO]
+
+27
+00:01:36,254 --> 00:01:41,429
+Because my typing is terrible I'm just
+gonna
+
+28
+00:01:41,429 --> 00:01:46,617
+copy integer 01 plus packed decimal 01.
+
+29
+00:01:46,617 --> 00:01:49,290
+With a full stop at the end.
+
+30
+00:01:51,490 --> 00:01:54,970
+Pretty printer and everything looks good,
+but we'll check it.
+
+31
+00:01:56,830 --> 00:02:00,730
+I managed to get the syntax correct.
+
+32
+00:02:00,730 --> 00:02:02,550
+So let's take a look at what this is
+actually doing.
+
+33
+00:02:02,550 --> 00:02:04,780
+Very, very straightforward.
+
+34
+00:02:06,270 --> 00:02:08,920
+It's just adding integer 01 and
+
+35
+00:02:08,920 --> 00:02:15,320
+packed decimal 01 and putting the product
+of those two into the variable results.
+
+36
+00:02:15,320 --> 00:02:20,685
+If we want to check, and let's add the
+right
+
+37
+00:02:20,685 --> 00:02:25,909
+statement and we'll just write results.
+
+38
+00:02:25,909 --> 00:02:28,323
+[BLANK_AUDIO]
+
+39
+00:02:28,323 --> 00:02:29,729
+Activate our program.
+
+40
+00:02:29,729 --> 00:02:36,253
+[BLANK_AUDIO]
+
+41
+00:02:36,253 --> 00:02:41,070
+And, there, we can see the result, 16.5.
+
+42
+00:02:41,070 --> 00:02:43,480
+Let's go through this a little bit deeper.
+
+43
+00:02:43,480 --> 00:02:45,594
+Even though it looks super simple,
+
+44
+00:02:45,594 --> 00:02:48,772
+there's just a few things that we need to
+go through.
+
+45
+00:02:48,772 --> 00:02:50,270
+And, the first one is.
+
+46
+00:02:50,270 --> 00:02:54,620
+For any arithmetic operations, we always
+have to have the equals sign.
+
+47
+00:02:57,110 --> 00:02:59,600
+To the left of the actual calculation.
+
+48
+00:03:01,200 --> 00:03:05,160
+And the variable to hold the result is to
+be the left of the equal sign.
+
+49
+00:03:07,050 --> 00:03:11,700
+And the calculation is executed, the two
+variables to the right of the equal sign
+
+50
+00:03:11,700 --> 00:03:16,290
+always stay the same, and it's only the
+variable to the left that will be updated.
+
+51
+00:03:17,860 --> 00:03:19,990
+In our case, we have a variable called
+result.
+
+52
+00:03:21,020 --> 00:03:25,340
+If that already held a number prior to the
+calculation taking place,
+
+53
+00:03:26,440 --> 00:03:30,340
+it would then be overridden with the new
+result of the calculation.
+
+54
+00:03:31,990 --> 00:03:37,010
+You'll also notice, I put space in front
+and behind the equals sign.
+
+55
+00:03:37,010 --> 00:03:38,750
+You've always got to do this.
+
+56
+00:03:40,020 --> 00:03:43,590
+And also between the actual arithmetic
+operators as well.
+
+57
+00:03:45,000 --> 00:03:46,880
+Always put space in front and behind.
+
+58
+00:03:48,900 --> 00:03:53,743
+As your calculations become more complex
+you'll start to use parenthesis.
+
+59
+00:03:53,743 --> 00:03:57,563
+And you must insure that you insert blank
+characters before and
+
+60
+00:03:57,563 --> 00:04:02,043
+after the parenthesis to separate them
+from your arithmetic operators.
+
+61
+00:04:03,270 --> 00:04:09,500
+Now when I say you've got to make sure you
+insert a space before and
+
+62
+00:04:09,500 --> 00:04:11,006
+after, one space is the minimum.
+
+63
+00:04:11,006 --> 00:04:17,360
+You can, for instance, like I often do so
+I can line up my code and
+
+64
+00:04:17,360 --> 00:04:22,690
+make it a lot more readable, you can
+insert as many spaces as you want.
+
+65
+00:04:22,690 --> 00:04:24,180
+And it will all still work the same.
+
+66
+00:04:25,220 --> 00:04:28,580
+And this allows us to define our
+calculations
+
+67
+00:04:28,580 --> 00:04:31,395
+across many lines within the ABAP editor.
+
+68
+00:04:31,395 --> 00:04:36,834
+[SOUND] Now as you can imagine, we're not
+just
+
+69
+00:04:36,834 --> 00:04:43,145
+stuck to calculate in the value of
+variables we can.
+
+70
+00:04:43,145 --> 00:04:48,348
+[SOUND] Also use individual values
+
+71
+00:04:48,348 --> 00:04:54,860
+in our calculation, just as shown here.
+
+72
+00:04:54,860 --> 00:04:56,100
+Shows an example.
+
+73
+00:04:56,100 --> 00:04:59,851
+So, it's just output the result.
+
+74
+00:04:59,851 --> 00:05:00,810
+[SOUND]
+
+75
+00:05:00,810 --> 00:05:04,572
+[BLANK_AUDIO]
+
+76
+00:05:04,572 --> 00:05:05,453
+Oops.
+
+77
+00:05:05,453 --> 00:05:11,874
+[BLANK_AUDIO]
+
+78
+00:05:11,874 --> 00:05:14,740
+There we go.
+

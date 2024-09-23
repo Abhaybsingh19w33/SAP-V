@@ -1,0 +1,320 @@
+1
+00:00:01,370 --> 00:00:04,930
+This module will introduce the ABAP
+debugger, and
+
+2
+00:00:04,930 --> 00:00:07,840
+we'll go step by step through some of the
+main tools
+
+3
+00:00:07,840 --> 00:00:11,870
+we can use to ensure our programs function
+as we intend them too.
+
+4
+00:00:11,870 --> 00:00:16,280
+And we will also see how we can highlight
+bugs within our program
+
+5
+00:00:16,280 --> 00:00:18,420
+that are not captured by the syntax
+checker.
+
+6
+00:00:20,520 --> 00:00:24,010
+So the first thing we're going to do is
+load up a program
+
+7
+00:00:24,010 --> 00:00:29,100
+that we have used previously that accesses
+the database table we created
+
+8
+00:00:29,100 --> 00:00:30,710
+containing employee records.
+
+9
+00:00:34,260 --> 00:00:38,084
+So the program we'll use is Zed employee
+list 01.
+
+10
+00:00:39,520 --> 00:00:43,530
+So we'll just go into the program itself
+and have a look at the code, so
+
+11
+00:00:43,530 --> 00:00:46,730
+we are familiar with the logic that we
+want to debug.
+
+12
+00:00:48,200 --> 00:00:54,420
+So the program basically reads data from a
+table called z_employees and
+
+13
+00:00:54,420 --> 00:00:59,420
+we have multiple select statements that
+act as loops, so
+
+14
+00:00:59,420 --> 00:01:05,660
+it'll read the first record, write out the
+record to the screen,
+
+15
+00:01:05,660 --> 00:01:09,090
+then end the loop, and it'll keep going
+round until all the records have been
+
+16
+00:01:09,090 --> 00:01:11,960
+read, and output to the screen from that
+table.
+
+17
+00:01:14,420 --> 00:01:15,280
+Underline.
+
+18
+00:01:15,280 --> 00:01:16,950
+And it does the loop again.
+
+19
+00:01:16,950 --> 00:01:18,370
+Underline.
+
+20
+00:01:18,370 --> 00:01:18,890
+Loop again,
+
+21
+00:01:18,890 --> 00:01:23,610
+with some slightly different output to the
+screen, by introducing new lines.
+
+22
+00:01:24,730 --> 00:01:25,230
+And so on.
+
+23
+00:01:27,640 --> 00:01:32,970
+Step back just to the main screen of
+S-E-38 and we can
+
+24
+00:01:32,970 --> 00:01:38,410
+start debugging this program in a number
+of ways, and the first way we'll see
+
+25
+00:01:38,410 --> 00:01:44,830
+is we have an option here on this toolbar
+called debugging, which is SHIFT F5.
+
+26
+00:01:44,830 --> 00:01:46,730
+As long as we have the program and
+
+27
+00:01:46,730 --> 00:01:52,120
+the program import box, we can click the
+debugging window and it will take us
+
+28
+00:01:52,120 --> 00:01:57,080
+into a debugging session at the first line
+of code within our program.
+
+29
+00:02:00,490 --> 00:02:01,310
+So here we go.
+
+30
+00:02:01,310 --> 00:02:02,960
+We've entered the debugger, and
+
+31
+00:02:02,960 --> 00:02:06,810
+you can see we've got a blue arrow
+pointing at the report statements.
+
+32
+00:02:06,810 --> 00:02:09,360
+And that's the first line of code within
+our program.
+
+33
+00:02:11,860 --> 00:02:15,340
+Now I'll step back and show you an
+alternative way of debugging.
+
+34
+00:02:20,170 --> 00:02:22,530
+If we go and look at the code itself, now
+
+35
+00:02:24,700 --> 00:02:28,640
+we have the option of setting what I
+called break points on our code.
+
+36
+00:02:30,770 --> 00:02:34,710
+And we'll come to break points very
+shortly, but for now I'll just set one.
+
+37
+00:02:36,270 --> 00:02:40,470
+So I'm gonna place my cursor on the line
+of code, and click this stop icon.
+
+38
+00:02:41,720 --> 00:02:46,958
+And that will set a break point on this
+line of code, which will force the program
+
+39
+00:02:46,958 --> 00:02:51,820
+to stop executing our code and take us
+directly into a debugging session.
+
+40
+00:02:53,060 --> 00:02:57,850
+So if we execute the program, you'll see
+it's very fast.
+
+41
+00:02:58,920 --> 00:03:03,370
+The program started to execute, and then
+as soon as it got down to the line of code
+
+42
+00:03:03,370 --> 00:03:08,350
+where we set a break point the debugging
+session kicked in and we have
+
+43
+00:03:08,350 --> 00:03:12,770
+the blue arrow identifying the line of
+code that we can start debugging from.
+
+44
+00:03:14,480 --> 00:03:18,430
+And I'll say, this is actually my
+preferred way of debugging a program,
+
+45
+00:03:18,430 --> 00:03:20,300
+because more often than not,
+
+46
+00:03:20,300 --> 00:03:22,790
+you don't want to start at the very start
+of your program.
+
+47
+00:03:24,190 --> 00:03:26,990
+You have a good idea of where the issues
+are, so
+
+48
+00:03:26,990 --> 00:03:31,490
+you'll normally set a break point, let the
+program zoom through to it, and
+
+49
+00:03:31,490 --> 00:03:34,730
+then start debugging line by line from
+that point on.
+
+50
+00:03:36,740 --> 00:03:38,860
+Now I briefly mentioned rate points there.
+
+51
+00:03:39,860 --> 00:03:42,420
+And I will just explain there are two type
+of rate points
+
+52
+00:03:42,420 --> 00:03:43,720
+that you can set in your program.
+
+53
+00:03:45,200 --> 00:03:48,900
+Static rate points, which we will come to
+in a little while,
+
+54
+00:03:48,900 --> 00:03:50,960
+and dynamic rate points.
+
+55
+00:03:50,960 --> 00:03:52,460
+And that is what I set just there.
+
+56
+00:03:54,180 --> 00:03:57,720
+An important point to keep in mind about
+dynamic rate points
+
+57
+00:03:57,720 --> 00:04:00,360
+is that they are only valid for the
+current session.
+
+58
+00:04:01,810 --> 00:04:03,910
+So if you come out of your sub-gui and
+
+59
+00:04:03,910 --> 00:04:07,710
+go back in at a later date, your break
+point will no longer exist.
+
+60
+00:04:07,710 --> 00:04:10,566
+So just step back to the program
+
+61
+00:04:10,566 --> 00:04:20,566
+[BLANK_AUDIO]
+
+62
+00:04:31,607 --> 00:04:34,504
+I've just mentioned that, here is another
+way of setting a break point.
+
+63
+00:04:34,504 --> 00:04:39,080
+And that's within your debugging session
+itself.
+
+64
+00:04:40,430 --> 00:04:45,050
+You can just double click on any statement
+and a break point will be set.
+
+65
+00:04:45,050 --> 00:04:48,079
+So for example, I'll just double click
+here, [SOUND] And
+
+66
+00:04:48,079 --> 00:04:49,855
+you'll see a break point is set.
+
+67
+00:04:49,855 --> 00:04:53,285
+To remove your break point, just double
+click the stop sign.
+
+68
+00:04:53,285 --> 00:04:55,880
+[SOUND] And it's gone.
+

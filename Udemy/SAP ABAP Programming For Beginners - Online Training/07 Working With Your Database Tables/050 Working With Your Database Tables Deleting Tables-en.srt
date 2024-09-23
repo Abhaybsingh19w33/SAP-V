@@ -1,0 +1,358 @@
+1
+00:00:00,950 --> 00:00:05,080
+Now we're going to take a look at deleting
+complete database tables themselves.
+
+2
+00:00:05,080 --> 00:00:10,490
+I mentioned when we covered deleting
+fields that you don't often have to do
+
+3
+00:00:10,490 --> 00:00:17,065
+that task, and when we talk about deleting
+tables, but that's even more infrequent.
+
+4
+00:00:18,515 --> 00:00:22,125
+But you may have this requirement so let's
+go through it so
+
+5
+00:00:22,125 --> 00:00:23,545
+we can understand the process.
+
+6
+00:00:24,825 --> 00:00:25,755
+First thing is,
+
+7
+00:00:25,755 --> 00:00:30,790
+you will only be allowed to delete your
+own customer-specific tables.
+
+8
+00:00:30,790 --> 00:00:33,980
+You will not be allowed to delete SAP
+delivered tables.
+
+9
+00:00:35,260 --> 00:00:39,690
+Now because we have just created this
+ZEMPLOYEES3 table,
+
+10
+00:00:39,690 --> 00:00:43,740
+we will use this in our example for
+deleting the table.
+
+11
+00:00:43,740 --> 00:00:49,470
+But before that I just want to show you a
+technique for checking that everything is
+
+12
+00:00:49,470 --> 00:00:52,890
+okay for you to delete the table, and you
+will not affect other parts of the system.
+
+13
+00:00:55,280 --> 00:00:59,810
+So what I'm gonna do is go back to our
+ZEMPLOYEES1 table.
+
+14
+00:00:59,810 --> 00:01:07,550
+Because we have included this table in the
+ABAP programs we have created so far.
+
+15
+00:01:09,630 --> 00:01:13,300
+So what I have done, I've keyed in
+ZEMPLOYEES1, I'll choose Display.
+
+16
+00:01:13,300 --> 00:01:13,800
+No.
+
+17
+00:01:15,230 --> 00:01:18,390
+it looks like, that's the wrong one, must
+be ZEMPLOYEES.
+
+18
+00:01:20,280 --> 00:01:22,540
+There we go, and we'll step back.
+
+19
+00:01:22,540 --> 00:01:26,777
+And now what I'm gonna do, is go to this
+button up here, the Where-Used button.
+
+20
+00:01:28,450 --> 00:01:32,490
+Now this is really, really handy tool,
+that you will become familiar with, and
+
+21
+00:01:32,490 --> 00:01:36,670
+you will use an awful lot whilst you are
+developing, testing,
+
+22
+00:01:36,670 --> 00:01:38,710
+and just reading ABAP programs.
+
+23
+00:01:40,760 --> 00:01:44,380
+So if we click the button, the system then
+brings up a dialog box
+
+24
+00:01:44,380 --> 00:01:48,710
+where we go through and choose the objects
+we want to look through.
+
+25
+00:01:48,710 --> 00:01:53,200
+So what this is going to do is check all
+the different types of objects that
+
+26
+00:01:53,200 --> 00:01:55,850
+we have in our system that we select.
+
+27
+00:01:55,850 --> 00:01:59,680
+For a reference to our table is
+ZEMPLOYEES.
+
+28
+00:01:59,680 --> 00:02:04,340
+Now, we know we have only used this table
+in a program before, but
+
+29
+00:02:04,340 --> 00:02:07,780
+with other tables you may not have that
+background knowledge.
+
+30
+00:02:08,990 --> 00:02:14,023
+So you may want to go through, have a look
+at objects such as structures,
+
+31
+00:02:14,023 --> 00:02:19,899
+database tables, views, and so on, and to
+execute it, just click the green tick.
+
+32
+00:02:19,899 --> 00:02:23,044
+[BLANK_AUDIO]
+
+33
+00:02:23,044 --> 00:02:26,560
+Get a little pop-up, Where-Used Include,
+Fields of the Table.
+
+34
+00:02:26,560 --> 00:02:27,750
+We just choose Yes.
+
+35
+00:02:29,150 --> 00:02:32,170
+So the system's going away and checking
+all of the different objects
+
+36
+00:02:33,290 --> 00:02:36,690
+that we have selected to find references
+to our table.
+
+37
+00:02:38,520 --> 00:02:40,000
+And there it's come back and
+
+38
+00:02:40,000 --> 00:02:44,180
+it's shown us, we have two programs that
+are using this table.
+
+39
+00:02:45,970 --> 00:02:49,060
+So immediately we know that if we delete
+this table
+
+40
+00:02:50,070 --> 00:02:51,720
+these programs are gonna become inactive.
+
+41
+00:02:51,720 --> 00:02:53,040
+They're not going to work anymore.
+
+42
+00:02:54,780 --> 00:02:57,180
+If you want to look at the specific code
+in the table,
+
+43
+00:02:58,300 --> 00:02:59,515
+all you need to do is double-click.
+
+44
+00:03:03,478 --> 00:03:07,760
+So by double-clicking on this entry it's
+then showing the snippets of code
+
+45
+00:03:09,020 --> 00:03:10,880
+in our program where the table is used.
+
+46
+00:03:12,280 --> 00:03:14,530
+And we can see we have lots of selects and
+write statements.
+
+47
+00:03:15,620 --> 00:03:21,437
+And once again, we can double-click on any
+one of these lines,
+
+48
+00:03:21,437 --> 00:03:25,656
+and actually jump straight into the
+program.
+
+49
+00:03:25,656 --> 00:03:30,463
+There we go, and it takes us to the exact
+location that we double-clicked on.
+
+50
+00:03:30,463 --> 00:03:38,020
+[BLANK_AUDIO]
+
+51
+00:03:38,020 --> 00:03:38,980
+Program down here.
+
+52
+00:03:38,980 --> 00:03:42,630
+Exactly the same thing,
+
+53
+00:03:42,630 --> 00:03:44,500
+we can double-click and go have a look at
+the program.
+
+54
+00:03:47,578 --> 00:03:50,785
+So this Where-Used button is a very useful
+tool, and
+
+55
+00:03:50,785 --> 00:03:55,364
+I suggest you get used to using it,
+because it saves you an awful lot of time.
+
+56
+00:03:55,364 --> 00:03:57,999
+[BLANK_AUDIO]
+
+57
+00:03:57,999 --> 00:04:02,987
+Now, if we try to delete this table now
+the system will not let us do
+
+58
+00:04:02,987 --> 00:04:06,730
+it because we have objects that dependent
+on it.
+
+59
+00:04:08,280 --> 00:04:13,060
+So what you would have to do is find those
+programs, take some course of action to
+
+60
+00:04:13,060 --> 00:04:17,810
+either edit the code, take out references
+to the table or remove the programs
+
+61
+00:04:17,810 --> 00:04:21,039
+completely before you could then come back
+and delete this table.
+
+62
+00:04:23,970 --> 00:04:27,130
+So what we will do is change the table
+name.
+
+63
+00:04:27,130 --> 00:04:32,780
+And we'll use the ZEMPLOYEES3 table that
+we created in the previous videos.
+
+64
+00:04:32,780 --> 00:04:35,985
+And we will choose to delete this table.
+
+65
+00:04:38,795 --> 00:04:43,235
+As you can see we're presented with a
+message box telling us the table contains
+
+66
+00:04:43,235 --> 00:04:47,985
+data, and we know this, but we just want
+to delete the table anyway.
+
+67
+00:04:49,005 --> 00:04:53,530
+If you click the green tick button, we
+will be taken back to the previous screen,
+
+68
+00:04:53,530 --> 00:04:56,830
+and the table would not be deleted, but
+
+69
+00:04:56,830 --> 00:05:00,960
+if you click the little trash can, the
+table will get deleted.
+
+70
+00:05:05,110 --> 00:05:07,040
+And there we have the confirmation message
+at the bottom,
+
+71
+00:05:07,040 --> 00:05:08,925
+saying the table was removed.
+
+72
+00:05:08,925 --> 00:05:15,130
+If we try and display it, we can see it
+does not exist.
+
+73
+00:05:19,050 --> 00:05:23,450
+Now one final note, is that now we've
+deleted the table,
+
+74
+00:05:23,450 --> 00:05:25,710
+we cannot undo this process.
+
+75
+00:05:25,710 --> 00:05:27,290
+The table is gone completely.
+
+76
+00:05:28,440 --> 00:05:32,600
+So before you click that trash can button,
+make sure you do want to delete the table.
+

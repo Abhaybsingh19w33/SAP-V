@@ -1,0 +1,861 @@
+1
+00:00:02,680 --> 00:00:07,960
+We've already seen the select statements
+in action, so let's skip that one for now.
+
+2
+00:00:07,960 --> 00:00:11,543
+And we'll focus on the next statement
+down, the insert statements.
+
+3
+00:00:11,543 --> 00:00:13,759
+[BLANK_AUDIO]
+
+4
+00:00:13,759 --> 00:00:18,780
+First of all, I'm just gonna comment out
+what we have here.
+
+5
+00:00:20,050 --> 00:00:20,550
+Oops.
+
+6
+00:00:22,020 --> 00:00:22,600
+There we go.
+
+7
+00:00:22,600 --> 00:00:27,200
+And we'll take the scenario that we want
+to insert a brand new
+
+8
+00:00:27,200 --> 00:00:31,550
+record into our zemployees table.
+
+9
+00:00:31,550 --> 00:00:36,920
+So in its simplest form what we will do is
+write insert
+
+10
+00:00:36,920 --> 00:00:41,480
+followed by our table name with a full
+stop at the end.
+
+11
+00:00:44,850 --> 00:00:46,650
+As you can see this is super simple.
+
+12
+00:00:48,310 --> 00:00:52,110
+But one little thing to note is if you use
+this form of the statement,
+
+13
+00:00:53,670 --> 00:00:57,210
+you always must specify the table name.
+
+14
+00:00:57,210 --> 00:01:00,238
+You cannot use a variable instead.
+
+15
+00:01:00,238 --> 00:01:03,381
+Now next, as I mentioned,
+
+16
+00:01:03,381 --> 00:01:08,441
+get into the habit of checking sysubrc,
+and
+
+17
+00:01:08,441 --> 00:01:15,295
+I just noticed I made a mistake, [LAUGH],
+it's sy-subrc.
+
+18
+00:01:15,295 --> 00:01:19,200
+So once we have our INSERT statement,
+
+19
+00:01:19,200 --> 00:01:25,790
+then you would write some sort of check
+statement if sy-subrc,
+
+20
+00:01:25,790 --> 00:01:29,705
+not equals zero, it can just be zero.
+
+21
+00:01:34,400 --> 00:01:36,890
+Then we would do some statement, so
+
+22
+00:01:41,820 --> 00:01:45,440
+that will ensure we capture any errors
+that happen within such statements.
+
+23
+00:01:46,440 --> 00:01:51,053
+And we can take the appropriate action by
+including some code right here.
+
+24
+00:01:51,053 --> 00:01:54,350
+[BLANK_AUDIO]
+
+25
+00:01:54,350 --> 00:01:56,910
+Now let's step back just a little bit and
+
+26
+00:01:56,910 --> 00:02:00,540
+go through this statement again in a
+little more detail.
+
+27
+00:02:01,600 --> 00:02:04,270
+And the reason we're doing this is because
+
+28
+00:02:04,270 --> 00:02:07,360
+we don't want to use this form of the
+statement.
+
+29
+00:02:07,360 --> 00:02:10,980
+It includes some bad practices by today's
+standards.
+
+30
+00:02:10,980 --> 00:02:14,540
+And it's a throwback to some of the older
+ABAP programs
+
+31
+00:02:14,540 --> 00:02:18,030
+that you will no doubt come across when
+working with an SAP system.
+
+32
+00:02:19,030 --> 00:02:19,630
+So what do I mean?
+
+33
+00:02:19,630 --> 00:02:22,650
+Well, take a look at the statement again.
+
+34
+00:02:22,650 --> 00:02:26,400
+All we say is, INSERT table name.
+
+35
+00:02:26,400 --> 00:02:27,790
+INSERT zemployees.
+
+36
+00:02:28,880 --> 00:02:31,599
+You might wonder, what are we actually
+inserting?
+
+37
+00:02:33,100 --> 00:02:37,288
+Well this is where we need to introduce a
+concept called a work area.
+
+38
+00:02:37,288 --> 00:02:41,840
+In the ABAP statement we have just written
+expects a work
+
+39
+00:02:41,840 --> 00:02:46,470
+area to exist that was created when we
+declared an internal table.
+
+40
+00:02:47,680 --> 00:02:52,080
+And this type of work area is often
+referred to as a header record.
+
+41
+00:02:54,140 --> 00:02:59,350
+So let me bring in Microsoft Excel to try
+and explain a header record and how
+
+42
+00:02:59,350 --> 00:03:04,330
+it's attached to an internal table, and
+compare it against a standalone work area.
+
+43
+00:03:07,600 --> 00:03:10,870
+Okay, so I'm going to try and represent a
+normal table here.
+
+44
+00:03:12,450 --> 00:03:17,710
+What we would normally have is record one,
+
+45
+00:03:18,830 --> 00:03:23,150
+and we would have field one, field two,
+field three, etc.
+
+46
+00:03:25,430 --> 00:03:32,796
+Then we would have record two, record
+three, record four, record five.
+
+47
+00:03:35,380 --> 00:03:37,550
+And they would all contain their
+individual fields.
+
+48
+00:03:37,550 --> 00:03:41,040
+So we would have an entry for record, for
+field one, for field two,
+
+49
+00:03:41,040 --> 00:03:42,540
+for field three, in every record.
+
+50
+00:03:44,660 --> 00:03:49,655
+Now, if this is our table,
+
+51
+00:03:49,655 --> 00:03:55,092
+let's give it a nice border.
+
+52
+00:03:55,092 --> 00:04:02,060
+Then when we work with an internal table
+with a header record,
+
+53
+00:04:02,060 --> 00:04:06,619
+we have this additional record up here.
+
+54
+00:04:06,619 --> 00:04:16,619
+[BLANK_AUDIO]
+
+55
+00:04:19,530 --> 00:04:24,217
+And this little guy is what gets
+
+56
+00:04:24,217 --> 00:04:28,911
+populated when we reference.
+
+57
+00:04:28,911 --> 00:04:31,928
+[BLANK_AUDIO]
+
+58
+00:04:31,928 --> 00:04:37,094
+The table just by its table name or in our
+case where we chose
+
+59
+00:04:37,094 --> 00:04:42,051
+the insert so what would happen is
+whatever was existing
+
+60
+00:04:42,051 --> 00:04:46,587
+on this header record when the INSERT is
+executed,
+
+61
+00:04:46,587 --> 00:04:51,130
+this record would be inserted into the
+table body.
+
+62
+00:04:52,510 --> 00:04:58,850
+This header record only exists in memory,
+whilst our program is being executed.
+
+63
+00:04:58,850 --> 00:05:04,550
+It doesn't contain a record held in the
+table itself, it's just a place for us to
+
+64
+00:05:04,550 --> 00:05:10,520
+work with a current record, and that's
+where the term work area comes from.
+
+65
+00:05:10,520 --> 00:05:13,440
+We just used it to hold the current record
+we are working with.
+
+66
+00:05:15,390 --> 00:05:19,850
+So when we are working with the data in
+our program, we're always
+
+67
+00:05:21,470 --> 00:05:25,190
+referencing this header record just by
+using the table name.
+
+68
+00:05:25,190 --> 00:05:28,590
+And it can become a little bit confusing.
+
+69
+00:05:28,590 --> 00:05:31,810
+Because you think you're referencing the
+table, but actually no,
+
+70
+00:05:31,810 --> 00:05:36,460
+you're working with a record held in
+memory
+
+71
+00:05:36,460 --> 00:05:41,140
+that has the same structure as the table.
+
+72
+00:05:41,140 --> 00:05:42,720
+The fact that the table and
+
+73
+00:05:42,720 --> 00:05:46,330
+its header line have the same name leads
+to confusion.
+
+74
+00:05:48,740 --> 00:05:52,370
+Now, with the introduction of ABAP
+Objects, which we don't cover in this
+
+75
+00:05:52,370 --> 00:05:57,290
+course, but I highly recommend you take a
+course covering ABAP Objects.
+
+76
+00:05:57,290 --> 00:06:02,420
+This method of using this type of work
+area is no longer valid.
+
+77
+00:06:03,460 --> 00:06:06,500
+ABAP Objects will not allow you to
+reference a table
+
+78
+00:06:07,670 --> 00:06:08,810
+by using its header record.
+
+79
+00:06:10,230 --> 00:06:10,890
+So, like I say,
+
+80
+00:06:10,890 --> 00:06:16,800
+this is a bit of a throwback to how ABAP
+was coded many years ago.
+
+81
+00:06:16,800 --> 00:06:20,580
+And with the changes in the language that
+have come about over the last,
+
+82
+00:06:22,300 --> 00:06:27,550
+I was going to say few years, but, boy, it
+must be, ooh, six years, seven years.
+
+83
+00:06:27,550 --> 00:06:32,090
+This way of referencing a work area for a
+table is no longer used, and
+
+84
+00:06:32,090 --> 00:06:37,140
+you shouldn't create programs yourself
+using this type of work area.
+
+85
+00:06:37,140 --> 00:06:40,450
+So to avoid any confusion, when working
+with internal tables,
+
+86
+00:06:40,450 --> 00:06:45,614
+you should make sure your programs work
+with separate work areas.
+
+87
+00:06:46,800 --> 00:06:48,130
+And what do I mean by this?
+
+88
+00:06:48,130 --> 00:06:53,030
+Well, it is similar in a way to what we
+have here.
+
+89
+00:06:53,030 --> 00:06:57,719
+[BLANK_AUDIO]
+
+90
+00:06:57,719 --> 00:06:59,253
+Let me pop it down here.
+
+91
+00:06:59,253 --> 00:07:07,450
+[BLANK_AUDIO]
+
+92
+00:07:07,450 --> 00:07:09,178
+If I do an insert.
+
+93
+00:07:09,178 --> 00:07:19,178
+[BLANK_AUDIO]
+
+94
+00:07:27,150 --> 00:07:30,471
+So this example is a table with a header
+record.
+
+95
+00:07:30,471 --> 00:07:34,335
+[BLANK_AUDIO]
+
+96
+00:07:34,335 --> 00:07:35,357
+This one
+
+97
+00:07:35,357 --> 00:07:41,336
+[BLANK_AUDIO]
+
+98
+00:07:41,336 --> 00:07:44,660
+is an internal table without header
+record.
+
+99
+00:07:44,660 --> 00:07:48,024
+But we have a separately defined work
+area.
+
+100
+00:07:48,024 --> 00:07:53,696
+We'll call
+
+101
+00:07:53,696 --> 00:07:58,239
+this WA.
+
+102
+00:07:58,239 --> 00:08:00,832
+And this is our table.
+
+103
+00:08:00,832 --> 00:08:11,757
+[BLANK_AUDIO]
+
+104
+00:08:11,757 --> 00:08:17,050
+So when we write code, we can reference
+the table by itself.
+
+105
+00:08:17,050 --> 00:08:22,390
+And, when we reference the work area where
+we want to work with a record in memory,
+
+106
+00:08:22,390 --> 00:08:25,190
+we reference a completely separate work
+area.
+
+107
+00:08:25,190 --> 00:08:29,300
+It will have its own name, so it will be
+clear
+
+108
+00:08:29,300 --> 00:08:33,750
+that it does not belong to the table
+exclusively.
+
+109
+00:08:33,750 --> 00:08:39,990
+It's a separate structure that we will
+create in our program that sits by itself.
+
+110
+00:08:39,990 --> 00:08:44,808
+So let's go back to our program code and
+
+111
+00:08:44,808 --> 00:08:50,215
+have a look at how we can declare a work
+area.
+
+112
+00:08:50,215 --> 00:08:54,045
+So you should be familiar with the data
+statement, and
+
+113
+00:08:54,045 --> 00:08:57,551
+that's exactly what we do to declare a
+work area.
+
+114
+00:08:57,551 --> 00:09:01,136
+Because, you know, in reality,
+
+115
+00:09:01,136 --> 00:09:07,191
+it's just like a normal structure, all we
+do is data, and
+
+116
+00:09:07,191 --> 00:09:12,530
+we'll give it a name, let's say
+wa_employees.
+
+117
+00:09:12,530 --> 00:09:14,528
+Then we need to give it a type.
+
+118
+00:09:14,528 --> 00:09:17,960
+Well, remember, we're working with a
+table, so
+
+119
+00:09:17,960 --> 00:09:22,610
+I'm not gonna use the type statement and
+declare, you know, a character field.
+
+120
+00:09:22,610 --> 00:09:27,540
+I'm gonna declare a bunch of fields that
+make up the table.
+
+121
+00:09:27,540 --> 00:09:31,410
+And the easiest way of doing this is use
+the like statement.
+
+122
+00:09:31,410 --> 00:09:36,257
+And we're going to say our wa_employees
+work area is
+
+123
+00:09:36,257 --> 00:09:39,820
+like zemployees, which is our table.
+
+124
+00:09:42,310 --> 00:09:46,289
+So our wa_employees work area will take
+the same
+
+125
+00:09:46,289 --> 00:09:49,310
+structure as our zemployees table.
+
+126
+00:09:49,310 --> 00:09:52,940
+But it won't be a table as such,
+
+127
+00:09:52,940 --> 00:09:57,300
+it will be a record structure not a table
+structure.
+
+128
+00:09:57,300 --> 00:10:01,560
+So our work area will only store one
+record.
+
+129
+00:10:02,780 --> 00:10:08,920
+So once we declare our wa_employees work
+area, we can then change our INSERT
+
+130
+00:10:10,540 --> 00:10:14,120
+statement to use the work area to insert a
+record into the table.
+
+131
+00:10:15,470 --> 00:10:18,630
+And we do this by editing the INSERT
+statement,
+
+132
+00:10:18,630 --> 00:10:20,900
+instead of saying INSERT zemployees.
+
+133
+00:10:20,900 --> 00:10:26,871
+We will say INSERT zemployees FROM
+wa_employees,
+
+134
+00:10:26,871 --> 00:10:29,590
+which is our work area.
+
+135
+00:10:29,590 --> 00:10:34,000
+It would help, if I could type.
+
+136
+00:10:34,000 --> 00:10:36,105
+There we go.
+
+137
+00:10:36,105 --> 00:10:41,780
+Now also, with this
+
+138
+00:10:41,780 --> 00:10:47,590
+form of the statement, we could, actually
+use a variable here to identify the table.
+
+139
+00:10:47,590 --> 00:10:53,440
+So instead of doing INSERT table name, we
+can do INSERT and put a variable
+
+140
+00:10:53,440 --> 00:10:58,630
+there that we may have populated earlier
+with our zemployees table.
+
+141
+00:10:58,630 --> 00:11:00,590
+And the only thing to remember is,
+
+142
+00:11:00,590 --> 00:11:05,090
+if you do use a variable, you have to
+enclose it in brackets.
+
+143
+00:11:06,250 --> 00:11:14,340
+So, our INSERT statement would look like,
+
+144
+00:11:14,340 --> 00:11:20,244
+would look like this, INSERT,
+
+145
+00:11:20,244 --> 00:11:25,500
+our table name in brackets.
+
+146
+00:11:28,730 --> 00:11:34,160
+I'll remove that for now,
+
+147
+00:11:34,160 --> 00:11:39,290
+and we'll concentrate on the basic form.
+
+148
+00:11:39,290 --> 00:11:41,690
+So now, we've declared our work area.
+
+149
+00:11:41,690 --> 00:11:43,556
+We've got an INSERT statement.
+
+150
+00:11:43,556 --> 00:11:45,554
+One thing that I need to do,
+
+151
+00:11:45,554 --> 00:11:51,950
+[BLANK_AUDIO]
+
+152
+00:11:51,950 --> 00:11:54,550
+fill our work area with some data.
+
+153
+00:11:54,550 --> 00:11:58,475
+[BLANK_AUDIO]
+
+154
+00:11:58,475 --> 00:12:00,310
+So let's do that in this example.
+
+155
+00:12:00,310 --> 00:12:04,480
+I'm going to remind myself of the
+structure of zemployees.
+
+156
+00:12:04,480 --> 00:12:09,460
+I could use forward navigation, just
+double-click.
+
+157
+00:12:09,460 --> 00:12:11,470
+But I'm just going to open up a brand new
+session.
+
+158
+00:12:16,365 --> 00:12:24,230
+And I'm gonna copy these fields.
+
+159
+00:12:27,330 --> 00:12:34,580
+Paste them in.
+
+160
+00:12:34,580 --> 00:12:38,408
+Remember, copy and paste, it's a coder's
+best friend.
+
+161
+00:12:38,408 --> 00:12:43,468
+[BLANK_AUDIO]
+
+162
+00:12:43,468 --> 00:12:44,467
+Oops.
+
+163
+00:12:44,467 --> 00:12:54,568
+[BLANK_AUDIO]
+
+164
+00:12:54,568 --> 00:13:00,242
+So what we will do is fill out a work area
+with a new record,
+
+165
+00:13:00,242 --> 00:13:04,854
+and I'm just going to check what data we
+have in
+
+166
+00:13:04,854 --> 00:13:09,850
+the table first, forward navigation this
+time.
+
+167
+00:13:15,740 --> 00:13:23,650
+Okay, we have used up to one, zero then
+five.
+
+168
+00:13:23,650 --> 00:13:28,516
+So let's fill in a record.
+
+169
+00:13:28,516 --> 00:13:38,433
+Six.
+
+170
+00:13:38,433 --> 00:13:43,669
+I tell you what let's give it a proper
+surname.
+
+171
+00:13:43,669 --> 00:13:50,991
+Whoever WESTMORE
+
+172
+00:13:50,991 --> 00:13:56,376
+is, BRUCE.
+
+173
+00:13:56,376 --> 00:14:04,560
+No he wasn't born in 2000.
+
+174
+00:14:04,560 --> 00:14:05,927
+Let's see 1992 12 13.
+
+175
+00:14:05,927 --> 00:14:12,869
+[BLANK_AUDIO]
+
+176
+00:14:12,869 --> 00:14:17,120
+So now, we have our data statement
+declared in our work area.
+
+177
+00:14:19,710 --> 00:14:23,850
+We are filling our work area fields with
+some values.
+
+178
+00:14:23,850 --> 00:14:29,705
+We're then going to in insert our work
+area field into our table.
+
+179
+00:14:30,805 --> 00:14:33,175
+And check that everything works
+successfully.
+
+180
+00:14:36,555 --> 00:14:40,596
+And for this check,
+
+181
+00:14:40,596 --> 00:14:46,549
+lets have a write statement.
+
+182
+00:14:46,549 --> 00:14:50,717
+Change this to an equals.
+
+183
+00:14:50,717 --> 00:14:56,497
+So, if it dos equal zero, write this
+statement out.
+
+184
+00:14:56,497 --> 00:14:57,555
+Else.
+
+185
+00:14:57,555 --> 00:15:07,555
+[BLANK_AUDIO]
+
+186
+00:15:08,700 --> 00:15:14,820
+We have a return code of sy-subrc,
+
+187
+00:15:14,820 --> 00:15:22,780
+and don't forget to use the chain
+statement.
+
+188
+00:15:23,790 --> 00:15:32,620
+Just make sure everything looks good.
+
+189
+00:15:32,620 --> 00:15:36,200
+Give it a check.
+
+190
+00:15:36,200 --> 00:15:39,520
+And then we should be able to execute our
+program.
+

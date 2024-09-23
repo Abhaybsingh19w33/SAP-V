@@ -1,0 +1,72 @@
+1
+00:00:02,840 --> 00:00:03,950
+Now to modify records,
+
+2
+00:00:03,950 --> 00:00:07,780
+the modify statement again has to
+reference the work area.
+
+3
+00:00:09,640 --> 00:00:14,410
+So, I'll bring in an example from using
+the header record, than we'll modify it,
+
+4
+00:00:15,690 --> 00:00:19,850
+to use the work area.
+
+5
+00:00:19,850 --> 00:00:22,530
+So we're using iTab02 in this case.
+
+6
+00:00:22,530 --> 00:00:25,510
+So if the surname is Jones oops.
+
+7
+00:00:25,510 --> 00:00:27,258
+Sorry, I need to specify the into.
+
+8
+00:00:27,258 --> 00:00:33,085
+[BLANK_AUDIO]
+
+9
+00:00:33,085 --> 00:00:36,451
+So, we would then say
+
+10
+00:00:36,451 --> 00:00:43,190
+if_wa_iTab02surname equals Jones.
+
+11
+00:00:43,190 --> 00:00:48,293
+And then we would modify
+
+12
+00:00:48,293 --> 00:00:55,960
+the work area record to say SMITH.
+
+13
+00:00:55,960 --> 00:01:02,478
+And then the actual modify statement
+itself would be MODIFY iTab02,
+
+14
+00:01:02,478 --> 00:01:06,176
+and then we would say FROM our work area.
+
+15
+00:01:06,176 --> 00:01:10,960
+[BLANK_AUDIO]
+
+16
+00:01:10,960 --> 00:01:15,760
+So to summarize, we are telling the system
+to modify our Internal Table
+
+17
+00:01:15,760 --> 00:01:18,560
+using the record we hold in our work area.
+

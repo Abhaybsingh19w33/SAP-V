@@ -1,0 +1,552 @@
+1
+00:00:02,320 --> 00:00:04,030
+Let's move onto working with Time Fields.
+
+2
+00:00:05,630 --> 00:00:08,400
+Just like using calculations with Date
+Fields,
+
+3
+00:00:08,400 --> 00:00:10,340
+we can also do the same with Time Fields.
+
+4
+00:00:12,310 --> 00:00:15,600
+All of the same principles apply, so let's
+get straight onto it,
+
+5
+00:00:15,600 --> 00:00:16,760
+and look at some examples.
+
+6
+00:00:16,760 --> 00:00:21,814
+In these examples, we'll look at the
+fictitious employee clocking-in and
+
+7
+00:00:21,814 --> 00:00:23,378
+clocking-out times.
+
+8
+00:00:23,378 --> 00:00:30,583
+So, first of all, we're going to declare
+the two times, clock-in and clock-out.
+
+9
+00:00:30,583 --> 00:00:32,083
+[BLANK_AUDIO]
+
+10
+00:00:32,083 --> 00:00:34,251
+So back up to our data section.
+
+11
+00:00:34,251 --> 00:00:38,544
+[BLANK_AUDIO]
+
+12
+00:00:38,544 --> 00:00:40,833
+Let's create a new little block.
+
+13
+00:00:40,833 --> 00:00:50,833
+[BLANK_AUDIO]
+
+14
+00:01:05,125 --> 00:01:07,918
+Just make it a little easy to read.
+
+15
+00:01:07,918 --> 00:01:14,668
+[BLANK_AUDIO]
+
+16
+00:01:14,668 --> 00:01:17,500
+So let's declare a clock-in.
+
+17
+00:01:17,500 --> 00:01:27,500
+[BLANK_AUDIO]
+
+18
+00:01:28,584 --> 00:01:31,123
+And a clock-out time.
+
+19
+00:01:32,860 --> 00:01:36,020
+And while we're at it let's declare some
+more.
+
+20
+00:01:38,890 --> 00:01:40,458
+Let's do a seconds.
+
+21
+00:01:40,458 --> 00:01:47,377
+[BLANK_AUDIO]
+
+22
+00:01:47,377 --> 00:01:56,427
+So, this is gonna hold the difference in
+time in seconds,
+
+23
+00:01:56,427 --> 00:02:01,780
+it would help if I spell it right.
+
+24
+00:02:01,780 --> 00:02:05,293
+And as you might guess, we'll do a
+minutes.
+
+25
+00:02:05,293 --> 00:02:09,336
+[BLANK_AUDIO]
+
+26
+00:02:09,336 --> 00:02:11,085
+And then hours.
+
+27
+00:02:11,085 --> 00:02:21,085
+[BLANK_AUDIO]
+
+28
+00:02:26,126 --> 00:02:30,833
+Line it up, just so it looks a bit easier
+to read, and we'll do the same over here.
+
+29
+00:02:30,833 --> 00:02:35,667
+[BLANK_AUDIO]
+
+30
+00:02:35,667 --> 00:02:37,250
+And a bit easier on the eye.
+
+31
+00:02:39,030 --> 00:02:40,585
+Now, go down to the Code.
+
+32
+00:02:40,585 --> 00:02:50,833
+[BLANK_AUDIO]
+
+33
+00:02:50,833 --> 00:02:53,917
+And let's start filling some of these
+fields with values.
+
+34
+00:02:53,917 --> 00:02:59,792
+[BLANK_AUDIO]
+
+35
+00:02:59,792 --> 00:03:03,372
+So, our
+
+36
+00:03:03,372 --> 00:03:09,511
+clocking time
+
+37
+00:03:09,511 --> 00:03:19,235
+is equal 07:30.
+
+38
+00:03:20,850 --> 00:03:24,667
+That will equal 4 o'clock in the afternoon
+for the clock out.
+
+39
+00:03:24,667 --> 00:03:31,667
+[BLANK_AUDIO]
+
+40
+00:03:31,667 --> 00:03:36,708
+And then, let's work out the difference in
+seconds.
+
+41
+00:03:36,708 --> 00:03:46,086
+[BLANK_AUDIO]
+
+42
+00:03:46,086 --> 00:03:47,460
+Let's see, if I got everything correct.
+
+43
+00:03:47,460 --> 00:03:52,915
+Almost, missed off the fields.
+
+44
+00:03:54,640 --> 00:03:58,833
+There we go and finally let's write out.
+
+45
+00:03:58,833 --> 00:04:04,917
+[BLANK_AUDIO]
+
+46
+00:04:04,917 --> 00:04:07,376
+I'm gonna make it a bit more descriptive
+eh?
+
+47
+00:04:07,376 --> 00:04:17,376
+[BLANK_AUDIO]
+
+48
+00:04:41,500 --> 00:04:42,305
+There we go.
+That should do it.
+
+49
+00:04:42,305 --> 00:04:46,424
+So, we're going to write out a bit of text
+to say the clock-in time was and
+
+50
+00:04:46,424 --> 00:04:50,345
+then the clock-in, the clock-out time was,
+and the clock-out and
+
+51
+00:04:50,345 --> 00:04:52,625
+then show us the difference in seconds.
+
+52
+00:04:56,200 --> 00:04:57,941
+I do apologize, I don't know what I'm
+doing here.
+
+53
+00:04:57,941 --> 00:05:03,303
+[LAUGH] I don't know why I've made the
+seconds diff
+
+54
+00:05:03,303 --> 00:05:11,700
+equal to this, this should be a
+calculation [UNKNOWN] before we run it.
+
+55
+00:05:11,700 --> 00:05:14,125
+See, it's clock-out minus clock-in.
+
+56
+00:05:14,125 --> 00:05:16,708
+There we go.
+
+57
+00:05:16,708 --> 00:05:20,935
+So this should be 16:00 hours minus
+
+58
+00:05:20,935 --> 00:05:26,167
+07:30 giving us the difference in seconds.
+
+59
+00:05:26,167 --> 00:05:28,417
+Pretty it up.
+
+60
+00:05:28,417 --> 00:05:31,626
+See if I made any mistakes.
+
+61
+00:05:31,626 --> 00:05:35,750
+As a bonus, now we'll test it.
+
+62
+00:05:35,750 --> 00:05:37,251
+So there we can see.
+
+63
+00:05:37,251 --> 00:05:39,458
+Clock-in time clock-out.
+
+64
+00:05:39,458 --> 00:05:44,626
+The difference is 30,600 seconds.
+
+65
+00:05:44,626 --> 00:05:51,167
+Now, is that correct?
+
+66
+00:05:51,167 --> 00:05:51,850
+Let's have a look.
+
+67
+00:05:54,510 --> 00:05:55,710
+So, we have 8 hours and 30 minutes.
+
+68
+00:05:55,710 --> 00:06:01,360
+So 8 times 60 plus
+
+69
+00:06:01,360 --> 00:06:10,240
+30 times 60 is 30,600 seconds.
+
+70
+00:06:15,500 --> 00:06:18,897
+Let's not continue and work out, the
+minutes difference and
+
+71
+00:06:18,897 --> 00:06:20,209
+the hours difference.
+
+72
+00:06:20,209 --> 00:06:24,167
+[BLANK_AUDIO]
+
+73
+00:06:24,167 --> 00:06:29,350
+It's a simple calculation for the minutes.
+
+74
+00:06:29,350 --> 00:06:32,132
+Remember you must save your precious
+fingers, so Copy and
+
+75
+00:06:32,132 --> 00:06:33,334
+Paste as much as you can.
+
+76
+00:06:33,334 --> 00:06:44,251
+[BLANK_AUDIO]
+
+77
+00:06:44,251 --> 00:06:48,042
+All we need to do is reference our
+seconds.
+
+78
+00:06:48,042 --> 00:06:52,209
+[BLANK_AUDIO]
+
+79
+00:06:52,209 --> 00:06:55,130
+And divide by 60.
+
+80
+00:06:55,130 --> 00:07:00,782
+So now we should see 33,600
+
+81
+00:07:00,782 --> 00:07:06,660
+seconds divided by 60 giving us I can't
+remember what that calculation was.
+
+82
+00:07:06,660 --> 00:07:07,960
+Five, ten, was it?
+
+83
+00:07:07,960 --> 00:07:11,000
+Something like that then we'll write out.
+
+84
+00:07:11,000 --> 00:07:15,292
+[BLANK_AUDIO]
+
+85
+00:07:15,292 --> 00:07:18,000
+The difference in minutes this time.
+
+86
+00:07:18,000 --> 00:07:24,709
+[BLANK_AUDIO]
+
+87
+00:07:24,709 --> 00:07:27,869
+And while we're at it,
+
+88
+00:07:27,869 --> 00:07:32,458
+let's do the hours calculation.
+
+89
+00:07:32,458 --> 00:07:42,458
+[BLANK_AUDIO]
+
+90
+00:07:51,875 --> 00:07:55,834
+And why not pretty it all up.
+
+91
+00:07:55,834 --> 00:08:05,834
+[BLANK_AUDIO]
+
+92
+00:08:33,833 --> 00:08:34,667
+Okay.
+
+93
+00:08:34,667 --> 00:08:35,600
+Pretty Printer.
+
+94
+00:08:36,750 --> 00:08:38,990
+We'll do a check, to see if I made any
+mistakes.
+
+95
+00:08:40,070 --> 00:08:42,620
+And it looks like I did.
+
+96
+00:08:42,620 --> 00:08:45,626
+So, what did I call hours_diff?
+
+97
+00:08:45,626 --> 00:08:52,167
+[BLANK_AUDIO]
+
+98
+00:08:52,167 --> 00:08:54,530
+Okay, I made a mistake up here by the
+looks of things.
+
+99
+00:08:55,570 --> 00:08:57,345
+There we go, just 1s.
+
+100
+00:09:00,240 --> 00:09:02,040
+Okay, everything is good this time.
+
+101
+00:09:03,460 --> 00:09:04,570
+Now let's test.
+
+102
+00:09:04,570 --> 00:09:09,770
+Oh, no doubt you've seen the mistake.
+
+103
+00:09:11,560 --> 00:09:16,220
+Here we want to output the minutes not the
+seconds.
+
+104
+00:09:16,220 --> 00:09:19,835
+I guess this is what happens, when you
+copy and paste too much.
+
+105
+00:09:19,835 --> 00:09:24,083
+[BLANK_AUDIO]
+
+106
+00:09:24,083 --> 00:09:26,917
+Okay.
+
+107
+00:09:26,917 --> 00:09:28,833
+Test it out this time.
+
+108
+00:09:28,833 --> 00:09:33,626
+[BLANK_AUDIO]
+
+109
+00:09:33,626 --> 00:09:34,917
+There we go.
+
+110
+00:09:34,917 --> 00:09:41,500
+So seconds through 30,600, minutes 510 and
+hours 9.
+
+111
+00:09:41,500 --> 00:09:44,542
+[BLANK_AUDIO]
+
+112
+00:09:44,542 --> 00:09:48,083
+And I see I even made the spelling mistake
+there too.
+
+113
+00:09:48,083 --> 00:09:54,709
+[BLANK_AUDIO]
+
+114
+00:09:54,709 --> 00:10:00,442
+So, if we have 510 minutes difference, and
+hours wasn't 9 exactly,
+
+115
+00:10:00,442 --> 00:10:04,820
+but can you see why why we were given 9 as
+the answer?
+
+116
+00:10:05,990 --> 00:10:09,500
+Hopefully, you recognize that the hours
+diff was an integer.
+
+117
+00:10:13,170 --> 00:10:16,160
+If we'd made it a decimal, we would have
+got a decimal result.
+
+118
+00:10:17,220 --> 00:10:19,110
+Giving us eight and a half hours
+difference.
+
+119
+00:10:19,110 --> 00:10:22,700
+But, because it was an integer it was
+rounded up to 9.
+
+120
+00:10:22,700 --> 00:10:28,120
+You want to check it out, let's change
+that integer to a decimal.
+
+121
+00:10:28,120 --> 00:10:32,940
+So what we need to do, is moved to the
+data declaration part, and
+
+122
+00:10:34,390 --> 00:10:40,320
+where we have an integer, let's change it
+to a pac decimal.
+
+123
+00:10:40,320 --> 00:10:43,480
+And remember, we need to specify how many
+decimal places we want.
+
+124
+00:10:43,480 --> 00:10:46,958
+We'll put 2.
+
+125
+00:10:46,958 --> 00:10:55,584
+[BLANK_AUDIO]
+
+126
+00:10:55,584 --> 00:10:58,460
+Everything looks good, we'll activate it
+and then test it out.
+
+127
+00:10:58,460 --> 00:11:03,043
+And as you can see, the results now is 8.5
+hours.
+
+128
+00:11:03,043 --> 00:11:07,689
+[BLANK_AUDIO]
+

@@ -1,0 +1,92 @@
+1
+00:00:01,140 --> 00:00:03,380
+This brings us to the end of the debugging
+module.
+
+2
+00:00:04,410 --> 00:00:09,500
+And, before we wrap things up, I just want
+to discuss how to stop the debugger.
+
+3
+00:00:09,500 --> 00:00:11,890
+Now, it may seem fairly simple, but
+
+4
+00:00:11,890 --> 00:00:14,430
+there are two ways you can stop debugging
+your program.
+
+5
+00:00:16,010 --> 00:00:18,970
+The first way is by pressing the F8 key,
+and
+
+6
+00:00:18,970 --> 00:00:21,760
+letting your program run all the way
+through to the end.
+
+7
+00:00:22,860 --> 00:00:26,260
+But, keep in mind, if you have any grey
+points or watch points set,
+
+8
+00:00:26,260 --> 00:00:31,370
+the program execution will most likely
+pause, and you'll have to press
+
+9
+00:00:31,370 --> 00:00:36,700
+F8 key again, and maybe keep doing it in a
+cycle until the program finishes.
+
+10
+00:00:36,700 --> 00:00:39,710
+And, you need to bear in mind that you are
+counting on your
+
+11
+00:00:39,710 --> 00:00:41,690
+program executing successfully.
+
+12
+00:00:43,250 --> 00:00:47,943
+If your program causes any runtime errors,
+your debug session will terminate, and
+
+13
+00:00:47,943 --> 00:00:52,254
+you'll be returned to the SAP menu screen,
+which can be just damn annoying.
+
+14
+00:00:52,254 --> 00:00:55,712
+Because you just want to get back to a
+C38.
+
+15
+00:00:55,712 --> 00:01:00,432
+The alternate way of stopping the
+debugger, and my preferred method,
+
+16
+00:01:00,432 --> 00:01:01,710
+Is very simple.
+
+17
+00:01:01,710 --> 00:01:06,430
+Just come to the debugging menu, and chose
+restart.
+
+18
+00:01:08,260 --> 00:01:11,880
+That way, no more program code will be
+executed, and
+
+19
+00:01:11,880 --> 00:01:14,580
+you'll be returned to the SE38 front
+screen.
+

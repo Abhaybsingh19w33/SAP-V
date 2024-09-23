@@ -1,0 +1,180 @@
+1
+00:00:02,710 --> 00:00:05,530
+We're now going to take a look
+at the MOVE-CORRESPONDING
+
+2
+00:00:05,530 --> 00:00:09,930
+statement that I mentioned a little
+earlier in one of the other videos.
+
+3
+00:00:09,930 --> 00:00:13,730
+There's not much to talk about, so let's
+just get straight down to the code and
+
+4
+00:00:13,730 --> 00:00:15,210
+show you what it does.
+
+5
+00:00:16,310 --> 00:00:17,770
+So in our previous example,
+
+6
+00:00:19,150 --> 00:00:24,350
+we moved the individual fields to the
+header record of our internal table and
+
+7
+00:00:24,350 --> 00:00:28,240
+then used the APPEND statement to
+write that header record to the table.
+
+8
+00:00:29,794 --> 00:00:34,007
+Well, instead of writing
+those five lines of code,
+
+9
+00:00:34,007 --> 00:00:38,049
+those MOVE statements,
+we can just use one line.
+
+10
+00:00:38,049 --> 00:00:40,534
+And that's by making use
+of MOVE-CORRESPONDING.
+
+11
+00:00:42,480 --> 00:00:43,870
+So here's how it looks.
+
+12
+00:00:43,870 --> 00:00:46,011
+We have the MOVE statement,
+and we have dash.
+
+13
+00:00:52,048 --> 00:00:57,471
+And we specify the table name,
+which is our zemployees table,
+
+14
+00:00:57,471 --> 00:01:01,780
+and we just say we want to
+move it to our itab table.
+
+15
+00:01:04,740 --> 00:01:05,860
+And that's all there is to it, and
+
+16
+00:01:05,860 --> 00:01:10,289
+we can get rid of these
+remaining MOVE statements.
+
+17
+00:01:12,160 --> 00:01:17,077
+So it matches up the technical name
+of each field from the zemployees.
+
+18
+00:01:18,320 --> 00:01:23,890
+And where there's a matching field in
+itab01, it will move the contents.
+
+19
+00:01:25,210 --> 00:01:29,110
+It's really simple, and
+it's a real time-saving statement.
+
+20
+00:01:29,110 --> 00:01:33,730
+And all you need to make sure is that
+the fields that you're hoping to move
+
+21
+00:01:33,730 --> 00:01:36,090
+are named the same between the two tables.
+
+22
+00:01:38,200 --> 00:01:42,260
+There is one thing to watch out for,
+and that's when you use this statement,
+
+23
+00:01:42,260 --> 00:01:45,160
+just ensure that the fields
+you are moving data to and
+
+24
+00:01:45,160 --> 00:01:48,546
+from do have the same data type or length.
+
+25
+00:01:48,546 --> 00:01:52,680
+So even though it'll
+match up the field names,
+
+26
+00:01:52,680 --> 00:01:56,420
+it's up to you to make sure
+the field type is correct.
+
+27
+00:01:58,160 --> 00:02:02,650
+If they do differ in any way, you could
+end up with unpredictable results.
+
+28
+00:02:04,260 --> 00:02:05,110
+Now back to this code.
+
+29
+00:02:05,110 --> 00:02:07,019
+Let's stick a breakpoint on and
+see it in action.
+
+30
+00:02:18,188 --> 00:02:23,148
+Have a look at our internal table,
+and then we'll step through the code,
+
+31
+00:02:23,148 --> 00:02:25,317
+bang, it moves all the fields.
+
+32
+00:02:29,264 --> 00:02:29,774
+If we scoot up.
+
+33
+00:02:37,925 --> 00:02:41,825
+And I just type in the fields here.
+
+34
+00:02:41,825 --> 00:02:47,096
+Oops, I missed the itab.
+
+35
+00:02:47,096 --> 00:02:48,490
+itab01.
+
+36
+00:03:06,137 --> 00:03:09,340
+And you can see it's
+actually moving them in.
+
+37
+00:03:09,340 --> 00:03:12,149
+And it's as simple as that.
+
+38
+00:03:17,885 --> 00:03:20,392
+And so on, I'll zoom through the program.
+
+39
+00:03:20,392 --> 00:03:21,669
+Let's get back to some more wrap up.
+

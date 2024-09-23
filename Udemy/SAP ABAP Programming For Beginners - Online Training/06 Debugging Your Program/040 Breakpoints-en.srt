@@ -1,0 +1,210 @@
+1
+00:00:01,930 --> 00:00:03,800
+Let's have a look at breakpoints in more
+detail.
+
+2
+00:00:03,800 --> 00:00:08,220
+The Breakpoint button allows you to see a
+list
+
+3
+00:00:08,220 --> 00:00:11,780
+of individual breakpoints that you have
+set within your program.
+
+4
+00:00:12,918 --> 00:00:16,680
+And by double-clicking on any breakpoint,
+
+5
+00:00:16,680 --> 00:00:21,140
+entering the table, it will remove the
+break point.
+
+6
+00:00:23,790 --> 00:00:26,540
+This breakpoint table is very handy.
+
+7
+00:00:26,540 --> 00:00:31,120
+When you're in a large program, and you
+have to set lots of breakpoints to
+
+8
+00:00:31,120 --> 00:00:34,320
+keep track of the different variables that
+are being used.
+
+9
+00:00:34,320 --> 00:00:38,160
+And the table allows you to review the
+breakpoints sets,
+
+10
+00:00:38,160 --> 00:00:42,480
+and when you don't want them, you can just
+choose which ones you want to remove.
+
+11
+00:00:44,290 --> 00:00:48,430
+It's important to remember the lifetime of
+your breakpoint and
+
+12
+00:00:48,430 --> 00:00:50,890
+watchpoints which we will go on to.
+
+13
+00:00:50,890 --> 00:00:53,477
+It's only for the length of your current
+debug session.
+
+14
+00:00:55,800 --> 00:01:00,420
+When you leave your debug session, your
+breakpoint will be deleted.
+
+15
+00:01:00,420 --> 00:01:03,110
+There is an option that allows you to save
+the breakpoint.
+
+16
+00:01:04,460 --> 00:01:08,320
+And watchpoints before closing your debug
+session.
+
+17
+00:01:08,320 --> 00:01:10,760
+So that your breakpoints remain active for
+
+18
+00:01:10,760 --> 00:01:13,320
+the next time you come to debug your
+program.
+
+19
+00:01:14,340 --> 00:01:16,690
+This allows them to be set in place, and
+
+20
+00:01:16,690 --> 00:01:19,840
+saved, so you don't have the hassle of
+recreating them.
+
+21
+00:01:21,710 --> 00:01:26,770
+Now to do this, choose the Breakpoint
+menu, and choose Save.
+
+22
+00:01:30,922 --> 00:01:36,490
+These breakpoints will remain intact,
+until you manually remove them or
+
+23
+00:01:36,490 --> 00:01:39,560
+until you end your current SAP session.
+
+24
+00:01:39,560 --> 00:01:49,560
+[BLANK_AUDIO]
+
+25
+00:01:54,232 --> 00:01:58,800
+If you are in the ABAP Editor, you can
+choose the Utilities menu,
+
+26
+00:01:58,800 --> 00:02:02,456
+Breakpoints, then Display to see an
+overview of all
+
+27
+00:02:02,456 --> 00:02:06,627
+the dynamic breakpoints you have set
+within your program.
+
+28
+00:02:09,377 --> 00:02:12,182
+You can then use the options available to
+delete your breakpoints.
+
+29
+00:02:13,229 --> 00:02:17,177
+By double-clicking you will navigate to
+the location of the breakpoint
+
+30
+00:02:17,177 --> 00:02:17,807
+in your program.
+
+31
+00:02:19,977 --> 00:02:24,047
+Earlier on you may recall I mentioned
+static break points.
+
+32
+00:02:24,047 --> 00:02:28,320
+This is where you enter a line of code
+within your ABAP program itself.
+
+33
+00:02:28,320 --> 00:02:33,147
+Forcing the program to enter debug mode at
+the specific line you choose.
+
+34
+00:02:34,480 --> 00:02:40,648
+To do this, you need to insert the
+statement BREAK-POINT.
+
+35
+00:02:40,648 --> 00:02:48,328
+[BLANK_AUDIO]
+
+36
+00:02:48,328 --> 00:02:53,197
+If you try to run your program, you will
+see your program will enter debug mode,
+
+37
+00:02:53,197 --> 00:02:57,630
+and your cursor should be positioned at
+the line of code where you entered
+
+38
+00:02:57,630 --> 00:02:58,735
+the breakpoint.
+
+39
+00:03:01,430 --> 00:03:07,650
+Now by embedding this statement into your
+programs, it is active for all users.
+
+40
+00:03:07,650 --> 00:03:10,540
+As you can imagine, this is undesirable
+for
+
+41
+00:03:10,540 --> 00:03:15,650
+anyone else that tries to run your program
+that doesn't need to debug your code, so
+
+42
+00:03:15,650 --> 00:03:20,480
+be careful with this, and ensure you don't
+leave this statement line,
+
+43
+00:03:20,480 --> 00:03:26,020
+lying around in programs that will get
+transported to other systems,
+
+44
+00:03:26,020 --> 00:03:28,200
+such as your q and a, and your live
+environment.
+

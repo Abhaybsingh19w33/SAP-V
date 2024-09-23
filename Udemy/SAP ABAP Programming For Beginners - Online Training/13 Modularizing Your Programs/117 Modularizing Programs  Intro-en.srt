@@ -1,0 +1,215 @@
+1
+00:00:01,280 --> 00:00:04,480
+We're now going to discuss modularizing
+our programs.
+
+2
+00:00:05,660 --> 00:00:09,450
+And if you don't know already, it's really
+good practice to try and
+
+3
+00:00:09,450 --> 00:00:14,140
+keep your programs as simple to read and
+self contained as possible.
+
+4
+00:00:15,410 --> 00:00:19,790
+And what I mean is, try and split up any
+large complicated tasks.
+
+5
+00:00:19,790 --> 00:00:22,670
+Into much smaller, simpler tasks.
+
+6
+00:00:22,670 --> 00:00:27,540
+By placing each task into its own separate
+individual module that you
+
+7
+00:00:27,540 --> 00:00:33,340
+as a developer are able to concentrate on
+without any other distractions.
+
+8
+00:00:33,340 --> 00:00:40,090
+Modularizing your code lets you focus on
+that one single task and not get confused
+
+9
+00:00:40,090 --> 00:00:46,380
+by the big picture of a much larger
+development that you may be working on.
+
+10
+00:00:46,380 --> 00:00:51,240
+By working on individual tasks, it makes
+it much easier to develop and
+
+11
+00:00:51,240 --> 00:00:52,235
+debug your program.
+
+12
+00:00:52,235 --> 00:00:57,314
+It develop individual modules of code that
+once tested incomplete,
+
+13
+00:00:57,314 --> 00:01:00,117
+you don't have to worry about again,
+
+14
+00:01:00,117 --> 00:01:04,847
+leaving you free to concentrate on any
+other issues that may crop
+
+15
+00:01:04,847 --> 00:01:09,510
+up in other areas of your coding project
+that you have to solve.
+
+16
+00:01:09,510 --> 00:01:11,214
+[BLANK_AUDIO]
+
+17
+00:01:11,214 --> 00:01:15,962
+Creating individual source code modules
+helps you avoid repeatedly writing
+
+18
+00:01:15,962 --> 00:01:18,600
+the same set of statement again and again.
+
+19
+00:01:18,600 --> 00:01:22,480
+And this in turn makes your programs
+easier to read and
+
+20
+00:01:22,480 --> 00:01:25,130
+understand both by you and by others.
+
+21
+00:01:26,730 --> 00:01:29,530
+And a big benefit is when it comes to
+support.
+
+22
+00:01:31,000 --> 00:01:33,780
+By creating these small modules of code,
+
+23
+00:01:33,780 --> 00:01:39,160
+anybody having to support your programs in
+the future, maybe even you.
+
+24
+00:01:39,160 --> 00:01:42,946
+You'll find it much easier to read and
+understand what's going on.
+
+25
+00:01:42,946 --> 00:01:45,083
+[BLANK_AUDIO]
+
+26
+00:01:45,083 --> 00:01:48,066
+And when you first begin to design your
+program,
+
+27
+00:01:48,066 --> 00:01:51,060
+it's important you concentrate on the
+design.
+
+28
+00:01:52,700 --> 00:01:54,600
+Do not start coding straightaway.
+
+29
+00:01:54,600 --> 00:01:59,510
+You need to map out your solution maybe
+use some pseudo-code or
+
+30
+00:01:59,510 --> 00:02:01,780
+maybe flow charts, whatever you prefer.
+
+31
+00:02:03,220 --> 00:02:05,850
+Only when your design makes sense,
+
+32
+00:02:05,850 --> 00:02:08,950
+should you then start turning your
+solution into ABAP code.
+
+33
+00:02:11,010 --> 00:02:11,560
+Making sure,
+
+34
+00:02:11,560 --> 00:02:17,230
+you design your program first really helps
+when it comes to modularizing your program
+
+35
+00:02:17,230 --> 00:02:22,520
+because you can see how you can split your
+program up into separate pieces.
+
+36
+00:02:22,520 --> 00:02:26,450
+Which will allow you then, to focus on the
+development of one piece at a time.
+
+37
+00:02:28,080 --> 00:02:31,760
+Now, if you recall, when we looked at
+design in selection strings,
+
+38
+00:02:31,760 --> 00:02:34,350
+we used modularization techniques.
+
+39
+00:02:34,350 --> 00:02:39,373
+By making use of processing blocks such as
+the start of selection block.
+
+40
+00:02:39,373 --> 00:02:40,650
+[BLANK_AUDIO]
+
+41
+00:02:40,650 --> 00:02:45,300
+Maturization isn't just limited to using
+processing blocks in our program.
+
+42
+00:02:46,360 --> 00:02:51,160
+The SAP system itself allows us to use a
+number of techniques for
+
+43
+00:02:51,160 --> 00:02:56,300
+breaking our program open Into smaller,
+more manageable pieces of code.
+
+44
+00:02:56,300 --> 00:03:00,860
+And throughout this section, we're gonna
+take a look at just how we
+
+45
+00:03:00,860 --> 00:03:05,429
+can modularize our programs using the
+various tools SAP provides.
+
+46
+00:03:05,429 --> 00:03:07,289
+[BLANK_AUDIO]
+

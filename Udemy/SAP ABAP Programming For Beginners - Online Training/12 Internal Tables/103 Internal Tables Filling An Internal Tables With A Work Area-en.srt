@@ -1,0 +1,349 @@
+1
+00:00:01,930 --> 00:00:06,800
+We will now switch tact and
+have a look at how all this works
+
+2
+00:00:06,800 --> 00:00:09,820
+where we want to use a work
+area instead of a header line.
+
+3
+00:00:12,390 --> 00:00:16,780
+The fundamental difference is that when
+we are selecting records from the table,
+
+4
+00:00:16,780 --> 00:00:19,900
+we are using the separate work area,
+
+5
+00:00:19,900 --> 00:00:24,230
+instead of using the internal
+table's own header line.
+
+6
+00:00:24,230 --> 00:00:26,464
+Let's go straight to look at some code.
+
+7
+00:00:33,244 --> 00:00:36,484
+So, what I'm gonna do is define
+a brand new internal table.
+
+8
+00:00:41,859 --> 00:00:44,957
+And found, let me clear out this stuff,
+
+9
+00:00:44,957 --> 00:00:50,346
+cuz further down in the program,
+we got the stuff we declared before.
+
+10
+00:00:55,303 --> 00:00:59,431
+So, first of all as a refresher,
+we have the line type and
+
+11
+00:00:59,431 --> 00:01:03,660
+that's made up of two fields,
+surname and date of birth.
+
+12
+00:01:03,660 --> 00:01:08,752
+Then, let's put a space in here,
+then we declare
+
+13
+00:01:08,752 --> 00:01:13,480
+the data type which is
+made up of the line type,
+
+14
+00:01:13,480 --> 00:01:20,538
+followed by declaring the internal
+table itself, look at this one.
+
+15
+00:01:20,538 --> 00:01:25,610
+So, this is the declaration
+of the internal table and
+
+16
+00:01:25,610 --> 00:01:29,114
+finally, we declare the work area.
+
+17
+00:01:29,114 --> 00:01:31,551
+So with those statements in place,
+let's move on and
+
+18
+00:01:31,551 --> 00:01:33,780
+have a look at the select
+statement we would use.
+
+19
+00:01:34,980 --> 00:01:37,742
+It's very similar to how we
+define the select statement for
+
+20
+00:01:37,742 --> 00:01:40,430
+working with an internal
+table with a header line.
+
+21
+00:01:40,430 --> 00:01:44,377
+And then,
+we start with a select statement.
+
+22
+00:01:48,405 --> 00:01:52,229
+And then, what I'm gonna do here
+is specify individual fields,
+
+23
+00:01:52,229 --> 00:01:54,810
+so I'm gonna say surname and
+date of birth.
+
+24
+00:01:57,260 --> 00:02:02,100
+Then we use from to say where
+we're gonna select it from, and
+
+25
+00:02:02,100 --> 00:02:06,510
+we're gonna specify the employees table,
+and
+
+26
+00:02:06,510 --> 00:02:12,220
+I'll just break the statement
+onto a brand new line.
+
+27
+00:02:12,220 --> 00:02:16,160
+Then, we're gonna use into, and
+this is where we specify the work area.
+
+28
+00:02:16,160 --> 00:02:23,230
+So, because our work area is wa_itab02,
+that's what I'm going to input.
+
+29
+00:02:26,991 --> 00:02:34,421
+Now, I'm going to add an append statement
+and this is where I'm going to do wa.
+
+30
+00:02:47,319 --> 00:02:51,881
+So, let's check the code.
+
+31
+00:02:51,881 --> 00:02:52,822
+That looks good.
+
+32
+00:02:52,822 --> 00:02:55,062
+So, now let's explain it for you.
+
+33
+00:02:55,062 --> 00:02:57,524
+So, we have our normal SELECT statement.
+
+34
+00:02:57,524 --> 00:03:02,011
+We specify it is going into our work area.
+
+35
+00:03:02,011 --> 00:03:04,957
+Then, we have our APPEND statement and
+
+36
+00:03:04,957 --> 00:03:10,950
+we're gonna say append the record from
+the word carrier to our internal table.
+
+37
+00:03:10,950 --> 00:03:15,550
+Then, this section of code is ended
+with the ENDSELECT to complete the loop.
+
+38
+00:03:18,120 --> 00:03:23,867
+Let's debug the code and
+you can see it in action.
+
+39
+00:03:23,867 --> 00:03:27,250
+Oops, not active.
+
+40
+00:03:27,250 --> 00:03:28,840
+Okay.
+
+41
+00:03:32,218 --> 00:03:33,380
+So, here we go.
+
+42
+00:03:35,510 --> 00:03:37,130
+There's our work area.
+
+43
+00:03:37,130 --> 00:03:41,087
+There's our internal table,
+and I'll step through,
+
+44
+00:03:41,087 --> 00:03:45,903
+line by line,
+Work area is filled, and then,
+
+45
+00:03:45,903 --> 00:03:50,255
+we append it to the internal tape,
+and then the loop continues.
+
+46
+00:03:56,630 --> 00:04:00,831
+Now zoom through, fairly simple stuff.
+
+47
+00:04:03,490 --> 00:04:05,360
+In some of our previous examples,
+
+48
+00:04:05,360 --> 00:04:10,390
+we looked at using an array fetch, which
+in essence, skipped the header record.
+
+49
+00:04:10,390 --> 00:04:12,340
+Well, the same thing applies here.
+
+50
+00:04:12,340 --> 00:04:16,543
+Even though we're using an internal
+table a without header record,
+
+51
+00:04:16,543 --> 00:04:19,448
+we can still take a look
+at the same type of code.
+
+52
+00:04:26,199 --> 00:04:28,670
+And see how it works
+with this type of table.
+
+53
+00:04:31,610 --> 00:04:34,706
+So, let's comment out this.
+
+54
+00:04:34,706 --> 00:04:38,235
+And let's now just code
+a simple array fetch.
+
+55
+00:04:38,235 --> 00:04:40,380
+So, we would have the select statement.
+
+56
+00:04:40,380 --> 00:04:44,894
+Let's choose all fields.
+
+57
+00:04:44,894 --> 00:04:50,564
+So select star from zemployees
+
+58
+00:04:50,564 --> 00:04:55,581
+into corresponding fields
+
+59
+00:04:55,581 --> 00:05:01,913
+of our table, which is itab02.
+
+60
+00:05:01,913 --> 00:05:05,341
+We don't need the APPEND or the ENDSELECT.
+
+61
+00:05:13,061 --> 00:05:17,900
+So, as you can see, an array fetch
+works exactly the same as before.
+
+62
+00:05:17,900 --> 00:05:18,850
+And we can test it out.
+
+63
+00:05:18,850 --> 00:05:21,823
+Let's first stick a break point in.
+
+64
+00:05:25,687 --> 00:05:28,243
+It's going to zoom straight through, but
+
+65
+00:05:28,243 --> 00:05:31,660
+we can see that the internal
+table is empty at the moment.
+
+66
+00:05:31,660 --> 00:05:36,806
+As soon as I press F5,
+the program is going to end,
+
+67
+00:05:36,806 --> 00:05:43,531
+but on the F5 press, the internal
+table will be filled with data.
+
+68
+00:05:43,531 --> 00:05:48,205
+I guess what we need to show that is
+then just create a bit of code, and
+
+69
+00:05:48,205 --> 00:05:52,320
+we will come to loops later on,
+so don't worry about that.
+
+70
+00:06:21,519 --> 00:06:23,180
+Now, let's test it again.
+
+71
+00:06:26,302 --> 00:06:27,720
+Have a look at itab02.
+
+72
+00:06:27,720 --> 00:06:29,047
+Press F5, and
+
+73
+00:06:29,047 --> 00:06:35,085
+you can see we got five records
+inserted into the table, all in one go.
+
+74
+00:06:35,085 --> 00:06:36,907
+So, I'll just zoom through
+the rest of the program.
+
+75
+00:06:36,907 --> 00:06:39,101
+We don't really need to
+look at this output.
+
+76
+00:06:44,766 --> 00:06:46,485
+And get rid of the break points.
+

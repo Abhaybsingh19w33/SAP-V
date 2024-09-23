@@ -1,0 +1,480 @@
+1
+00:00:01,360 --> 00:00:05,565
+Let's now take a look at how we can format
+a single line on the screen.
+
+2
+00:00:05,565 --> 00:00:10,360
+And when we define individual lines for
+
+3
+00:00:10,360 --> 00:00:16,170
+our selection screen, we need to define
+the start and end of each line.
+
+4
+00:00:16,170 --> 00:00:20,280
+And in between the start and end, we
+include the specific parameters and
+
+5
+00:00:20,280 --> 00:00:21,570
+select option statements.
+
+6
+00:00:23,110 --> 00:00:24,100
+So let's have a look at the code.
+
+7
+00:00:24,100 --> 00:00:32,140
+Let's see how the screen looks at the
+moment, and then we can maybe tidy it up.
+
+8
+00:00:32,140 --> 00:00:39,294
+Okay, so that's the first line,
+
+9
+00:00:39,294 --> 00:00:43,989
+the employee output.
+
+10
+00:00:43,989 --> 00:00:46,369
+So let's start the code here.
+
+11
+00:00:46,369 --> 00:00:50,274
+So to begin with, what we do is type
+
+12
+00:00:50,274 --> 00:00:55,270
+SELECTION-SCREEN and then BEGIN OF LINE.
+
+13
+00:00:57,450 --> 00:00:59,836
+And then to define the end of our line,
+
+14
+00:00:59,836 --> 00:01:07,732
+we do SELECTION-SCREEN,
+
+15
+00:01:07,732 --> 00:01:11,702
+it would help if, spelt it properly
+wouldn't it?
+
+16
+00:01:11,702 --> 00:01:15,700
+SELECTION-SCREEN, and as you may guess,
+just END OF LINE.
+
+17
+00:01:18,110 --> 00:01:23,310
+So now anything between the begin and end
+will all appear on one line.
+
+18
+00:01:24,720 --> 00:01:26,715
+So let's change the three lines in
+between.
+
+19
+00:01:26,715 --> 00:01:32,510
+Or two lines, [LAUGH] first of all we have
+a comment.
+
+20
+00:01:32,510 --> 00:01:38,560
+And we'll say this is going to start,
+position one.
+
+21
+00:01:40,520 --> 00:01:42,660
+We don't want to, a new line there.
+
+22
+00:01:42,660 --> 00:01:47,580
+It's going to be 15 characters long, and
+it will contain the word surname.
+
+23
+00:01:47,580 --> 00:01:52,440
+If you remember text001, contains the
+value surname.
+
+24
+00:01:52,440 --> 00:01:53,480
+Here we go.
+
+25
+00:01:57,045 --> 00:01:58,975
+And that will be followed by another
+comment.
+
+26
+00:02:00,205 --> 00:02:06,046
+And we'll say lets start this at position
+20, and that's gonna be for
+
+27
+00:02:06,046 --> 00:02:12,675
+a length of 10, and that's gonna contain
+the value stored in variable comm1.
+
+28
+00:02:12,675 --> 00:02:19,002
+Which as we saw earlier gets assigned
+during the initialization
+
+29
+00:02:19,002 --> 00:02:24,284
+session of the program, and that will say
+hello SAP.
+
+30
+00:02:24,284 --> 00:02:26,120
+And then lastly, let's start another line.
+
+31
+00:02:26,120 --> 00:02:32,470
+And let's just define a brand new
+parameter.
+
+32
+00:02:36,340 --> 00:02:40,790
+Lets define a parameter called ABC, and
+we'll make
+
+33
+00:02:40,790 --> 00:02:44,010
+it a character data type with a length of
+5.
+
+34
+00:02:44,010 --> 00:02:47,980
+And if you remember when we
+
+35
+00:02:47,980 --> 00:02:52,000
+define character data types we don't have
+to define it as a type c.
+
+36
+00:02:52,000 --> 00:02:54,800
+Because that's implied because it's the
+default.
+
+37
+00:02:54,800 --> 00:02:56,690
+So I'll just leave it in the short form.
+
+38
+00:02:56,690 --> 00:02:57,190
+Just like that.
+
+39
+00:02:59,500 --> 00:03:00,204
+And that's it.
+
+40
+00:03:00,204 --> 00:03:05,707
+[BLANK_AUDIO]
+
+41
+00:03:05,707 --> 00:03:07,461
+Let's see what it looks like.
+
+42
+00:03:07,461 --> 00:03:11,348
+[BLANK_AUDIO]
+
+43
+00:03:11,348 --> 00:03:14,808
+So there you can see, we have our first
+field.
+
+44
+00:03:14,808 --> 00:03:18,048
+Or our first comment, and our second
+comment.
+
+45
+00:03:18,048 --> 00:03:19,801
+[BLANK_AUDIO]
+
+46
+00:03:19,801 --> 00:03:23,086
+And then the parameter field, all
+displayed on one line.
+
+47
+00:03:23,086 --> 00:03:25,304
+[BLANK_AUDIO]
+
+48
+00:03:25,304 --> 00:03:32,500
+So anything between the BEGIN OF LINE and
+END OF LINE can all be put on one line.
+
+49
+00:03:32,500 --> 00:03:35,380
+And all you need to do is make sure you
+get your positioning and
+
+50
+00:03:35,380 --> 00:03:36,690
+length parameters correct.
+
+51
+00:03:39,170 --> 00:03:42,870
+Now those of you who have your eyes peeled
+you may have noticed something.
+
+52
+00:03:43,890 --> 00:03:44,880
+Let's go back to the screen.
+
+53
+00:03:47,000 --> 00:03:51,280
+See here we defined the parameter field,
+but
+
+54
+00:03:51,280 --> 00:03:56,670
+see how it didn't automatically get
+assigned a comment or
+
+55
+00:03:56,670 --> 00:04:00,030
+description that refers to the technical
+name of the field.
+
+56
+00:04:00,030 --> 00:04:04,858
+Well, that's because we used specific
+comments on the line.
+
+57
+00:04:04,858 --> 00:04:08,353
+[BLANK_AUDIO]
+
+58
+00:04:08,353 --> 00:04:13,080
+So whenever you use the BEGIN OF LINE and
+END OF LINE to define the line on
+
+59
+00:04:13,080 --> 00:04:19,370
+the screen, the selection text itself that
+describes the element is not displayed.
+
+60
+00:04:19,370 --> 00:04:21,420
+And that's when you would use the comments
+
+61
+00:04:22,770 --> 00:04:24,630
+to create your own description on the
+line.
+
+62
+00:04:26,930 --> 00:04:32,130
+Now one more addition I want to show you
+right here is, and the, and this can only
+
+63
+00:04:32,130 --> 00:04:37,720
+be used when you are at the BEGIN OF LINE
+and END OF LINE, is the position addition.
+
+64
+00:04:39,400 --> 00:04:40,260
+Now to be fair,
+
+65
+00:04:40,260 --> 00:04:45,720
+I don't see this being used an awful lot
+because the different elements of our
+
+66
+00:04:45,720 --> 00:04:50,830
+screen allow you to specify the position
+of the element within its own syntax.
+
+67
+00:04:52,230 --> 00:04:53,810
+But we do have the option of
+
+68
+00:04:55,040 --> 00:04:58,170
+specifying the position of the next
+element separately.
+
+69
+00:05:00,240 --> 00:05:02,100
+So we would do SELECTION-SCREEN.
+
+70
+00:05:03,840 --> 00:05:08,110
+And then we would include position, and
+
+71
+00:05:08,110 --> 00:05:11,660
+then we can specify the position using an
+integer.
+
+72
+00:05:12,690 --> 00:05:15,112
+So we could say position 35.
+
+73
+00:05:15,112 --> 00:05:25,039
+[BLANK_AUDIO]
+
+74
+00:05:25,039 --> 00:05:29,564
+And if we include a parameter straight
+after this position,
+
+75
+00:05:29,564 --> 00:05:33,304
+then our parameter will appear in position
+35.
+
+76
+00:05:34,770 --> 00:05:38,612
+Let's check it out.
+Now its hard to see here but
+
+77
+00:05:38,612 --> 00:05:44,792
+let me step back, I'll tell you what I'll
+do,
+
+78
+00:05:44,792 --> 00:05:48,845
+let's comment out these two.
+
+79
+00:05:48,845 --> 00:05:56,480
+I do apologize.
+
+80
+00:05:56,480 --> 00:06:05,495
+Tell you what, instead of commenting them
+out [LAUGH] let's move them down.
+
+81
+00:06:08,520 --> 00:06:13,020
+So there you can see the parameter was
+positioned at column 35.
+
+82
+00:06:13,020 --> 00:06:16,640
+Now that just so happens to be in line
+with these.
+
+83
+00:06:16,640 --> 00:06:19,406
+So let's just change it a little bit.
+
+84
+00:06:19,406 --> 00:06:20,634
+Let's choose 30.
+
+85
+00:06:20,634 --> 00:06:25,315
+[BLANK_AUDIO]
+
+86
+00:06:25,315 --> 00:06:27,750
+And now you can see we've moved it a back
+a little bit.
+
+87
+00:06:32,080 --> 00:06:36,440
+Now we do have something else to add on to
+the position.
+
+88
+00:06:36,440 --> 00:06:40,910
+And that is we have some I guess you call
+them constants that we can use.
+
+89
+00:06:42,190 --> 00:06:44,630
+So by default we'll go back to the screen.
+
+90
+00:06:44,630 --> 00:06:49,860
+We can see we have a default position
+here, and we have a default position here.
+
+91
+00:06:49,860 --> 00:06:54,560
+Well this is referred to as position low,
+and this is position high.
+
+92
+00:06:56,540 --> 00:07:01,610
+Now we can use these default positions
+with our position addition.
+
+93
+00:07:03,170 --> 00:07:07,100
+And all we need to do is add pos.
+
+94
+00:07:07,100 --> 00:07:08,100
+I'll tell you what I'll do.
+
+95
+00:07:08,100 --> 00:07:14,740
+I'll choose pos_high first and it's pos
+underscore high.
+
+96
+00:07:14,740 --> 00:07:18,141
+[BLANK_AUDIO]
+
+97
+00:07:18,141 --> 00:07:22,848
+And what you'll see is when we execute the
+program
+
+98
+00:07:22,848 --> 00:07:27,340
+our parameter is lined with the high
+position.
+
+99
+00:07:28,920 --> 00:07:30,860
+So if you are defining your own fields,
+and
+
+100
+00:07:30,860 --> 00:07:34,080
+you want them all to line up just as they
+do with the select option,
+
+101
+00:07:34,080 --> 00:07:38,076
+you can use the pos_high so you don't have
+to remember the actual value.
+
+102
+00:07:38,076 --> 00:07:43,035
+[SOUND] And the pos_low, well that
+
+103
+00:07:43,035 --> 00:07:48,337
+will bring it in line with the first.
+
+104
+00:07:48,337 --> 00:07:49,602
+There we go.
+
+105
+00:07:49,602 --> 00:07:53,479
+[BLANK_AUDIO]
+

@@ -1,0 +1,488 @@
+1
+00:00:01,610 --> 00:00:04,080
+Now let's go down and focus on the coding
+area.
+
+2
+00:00:04,080 --> 00:00:08,683
+And you can see when we created our
+program,
+
+3
+00:00:08,683 --> 00:00:14,170
+the first set of lines we see [SOUND] Are
+common lines.
+
+4
+00:00:14,170 --> 00:00:19,865
+[SOUND] And we were presented with seven
+comment lines
+
+5
+00:00:19,865 --> 00:00:26,343
+that ideally can be used to start
+commenting your program.
+
+6
+00:00:26,343 --> 00:00:30,070
+Now comments in ABAP can appear in two
+ways.
+
+7
+00:00:31,170 --> 00:00:36,469
+First of all, we see an asterisk at the
+start of a line.
+
+8
+00:00:38,490 --> 00:00:42,580
+If you put an asterisk in there,
+
+9
+00:00:42,580 --> 00:00:47,820
+it turns everything to the right of the
+asterisk into a comment.
+
+10
+00:00:47,820 --> 00:00:52,800
+And note it's important that the asterisk
+has to be in the first column.
+
+11
+00:00:52,800 --> 00:00:56,590
+If you make it in the second column or
+beyond, it's no longer a comment.
+
+12
+00:00:56,590 --> 00:01:01,023
+[SOUND] The other way of writing
+
+13
+00:01:01,023 --> 00:01:06,170
+a comment is within a line itself.
+
+14
+00:01:06,170 --> 00:01:10,141
+So we can go to the end of this report
+line,
+
+15
+00:01:10,141 --> 00:01:15,133
+insert a few spaces and when we do the
+double quotes,
+
+16
+00:01:15,133 --> 00:01:19,630
+everything to the right turns into a
+comment.
+
+17
+00:01:19,630 --> 00:01:22,983
+[SOUND] This becomes really useful, so
+
+18
+00:01:22,983 --> 00:01:28,743
+you can comment your programs line by
+line, or at the very least,
+
+19
+00:01:28,743 --> 00:01:33,586
+a few lines of comments for each section
+of your program
+
+20
+00:01:33,586 --> 00:01:36,795
+[BLANK_AUDIO]
+
+21
+00:01:36,795 --> 00:01:37,836
+So let's delete that.
+
+22
+00:01:37,836 --> 00:01:43,128
+[SOUND] The next line of code that
+
+23
+00:01:43,128 --> 00:01:48,836
+we see starts with a word report.
+
+24
+00:01:48,836 --> 00:01:50,695
+And this is called a statement.
+
+25
+00:01:50,695 --> 00:01:55,500
+And a report statement is always the first
+statements
+
+26
+00:01:55,500 --> 00:01:58,190
+in any executable program we create.
+
+27
+00:01:59,970 --> 00:02:04,750
+The statement itself is then followed by
+the program name that we created.
+
+28
+00:02:06,230 --> 00:02:09,540
+Then the statement line is terminated with
+a full stop.
+
+29
+00:02:10,880 --> 00:02:16,170
+Now the full stop is way beyond the end of
+the actual program name.
+
+30
+00:02:17,230 --> 00:02:21,900
+Doesn't really matter where it appears as
+long it appears after the program name.
+
+31
+00:02:21,900 --> 00:02:24,320
+It could appear there, could appear
+halfway,
+
+32
+00:02:24,320 --> 00:02:28,350
+could, could appear right at the end,
+doesn't really matter.
+
+33
+00:02:28,350 --> 00:02:32,890
+But what is important to note is that
+every statement in ABAP
+
+34
+00:02:32,890 --> 00:02:35,930
+must finish with the full stop or period.
+
+35
+00:02:37,620 --> 00:02:43,110
+This allows your statement to take up as
+many lines in the editor as you wish.
+
+36
+00:02:43,110 --> 00:02:48,200
+So our report statement could in effect be
+like that.
+
+37
+00:02:49,220 --> 00:02:53,500
+As long as we've got the period at the end
+of the statement everything will be fine.
+
+38
+00:02:53,500 --> 00:02:57,880
+Here's the period that says when the
+statement is finished.
+
+39
+00:02:57,880 --> 00:03:05,769
+[SOUND] Now just before we get on to
+writing our first piece of code,
+
+40
+00:03:05,769 --> 00:03:11,087
+I'll just tell you about the help options.
+
+41
+00:03:11,087 --> 00:03:15,265
+If you place your cursor on any ABAP
+statement,
+
+42
+00:03:15,265 --> 00:03:21,120
+you can then press this help on button
+which we discussed earlier.
+
+43
+00:03:23,950 --> 00:03:29,560
+It will then bring up a window
+automatically filling in the keyword and
+
+44
+00:03:29,560 --> 00:03:32,650
+all you need to do is press the continue
+button.
+
+45
+00:03:32,650 --> 00:03:37,950
+And the system will display help on that
+specific statement and
+
+46
+00:03:37,950 --> 00:03:41,900
+give you an explanation of what it is used
+for on the syntax.
+
+47
+00:03:43,010 --> 00:03:49,540
+So I'll click the continue button and up
+pops the ABAP help.
+
+48
+00:03:49,540 --> 00:03:52,760
+And you can see it's navigated direct to
+the port statements and
+
+49
+00:03:52,760 --> 00:03:56,650
+tells you all the different additions that
+you an add in there.
+
+50
+00:03:56,650 --> 00:04:04,485
+And this goes for every single other
+statements within an SAP system.
+
+51
+00:04:04,485 --> 00:04:10,909
+Now as with SAP there's always more than
+one way of doing things.
+
+52
+00:04:12,720 --> 00:04:17,370
+So what you can do as well, is just click
+on the statements, and
+
+53
+00:04:17,370 --> 00:04:20,140
+then just press the F1 key.
+
+54
+00:04:20,140 --> 00:04:23,690
+And you'll notice it misses out that first
+step,
+
+55
+00:04:23,690 --> 00:04:27,440
+that middle screen that we were shown.
+
+56
+00:04:30,570 --> 00:04:36,410
+Now one of the little tips I'll give you
+right now, which I found really,
+
+57
+00:04:36,410 --> 00:04:41,510
+really useful when I was learning ABAP, is
+a new transaction.
+
+58
+00:04:41,510 --> 00:04:42,795
+So we'll open up a new session.
+
+59
+00:04:42,795 --> 00:04:46,920
+[BLANK_AUDIO]
+
+60
+00:04:46,920 --> 00:04:50,485
+And this transaction is called ABAPDOCU.
+
+61
+00:04:50,485 --> 00:04:53,704
+A-B-A-P-D-O-C-U.
+
+62
+00:04:56,240 --> 00:05:00,250
+And this is SAP's ABAP documentation with
+examples.
+
+63
+00:05:00,250 --> 00:05:04,548
+So if you navigate the preview on the left
+hand side, and
+
+64
+00:05:04,548 --> 00:05:07,298
+double click on any of the entries.
+
+65
+00:05:07,298 --> 00:05:13,503
+[BLANK_AUDIO]
+
+66
+00:05:13,503 --> 00:05:18,412
+[SOUND] This transaction will give you
+example code that you can use to base
+
+67
+00:05:18,412 --> 00:05:19,628
+your own code on.
+
+68
+00:05:19,628 --> 00:05:23,905
+You can either copy and paste it into your
+own ABAP editor or
+
+69
+00:05:23,905 --> 00:05:26,540
+play around with it directly here.
+
+70
+00:05:26,540 --> 00:05:30,730
+So we can execute this code by clicking on
+the execute button and
+
+71
+00:05:32,090 --> 00:05:33,600
+the example program will run.
+
+72
+00:05:35,360 --> 00:05:39,280
+This is a really good transaction to help
+you with learning ABAP because
+
+73
+00:05:40,280 --> 00:05:44,680
+it gives endless examples of how to use
+the different statements.
+
+74
+00:05:44,680 --> 00:05:51,987
+So let's go back to our program there.
+
+75
+00:05:51,987 --> 00:05:57,020
+And what we'll do is enter our first line
+of code.
+
+76
+00:05:58,080 --> 00:06:04,925
+So what I'll do first is just put our
+report statement back to how it
+
+77
+00:06:04,925 --> 00:06:10,540
+should look.
+
+78
+00:06:10,540 --> 00:06:14,668
+And on a new line,
+
+79
+00:06:14,668 --> 00:06:21,275
+key in the write statement,
+
+80
+00:06:21,275 --> 00:06:29,545
+followed by [SOUND] Hello SAP world.
+
+81
+00:06:29,545 --> 00:06:31,202
+If you've done programming before,
+
+82
+00:06:31,202 --> 00:06:33,490
+I'm sure you'll be familiar with that
+statement.
+
+83
+00:06:35,390 --> 00:06:38,020
+So have a guess what the right statement
+will do.
+
+84
+00:06:38,020 --> 00:06:38,870
+It's fairly easy.
+
+85
+00:06:38,870 --> 00:06:44,780
+It will write whatever we put in quotes to
+the output window.
+
+86
+00:06:44,780 --> 00:06:50,950
+Here we're asking it to output the text
+hello SAP world.
+
+87
+00:06:50,950 --> 00:06:54,510
+The right statement looks very simple and
+it is.
+
+88
+00:06:54,510 --> 00:06:58,240
+But there are lots of different additions
+you can add to it.
+
+89
+00:06:58,240 --> 00:06:59,370
+To help format the output.
+
+90
+00:07:00,630 --> 00:07:03,930
+We'll come to those in a little while.
+
+91
+00:07:03,930 --> 00:07:07,590
+But right now no doubt you're eager to see
+this report run and
+
+92
+00:07:07,590 --> 00:07:09,300
+see this spectacular output.
+
+93
+00:07:09,300 --> 00:07:11,798
+So what we'll do is first of all save our
+program.
+
+94
+00:07:11,798 --> 00:07:16,635
+[SOUND] Once it's saved we can then
+
+95
+00:07:16,635 --> 00:07:21,127
+check the syntax of our program
+
+96
+00:07:21,127 --> 00:07:25,628
+[SOUND] Everything is correct.
+
+97
+00:07:25,628 --> 00:07:29,086
+And we need to activate the program.
+
+98
+00:07:29,086 --> 00:07:37,045
+[SOUND] And once it's activated you can
+see the status has changed.
+
+99
+00:07:37,045 --> 00:07:38,796
+And then we're ready to test it.
+
+100
+00:07:38,796 --> 00:07:41,879
+So just press the test button.
+
+101
+00:07:43,770 --> 00:07:48,560
+And now we can see our report title, and
+then the text we asked it to output.
+
+102
+00:07:50,600 --> 00:07:51,270
+How good's that?
+
+103
+00:07:51,270 --> 00:07:53,460
+You've written your first program.
+
+104
+00:07:53,460 --> 00:07:55,590
+All with adding just one line of code.
+
+105
+00:07:56,930 --> 00:08:02,940
+Now to celebrate, go grab yourself a nice
+cup of coffee, have a cup of tea or
+
+106
+00:08:02,940 --> 00:08:06,620
+whatever your preference is, because we've
+got a long way to go.
+
