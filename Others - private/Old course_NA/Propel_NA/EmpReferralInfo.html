@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Referral Info</title>
+	<style>
+	.required
+	{
+		color:red
+	}
+	</style>
+	<script>
+	function getNewWindow()
+	
+	{
+	var city = document.Referral.location.value;
+	
+		if(city=="location")
+			{
+				document.getElementById("ABC").innerHTML="Please enter valid data";
+				return false;
+			}
+	if (city == "Chennai")
+		state="Tamil Nadu";
+	if (city == "Mumbai")
+		state="Maharashtra";
+	if (city == "Pune")
+		state="Maharashtra";
+	if (city == "Bangalore")
+		state="Karnataka";
+
+		var details = window.open("","Details","width=250","height=250");
+		details.document.write ("<html><body>");
+		details.document.write ("<table border =2 align=center><caption> Employee Referral Details </caption>");
+		details.document.write ("<tr><td>First Name:</td><td>"+document.Referral.name1.value+"</td></tr>");
+		details.document.write ("<tr><td>Last Name:</td><td>"+document.Referral.name2.value+"</td></tr>");
+		details.document.write ("<tr><td>Contact Number:</td><td>"+document.Referral.contact.value+"</td></tr>");
+		details.document.write ("<tr><td>Email Address:</td><td>"+document.Referral.email1.value+"</td></tr>");
+		details.document.write ("<tr><td>Date of Birth:</td><td>"+document.Referral.DOB.value+"</td></tr>");
+		details.document.write ("<tr><td>Current City:</td><td>"+document.Referral.location.value+"</td></tr>");
+		details.document.write ("<tr><td>State:</td><td>"+state+"</td></tr>");
+		details.document.write ("</table></body></html>");
+		details.focus();
+		
+		return true;
+		}
+		
+	</script>
+	</head>
+
+<body input style="background-color:aqua">
+
+<form name="Referral" onSubmit="return getNewWindow()">
+<table align="center" border=2>
+<tr>
+<h1 align="center">Employee Referral Form </h1>
+</tr><tr>
+<td>First Name: <span class="required">*</span> &nbsp; &nbsp; &nbsp; &nbsp;</td>
+<td><input type="text" name="name1" pattern=[A-Za-z\s]{3,} required/></td>
+</tr><tr>
+<td>Last Name: <span class="required">*</span>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+<td><input type="text" name="name2" pattern=[A-Za-z\s]{3,} required/></td>
+</tr>
+<tr>
+<td>Contact Number: <span class="required">*</span>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+<td><input type="text" name="contact" pattern=[0-9]{10} maxlength=10 required/></td>
+</tr>
+<tr>
+<td>Email Address: <span class="required">*</span></td>
+<td><input type="email" name="email1" required/></td>
+</tr>
+<tr>
+<td>Date of Birth: <span class="required">*</span>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+<td><input type="date" name="DOB" max="1995-05-27"required/></td>
+</tr>
+<tr>
+<td>Current City Location: <span class="required">*</span>&nbsp; &nbsp; &nbsp; &nbsp;</td>
+<td><select name="location">
+	<option value="Chennai">Chennai</option>
+	<option value="Mumbai">Mumbai</option>
+	<option value="Pune">Pune</option>
+	<option value="Bangalore">Bangalore</option></select></td>
+	<label id="ABC"></label>
+</tr>
+<tr>
+<td colspan="2" align="center"><input type="submit" name="submit1" value="Submit"/></td> 
+</tr>
+</form>
+</body>
+</html>
