@@ -1,0 +1,36 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tax="https://taxschemas.netweaver.neo.com/taxflow">
+   <soapenv:Header/>
+   <soapenv:Body>
+            <tax:IncomeTaxMessage xmlns:tax="https://taxschemas.netweaver.neo.com/taxflow">
+         <!--1 or more repetitions:-->
+         <UserData>
+            <!--Zero or more repetitions:-->
+            <TaxID>ABCD1213A</TaxID>
+            <!--Zero or more repetitions:-->
+            <Account_Type>Individual</Account_Type>
+            <!--Zero or more repetitions:-->
+            <Currency>EUR</Currency>
+            <!--Zero or more repetitions:-->
+            <EOM>false</EOM>
+            <!--Zero or more repetitions:-->
+            <Annual_Income>80000</Annual_Income>
+            <!--Zero or more repetitions:-->
+            <Tax_Percent>40</Tax_Percent>
+            <!--Zero or more repetitions:-->
+            <Tax_Amount>32000</Tax_Amount>
+            <!--Zero or more repetitions:-->
+            <FirstName>John</FirstName>
+            <!--Zero or more repetitions:-->
+            <LastName>Doe</LastName>
+            <!--Zero or more repetitions:-->
+            <Department>ABC</Department>
+            <!--Zero or more repetitions:-->
+            <Address>Dietmar-Hopp-Allee 16, 69190 Walldorf</Address>
+            <!--Zero or more repetitions:-->
+            <EMail>john.doe@abc.com</EMail>
+            <!--Zero or more repetitions:-->
+            <PhoneNumber>+49 123456789</PhoneNumber>
+         </UserData>
+      </tax:IncomeTaxMessage>
+   </soapenv:Body>
+</soapenv:Envelope>

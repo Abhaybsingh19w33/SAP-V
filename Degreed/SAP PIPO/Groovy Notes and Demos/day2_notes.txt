@@ -1,0 +1,627 @@
+Flow control
+============
+1)simple if 
+2)if else
+3)ladder if 
+
+
+4)Nested if 
+5)switch case
+
+
+
+4)Nested if 
+============
+
+if(condition1)
+{
+---
+---
+	if(condition2)
+	{
+	----
+	-----
+		if(condition3)
+		{
+		----
+		----
+		}
+		else
+		{
+		--
+		---
+		}
+	}
+	else
+	{
+	--
+	---
+	}
+}
+else
+{
+--
+--
+}
+
+============================================
+
+switch case 
+===========
+
+switch (expression/variable)
+{
+case1 expression1/variable:
+	statements
+	break
+case1 expression2/variable:
+	statements
+	break
+.
+.
+.
+case1 expressionN/variable:
+	statements
+	break
+
+default:
+	statements
+}
+
+
+->for default no need break statement in the switch case 
+->we can use range operator in the switch case 
+->we can use regex in the switch case 
+
+========================================================
+Wild card character or meta characters or anchors or indentifiers
+==================================================================
+
+^  -> Lines start with 
+
+$  ->Lines ends with 
+
+
+
+[]
+======
+It matches any one character from the given list or range 
+
+
+a[aeiou]c 
+
+
+aac
+aec
+aic
+aoc
+auc
+
+
+[a-z] lowecase
+
+[A-Z] uppercase
+
+[0-9] digit
+
+[a-zA-Z] alphabet
+
+[a-zA-Z0-9] alphanumeric
+
+a[0-9]c 
+
+
+[^]
+======
+It matches any one character other than the given list or range 
+
+
+
+
+
+a[^aeiou]c 
+
+
+aac Not accept
+aec Not accept
+aic Not accept
+aoc Not accept
+auc Not accept
+apc accept
+a7c accept
+
+
+[^a-z] non-lowecase
+
+[^A-Z] non-uppercase
+
+[^0-9] non-digit
+
+[^a-zA-Z] non-alphabet
+
+[^a-zA-Z0-9] non-alphanumeric or special characters
+
+
++
+===
+It matches 1 or more occurences of preceding character
+
+
+ab+c 
+abc 
+abbbbbbbbbbbc
+
+
+
+binding operator
+===================
+
+~  It is true, if the given pattern found
+
+
+
+Loops
+===========
+1)while
+2)for 
+3)for in 
+
+
+Loop control statements
+========================
+1)continue
+2)break
+
+
+1)while
+=========
+while(condition)
+{
+---
+---
+}
+---
+-----------
+
+while(true)
+{
+---
+---
+}
+---
+
+
+
+continue
+=========
+	=>Once the continue matches it will send execution back to the loop.
+	=>The purpose of the continue is to skip one iteration
+	
+
+
+
+break
+========
+	=>It used to terminate the loop
+
+
+
+
+for loop 
+========
+for(variablename;expression;inc/dec)
+{
+---
+---
+}
+
+================================================
+for in 
+==========
+for (variablename in list_of_values)
+{
+--
+---
+}
+
+
+Variables
+==========
+1)scalar
+	=>strings
+	
+2)Array
+
+3)Hash Map
+
+
+
+strings 
+========
+1)single quoted string  ' '
+
+2)Double quoted string  " "
+
+
+quoting rules
+==============
+' ' ' Not accept
+
+" " " Not accept
+
+' " ' accept
+
+" ' " accept
+
+' \' ' accept
+
+" \" " accept
+
+
+=>we can access any character from the string based on index or reverse index 
+=>index start with 0 and reverse index start with -1
+
+
+string methods
+==============
+1)length()
+2)replace()
+6)toUpperCase()
+
+
+3)substring()
+4)indexOf()
+5)toLowerCase()
+7)split()
+8)join()
+
+
+
+
+
+
+
+System.identityHashCode
+========================
+It is used to display the id of the given value
+
+
+
+
+Mutable
+==========
+	=>We can change/edit/modify the data in the same reference object(original object).
+	
+Array
+HashMap
+	
+	
+
+Immutable
+==========
+	=>We can not change/edit/modify the data in the same reference object(original object)
+	
+	
+int
+double
+bool
+string
+	
+
+
+
+
+Array 
+=======
+=>In c lang- Array is a collection of similar data
+ex:
+int a[3]=(10,20,30);
+
+
+In Groovy
+===========
+Array or List or Indexed Array
+==============================
+	=>Array is collection of any data type
+	=>size is infinite 
+	=>Array it contains list of comma separated values in []
+	
+ex:
+
+my_list=[10,20,30,4.5,"groovy"]
+
+	=>Array is mutable object
+
+
+=>we can access any value from the Array based on index or reverse index 
+=>index start with 0 and reverse index start with -1
+
+
+
+Array Methods
+=============
+1)size()
+
+2)count()
+
+3)remove()
+
+4)pop()
+
+5)sort()
+
+6)reverse()
+
+7)add()
+
+8)contains()
+
+9)push()
+
+===================================================
+Map or Hash Map or Dictionary or Assosiative Array or Hash
+============================================================
+=>Map is a key and value pair
+=>map we define between a [] with key:value pair
+
+
+emp_details=[101,"John",102,"Siri",103,"Bob"] ->Indexed array
+
+emp_details=[101:"John",102:"Siri",103:"Bob"] ->Assosiative array
+
+=>Based on key we can access the value 
+=>keys are unique, values can be anything
+
+
+Map methods 
+============
+1)keySet()
+2)values 
+3)size()
+4)containsKey()
+
+#####################################################################
+File handling
+=============
+opena file
+process a file 
+	=>read 
+	=>write
+	=>append
+	
+
+write
+=====
+	=>If file already exists, it will override the data.
+	=>If file not exist, then it will create a file 
+	
+
+
+append
+=======
+	=>If file not exist, then it will create a file 
+	=>If file already exists, it will add the data at end of the file 
+
+
+File 
+====
+	=>It is used to open a file 
+	
+
+read
+====
+getText()
+
+write
+=====
+filename.write("text")
+
+append
+=====
+filename.append("text"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

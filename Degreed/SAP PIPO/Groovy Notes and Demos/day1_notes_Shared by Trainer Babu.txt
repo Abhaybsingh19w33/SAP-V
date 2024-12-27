@@ -1,0 +1,235 @@
+programming lang
+====================
+c, c++, java
+
+	=>Compiler based lang are programming lang
+	
+
+Scripting lang
+==============
+shell, javascript, php, perl, powershell
+
+	=>Interpreter based lang are Scripting lang
+	
+	
+programming and scripting
+==========================
+
+python, groovy
+
+
+cmd 
+=====
+java --version
+
+
+java/Groovy
+===========
+
+class Test
+{
+    public static void main(String []args)
+    {
+        System.out.println("My First Java Program.");
+    }
+};
+
+
+==============================================
+groovy
+========
+println("My First Java Program.")
+
+==================================================
+How to download and install groovy
+=====================================
+https://groovy.apache.org/
+
+Open cmd 
+===========
+	java --version
+	
+	groovy --version
+	
+============================
+groovysh
+=========
+	=>Groovy intaractive mode
+	
+
+
+C:\Users\SCRIPTING SCHOOL>groovysh
+Groovy Shell (3.0.5, JVM: 15)
+Type ':help' or ':h' for help.
+-----------------------------------------------------------------------------------------------------------------------
+groovy:000>
+
+===============================================
+Groovy
+========
+	=>Groovy is a genaral purpose and interpreter and interactive lang.
+	=>Groovy is both procedure and object oriented object.
+	=>Groovy is opensource
+	=>Groovy is platform-independent because it uses a "Write Once, Run Anywhere" approach
+    =>Groovy is case-sensitive
+	=>Dynamic data type
+	
+
+static data type
+================
+int a=100;
+float b=2.5;
+
+
+Dynamic data type
+==================
+x=10
+y=2.5
+
+
+
+1)groovy script extension is .groovy
+
+ex:
+
+sample.groovy
+
+2)groovy interpreter name is groovy
+
+
+groovy sample.groovy
+
+3)comments in groovy
+=======================
+a)Single-line comment
+
+//
+
+b)Multi-line comment
+
+/*  ------------
+-----------
+-----------
+--------- */
+
+
+1
+//2
+3
+4
+5
+6
+7
+8
+9
+10
+
+
+
+1
+/*
+2
+3
+4
+5
+6
+7
+8
+9
+*/
+10
+
+
+//purpose of this script
+//date
+//version (groovy version)
+//version (script version)
+/author name < bab - bab@gmail.com>
+
+
+
+
+
+
+//version 2.0
+
+
+
+How to write groovy script
+=============================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

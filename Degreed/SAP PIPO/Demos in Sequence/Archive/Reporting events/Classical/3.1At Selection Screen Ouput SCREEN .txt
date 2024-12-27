@@ -1,0 +1,20 @@
+REPORT z.
+PARAMETERS:empno(4) TYPE n,
+          ename(10) TYPE c.
+
+AT SELECTION-SCREEN OUTPUT.
+LOOP AT SCREEN.  
+IF SCREEN-NAME = 'ENAME'.
+    SCREEN-ACTIVE = 0.
+    MODIFY SCREEN.
+ENDIF.
+ENDLOOP.
+
+START-OF-SELECTION.
+WRITE :/ 'Ename is :', ename.
+WRITE :/ 'Empno is :', empno.
+
+
+======================
+If the above is changed to SCREEN-INPUT = 0,  grey out
+If the above is changed to SCREEN-invisible = 1,like a password field. You can type but cannot see what has been typed(  *******)

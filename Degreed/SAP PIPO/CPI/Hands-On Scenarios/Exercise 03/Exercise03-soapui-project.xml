@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="69264e56-0582-48f2-b767-41101c528912" activeEnvironment="Default" name="Exercise03" resourceRoot="" soapui-version="5.4.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="d216f502-bb6f-486e-846f-dcc4b7bdefeb" wsaVersion="NONE" name="DefaultPayloadProviderSEIServiceSoapBinding" type="wsdl" bindingName="{http://camel.apache.org/cxf/jaxws/provider}DefaultPayloadProviderSEIServiceSoapBinding" soapVersion="1_1" anonymous="optional" definition="https://rktw019-tmn.avt.eu1.hana.ondemand.com/Operations/api/WSDLDownload?artifactName=Exercise03_00&amp;servicePath=/Exercise03_00&amp;domainName=avtsbhf.eu1.hana.ondemand.com&amp;includePolicies=true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://rktw019-tmn.avt.eu1.hana.ondemand.com/Operations/api/WSDLDownload?artifactName=Exercise03_00&amp;servicePath=/Exercise03_00&amp;domainName=avtsbhf.eu1.hana.ondemand.com&amp;includePolicies=true"><con:part><con:url>https://rktw019-tmn.avt.eu1.hana.ondemand.com/Operations/api/WSDLDownload?artifactName=Exercise03_00&amp;servicePath=/Exercise03_00&amp;domainName=avtsbhf.eu1.hana.ondemand.com&amp;includePolicies=true</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://camel.apache.org/cxf/jaxws/provider" xmlns:ns1="http://cxf.component.camel.apache.org/" xmlns:ns2="http://schemas.xmlsoap.org/soap/http" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://camel.apache.org/cxf/jaxws/provider" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://cxf.component.camel.apache.org/" xmlns="http://cxf.component.camel.apache.org/">
+      <xsd:element name="invoke" nillable="true" type="xsd:anyType"/>
+      <xsd:element name="invokeResponse" nillable="true" type="xsd:anyType"/>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="invokeResponse">
+    <wsdl:part element="ns1:invokeResponse" name="invokeResponse"/>
+  </wsdl:message>
+  <wsdl:message name="invoke">
+    <wsdl:part element="ns1:invoke" name="invoke"/>
+  </wsdl:message>
+  <wsdl:portType name="DefaultPayloadProviderSEI">
+    <wsdl:operation name="invoke">
+      <wsdl:input message="tns:invoke" name="invoke"/>
+      <wsdl:output message="tns:invokeResponse" name="invokeResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DefaultPayloadProviderSEIServiceSoapBinding" type="tns:DefaultPayloadProviderSEI">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsp:Policy xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy">
+      <wsp:PolicyReference URI="#BN__binding"/>
+    </wsp:Policy>
+    <wsdl:operation name="invoke">
+      <soap:operation soapAction="" style="document"/>
+      <wsdl:input name="invoke">
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output name="invokeResponse">
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="service">
+    <wsdl:port binding="tns:DefaultPayloadProviderSEIServiceSoapBinding" name="port">
+      <soap:address location="https://host:port/path"/>
+    </wsdl:port>
+  </wsdl:service>
+  <wsp:UsingPolicy required="true" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"/>
+  <wsp:Policy wsu:Id="BN__binding" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <sp:TransportBinding xmlns:sp="http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702">
+          <wsp:Policy>
+            <sp:TransportToken>
+              <wsp:Policy>
+                <sp:HttpsToken>
+                  <wsp:Policy>
+                    <wsp:ExactlyOne>
+                      <sp:HttpBasicAuthentication/>
+                      <sp:RequireClientCertificate/>
+                    </wsp:ExactlyOne>
+                  </wsp:Policy>
+                </sp:HttpsToken>
+              </wsp:Policy>
+            </sp:TransportToken>
+            <sp:AlgorithmSuite>
+              <wsp:Policy>
+                <wsp:ExactlyOne>
+                  <sp:Basic256/>
+                  <sp:Basic192/>
+                  <sp:Basic128/>
+                  <sp:TripleDes/>
+                  <sp:Basic256Rsa15/>
+                  <sp:Basic192Rsa15/>
+                  <sp:Basic128Rsa15/>
+                  <sp:TripleDesRsa15/>
+                  <sp:Basic256Sha256/>
+                  <sp:Basic192Sha256/>
+                  <sp:Basic128Sha256/>
+                  <sp:TripleDesSha256/>
+                  <sp:Basic256Sha256Rsa15/>
+                  <sp:Basic192Sha256Rsa15/>
+                  <sp:Basic128Sha256Rsa15/>
+                  <sp:TripleDesSha256Rsa15/>
+                </wsp:ExactlyOne>
+              </wsp:Policy>
+            </sp:AlgorithmSuite>
+            <sp:Layout>
+              <wsp:Policy>
+                <sp:Strict/>
+              </wsp:Policy>
+            </sp:Layout>
+          </wsp:Policy>
+        </sp:TransportBinding>
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://host:port/path</con:endpoint></con:endpoints><con:operation id="3120fabb-7df6-4466-b05b-7d7568f5e03a" isOneWay="false" action="" name="invoke" bindingOperationName="invoke" type="Request-Response" outputName="invokeResponse" inputName="invoke" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eeebea4a-e910-4080-9afd-bc51c754436d" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://d0241-iflmap.hcisbt.eu1.hana.ondemand.com/cxf/Exercise03_XX</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:cxf="http://cxf.component.camel.apache.org/">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <cxf:invoke>
+      	<TwitterMsg>Welcome to the Twitter Integration with SAP CPI!!</TwitterMsg>
+      </cxf:invoke>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://camel.apache.org/cxf/jaxws/provider/DefaultPayloadProviderSEI/invoke"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>

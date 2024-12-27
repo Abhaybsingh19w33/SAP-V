@@ -1,0 +1,11 @@
+"The below program will work only of a table has been created in DDIC.
+"Participants are suppossed to use their data element names
+REPORT Z.
+PARAMETERS PEMPNO(4) TYPE N.
+PARAMETERS PEMPNO1 TYPE Z104329EMP-EMPNO.
+PARAMETERS PEMPNO2  TYPE Z104329DEEMPNO. "Data Element
+
+
+WRITE PEMPNO.
+WRITE PEMPNO1.
+WRITE PEMPNO2.

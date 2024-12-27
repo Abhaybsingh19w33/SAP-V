@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://webservice.supplier.test.org" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://webservice.supplier.test.org" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://webservice.supplier.test.org" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getSupplier">
+    <complexType>
+     <sequence>
+      <element name="SupplierID" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSupplierResponse">
+    <complexType>
+     <sequence>
+      <element name="getSupplierReturn" type="impl:Suppliers"/>
+     </sequence>
+    </complexType>
+   </element>
+   <complexType name="Suppliers">
+    <sequence>
+       <element name="SupplierId" type="xsd:string"/>
+       <element name="CompanyName" type="xsd:string"/>
+       <element name="ContactName" type="xsd:string"/>
+       <element name="ContactTitle" type="xsd:string"/>
+       <element name="Address" type="xsd:string"/>
+       <element name="City" type="xsd:string"/>
+       <element name="Region" type="xsd:string"/>
+       <element name="PostalCode" type="xsd:string"/>
+       <element name="Country" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <complexType name="EntityNotFoundException">
+    <sequence>
+     <element name="errorName" nillable="true" type="xsd:string"/>
+     <element name="errorCode" nillable="true" type="xsd:string"/>
+     <element name="errorText" nillable="true" type="xsd:string"/>
+    </sequence>
+   </complexType>
+   <element name="fault" type="impl:EntityNotFoundException"/>
+   <element name="getSuppliers">
+    <complexType>
+     <sequence>
+        <element name="City" type="xsd:string"/>
+        <element name="PostalCode" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getSuppliersResponse">
+    <complexType>
+     <sequence>
+      <element maxOccurs="unbounded" name="getSuppliersReturn" type="impl:Suppliers"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="generateData">
+    <complexType/>
+   </element>
+   <element name="generateDataResponse">
+    <complexType/>
+   </element>
+   <element name="deleteSupplier">
+    <complexType>
+     <sequence>
+      <element name="SupplierID" type="xsd:int"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="deleteSupplierResponse">
+    <complexType/>
+   </element>
+   <element name="updateSupplier">
+    <complexType>
+     <sequence>
+        <element name="SupplierId" type="xsd:string"/>
+        <element name="CompanyName" type="xsd:string"/>
+        <element name="ContactName" type="xsd:string"/>
+        <element name="ContactTitle" type="xsd:string"/>
+        <element name="Address" type="xsd:string"/>
+        <element name="City" type="xsd:string"/>
+        <element name="Region" type="xsd:string"/>
+        <element name="PostalCode" type="xsd:string"/>
+        <element name="Country" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="updateSupplierResponse">
+    <complexType/>
+   </element>
+   <element name="createSupplier">
+    <complexType>
+     <sequence>
+        <element name="SupplierId" type="xsd:string"/>
+        <element name="CompanyName" type="xsd:string"/>
+        <element name="ContactName" type="xsd:string"/>
+        <element name="ContactTitle" type="xsd:string"/>
+        <element name="Address" type="xsd:string"/>
+        <element name="City" type="xsd:string"/>
+        <element name="Region" type="xsd:string"/>
+        <element name="PostalCode" type="xsd:string"/>
+        <element name="Country" type="xsd:string"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="createSupplierResponse">
+    <complexType>
+     <sequence>
+      <element name="createSupplierReturn" type="impl:Suppliers"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getSupplierRequest">
+
+      <wsdl:part element="impl:getSupplier" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteSupplierRequest">
+
+      <wsdl:part element="impl:deleteSupplier" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="createSupplierRequest">
+
+      <wsdl:part element="impl:createSupplier" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSuppliersRequest">
+
+      <wsdl:part element="impl:getSuppliers" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+   <wsdl:message name="getSupplierResponse">
+      
+      <wsdl:part element="impl:getSupplierResponse" name="parameters">
+         
+   </wsdl:part>
+   </wsdl:message>
+   
+   <wsdl:message name="updateSupplierResponse">
+
+      <wsdl:part element="impl:updateSupplierResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="updateSupplierRequest">
+
+      <wsdl:part element="impl:updateSupplier" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="deleteSupplierResponse">
+
+      <wsdl:part element="impl:deleteSupplierResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getSuppliersResponse">
+
+      <wsdl:part element="impl:getSuppliersResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+   <wsdl:message name="createSupplierResponse">
+      
+      <wsdl:part element="impl:createSupplierResponse" name="parameters">
+         
+      </wsdl:part>
+      
+   </wsdl:message>
+
+   <wsdl:message name="generateDataResponse">
+
+      <wsdl:part element="impl:generateDataResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="generateDataRequest">
+
+      <wsdl:part element="impl:generateData" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="EntityNotFoundException">
+
+      <wsdl:part element="impl:fault" name="fault">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ServiceImplementation">
+
+      <wsdl:operation name="getSupplier">
+
+         <wsdl:input message="impl:getSupplierRequest" name="getSupplierRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getSupplierResponse" name="getSupplierResponse">
+
+       </wsdl:output>
+
+         <wsdl:fault message="impl:EntityNotFoundException" name="EntityNotFoundException">
+
+       </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSuppliers">
+
+         <wsdl:input message="impl:getSuppliersRequest" name="getSuppliersRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getSuppliersResponse" name="getSuppliersResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="generateData">
+
+         <wsdl:input message="impl:generateDataRequest" name="generateDataRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:generateDataResponse" name="generateDataResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteSupplier">
+
+         <wsdl:input message="impl:deleteSupplierRequest" name="deleteSupplierRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:deleteSupplierResponse" name="deleteSupplierResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateSupplier">
+
+         <wsdl:input message="impl:updateSupplierRequest" name="updateSupplierRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:updateSupplierResponse" name="updateSupplierResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createSupplier">
+
+         <wsdl:input message="impl:createSupplierRequest" name="createSupplierRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:createSupplierResponse" name="createSupplierResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+   </wsdl:portType>
+
+   <wsdl:binding name="ServiceImplementationSoapBinding" type="impl:ServiceImplementation">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getSupplier">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSupplierRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSupplierResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+         <wsdl:fault name="EntityNotFoundException">
+
+            <wsdlsoap:fault name="EntityNotFoundException" use="literal"/>
+
+         </wsdl:fault>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getSuppliers">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getSuppliersRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getSuppliersResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="generateData">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="generateDataRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="generateDataResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="deleteSupplier">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="deleteSupplierRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="deleteSupplierResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="updateSupplier">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="updateSupplierRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="updateSupplierResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="createSupplier">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="createSupplierRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="createSupplierResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+   </wsdl:binding>
+   <wsdl:service name="SupplierService">
+
+      <wsdl:port binding="impl:ServiceImplementationSoapBinding" name="ServiceImplementation">
+
+         <wsdlsoap:address location="Replace it with endpint URL of SOAP simulator SOAP service deployed on your tenant. You can get it from monitoring section"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+   
+ </wsdl:definitions>

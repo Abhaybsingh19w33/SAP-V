@@ -1,0 +1,23 @@
+REPORT Z.
+
+The HIDE keyword is used to store data objects and their values so they can be made available when the User selects a report line. 
+
+
+DATA:
+  it_kna1 TYPE TABLE  OF kna1,
+  wa_kna1 TYPE kna1,
+
+
+SELECT * FROM kna1 INTO  TABLE it_kna1 UP TO 10 ROWS.
+  
+  
+LOOP AT it_kna1 INTO wa_kna1.
+  WRITE : / wa_kna1-kunnr, wa_kna1-land1, wa_kna1-name1.
+  HIDE wa_kna1-kunnr.
+ENDLOOP.
+
+AT LINE-SELECTION.
+  WRITE /:'This is secondary list:', SY-LSIND.
+  WRITE /: Customer number is :', WA-kunnr.
+
+
