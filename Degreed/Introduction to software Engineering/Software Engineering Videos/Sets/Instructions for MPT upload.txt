@@ -1,0 +1,24 @@
+ 3 hrs .. open book .. 70 mks
+
+1)README.txt ( notepad)
+2)Screenshots.doc(Word)
+3)CODE.txt (notepad)
+**********************************
+
+Readme
+1)name of tables, se38 program names, fm names etc
+
+2)Screenshots
+Output, screens etc
+
+3)Code
+copy paste all the code
+***************************************************
+While uploading give folder name as empnoMPT1
+
+URL to upload : http://ndafile:8081/iUpload/upload/upload.action
+
+
+
+
+ 
