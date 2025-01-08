@@ -1,0 +1,3 @@
+- Degreed
+    - [Fiori Elements](https://degreed.com/pathway/08qg0yoypr/pathway?newWindow=true)
+    - [UI5 Training - UI5 Fiori](https://degreed.com/pathway/jp1qkxdj9v/pathway?newWindow=true)
